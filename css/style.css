@@ -1330,9 +1330,9 @@ form #mce-error-response a {
   color: var(--primary-color);
   background: none;
   border: none;
-  transform: rotate(90deg) translateX(1px);
   font-weight: bold;
   font-size: 18px;
+  transform: translateY(4px);
 }
 
 .mission-btn-collapse {
@@ -1342,6 +1342,7 @@ form #mce-error-response a {
   border: none;
   font-weight: bold;
   font-size: 18px;
+  transform: translateY(4px);
 }
 
 .mission-expanded {
