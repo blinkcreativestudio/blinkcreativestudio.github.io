@@ -764,6 +764,9 @@
             var video = $(this).siblings("video")[0];
             var image = $(this).find("image"); // Find the image element
             
+            // Revert all other videos' icons back to the play icon
+            $(".vid-icon").not(this).find("image").attr("href", "/assets/works/Play_Button.svg");
+            
             // Check if the clicked video is the same as the currently playing video
             if (video === currentVideo) {
                 // If it is, pause the video
@@ -793,7 +796,6 @@
                 image.attr("href", "/assets/works/Pause_button.svg"); // Change this to the desired href
             }
         });
-
         // PLAY ON TOUCH
         $('.thumb').on('touchstart', function () {
             $('video').each(function () {
