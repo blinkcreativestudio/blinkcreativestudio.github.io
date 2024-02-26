@@ -764,8 +764,11 @@
             var video = $(this).siblings("video")[0];
             var image = $(this).find("image"); // Find the image element
             
-            // Revert all other videos' icons back to the play icon
-            $(".vid-icon").not(this).find("image").attr("href", "/assets/works/Play_Button.svg");
+            // Reset all other videos
+            $(".vid-icon").not(this).each(function() {
+                var otherVideo = $(this).siblings("video")[0];
+                otherVideo.load()
+            });
             
             // Check if the clicked video is the same as the currently playing video
             if (video === currentVideo) {
@@ -780,7 +783,7 @@
             } else {
                 // If it's a different video, pause the currently playing video (if any)
                 if (currentVideo && !currentVideo.paused && !currentVideo.ended) {
-                    currentVideo.pause();
+                    currentVideo.load();
                 }
                 // Set the new video as the current video
                 currentVideo = video;
