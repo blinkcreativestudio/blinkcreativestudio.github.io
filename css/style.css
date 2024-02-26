@@ -1314,6 +1314,18 @@ form #mce-error-response a {
   font-weight: bolder;
 }
 
+.office-video {
+  width: 100%;
+
+  margin-top: 40px;
+  aspect-ratio: 16/9;
+}
+.office-video video {
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
 .mission-btn-expand {
   color: var(--primary-color);
   background: none;
