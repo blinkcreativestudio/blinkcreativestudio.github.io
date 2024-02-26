@@ -213,18 +213,23 @@
           <div class="col-12">
             <h1 class="heading2 c-primary">About us</h1>
             <p class="mt-3">
-              A multimedia company that specializes in design, production, and
-              marketing. We are a dynamic team of creative strategists,
-              consultants, and technicians. Our work environment enables our
-              team members to freely contribute, collaborate, and learn from one
-              another. With this unparalleled commitment and agility, we
-              established a reputation for artistry and effective outputs.
+              Blink Creative Studio is a multimedia company that specializes in
+              design, production, and marketing. We are a dynamic team of
+              creative strategists, consultants, artists, storytellers, and
+              technicians. Our work environment enables our team members to
+              freely contribute, collaborate, and learn from one another. With
+              this commitment and agility, we have established a reputation for
+              artistry and effective outputs.
               <br /><br />
               We listen and work closely with our clients to deliver enduring
               success. We work with a variety of industries, big or small –
               catering to corporate, academic, and personal multimedia needs. We
-              are constantly thrilled to exceed ourselves after every milestone
-              we have accomplished.
+              aim to exceed ourselves after every milestone we have
+              accomplished.
+              <br /><br />
+              We are currently expanding our horizons by delving into the
+              production of films, TV shows, and web series, broadening our
+              creative portfolio.
               <br /><br />
               <span class="fw-600">We are BLINK Creative Studio.</span>
               <br /><br />
@@ -240,15 +245,100 @@
               class="w-100"
             />
           </div>
-          <div class="col-md-6 col-12 p-md-3 mt-5">
+          <div class="col-12 p-md-3 mt-5">
             <h2 class="heading2 c-primary">Mission</h2>
             <p class="mt-3">
-              Pushing the limits of imagination, intuition, and intellect to
-              create effective multimedia outputs that drive our clients’
-              long-term success.
+              Blink Creative Studio is dedicated to pushing the boundaries of
+              imagination, intuition, and intellect. Our commitment is to create
+              multimedia outputs that not only meet but exceed expectations,
+              leaving an enduring impact on audiences and propelling our clients
+              toward sustained success.
+              <button class="mission-btn-expand">></button>
             </p>
+            <div class="mission-expanded">
+              <p>
+                <strong>Unleashing Creative Boundaries:</strong> At Blink
+                Creative Studio, we're not afraid to break the mold and redefine
+                what's possible in the world of multimedia. Our mission is to
+                constantly push the limits of imagination, intuition, and
+                intellect to deliver innovative and boundary-pushing creations.
+              </p>
+              <p>
+                <strong>Global Impact, Local Expertise:</strong> We believe in
+                the power of multimedia to transcend geographical boundaries.
+                Our team, fueled by passion and expertise, strives to create
+                experiences that not only meet the specific needs of our clients
+                but also resonate on a global scale, inspiring and captivating
+                audiences worldwide.
+              </p>
+              <p>
+                <strong>Crafting Transformative Experiences:</strong> Multimedia
+                is not just about visuals; it's about telling compelling
+                stories. Whether through immersive virtual experiences, visually
+                stunning videos, interactive websites, or captivating graphic
+                design, our commitment to quality craftsmanship ensures that
+                each project becomes a transformative experience.
+              </p>
+              <p>
+                <strong>Innovation at the Core:</strong> In the ever-evolving
+                landscape of multimedia, we embrace change as an opportunity for
+                growth. Staying ahead of emerging trends and technologies, we
+                blend cutting-edge tools with artistic finesse, setting new
+                industry standards and providing our clients with unparalleled,
+                innovative solutions.
+              </p>
+              <p>
+                <strong>Partnerships for Long-Term Success:</strong> We view our
+                client relationships as true partnerships. Open communication,
+                deep understanding, and collaboration are the cornerstones of
+                our approach. By aligning our creative expertise with strategic
+                insights, we contribute significantly to the long-term success
+                of our clients.
+              </p>
+              <p>
+                <strong>Stewards of Excellence:</strong> Beyond being content
+                creators, we are storytellers, visionaries, and architects of
+                unforgettable experiences. Our commitment to excellence ensures
+                that each multimedia output not only meets but exceeds our
+                clients' expectations, leaving a lasting mark on their
+                audiences.
+              </p>
+              <p>
+                <strong>Agile Adaptation:</strong> Blink Creative Studio is not
+                just a studio; it's a dynamic force that adapts and evolves with
+                the industry. We embrace change as a catalyst for creativity,
+                enabling us to tackle new challenges head-on and deliver
+                multimedia solutions that stand out in a fast-paced and
+                ever-changing landscape.
+              </p>
+              <p>
+                <strong>Strategic Fusion of Art and Technology:</strong> Our
+                approach combines artistic prowess with technological
+                innovation. By fusing creativity with the latest tech trends, we
+                create multimedia outputs that not only meet the highest
+                standards of quality but also position our clients as leaders in
+                their respective fields.
+              </p>
+              <p>
+                <strong>Leave Your Mark on the World:</strong> Every project we
+                undertake is a chance to leave an indelible mark on the world of
+                multimedia. Our mission is not just about meeting objectives;
+                it's about crafting experiences that leave a lasting impact—one
+                that resonates with audiences, tells a story, and contributes to
+                the success of our clients.
+              </p>
+              <p>
+                <strong>Bespoke Masterpiece:</strong> At Blink Creative Studio,
+                we believe in crafting each project as a bespoke masterpiece.
+                Every endeavor is a unique opportunity to showcase our
+                creativity, drive, and unwavering commitment to excellence,
+                propelling our clients toward sustained success in the dynamic
+                and ever-expanding realm of multimedia.
+                <button class="mission-btn-collapse"><</button>
+              </p>
+            </div>
           </div>
-          <div class="col-md-6 col-12 p-md-3 mt-5">
+          <div class="col-12 p-md-3 mt-5">
             <h2 class="heading2 c-primary">Vision</h2>
             <p class="mt-3">
               The Blink Creative Studio as a leading company for stimulating
@@ -823,6 +913,24 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const expandBtn = document.querySelector(".mission-btn-expand");
+      const collapseBtn = document.querySelector(".mission-btn-collapse");
+
+      const missionExpanded = document.querySelector(".mission-expanded");
+
+      expandBtn.addEventListener("click", () => {
+        missionExpanded.style.maxHeight = "none";
+        missionExpanded.style.opacity = 1;
+        missionExpanded.style.transform = "scaleY(1)";
+      });
+      collapseBtn.addEventListener("click", () => {
+        missionExpanded.style.maxHeight = 0;
+        missionExpanded.style.opacity = 0;
+        missionExpanded.style.transform = "scaleY(0)";
+      });
+    </script>
 
     <!-- AOS -->
     <script src="/dist/aos/aos.js"></script>

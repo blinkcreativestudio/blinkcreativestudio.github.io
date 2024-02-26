@@ -1308,6 +1308,39 @@ form #mce-error-response a {
 }
 
 /* STUDIO PAGE*/
+
+.mission-btn-expand {
+  color: var(--primary-color);
+  background: none;
+  border: none;
+  transform: rotate(90deg) translateX(1px);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mission-btn-collapse {
+  color: white;
+  display: inline-block;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mission-expanded {
+  background-color: var(--primary-color);
+  padding: 16px 8px;
+  color: white;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease-in;
+  transform-origin: top;
+}
+
+.mission-expanded p {
+  margin-bottom: 16px;
+}
+
 .pic {
   position: relative;
 }
