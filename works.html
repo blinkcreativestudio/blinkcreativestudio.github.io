@@ -269,7 +269,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6 col-md-6 project-item vp all">
+                        <div class="col-12 col-lg-6 col-md-6 project-item ec all">
                             <div class="thumb" onclick="" data-video-id="workVideo7">
                                 <div class="vid-icon" onclick="">
                                       <svg width="60" height="60">
@@ -348,7 +348,7 @@
 
 
 
-                        <div class="col-12 col-lg-6 col-md-6 project-item avp ec all">
+                        <div class="col-12 col-lg-6 col-md-6 project-item ec all">
                             <div class="thumb" onclick="" data-video-id="workVideo11">
                                 <div class="vid-icon" onclick="">
                                       <svg width="60" height="60">
@@ -369,7 +369,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-lg-6 col-md-6 project-item avp ec all">
+                        <div class="col-12 col-lg-6 col-md-6 project-item ec all">
                             <div class="thumb" onclick="" data-video-id="workVideo12">
                                 <div class="vid-icon" onclick="">
                                       <svg width="60" height="60">
@@ -407,7 +407,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6 col-md-6 project-item vp avp ec all">
+                        <div class="col-12 col-lg-6 col-md-6 project-item ec all">
                             <div class="thumb" onclick="" data-video-id="workVideo14">
                                 <div class="vid-icon" onclick="">
                                       <svg width="60" height="60">
@@ -462,7 +462,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6 col-md-6 project-item avp ec all">
+                        <div class="col-12 col-lg-6 col-md-6 project-item avp all">
                             <div class="thumb" onclick="" data-video-id="workVideo17">
                                 <div class="vid-icon" onclick="">
                                       <svg width="60" height="60">
@@ -499,7 +499,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6 col-md-6 project-item vp all">
+                        <div class="col-12 col-lg-6 col-md-6 project-item avp all">
                             <div class="thumb" onclick="" data-video-id="workVideo19">
                                 <div class="vid-icon" onclick="">
                                       <svg width="60" height="60">
@@ -518,7 +518,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6 col-md-6 project-item vp all">
+                        <div class="col-12 col-lg-6 col-md-6 project-item avp all">
                             <div class="thumb" onclick="" data-video-id="workVideo20">
                                 <div class="vid-icon" onclick="">
                                       <svg width="60" height="60">
@@ -537,7 +537,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-6 col-md-6 project-item vp all">
+                        <div class="col-12 col-lg-6 col-md-6 project-item avp all">
                             <div class="thumb" onclick="" data-video-id="workVideo21">
                                 <div class="vid-icon" onclick="">
                                       <svg width="60" height="60">
@@ -764,8 +764,11 @@
             var video = $(this).siblings("video")[0];
             var image = $(this).find("image"); // Find the image element
             
-            // Revert all other videos' icons back to the play icon
-            $(".vid-icon").not(this).find("image").attr("href", "/assets/works/Play_Button.svg");
+            // Reset all other videos
+            $(".vid-icon").not(this).each(function() {
+                var otherVideo = $(this).siblings("video")[0];
+                otherVideo.load()
+            });
             
             // Check if the clicked video is the same as the currently playing video
             if (video === currentVideo) {
@@ -780,7 +783,7 @@
             } else {
                 // If it's a different video, pause the currently playing video (if any)
                 if (currentVideo && !currentVideo.paused && !currentVideo.ended) {
-                    currentVideo.pause();
+                    currentVideo.load();
                 }
                 // Set the new video as the current video
                 currentVideo = video;
