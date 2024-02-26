@@ -393,7 +393,7 @@
                             <div class="thumb" onclick="" data-video-id="workVideo13">
                                 <div class="vid-icon" onclick="">
                                       <svg width="60" height="60">
-                                        <image href="/assets/works/Play_Button.svg" width="60" height="60"/>
+                                        <image class="vid-icon-img" href="/assets/works/Play_Button.svg" width="60" height="60"/>
                                       </svg>                                                                                                                           
                                 </div>
                                 <video poster="/assets/works/JFC_HIGHLIGHTS_Thumbnail.png" class="thumb-video va-bottom" id="workVideo13" preload="metadata" width="100%" muted loop playsinline onclick="">
@@ -762,6 +762,7 @@
         
         $(".vid-icon").click(function() {
             var video = $(this).siblings("video")[0];
+            var image = $(this).find("image"); // Find the image element
             
             // Check if the clicked video is the same as the currently playing video
             if (video === currentVideo) {
@@ -771,6 +772,8 @@
                 }
                 // Set currentVideo to null since the video is paused
                 currentVideo = null;
+                // Reset the href attribute
+                image.attr("href", "/assets/works/Play_Button.svg");
             } else {
                 // If it's a different video, pause the currently playing video (if any)
                 if (currentVideo && !currentVideo.paused && !currentVideo.ended) {
@@ -780,12 +783,14 @@
                 currentVideo = video;
                 
                 // Play the clicked video
-              
                 video.play();
                 
                 // Hide details and vid-icon
                 $(this).siblings('.thumb-details').css("opacity", 0);
                 $(this).css("opacity", 0);
+                
+                // Change the href attribute
+                image.attr("href", "/assets/works/Pause_button.svg"); // Change this to the desired href
             }
         });
 
