@@ -341,9 +341,38 @@
           <div class="col-12 p-md-3 mt-5">
             <h2 class="heading2 c-primary">Vision</h2>
             <p class="mt-3">
-              The Blink Creative Studio as a leading company for stimulating
-              culture, business, and society with multimedia outputs that
-              communicate ideas, conversations, and stories.
+              To be at the forefront of innovation within the multimedia
+              industry and become a key player in stimulating culture, business,
+              and society through effective multimedia outputs that communicate
+              ideas, conversations, and stories.
+            </p>
+          </div>
+          <div class="col-12 p-md-3 mt-5">
+            <h2 class="heading2 c-primary">Core Values</h2>
+            <p class="mt-3">
+              <span class="highlighted">B</span>OLD - Fearlessly embracing
+              challenges and pushing boundaries to create impactful and
+              memorable experiences.
+            </p>
+            <p class="mt-3">
+              <span class="highlighted">L</span>IMITLESS - Embracing boundless
+              creativity and possibilities to unlock the full potential of every
+              project.
+            </p>
+            <p class="mt-3">
+              <span class="highlighted">I</span>NNOVATIVE - Constantly seeking
+              fresh perspectives, cutting-edge technologies, and imaginative
+              solutions to redefine the standards of multimedia excellence.
+            </p>
+            <p class="mt-3">
+              <span class="highlighted">N</span>OW - Committed to the present
+              moment, ensuring timely and relevant responses to the dynamic
+              needs of clients and the industry.
+            </p>
+            <p class="mt-3">
+              <span class="highlighted">K</span>EEN - Demonstrating acute
+              awareness, attention to detail, and a passion for excellence in
+              every aspect of our work.
             </p>
           </div>
         </div>
@@ -926,9 +955,11 @@
         missionExpanded.style.transform = "scaleY(1)";
       });
       collapseBtn.addEventListener("click", () => {
-        missionExpanded.style.maxHeight = 0;
         missionExpanded.style.opacity = 0;
         missionExpanded.style.transform = "scaleY(0)";
+        setTimeout(() => {
+          missionExpanded.style.maxHeight = 0;
+        }, 500);
       });
     </script>
 

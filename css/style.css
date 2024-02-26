@@ -1309,6 +1309,11 @@ form #mce-error-response a {
 
 /* STUDIO PAGE*/
 
+.highlighted {
+  color: var(--primary-color);
+  font-weight: bolder;
+}
+
 .mission-btn-expand {
   color: var(--primary-color);
   background: none;
@@ -1333,7 +1338,9 @@ form #mce-error-response a {
   color: white;
   opacity: 0;
   max-height: 0;
-  transition: all 0.3s ease-in;
+  overflow: hidden;
+  transition: transform 0.3s ease-in, max-height 0.5s ease-in-out,
+    opacity 0.3s ease-in;
   transform-origin: top;
 }
 
