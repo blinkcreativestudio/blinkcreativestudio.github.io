@@ -767,20 +767,20 @@
             if (video === currentVideo) {
                 // If it is, pause the video
                 if (!video.paused && !video.ended) {
-                    video.load();
+                    video.pause();
                 }
                 // Set currentVideo to null since the video is paused
                 currentVideo = null;
             } else {
                 // If it's a different video, pause the currently playing video (if any)
                 if (currentVideo && !currentVideo.paused && !currentVideo.ended) {
-                    currentVideo.load();
+                    currentVideo.pause();
                 }
                 // Set the new video as the current video
                 currentVideo = video;
                 
                 // Play the clicked video
-                video.load();
+              
                 video.play();
                 
                 // Hide details and vid-icon
