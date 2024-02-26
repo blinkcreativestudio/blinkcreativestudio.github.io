@@ -239,7 +239,7 @@
                                         <image href="/assets/works/Play_Button.svg" width="60" height="60"/>
                                       </svg>                                                                                                                           
                                 </div>
-                                <video class="thumb-video va-bottom" id="workVideo5" preload="metadata" width="100%" muted loop playsinline onclick="">
+                                <video poster="/assets/works/SEA-GAMES_THUMBNAIL.jpg" class="thumb-video va-bottom" id="workVideo5" preload="metadata" width="100%" muted loop playsinline onclick="">
                                     <source src="/assets/works/SEA Games.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
@@ -767,20 +767,20 @@
             if (video === currentVideo) {
                 // If it is, pause the video
                 if (!video.paused && !video.ended) {
-                    video.load();
+                    video.pause();
                 }
                 // Set currentVideo to null since the video is paused
                 currentVideo = null;
             } else {
                 // If it's a different video, pause the currently playing video (if any)
                 if (currentVideo && !currentVideo.paused && !currentVideo.ended) {
-                    currentVideo.load();
+                    currentVideo.pause();
                 }
                 // Set the new video as the current video
                 currentVideo = video;
                 
                 // Play the clicked video
-                video.load();
+              
                 video.play();
                 
                 // Hide details and vid-icon
