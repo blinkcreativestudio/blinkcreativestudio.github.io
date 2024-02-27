@@ -2820,6 +2820,44 @@ div.mce_inline_error {
   }
 }
 
+/* CAREERS PAGE */
+.careers-heading {
+  color: var(--primary-color);
+  font-size: 3.375rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.careers-copy {
+  margin-block: 8px;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 8px;
+  row-gap: 40px;
+  justify-content: center;
+  justify-items: center;
+}
+.perks-item {
+  aspect-ratio: 16/9;
+  width: 240px;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding-block: 16px;
+  padding-inline: 40px;
+  font-size: 20px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  transform: skew(-20deg);
+  gap: 16px;
+}
+
 // Registration Page
 
 .reg-input-container input {
