@@ -3096,6 +3096,14 @@ div.mce_inline_error {
   margin-top: 8px;
 }
 
+.application-btn:hover a {
+  color: var(--primary-color);
+}
+
+.application-btn a {
+  color: white;
+}
+
 /* JOBS POSTING END */
 
 /* APPLICATION FORM */

@@ -529,3 +529,55 @@
 </html>
 
 <!-- MAIL CHIMP API KEY: 06ca517d30d778c78da6d82a163a7217-us1 -->
+
+<!-- 
+
+<script src="https://cdn.jsdelivr.net/npm/mailchimp-api-v3"></script>
+<script>
+  const form = document.getElementById('jobApplicationForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const firstName = formData.get('firstName');
+    const lastName = formData.get('lastName');
+    const email = formData.get('email');
+    const contact = formData.get('contact');
+    const address = formData.get('address');
+    const resumeFile = formData.get('resume');
+    const coverLetterFile = formData.get('coverLetter');
+    const portfolioLink = formData.get('portfolioLink');
+
+    const mailchimp = new Mailchimp('YOUR_API_KEY');
+    const listId = 'YOUR_LIST_ID';
+
+    try {
+      // Upload files to Mailchimp file manager
+      const resumeUrl = await mailchimp.uploadFile(resumeFile, 'application/pdf');
+      const coverLetterUrl = await mailchimp.uploadFile(coverLetterFile, 'application/pdf');
+
+      // Add subscriber to Mailchimp audience
+      const response = await mailchimp.post(`/lists/${listId}/members`, {
+        email_address: email,
+        status: 'subscribed',
+        merge_fields: {
+          FNAME: firstName,
+          LNAME: lastName,
+          PHONE: contact,
+          ADDRESS: address,
+          PORTFOLIO: portfolioLink,
+          RESUME: resumeUrl,
+          COVER_LETTER: coverLetterUrl,
+        },
+      });
+
+      console.log('Email sent successfully:', response);
+      alert('Email sent successfully!');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Error sending email. Please try again.');
+    }
+  });
+</script>
+
+ -->
