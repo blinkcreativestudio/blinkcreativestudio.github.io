@@ -2825,30 +2825,34 @@ div.mce_inline_error {
   color: var(--primary-color);
   font-size: 3.375rem;
   line-height: 1.2;
-  font-weight: 700;
-}
-
-.why-work {
-  color: var(--gray-900);
   font-weight: normal;
 }
 
-.why-work-list {
+.careers-copy {
+  color: var(--gray-700);
+}
+
+.why-work h2 {
+  color: var(--gray-900);
+}
+
+.why-work ul {
   text-align: left;
   margin-top: 16px;
   color: var(--gray-700);
 }
 
-.why-work-list li {
+.why-work li {
   margin-bottom: 8px;
 }
 
-.perks {
+.perks h2 {
   color: var(--gray-900);
 }
 
-.perks span {
+.perks h2 strong {
   color: var(--primary-color);
+  font-weight: 700;
 }
 
 .careers-copy {
@@ -2863,6 +2867,7 @@ div.mce_inline_error {
   justify-content: center;
   justify-items: center;
 }
+
 .perks-item {
   text-align: center;
   background-color: var(--primary-color);
@@ -2887,6 +2892,71 @@ div.mce_inline_error {
 .perks-item span {
   transform: skew(20deg);
 }
+
+.our-people h2 {
+  color: var(--gray-900);
+  margin-bottom: 24px;
+}
+.our-people h2 strong {
+  color: var(--primary-color);
+}
+
+.our-people p {
+  color: var(--gray-700);
+  margin-bottom: 16px;
+}
+
+.group-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.group-photos img {
+  object-fit: cover;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.spread-wings h2 {
+  color: var(--gray-900);
+  margin-bottom: 24px;
+}
+.spread-wings h2 strong {
+  color: var(--primary-color);
+}
+
+.spread-wings p {
+  color: var(--gray-700);
+}
+
+.jobs {
+  width: 100vw;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.jobs h3 {
+  font-size: 32px;
+}
+
+.jobs p {
+  color: white;
+  font-weight: lighter;
+}
+
+.job-item {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.job-btn {
+  padding-block: 2px;
+  border: 3px solid var(--gray-50);
+}
+
+/* CAREERS PAGE END */
 
 // Registration Page
 
