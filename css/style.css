@@ -3098,6 +3098,56 @@ div.mce_inline_error {
 
 /* JOBS POSTING END */
 
+/* APPLICATION FORM */
+
+.apply-submit-btn {
+  display: flex;
+  justify-content: center;
+}
+.breadcrumbs a {
+  color: var(--gray-700);
+}
+.application input {
+  border: solid 1px var(--gray-500);
+  padding-block: 12px;
+}
+
+.application p {
+  border-bottom: solid 1px var(--gray-500);
+  padding-bottom: 12px;
+}
+
+.application-header {
+  color: var(--primary-color);
+}
+
+.apply-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.apply-grid input:nth-of-type(3),
+.apply-grid input:nth-of-type(5) {
+  grid-column: span 2; /* Make email and address inputs span across all columns */
+}
+
+.apply-files {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.apply-files label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* APPLICATION FORM END */
+
 /* REGISTRATION PAGE */
 
 .reg-input-container input {
