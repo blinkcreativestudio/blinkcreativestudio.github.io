@@ -3016,6 +3016,38 @@ div.mce_inline_error {
   background-color: var(--gray-400); /* Border color */
 }
 
+.job-description {
+  margin-block: 16px;
+}
+
+.application-instructions p {
+  margin-bottom: 16px;
+}
+
+.job-board h1 {
+  color: var(--primary-color);
+  font-size: 32px;
+}
+
+.job-loc {
+  font-size: 18px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.job-time {
+  color: var(--gray-700);
+}
+
+.job-board {
+  padding-top: 120px;
+}
+
+.job-board-header {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+}
+
 /* JOBS POSTING END */
 
 /* REGISTRATION PAGE */
