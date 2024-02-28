@@ -2995,7 +2995,7 @@ div.mce_inline_error {
 .dept-positions {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
   background-color: var(--primary-color);
   overflow: hidden;
   max-height: 0;
