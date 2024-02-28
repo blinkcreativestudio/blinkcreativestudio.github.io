@@ -485,21 +485,38 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/smtp.js/dist/smtp.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-      import smtp from "smtp.js";
-      const email = {
-        from: "sender@example.com",
-        to: "lapina.jason@gmail.com",
-        subject: "Test email",
-        text: "This is a test email sent from the browser",
-      };
+      // Initialize EmailJS with your user ID
+      emailjs.init("DTS61GqKpRoZxIgRc");
 
-      const form = document.getElementById("form");
-      smtp
-        .sendMail(email)
-        .then((info) => console.log(info))
-        .catch((err) => console.error(err));
+      // Function to send form data
+      function sendFormData(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        const formData = {
+          firstName: document.getElementById("firstName").value,
+          lastName: document.getElementById("lastName").value,
+          email: document.getElementById("email").value,
+          contact: document.getElementById("contact").value,
+          address: document.getElementById("address").value,
+          portfolioLink: document.getElementById("portfolioLink").value,
+        };
+
+        emailjs
+          .send("service_vgtaguq", "template_pc048ph", formData)
+          .then(function (response) {
+            console.log("Email sent successfully:", response);
+            alert("Form submitted successfully!");
+          })
+          .catch(function (error) {
+            console.error("Email sending failed:", error);
+            alert("Failed to submit form. Please try again later.");
+          });
+      }
+
+      const form = document.getElementById("jobApplicationForm");
+      form.addEventListener("submit", sendFormData);
     </script>
 
     <!-- AOS -->
