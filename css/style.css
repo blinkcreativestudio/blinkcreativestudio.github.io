@@ -2828,34 +2828,64 @@ div.mce_inline_error {
   font-weight: 700;
 }
 
+.why-work {
+  color: var(--gray-900);
+  font-weight: normal;
+}
+
+.why-work-list {
+  text-align: left;
+  margin-top: 16px;
+  color: var(--gray-700);
+}
+
+.why-work-list li {
+  margin-bottom: 8px;
+}
+
+.perks {
+  color: var(--gray-900);
+}
+
+.perks span {
+  color: var(--primary-color);
+}
+
 .careers-copy {
   margin-block: 8px;
 }
 
 .perks-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 8px;
-  row-gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  column-gap: 32px;
+  row-gap: 48px;
   justify-content: center;
   justify-items: center;
 }
 .perks-item {
-  aspect-ratio: 16/9;
-  width: 240px;
   text-align: center;
   background-color: var(--primary-color);
   color: white;
   padding-block: 16px;
-  padding-inline: 40px;
   font-size: 20px;
+  font-weight: bold;
   display: grid;
+  grid-template-columns: 1fr 1.2fr;
   justify-content: center;
   align-content: center;
   justify-items: center;
   align-items: center;
   transform: skew(-20deg);
   gap: 16px;
+  padding-right: 24px;
+}
+
+.perks-item image {
+  transform: skew(20deg);
+}
+.perks-item span {
+  transform: skew(20deg);
 }
 
 // Registration Page
