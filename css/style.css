@@ -2958,7 +2958,67 @@ div.mce_inline_error {
 
 /* CAREERS PAGE END */
 
-// Registration Page
+/* JOBS POSTING */
+.positions-toggle {
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.positions h1 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 24px;
+}
+
+.position-item {
+  color: white;
+}
+
+.dept-positions {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: var(--primary-color);
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0; /* Initially set opacity to 0 */
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    transform 0.3s;
+}
+
+.num-posting {
+  color: var(--gray-700);
+}
+
+.departments {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.dept {
+  padding-bottom: 24px;
+  position: relative;
+  /* border-bottom: solid 2px var(--gray-500); */
+}
+
+.dept::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* 80% of the element's width */
+  height: 2px; /* Border thickness */
+  background-color: var(--gray-400); /* Border color */
+}
+
+/* JOBS POSTING END */
+
+/* REGISTRATION PAGE */
 
 .reg-input-container input {
   width: 120%;
