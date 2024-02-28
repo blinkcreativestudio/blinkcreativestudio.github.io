@@ -2821,6 +2821,21 @@ div.mce_inline_error {
 }
 
 /* CAREERS PAGE */
+
+.see-open {
+  background-color: white;
+}
+
+.see-open:hover {
+  background-color: var(--primary-color);
+}
+.see-open:hover a {
+  color: white;
+}
+
+.see-open a {
+  color: var(--primary-color);
+}
 .careers-heading {
   color: var(--primary-color);
   font-size: 3.375rem;
@@ -2954,6 +2969,10 @@ div.mce_inline_error {
 .job-btn {
   padding-block: 2px;
   border: 3px solid var(--gray-50);
+}
+
+.job-btn a {
+  color: white;
 }
 
 /* CAREERS PAGE END */
