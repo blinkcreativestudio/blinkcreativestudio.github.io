@@ -2,20 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>HER+SPECTIVE Art Fair | Blink Creative Studio</title>
-
-    <!-- <meta name="description"
-        content="Blink Creative Studio is a multimedia company in Laguna, Philippines. We convey and connect through campaigns, photos, videos, and strategies."> -->
+    <title>Careers | Multimedia Company</title>
 
     <meta
       name="description"
-      content="HER+SPECTIVE is an empowering art fair celebrating Women's Month and championing gender equality."
-    />
-    <meta
-      name="keywords"
-      content="Her, Spective, Her+Spective, art, fair, March 25, 2023"
+      content="Blink Creative Studio is a multimedia company in Laguna, Philippines. We convey and connect through campaigns, photos, videos, and strategies."
     />
     <meta property="og:title" content="Blink Creative Studio" />
     <meta
@@ -71,7 +64,39 @@
     </script>
   </head>
 
-  <body class="overflow">
+  <body>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "440186012822465");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v16.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
     <!-- Start Nav  -->
     <nav class="navbar" data-aos="fade-in" data-aos-delay="50">
       <div class="container d-flex justify-content-between align-items-center">
@@ -121,7 +146,7 @@
 
         <ul id="navbar-list" class="navbar-list d-flex" aria-hidden="true">
           <li class="hide-desktop"><span class="menu-span">Menu</span></li>
-          <li class="menu"><a class="menu" href="/">Home</a></li>
+          <li class="active"><a class="menu" href="/">Home</a></li>
           <li><a class="menu" href="/capabilities">Capabilities</a></li>
           <li><a class="menu" href="/works">Works</a></li>
           <li><a class="menu" href="/studio">Studio</a></li>
@@ -145,7 +170,7 @@
             <a
               class="menu-contact underline-100"
               href="mailto:hello@blinkcreativestudio.com"
-              >hello@blinkcreativestudio.com</a
+              >""</a
             >
           </li>
         </ul>
@@ -153,46 +178,243 @@
     </nav>
     <!-- End nav  -->
 
-    <header
-      class="py-header pb-0 overflow-hidden"
-      id="events-header"
-      data-aos="fade-in"
-    >
-      <div class="text-start text-md-center">
-        <div class="row hero-banner">
-          <div class="col-7 col-sm-6 text-start main-logo-container">
-            <img
-              src="/assets/herspective/HerSpective Logo (1).svg"
-              alt="Her+Spective Art Fair March 25, 2023 9am to 5pm"
-            />
-          </div>
-          <div class="col-5 col-sm-6 main-image-container">
-            <img
-              src="/assets/herspective/BCS_HerSpective_MainBanner.png"
-              alt="Her+Spective Art Fair March 25, 2023 9am to 5pm"
-            />
+    <header>
+      <section class="py-header">
+        <div class="container">
+          <div class="row align-items-center">
+            <div
+              class="col-lg-6 col-12 text-center order-lg-1"
+              data-aos="fade-up"
+            >
+              <img
+                src="/assets/careers/Career_Page_HeroImage 1.jpg"
+                alt=""
+                class="w-100 main-img"
+              />
+            </div>
+            <div
+              class="col-lg-6 col-12 mt-lg-0 mt-3 text-center text-lg-start"
+              data-aos="fade-up"
+            >
+              <h1 class="careers-heading"><strong>Work in BCS</strong></h1>
+              <p class="careers-copy">
+                Join the creative hub of Blink Creative Studio, where innovation
+                meets imagination! Based in vibrant Los Baños, Laguna, we are a
+                dynamic multimedia company specializing in design, production,
+                and marketing. At Blink, we believe in the power of creativity
+                and collaboration to shape extraordinary experiences.
+              </p>
+
+              <div>
+                <button class="button-slanted see-open my-4">
+                  <span>
+                    <a href="/open-positions">SEE OPEN POSITIONS</a>
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </header>
 
-    <section class="container">
-      <div class="d-flex flex-column text-center justify-content-center">
-        <h2 class="mt-3" id="thank-you-modal-heading">Success!</h2>
-        <div class="modal-content lato" id="thank-you-modal-text">
-          Thank you for registering for the HER+SPECTIVE Art Fair as an
-          exhibitor. We have received your registration details and are excited
-          to have you as a participant in this event.
+    <section class="why-work">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-start text-sm-center mb-5" data-aos="fade-up">
+            <h2 class="careers-heading">Why work with us?</h2>
 
-          <p class="lato">
-            Go back to <a href="/" class="c-primary">homepage</a>
-          </p>
+            <ul>
+              <li>
+                Passionate Team: Join a dedicated team of creative strategists,
+                consultants, artists, storytellers, and technicians who trhive
+                on pushing boundaries and creating impactful work.
+              </li>
+              <li>
+                Collaborative Environment: Experience a workplace where
+                collaboration is not just encouraged but celebrated. We believe
+                in the strength of diverse perspectives coming together to
+                create something extraordinary.
+              </li>
+              <li>
+                Continuous Learning: Our commitment to growth is reflected in
+                our emphasis on continuous learning. At Blink, you'll have the
+                opportunity to expand your skills and stay at the forefront of
+                industry trends.
+              </li>
+              <li>
+                Exciting Projects: From digital marketing campaigns to film
+                production, our portfolio is diverse and always evolving. Be a
+                part of exciting projects that challenge and inspire you.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Start Prefooter  -->
-    <section class="tagline py-75 py-md-5">
+    <section class="perks">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-start text-sm-center mb-5" data-aos="fade-up">
+            <h2 class="careers-heading">
+              <strong>Perks</strong> and <strong>Benefits</strong>
+            </h2>
+          </div>
+
+          <div class="col-12" data-aos="fade-up">
+            <div class="perks-grid">
+              <div class="perks-item">
+                <svg width="120" height="120">
+                  <image
+                    href="/assets/careers/Benefits Packages Icon 1.svg"
+                    width="120"
+                    height="120"
+                  />
+                </svg>
+                <span>Benefits Package</span>
+              </div>
+              <div class="perks-item">
+                <svg width="120" height="120">
+                  <image
+                    href="/assets/careers/Benefits Packages Icon 1.svg"
+                    width="120"
+                    height="120"
+                  />
+                </svg>
+                <span>Professional Growth</span>
+              </div>
+              <div class="perks-item">
+                <svg width="120" height="120">
+                  <image
+                    href="/assets/careers/Benefits Packages Icon 1.svg"
+                    width="120"
+                    height="120"
+                  />
+                </svg>
+                <span>Inclusive Culture</span>
+              </div>
+              <div class="perks-item">
+                <svg width="120" height="120">
+                  <image
+                    href="/assets/careers/Benefits Packages Icon 1.svg"
+                    width="120"
+                    height="120"
+                  />
+                </svg>
+                <span>Competitive Salary</span>
+              </div>
+              <div class="perks-item">
+                <svg width="120" height="120">
+                  <image
+                    href="/assets/careers/Benefits Packages Icon 1.svg"
+                    width="120"
+                    height="120"
+                  />
+                </svg>
+                <span>Fun Staff Events</span>
+              </div>
+              <div class="perks-item">
+                <svg width="120" height="120">
+                  <image
+                    href="/assets/careers/Benefits Packages Icon 1.svg"
+                    width="120"
+                    height="120"
+                  />
+                </svg>
+                <span>Free Coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-75 our-people">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-start text-sm-center mb-5" data-aos="fade-up">
+            <h2 class="careers-heading">
+              The <strong>Coolest Kids</strong> on the Block
+            </h2>
+            <p>
+              At Blink, our collective of marketing experts and creative minds
+              hails from diverse backgrounds. Combined with our supportive think
+              tanks, this synergy fuels a spectrum of innovative strategies,
+              unlocking boundless possibilities.
+            </p>
+            <p>
+              We're excited to meet passionate individuals who share our vision
+              and values.
+            </p>
+            <p>
+              Ready to make your mark at Blink Creative Studio? Browse our
+              current opportunities and reach out to start the conversation.
+            </p>
+          </div>
+          <div class="group-photos">
+            <img src="/assets/careers/group1.jpg" />
+            <img src="/assets/careers/group2.jpg" />
+            <img src="/assets/careers/group3.jpg" />
+            <img src="/assets/careers/group4.jpg" />
+            <img src="/assets/careers/group5.jpg" />
+            <img src="/assets/careers/group6.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-75 spread-wings">
+      <div class="row">
+        <div class="col-12 text-start text-sm-center mb-5" data-aos="fade-up">
+          <h2 class="careers-heading">
+            Spread your wings with <strong>Blink</strong>
+          </h2>
+          <p>
+            At Blink Creative Studio, we believe in turning visions into
+            realities. Join us in pushing the boundaries of creativity!
+          </p>
+        </div>
+      </div>
+
+      <!-- <div class="jobs py-4 my-3">
+        <div class="container job-item">
+          <div>
+            <h3>Administrative Officer</h3>
+            <h4 class="mt-1 mb-3">In-House</h4>
+            <p>2F Left Wing, ES Plaza, Los Baños Laguna</p>
+          </div>
+          <button class="button-slanted white-btn job-btn">
+            <span> <a href="/AO">Learn more</a> </span>
+          </button>
+        </div>
+      </div> -->
+      <!-- <div class="jobs py-4 my-3">
+        <div class="container job-item">
+          <div>
+            <h3>Administrative Assistant</h3>
+            <h4 class="mt-1 mb-3">In-House</h4>
+            <p>2F Left Wing, ES Plaza, Los Baños Laguna</p>
+          </div>
+          <button class="button-slanted white-btn job-btn">
+            <span> <a href="/AA">Learn more</a> </span>
+          </button>
+        </div>
+      </div> -->
+      <div class="container my-4">
+        <div class="row justify-content-center">
+          <div class="col-auto">
+            <button class="button-slanted see-open my-4">
+              <span>
+                <a href="/open-positions">SEE OPEN POSITIONS</a>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tagline py-75 py-md-5 mt-5">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-5 offset-md-1 text-center">
@@ -209,7 +431,6 @@
         </div>
       </div>
     </section>
-    <!-- End Prefooter  -->
 
     <footer class="contacts py-75 pb-0" id="contact">
       <div class="container">
@@ -228,6 +449,7 @@
               ><span>Zoom or Coffee Date?</span></a
             >
 
+            <!-- // Link to appointments page -->
             <!-- <a href="/appointments">
                         <button class="button-slanted white-btn open-modal-button" id="book-now-btn-footer">
                             <span>Book an Appointment Now</span>

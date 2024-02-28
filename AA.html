@@ -2,20 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>HER+SPECTIVE Art Fair | Blink Creative Studio</title>
-
-    <!-- <meta name="description"
-        content="Blink Creative Studio is a multimedia company in Laguna, Philippines. We convey and connect through campaigns, photos, videos, and strategies."> -->
+    <title>Open Positions | Multimedia Company</title>
 
     <meta
       name="description"
-      content="HER+SPECTIVE is an empowering art fair celebrating Women's Month and championing gender equality."
-    />
-    <meta
-      name="keywords"
-      content="Her, Spective, Her+Spective, art, fair, March 25, 2023"
+      content="Blink Creative Studio is a multimedia company in Laguna, Philippines. We convey and connect through campaigns, photos, videos, and strategies."
     />
     <meta property="og:title" content="Blink Creative Studio" />
     <meta
@@ -71,7 +64,39 @@
     </script>
   </head>
 
-  <body class="overflow">
+  <body>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "440186012822465");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v16.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
     <!-- Start Nav  -->
     <nav class="navbar" data-aos="fade-in" data-aos-delay="50">
       <div class="container d-flex justify-content-between align-items-center">
@@ -121,7 +146,7 @@
 
         <ul id="navbar-list" class="navbar-list d-flex" aria-hidden="true">
           <li class="hide-desktop"><span class="menu-span">Menu</span></li>
-          <li class="menu"><a class="menu" href="/">Home</a></li>
+          <li class="active"><a class="menu" href="/">Home</a></li>
           <li><a class="menu" href="/capabilities">Capabilities</a></li>
           <li><a class="menu" href="/works">Works</a></li>
           <li><a class="menu" href="/studio">Studio</a></li>
@@ -145,7 +170,7 @@
             <a
               class="menu-contact underline-100"
               href="mailto:hello@blinkcreativestudio.com"
-              >hello@blinkcreativestudio.com</a
+              >""</a
             >
           </li>
         </ul>
@@ -153,46 +178,166 @@
     </nav>
     <!-- End nav  -->
 
-    <header
-      class="py-header pb-0 overflow-hidden"
-      id="events-header"
-      data-aos="fade-in"
-    >
-      <div class="text-start text-md-center">
-        <div class="row hero-banner">
-          <div class="col-7 col-sm-6 text-start main-logo-container">
-            <img
-              src="/assets/herspective/HerSpective Logo (1).svg"
-              alt="Her+Spective Art Fair March 25, 2023 9am to 5pm"
-            />
+    <header>
+      <section class="job-board container">
+        <div class="job-board-header" >
+
+          <div>
+            <h2>Job Board / Administrative Officer</h2>
+            <h1>Administrative Officer</h1>
+            <p class="job-loc"><strong>In-House</strong></p>
+            <p>2F Left Wing, ES Plaza, Los Baños, Laguna</p>
+            <p class="job-time">FULL TIME. FEBRUARY 27, 2024</p>
           </div>
-          <div class="col-5 col-sm-6 main-image-container">
-            <img
-              src="/assets/herspective/BCS_HerSpective_MainBanner.png"
-              alt="Her+Spective Art Fair March 25, 2023 9am to 5pm"
-            />
+
+          <div class="application-ctas" >
+            <div class="application-btn" >
+              <button class="button-slanted" ><span>Submit</span></button>
+            </div>
+            <p>Know someone who would be a perfect fit? Let them know!</p>
+
+            <div class="application-share" >
+              <svg class="positions-toggle" width="24" height="24">
+                <image
+                  href="/assets/fb.svg"
+                  width="24"
+                  height="24"
+                />
+              </svg>
+              <svg class="positions-toggle" width="24" height="24">
+                <image
+                  href="/assets/messenger.svg"
+                  width="24"
+                  height="24"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
-
-    <section class="container">
-      <div class="d-flex flex-column text-center justify-content-center">
-        <h2 class="mt-3" id="thank-you-modal-heading">Success!</h2>
-        <div class="modal-content lato" id="thank-you-modal-text">
-          Thank you for registering for the HER+SPECTIVE Art Fair as an
-          exhibitor. We have received your registration details and are excited
-          to have you as a participant in this event.
-
-          <p class="lato">
-            Go back to <a href="/" class="c-primary">homepage</a>
+      </header>
+        <div class="container job-description mt-5">
+          <h4 class="my-3"><strong> WHO ARE WE </strong></h4>
+          <p class="mb-5">
+            We are Blink Creative Studio – your premier destination for
+            innovative multimedia solutions. Located in Los Baños, Laguna, we
+            are a dynamic team of creative minds specializing in design,
+            production, and marketing. With a reputation for artistry and
+            effective outcomes, we collaborate closely with clients across
+            diverse industries, exceeding expectations at every milestone. Our
+            commitment to excellence extends as we expand our already diverse
+            creative portfolio.
           </p>
-        </div>
-      </div>
-    </section>
+          <h4 class="mb-3"><strong> ABOUT THE POSITION </strong></h4>
+          <p class="mb-5">
+            Are you a dynamic individual with a passion for organizational
+            efficiency and a keen eye for detail? Look no further! We’re on the
+            lookout for talented professionals to join our team as an 
+            Administrative Assistant!
+          </p>
+          <h5 class="mb-3"><strong> Job Summary:</strong></h5>
+          <p class="mb-5">
+            As an Admin/HR Assistant, your responsibilities typically include
+            coordinating administrative tasks, managing schedules, assisting in
+            HR processess such as payroll, punctuality, and tardiness, overseeing
+            incentives, maintaining employess records (201 files), and facilitating
+            communication between departments. Additionally you may be involved in 
+            organizing events, handling Facebook and social media accounts, managing 
+            office supplies, handling inventory, and supporting day-to-day operations, 
+            especially in the studio, such as during photoshoots. This includes 
+            responding to inquiries, addressing client-related tasks, and performing 
+            any other duties required by your supervisor.
+          </p>
 
-    <!-- Start Prefooter  -->
-    <section class="tagline py-75 py-md-5">
+          <h5 class="mb-3"><strong> Key Responsibilities:</strong></h5>
+          <div>
+            <h5 class="mb-3"><strong> Administrative Support:</strong></h5>
+            <ul>
+              <li>
+                Perform general office tasks such as managing phone calls, emails, 
+                facebook page and correspondence.
+              </li>
+              <li>
+                Coordinate and schedule meetings, appointments, photoshoots and interviews.
+              </li>
+              <li>Maintain and organize office files, documents, and records.</li>
+            </ul>
+            <h5 class="my-3"><strong> Human Resources Coordination:</strong></h5>
+            <ul>
+              <li>
+                Maintain employee records, ensuring accuracy and confidentiality.
+              </li>
+              <li>
+                Assist with HR-related inquiries and act as a liaison between 
+                employees and HR department.
+              </li>
+            </ul>
+            <h5 class="my-3"><strong> Employee Relations:</strong></h5>
+            <ul>
+              <li>
+                Assist in organizing employee engagement activities and events.
+              </li>
+              <li>
+                Handle routine employee inquiries and provide support in resolving issues.
+              </li>
+              <li>
+                Assist with the administration of employee benefits and leave requests.
+              </li>
+            </ul>
+            <h5 class="my-3">
+              <strong>Data Management:</strong>
+            </h5>
+            <ul>
+              <li>
+                Input and maintain accurate employee data in HR systems.
+              </li>
+              <li>
+                Prepare reports related to HR metrics, such as attendance and turnover.
+              </li>
+            </ul>
+            <h5 class="my-3">
+              <strong>Administrative Coordination for Multimedia Projects:</strong>
+            </h5>
+            <ul>
+              <li>
+                Support multimedia project coordination by assisting in scheduling, 
+                resource management, and documentation.
+              </li>
+              <li>Liaise with various departments to ensure smooth communication and workflow.</li>
+            </ul>
+            <h5 class="my-3">
+              <strong>Technology Proficiency:</strong>
+            </h5>
+            <ul>
+              <li>
+                Utilize office software, including word processing, spreadsheet, 
+                and presentation tools.
+              </li>
+              <li>Familiarity with HR software and multimedia project management tools.</li>
+              <li>Event Planning:</li>
+              <li>Assist in organizing company events, workshops, and training sessions.</li>
+            </ul>
+            <h5 class="my-3">
+              <strong>Confidentiality and Compliance:</strong>
+            </h5>
+            <ul>
+              <li>
+                Handle sensitive HR information with discretion and adhere to compliance requirements.
+              </li>
+              <li>Stay informed about HR policies, procedures, and legal requirements.</li>
+              <li>A Bachelor's degree in Business Administration, Human Resources, or a related field.</li>
+              <li>Proven experience as an administrative assistant or HR assistant.</li>
+              <li>Familiarity with multimedia industry processes and project management is a plus.</li>
+              <li>Strong organizational and time-management skills.</li>
+              <li>Excellent verbal and written communication skills.</li>
+              <li>Proficiency in Microsoft Office Suite and HR software.</li>
+              <li>Ability to handle sensitive information with confidentiality.</li>
+            </ul>
+          
+          </div>
+        </div>
+      </section>
+    
+    <section class="tagline py-75 py-md-5 mt-5">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-5 offset-md-1 text-center">
@@ -209,7 +354,6 @@
         </div>
       </div>
     </section>
-    <!-- End Prefooter  -->
 
     <footer class="contacts py-75 pb-0" id="contact">
       <div class="container">
@@ -228,6 +372,7 @@
               ><span>Zoom or Coffee Date?</span></a
             >
 
+            <!-- // Link to appointments page -->
             <!-- <a href="/appointments">
                         <button class="button-slanted white-btn open-modal-button" id="book-now-btn-footer">
                             <span>Book an Appointment Now</span>
