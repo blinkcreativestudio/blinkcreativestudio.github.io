@@ -2974,6 +2974,13 @@ div.mce_inline_error {
   border: 3px solid var(--gray-50);
 }
 
+.job-btn:hover {
+  background-color: white;
+}
+.job-btn:hover a {
+  color: var(--primary-color);
+}
+
 .job-btn a {
   color: white;
 }
