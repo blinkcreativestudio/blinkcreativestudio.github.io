@@ -43,7 +43,7 @@ function sendFormData(event) {
         .send("service_p2z9f58", "template_tp6s7dq", formData)
         .then(function (response) {
           console.log("Email sent successfully:", response);
-          alert("Application submitted successfully!");
+          window.location.href = "/applicant-thankyou";
         })
         .catch(function (error) {
           console.error("Email sending failed:", error);
