@@ -9,6 +9,7 @@ function sendFormData(event) {
   event.preventDefault();
 
   const formData = {
+    position: "Admin Officer",
     firstName: document.getElementById("firstName").value,
     lastName: document.getElementById("lastName").value,
     email: document.getElementById("email").value,
@@ -34,12 +35,12 @@ function sendFormData(event) {
     );
 
   Promise.all([uploadResume, uploadCoverLetter])
-    .then((results) => {
+    .then(() => {
       formData.resumeUrl = `https://gkiiaelkmdctjlyxtsnq.supabase.co/storage/v1/object/public/resumes/${formData.firstName}-${formData.lastName}-resume.pdf`;
       formData.coverLetterUrl = `https://gkiiaelkmdctjlyxtsnq.supabase.co/storage/v1/object/public/resumes/${formData.firstName}-${formData.lastName}-cover_letter.pdf`;
 
       emailjs
-        .send("service_vgtaguq", "template_pc048ph", formData)
+        .send("service_p2z9f58", "template_tp6s7dq", formData)
         .then(function (response) {
           console.log("Email sent successfully:", response);
           alert("Application submitted successfully!");
@@ -57,3 +58,12 @@ function sendFormData(event) {
 
 const form = document.getElementById("jobApplicationForm");
 form.addEventListener("submit", sendFormData);
+
+const formData = {
+  firstName: document.getElementById("firstName").value,
+  lastName: document.getElementById("lastName").value,
+  email: document.getElementById("email").value,
+  contact: document.getElementById("contact").value,
+  address: document.getElementById("address").value,
+  portfolioLink: document.getElementById("portfolioLink").value,
+};
