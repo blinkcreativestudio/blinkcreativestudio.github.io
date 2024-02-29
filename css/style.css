@@ -2897,12 +2897,15 @@ div.mce_inline_error {
   justify-items: center;
   align-items: center;
   transform: skew(-20deg);
-  gap: 16px;
+
   padding-right: 24px;
 }
 
 .perks-item image {
   transform: skew(20deg);
+  background-color: red;
+  object-fit: cover;
+  width: 70%;
 }
 .perks-item span {
   transform: skew(20deg);
