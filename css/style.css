@@ -3151,9 +3151,8 @@ div.mce_inline_error {
   margin-bottom: 24px;
 }
 
-.apply-grid input:nth-of-type(3),
 .apply-grid input:nth-of-type(5) {
-  grid-column: span 2; /* Make email and address inputs span across all columns */
+  grid-column: span 2;
 }
 
 .apply-files {
