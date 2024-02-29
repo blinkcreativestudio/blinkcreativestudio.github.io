@@ -2897,12 +2897,15 @@ div.mce_inline_error {
   justify-items: center;
   align-items: center;
   transform: skew(-20deg);
-  gap: 16px;
+
   padding-right: 24px;
 }
 
 .perks-item image {
   transform: skew(20deg);
+  background-color: red;
+  object-fit: cover;
+  width: 70%;
 }
 .perks-item span {
   transform: skew(20deg);
@@ -2978,6 +2981,17 @@ div.mce_inline_error {
 /* CAREERS PAGE END */
 
 /* JOBS POSTING */
+.qualifications-list li {
+  margin-left: 32px;
+}
+.responsibilities-list li {
+  margin-left: 32px;
+}
+.key-respons {
+  font-size: 18px;
+  font-weight: bolder;
+  color: var(--primary-color);
+}
 .positions-toggle {
   cursor: pointer;
   transition: transform 0.4s;
@@ -2998,9 +3012,9 @@ div.mce_inline_error {
   gap: 24px;
   background-color: var(--primary-color);
   overflow: hidden;
-  max-height: 0;
-  opacity: 0; /* Initially set opacity to 0 */
-  transform: scaleY(0);
+  max-height: 1000px;
+  opacity: 1;
+  transform: scaleY(1);
   transform-origin: top;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
     transform 0.3s;
@@ -3104,6 +3118,37 @@ div.mce_inline_error {
   color: white;
 }
 
+.applicant-ty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.applicant-ty button:hover a {
+  color: var(--primary-color);
+}
+
+.applicant-ty h1 {
+  color: var(--primary-color);
+}
+.applicant-ty p {
+  color: var(--gray-700);
+  margin-bottom: 24px;
+}
+
+.applicant-ty a {
+  color: white;
+  margin-bottom: 24px;
+}
+
+.return-home {
+  display: block;
+  color: var(--gray-500) !important;
+  margin-top: 16px;
+}
+
 /* JOBS POSTING END */
 
 /* APPLICATION FORM */
@@ -3137,9 +3182,8 @@ div.mce_inline_error {
   margin-bottom: 24px;
 }
 
-.apply-grid input:nth-of-type(3),
 .apply-grid input:nth-of-type(5) {
-  grid-column: span 2; /* Make email and address inputs span across all columns */
+  grid-column: span 2;
 }
 
 .apply-files {
