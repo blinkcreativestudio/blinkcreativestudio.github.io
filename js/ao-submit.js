@@ -36,8 +36,12 @@ function sendFormData(event) {
 
   Promise.all([uploadResume, uploadCoverLetter])
     .then(() => {
-      formData.resumeUrl = `https://gkiiaelkmdctjlyxtsnq.supabase.co/storage/v1/object/public/resumes/${formData.firstName}-${formData.lastName}-resume.pdf`;
-      formData.coverLetterUrl = `https://gkiiaelkmdctjlyxtsnq.supabase.co/storage/v1/object/public/resumes/${formData.firstName}-${formData.lastName}-cover_letter.pdf`;
+      formData.resumeUrl = `https://gkiiaelkmdctjlyxtsnq.supabase.co/storage/v1/object/public/resumes/${
+        formData.firstName
+      }-${formData.lastName}-resume-${Date.now()}.pdf`;
+      formData.coverLetterUrl = `https://gkiiaelkmdctjlyxtsnq.supabase.co/storage/v1/object/public/resumes/${
+        formData.firstName
+      }-${formData.lastName}-cover_letter-${Date.now()}.pdf`;
 
       emailjs
         .send("service_p2z9f58", "template_tp6s7dq", formData)
