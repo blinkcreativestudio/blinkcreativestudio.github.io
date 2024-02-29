@@ -58,12 +58,3 @@ function sendFormData(event) {
 
 const form = document.getElementById("jobApplicationForm");
 form.addEventListener("submit", sendFormData);
-
-const formData = {
-  firstName: document.getElementById("firstName").value,
-  lastName: document.getElementById("lastName").value,
-  email: document.getElementById("email").value,
-  contact: document.getElementById("contact").value,
-  address: document.getElementById("address").value,
-  portfolioLink: document.getElementById("portfolioLink").value,
-};
