@@ -3118,6 +3118,37 @@ div.mce_inline_error {
   color: white;
 }
 
+.applicant-ty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.applicant-ty button:hover a {
+  color: var(--primary-color);
+}
+
+.applicant-ty h1 {
+  color: var(--primary-color);
+}
+.applicant-ty p {
+  color: var(--gray-700);
+  margin-bottom: 24px;
+}
+
+.applicant-ty a {
+  color: white;
+  margin-bottom: 24px;
+}
+
+.return-home {
+  display: block;
+  color: var(--gray-500) !important;
+  margin-top: 16px;
+}
+
 /* JOBS POSTING END */
 
 /* APPLICATION FORM */
