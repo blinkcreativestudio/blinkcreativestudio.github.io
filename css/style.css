@@ -2978,6 +2978,17 @@ div.mce_inline_error {
 /* CAREERS PAGE END */
 
 /* JOBS POSTING */
+.qualifications-list li {
+  margin-left: 32px;
+}
+.responsibilities-list li {
+  margin-left: 32px;
+}
+.key-respons {
+  font-size: 18px;
+  font-weight: bolder;
+  color: var(--primary-color);
+}
 .positions-toggle {
   cursor: pointer;
   transition: transform 0.4s;
@@ -2998,9 +3009,9 @@ div.mce_inline_error {
   gap: 24px;
   background-color: var(--primary-color);
   overflow: hidden;
-  max-height: 0;
-  opacity: 0; /* Initially set opacity to 0 */
-  transform: scaleY(0);
+  max-height: 1000px;
+  opacity: 1;
+  transform: scaleY(1);
   transform-origin: top;
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
     transform 0.3s;

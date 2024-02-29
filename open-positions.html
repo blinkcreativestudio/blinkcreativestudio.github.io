@@ -146,11 +146,12 @@
 
         <ul id="navbar-list" class="navbar-list d-flex" aria-hidden="true">
           <li class="hide-desktop"><span class="menu-span">Menu</span></li>
-          <li class="active"><a class="menu" href="/">Home</a></li>
+          <li><a class="menu" href="/">Home</a></li>
           <li><a class="menu" href="/capabilities">Capabilities</a></li>
           <li><a class="menu" href="/works">Works</a></li>
           <li><a class="menu" href="/studio">Studio</a></li>
           <li><a class="menu" href="/events">Events</a></li>
+          <li class="active"><a class="menu" href="/careers">Careers</a></li>
           <!-- <li><a class="menu" id="menu-contact" href="/events">Events</a></li> -->
 
           <a class="menu" id="menu-contact" href="/appointments">
@@ -557,25 +558,26 @@
     <script src="/js/main.js" type="module"></script>
 
     <script>
-      let expanded = false;
+      let expanded = true;
       const toggleBtn = document.querySelector(".positions-toggle");
 
       const positions = document.querySelector(".dept-positions");
       toggleBtn.addEventListener("click", () => {
-        if (!expanded) {
+        if (expanded) {
+          positions.style.maxHeight = "0";
+          positions.style.opacity = 0;
+          positions.style.transform = "scaleY(0)";
+
+          toggleBtn.style.transform = "rotate(-90deg)";
+          expanded = false;
+        } else {
           positions.style.maxHeight =
             "1000px"; /* Set a value larger than the content's actual height */
           positions.style.opacity = 1;
           positions.style.transform = "scaleY(1)";
-          toggleBtn.style.transform = "rotate(-90deg)";
+          toggleBtn.style.transform = "rotate(0)";
 
           expanded = true;
-        } else {
-          positions.style.maxHeight = "0";
-          positions.style.opacity = 0;
-          positions.style.transform = "scaleY(0)";
-          toggleBtn.style.transform = "rotate(0)";
-          expanded = false;
         }
       });
     </script>
