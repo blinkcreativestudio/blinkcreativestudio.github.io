@@ -178,141 +178,51 @@
     </nav>
     <!-- End nav  -->
 
-    <header>
-      <section class="py-header positions">
-        <h1 class="container">Open Positions</h1>
+    <header class="py-header pb-4 container">
+      <div class="breadcrumbs">
+        <a href="/open-positions">Job Board</a>
+        <span>/</span>
+        <a href="/AD">Art Director</a>
+        <span>/</span>
+        <a href="/AD-submit"><strong>Apply</strong></a>
+      </div>
 
-        <div class="departments">
-          <div class="dept" id="admin">
-            <div class="container">
-              <h2 class="mb-2">Administrative</h2>
-              <p class="num-posting">
-                <svg class="positions-toggle" width="14" height="14">
-                  <image
-                    href="/assets/positions-collapse.svg"
-                    width="14"
-                    height="14"
-                  />
-                </svg>
-                2 JOBS POSTING
-              </p>
-            </div>
-            <div class="dept-positions">
-              <!-- <div class="container mt-3 py-4 job-item position-item">
-                <div>
-                  <h3>Administrative Officer</h3>
-                  <h4 class="mt-1 mb-3">In-House</h4>
-                  <p>2F Left Wing, ES Plaza, Los Baños Laguna</p>
-                </div>
-                <a href="/AO">
-                  <button class="button-slanted job-btn">
-                    <span>Learn more </span>
-                  </button>
-                </a>
-              </div> -->
-              <div class="container mt-3 py-4 job-item position-item">
-                <div>
-                  <h3>Administrative Assistant</h3>
-                  <h4 class="mt-1 mb-3">In-House</h4>
-                  <p>2F Left Wing, ES Plaza, Los Baños Laguna</p>
-                </div>
-                <a href="/AA">
-                  <button class="button-slanted job-btn">
-                    <span> Learn more </span>
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="dept" id="creatives">
-            <div class="container">
-              <h2 class="mb-2">Creatives</h2>
-              <p class="num-posting">
-                <svg width="14" height="14">
-                  <image
-                    href="/assets/positions-expand.svg"
-                    width="14"
-                    height="14"
-                  />
-                </svg>
-                2 JOBS POSTING
-              </p>
-            </div>
-            <div class="dept-positions">
-              <div class="container mt-3 py-4 job-item position-item">
-                <div>
-                  <h3>Creative Director</h3>
-                  <h4 class="mt-1 mb-3">In-House</h4>
-                  <p>2F Left Wing, ES Plaza, Los Baños Laguna</p>
-                </div>
-                <a href="/CD">
-                  <button class="button-slanted job-btn">
-                    <span>Learn more </span>
-                  </button>
-                </a>
-              </div>
-              <div class="container mt-3 py-4 job-item position-item">
-                <div>
-                  <h3>Art Director</h3>
-                  <h4 class="mt-1 mb-3">In-House</h4>
-                  <p>2F Left Wing, ES Plaza, Los Baños Laguna</p>
-                </div>
-                <a href="/AD.html">
-                  <button class="button-slanted job-btn">
-                    <span>Learn more </span>
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="dept" id="creatives">
-            <div class="container">
-              <h2 class="mb-2">Finance</h2>
-              <p class="num-posting">
-                <svg width="14" height="14">
-                  <image
-                    href="/assets/positions-expand.svg"
-                    width="14"
-                    height="14"
-                  />
-                </svg>
-                0 JOBS POSTING
-              </p>
-            </div>
-          </div>
-          <div class="dept" id="creatives">
-            <div class="container">
-              <h2 class="mb-2">Development</h2>
-              <p class="num-posting">
-                <svg width="14" height="14">
-                  <image
-                    href="/assets/positions-expand.svg"
-                    width="14"
-                    height="14"
-                  />
-                </svg>
-                0 JOBS POSTING
-              </p>
-            </div>
-          </div>
-          <div class="dept" id="creatives">
-            <div class="container">
-              <h2 class="mb-2">External</h2>
-              <p class="num-posting">
-                <svg width="14" height="14">
-                  <image
-                    href="/assets/positions-expand.svg"
-                    width="14"
-                    height="14"
-                  />
-                </svg>
-                0 JOBS POSTING
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <h1 class="application-header">Art Director</h1>
     </header>
+
+    <section class="application container">
+      <p class="apply-form-header">Personal Information</p>
+      <form id="jobApplicationForm" action="#">
+        <div class="apply-grid">
+          <input required id="firstName" placeholder="First name*" />
+          <input required id="lastName" placeholder="Last Name*" />
+          <input required id="email" placeholder="Email*" />
+          <input required id="contact" placeholder="Contact Number*" />
+          <input required id="address" placeholder="Address*" />
+        </div>
+
+        <p class="mb-3 mt-2">Professional details</p>
+        <div class="apply-files">
+          <div>
+            <label for="resume">Resume*</label>
+            <input type="file" id="resume" accept="application/pdf" />
+          </div>
+          <div>
+            <label for="coverLetter">Cover Letter*</label>
+            <input type="file" id="coverLetter" accept="application/pdf" />
+          </div>
+
+          <!-- <input id="portfolioLink" placeholder="Link to portfolio" /> -->
+        </div>
+
+        <div class="apply-submit-btn">
+          <button type="submit" class="mt-4 button-slanted">
+            <span>Submit</span>
+          </button>
+        </div>
+      </form>
+    </section>
+
     <section class="tagline py-75 py-md-5 mt-5">
       <div class="container">
         <div class="row">
@@ -330,7 +240,6 @@
         </div>
       </div>
     </section>
-
     <footer class="contacts py-75 pb-0" id="contact">
       <div class="container">
         <div class="row">
@@ -575,37 +484,69 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="/js/aa-submit.js"></script>
     <!-- AOS -->
     <script src="/dist/aos/aos.js"></script>
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- MAIN -->
     <script src="/js/main.js" type="module"></script>
-
-    <script>
-      let expanded = true;
-      const toggleBtn = document.querySelector(".positions-toggle");
-
-      const positions = document.querySelector(".dept-positions");
-      toggleBtn.addEventListener("click", () => {
-        if (expanded) {
-          positions.style.maxHeight = "0";
-          positions.style.opacity = 0;
-          positions.style.transform = "scaleY(0)";
-
-          toggleBtn.style.transform = "rotate(-90deg)";
-          expanded = false;
-        } else {
-          positions.style.maxHeight =
-            "1000px"; /* Set a value larger than the content's actual height */
-          positions.style.opacity = 1;
-          positions.style.transform = "scaleY(1)";
-          toggleBtn.style.transform = "rotate(0)";
-
-          expanded = true;
-        }
-      });
-    </script>
   </body>
 </html>
+
+<!-- MAIL CHIMP API KEY: 06ca517d30d778c78da6d82a163a7217-us1 -->
+
+<!-- 
+
+<script src="https://cdn.jsdelivr.net/npm/mailchimp-api-v3"></script>
+<script>
+  const form = document.getElementById('jobApplicationForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const firstName = formData.get('firstName');
+    const lastName = formData.get('lastName');
+    const email = formData.get('email');
+    const contact = formData.get('contact');
+    const address = formData.get('address');
+    const resumeFile = formData.get('resume');
+    const coverLetterFile = formData.get('coverLetter');
+    const portfolioLink = formData.get('portfolioLink');
+
+    const mailchimp = new Mailchimp('YOUR_API_KEY');
+    const listId = 'YOUR_LIST_ID';
+
+    try {
+      // Upload files to Mailchimp file manager
+      const resumeUrl = await mailchimp.uploadFile(resumeFile, 'application/pdf');
+      const coverLetterUrl = await mailchimp.uploadFile(coverLetterFile, 'application/pdf');
+
+      // Add subscriber to Mailchimp audience
+      const response = await mailchimp.post(`/lists/${listId}/members`, {
+        email_address: email,
+        status: 'subscribed',
+        merge_fields: {
+          FNAME: firstName,
+          LNAME: lastName,
+          PHONE: contact,
+          ADDRESS: address,
+          PORTFOLIO: portfolioLink,
+          RESUME: resumeUrl,
+          COVER_LETTER: coverLetterUrl,
+        },
+      });
+
+      console.log('Email sent successfully:', response);
+      alert('Email sent successfully!');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Error sending email. Please try again.');
+    }
+  });
+</script>
+
+ -->
