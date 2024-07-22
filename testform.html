@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Loading screen element -->
+    <div id="loadingScreen">Uploading... Please wait.</div>
+
+    <!-- Success modal element -->
+    <div id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="closeModal" class="close-button">&times;</span>
+                Success
+            </div>
+            <div class="modal-body">Upload successful!</div>
+            <div class="modal-footer">
+                <!-- No need to change here as it remains a button -->
+                <!-- <button class="close-button" id="closeModalButton">Close</button> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- This is an input element for entering a name -->
+    <input type="text" id="nameInput" placeholder="Enter your name" required>
+    <!-- This is an input element for entering a mobile number -->
+    <input type="text" id="mobileInput" placeholder="Enter your mobile number" required>
+    <!-- This is an input element for entering an email address -->
+    <input type="email" id="emailInput" placeholder="Enter your email" required>
+
+    <!-- Container for file input and reference number input -->
+    <div class="file-container">
+        <!-- This is an input element for entering a reference number -->
+        <input type="text" id="referenceInput" placeholder="Enter your reference number" required>
+        <!-- This is an input element of type file, which allows the user to select an image -->
+        <input type="file" accept="image/*" id="fileInput" required>
+    </div>
+
+    <!-- This is a dropdown element for selecting a department -->
+    <select id="departmentInput" required>
+        <option value="">Select your department</option>
+        <option value="HR">HR</option>
+        <option value="Finance">Finance</option>
+        <option value="IT">IT</option>
+        <option value="Marketing">Marketing</option>
+    </select>
+
+    <!-- This is the checkbox group for multiple selections with corresponding prices -->
+    <div id="checkboxGroup">
+        <div class="checkbox-item">
+            <label><input type="checkbox" value="Option1"> 1 Photo Marching 5R print size</label>
+            <span>$5</span>
+        </div>
+        <div class="checkbox-item">
+            <label><input type="checkbox" value="Option2"> 2 Photos Marching and Receiving 5R print size</label>
+            <span>$8</span>
+        </div>
+        <div class="checkbox-item">
+            <label><input type="checkbox" value="Option3"> Digital Copy</label>
+            <span>$3</span>
+        </div>
+    </div>
+
+    <!-- This is a button element for submitting the form -->
+    <button id="submitButton">Upload</button>
+
+    <!-- This is an image element with an empty src and alt attribute -->
+    <img src="" alt="">
+
+    <!-- This is a script tag, which contains JavaScript code -->
+    <script>
+        let url = "https://script.google.com/macros/s/AKfycbzJWQhtcX-daNN-OulMx2sMkuQGiT3miL70NuW7NXfvkrUrxXke7TP5XDX7J0picAWbAA/exec";
+        let file = document.getElementById("fileInput");
+        let nameInput = document.getElementById("nameInput");
+        let mobileInput = document.getElementById("mobileInput");
+        let emailInput = document.getElementById("emailInput");
+        let referenceInput = document.getElementById("referenceInput");
+        let departmentInput = document.getElementById("departmentInput");
+        let checkboxGroup = document.getElementById("checkboxGroup");
+        let img = document.querySelector("img");
+        let submitButton = document.getElementById("submitButton");
+        let loadingScreen = document.getElementById("loadingScreen");
+        let successModal = document.getElementById("successModal");
+        let closeModalButton = document.getElementById("closeModal");
+
+        let prices = {
+            Option1: 5,
+            Option2: 8,
+            Option3: 3
+        };
+
+        function updateTotalPrice() {
+            let selectedCheckboxes = Array.from(checkboxGroup.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
+            let selectedPrices = selectedCheckboxes.map(option => prices[option]);
+            let totalPrice = selectedPrices.reduce((acc, curr) => acc + curr, 0);
+            console.log("Total Price:", totalPrice);
+            return totalPrice;
+        }
+
+        checkboxGroup.addEventListener('change', updateTotalPrice);
+
+        submitButton.addEventListener('click', () => {
+            // Check if all required fields are filled
+            if (!nameInput.value || !mobileInput.value || !emailInput.value ||
+                !referenceInput.value || !file.files.length ||
+                !departmentInput.value) {
+                alert("Please fill out all required fields.");
+                return;
+            }
+
+            loadingScreen.style.display = 'flex'; // Show the loading screen
+
+            let fr = new FileReader();
+            fr.addEventListener('loadend', () => {
+                let res = fr.result;
+                img.src = res;
+                let spt = res.split("base64,")[1];
+                let selectedCheckboxes = Array.from(checkboxGroup.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
+                let totalPrice = updateTotalPrice();
+
+                let obj = {
+                    base64: spt,
+                    type: file.files[0].type,
+                    name: file.files[0].name,
+                    userName: nameInput.value,
+                    mobileNumber: mobileInput.value,
+                    email: emailInput.value,
+                    referenceNumber: referenceInput.value,
+                    department: departmentInput.value,
+                    selectedOptions: selectedCheckboxes,
+                    totalPrice: totalPrice
+                };
+                fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify(obj)
+                })
+                    .then(r => r.text())
+                    .then(data => {
+                        console.log(data);
+                        loadingScreen.style.display = 'none'; // Hide the loading screen
+                        successModal.style.display = 'flex'; // Show the success modal
+
+                        // Reset all fields
+                        nameInput.value = '';
+                        mobileInput.value = '';
+                        emailInput.value = '';
+                        referenceInput.value = '';
+                        file.value = '';
+                        departmentInput.value = '';
+                        Array.from(checkboxGroup.querySelectorAll('input[type="checkbox"]')).forEach(checkbox => checkbox.checked = false);
+                        img.src = ''; // Clear the image src
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        loadingScreen.style.display = 'none'; // Hide the loading screen in case of an error
+                        alert("Upload failed. Please try again."); // Show error message
+                    });
+            });
+            fr.readAsDataURL(file.files[0]);
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            successModal.style.display = 'none'; // Hide the success modal
+        });
+    </script>
+</body>
+
+</html>

@@ -3357,3 +3357,714 @@ div.mce_inline_error {
     transform: unset;
   }
 }
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 190px;
+  background-color: #f5f5f5;
+  gap: 40px;
+}
+
+.event-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  padding: 20px;
+  width: 950px;
+  height: 180px;
+  background-color: #a30a24;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+  color: #e1e1e1;
+  text-decoration: none;
+}
+
+.event-section:nth-child(even) {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.event-section:nth-child(even) .event-heading,
+.event-section:nth-child(even) .event-sub {
+  text-align: left;
+  margin-left: 350px;
+}
+
+
+.event-section:hover {
+  background-color: #f2f2f2;
+}
+
+.event-section:hover .event-heading {
+  color: #a30a24;
+}
+
+.event-section:hover .event-sub {
+  color: #000;
+}
+
+.event-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.event-heading {
+  font-size: 2.14rem;
+  font-weight: 700;
+}
+
+.event-sub {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.event-image1 {
+  position: absolute;
+  right: -28px;
+  width: 290px;
+  height: auto;
+  z-index: 0;
+  margin-top: -65px;
+}
+
+.event-image2 {
+  position: absolute;
+  left: -72px;
+  width: 360px;
+  height: auto;
+  z-index: 0;
+  margin-top: -42px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .events-container {
+    padding: 100px 50px;
+    gap: 20px;
+  }
+
+  .event-section {
+    width: calc(100% - 40px);
+    height: auto;
+    margin: 0;
+    padding: 15px 15px 0 15px;
+    text-align: center;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .event-heading {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .event-sub {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .event-image1,
+  .event-image2 {
+    position: static;
+    width: 90%;
+    height: auto;
+    margin-top: 15px;
+  }
+
+    .event-section:nth-child(even) .event-heading,
+    .event-section:nth-child(even) .event-sub {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+  .event-section:hover {
+    background-color: #f2f2f2;
+  }
+
+  .event-section:hover .event-heading {
+    color: #a30a24;
+  }
+
+  .event-section:hover .event-sub {
+    color: #000;
+  }
+}
+
+.upcoming-square {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 200px;
+  height: 50px;
+  background-color: #f2f2f2;
+  border: solid 2px #f2f2f2;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upcoming-text {
+  color: #a30a24;
+}
+
+.commencement-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.text-container {
+  position: absolute;
+  top: 24%;
+  left: 8%;
+  color: #ffffff;
+}
+
+
+
+.commencement-title {
+  font-size: 3.1vw;
+}
+
+.commencement-sub {
+  font-size: 1.9vw;
+}
+
+.commencement-image {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+
+    #hero-image-mobile {
+      display: block;
+    }
+        .text-container {
+          top: auto;
+          bottom: 8%;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          width: 100%;
+
+        }
+
+                .commencement-title {
+                  font-size: 3.4vw;
+                }
+        
+                .commencement-sub {
+                  font-size: 2.2vw;
+                }
+}
+
+.exponent {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
+.instruction-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.instruction-form-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  /* padding: 0 50px 0 50px; */
+}
+
+.instruction-content {
+  padding: 50px;
+}
+
+.instruction-heading {
+  color: #a30a24;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-right: 380px;
+}
+
+.instruction-ol {
+  counter-reset: item;
+  list-style: none;
+  margin-left: 45px;
+  color: #000000;
+}
+.instruction-ol li {
+  counter-increment: item;
+  position: relative;
+  padding: 15px;
+  margin-top: 20px;
+}
+    
+.instruction-ol li::before {
+  content: counter(item);
+  color: #ffffff;
+  font-weight: bold;
+  position: absolute;
+  font-size: 1.1em;
+  left: -2.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2em;
+  height: 2em;
+  background-color: #a30a24;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+    
+.instruction-highlights {
+  font-weight: 700;
+  color: #a30a24;
+}
+
+.commencement-line-horizontal {
+  width: 100%;
+  height: 1px;
+  background-color: #808080;
+  margin-top: 20px;
+} 
+
+.commencement-line-horizontal-form {
+  width: 100%;
+  height: 1px;
+  background-color: #808080;
+}
+
+.commencement-line-vertical {
+  width: 1px;
+  height: 370px;
+  background-color: #DBDBDB;
+  margin-top: 20px;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+    .commencement-button button {
+      background-color: #a30a24;
+      color: white;
+      border: none;
+      padding: 10px 35px;
+      font-size: 16px;
+      cursor: pointer;
+      transform: skew(-20deg);
+      position: relative;
+      overflow: hidden;
+      margin-top: 40px;
+      margin-left: 20px;
+    }
+  
+    .commencement-button button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -10px;
+      right: -10px;
+      background-color: inherit;
+      transform: skew(20deg);
+      z-index: -1;
+    }
+  
+    .commencement-button button span {
+      display: inline-block;
+      transform: skew(20deg);
+    }
+  
+    .commencement-button button:hover {
+      background-color: transparent;
+      border: 2px solid #a30a24;
+      color: #a30a24;
+    }
+
+    /* start of modal */
+    /* .commencement-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      overflow: auto;
+      text-align: center;
+    }
+  
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      position: relative;
+      text-align: center;
+    }
+  
+    .close {
+      color: #aaa;
+      position: absolute;
+      top: 5px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+.payment-heading {
+  color: #a30a24;
+  font-size: 2.14rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 2rem;
+} */
+
+.gcash-img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.gcash-qr-details {
+  display: flex;
+  margin-top: 20px;
+  gap: 30px;
+  /* text-align: center; */
+}
+
+.centered-text {
+  margin-top: 160px;
+}
+
+.gcash-bt {
+  width: 20%;
+  height: auto;
+  background-image: url("../assets/Commencement/GCash_logo.png");
+  background-color: #f2f2f2;
+  background-size: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #808080;
+  padding: 10px 35px;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.gcash-bt.active {
+  background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gcash-bt:hover {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gu-style {
+  width: 70px;
+    height: auto;
+}
+
+.ub-bt {
+  width: 20%;
+    height: auto;
+    background-image: url("../assets/Commencement/UB_logo.png");
+    background-color: #f2f2f2;
+    background-size: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #808080;
+    padding: 10px 35px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.ub-bt.active {
+  background-color: #ffffff;
+}
+
+.ub-bt:hover {
+  background-color: #ffffff;
+}
+
+.payment-bt {
+  /* padding: 10px; */
+  margin-top: 10px;
+} 
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 15px 0px 15px 0px;
+}
+
+.input-field {
+  padding: 10px;
+}
+
+.attach-field {
+  padding: 10px;
+  /* background-color: ; */
+  border: 1px solid #000000;
+}
+
+#fullname,
+#mobile,
+#email,
+#department {
+  width: 100%;
+  border: 1px solid #808080;
+  background-color: #ffffff;
+}
+
+#department {
+  width: 100%;
+  border: 1px solid #808080;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+#commencemet-package {
+  width: 100%;
+  border: 1px solid #808080;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.package-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.package-item label {
+  flex-basis: 70%;
+  margin-right: 10px;
+}
+
+.package-item .package-price {
+  flex-basis: 30%;
+  text-align: right;
+  font-weight: bold;
+}
+
+.package-label {
+  font-weight: 700;
+}
+
+.commencement-button-submit {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.commencement-receipt {
+ margin: 30px 0 0 0;
+}
+
+.receipt-label {
+  font-weight: 700;
+}
+
+#loadingScreen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+#successModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-modal-content {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.success-modal-header {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #a30a24;
+  font-weight: 700;
+  padding: 5px 35px 0 35px;
+}
+
+.success-modal-body {
+  font-size: 22px;
+  color: #000000;
+  padding: 15px;
+}
+
+.success-modal-footer {
+  margin-top: 20px;
+}
+
+.success-close-button {
+  background: #a30a24;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#checkboxGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+#checkboxGroup .checkbox-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#newCheckboxGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+#newCheckboxGroup .newCheckbox-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {  .instruction-content {
+    width: 100%;
+  }
+
+  .instruction-heading {
+    font-size: 22px;
+    margin: 0px;
+  }
+
+    .instruction-form-section {
+      margin-top: 50px;
+    }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .input-field,
+  .attach-field,
+  select,
+  button {
+    width: 100%;
+  }
+
+  .checkbox-item,
+  .newCheckbox-item {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .payment-bt {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .commencement-receipt {
+    margin-top: 10px;
+  }
+
+  .commencement-button-submit {
+    text-align: center;
+  }
+
+    .gcash-qr-details {
+      flex-direction: column;
+      align-items: center;
+    }
+
+        .centered-text {
+          margin: 10px 0 20px 0;
+        }
+  
+    /* Ensure the image size stays the same */
+    .gcash-img {
+      width: 100%;
+      /* Keep the same size */
+    }
+        .ub-bt,
+        .gcash-bt {
+          width: 40%;
+          height: auto;
+        }
+}
+
