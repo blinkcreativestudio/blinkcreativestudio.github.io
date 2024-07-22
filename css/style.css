@@ -3666,6 +3666,20 @@ div.mce_inline_error {
 
 .totalamount {
   font-weight: 700;
+  margin: 0;
+}
+
+.price-highlights {
+  font-weight: 700;
+  color: #a30a24;
+}
+
+.amount-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 141%;
 }
 
 .commencement-line-vertical {
@@ -3688,7 +3702,7 @@ div.mce_inline_error {
       transform: skew(-20deg);
       position: relative;
       overflow: hidden;
-      margin-top: 40px;
+      margin: 40px 0 40px 0; 
       margin-left: 20px;
     }
   
@@ -3711,8 +3725,16 @@ div.mce_inline_error {
   
     .commencement-button button:hover {
       background-color: transparent;
-      border: 2px solid #a30a24;
-      color: #a30a24;
+        color: #a30a24;
+        border: 2px solid #a30a24;
+        padding: 8px 35px;
+        font-size: 16px;
+        cursor: pointer;
+        transform: skew(-20deg);
+        position: relative;
+        overflow: hidden;
+        margin: 40px 0 40px 0;
+        margin-left: 20px;
     }
 
     /* start of modal */

@@ -367,7 +367,7 @@
                 <div class="flex-container">
                     <input class="input-field" type="text" id="fullname" name="fullname" placeholder="Full Name (Last, First Name, Middle Initial)*"
                         required>
-                    <input class="input-field" type="tel" id="mobile" name="mobile" placeholder="Mobile No.*" required>
+                    <input class="input-field" type="tel" id="mobile" name="mobile" placeholder="Mobile No.*" required pattern="[0-9]{11}">
                 </div>
                 <input class="input-field" type="email" id="email" name="email" placeholder="Email*" required><br><br>
                 <label for="department">College or Department:</label><br>
@@ -422,7 +422,10 @@
                     </div>
                 </div><br><br>
                 <div class="commencement-line-horizontal-form"></div><br>
-                <p id="totalCost" class="totalamount">Total Amount: Php 0</p><br>
+                <div class="amount-div">
+                    <p class="totalamount">Total Amount:</p><br>
+                    <p id="totalCost" class="price-highlights">Php 0.00</p><br>
+                </div>
                 <div class="commencement-line-horizontal-form"></div><br>
                 <p>Your payment method</p>
                 <div class="bank-div">
@@ -435,7 +438,7 @@
                     <button type="button" class="ub-bt" onclick="setActive('unionbank')">UnionBank</button>
                 </div>
                 <div class="gcash-qr-details">
-                    <img id="qrImage" src="/assets/Commencement/BCS_CASH_QR_1.png" alt="qrimage" class="gcash-img" />
+                    <img id="qrImage" src="/assets/Commencement/BCS_GCASH_QR_2.png" alt="qrimage" class="gcash-img" />
                     <h3 id="paymentDetails" class="centered-text">AN****O LI**S A.<br>+63 949 993 7470</h3>
                 </div>
                 <!-- File upload section -->
@@ -1509,7 +1512,7 @@
                 $("input[name='photo-packages[]']:checked").each(function () {
                     total += parseInt($(this).data("price"));
                 });
-                $("#totalCost").text("Total Amount: Php " + total + ".00");
+                $("#totalCost").text("Php" + total + ".00");
             }
 
             // Calculate total on checkbox change
@@ -1531,7 +1534,7 @@
 
             if (buttonType === 'gcash') {
                 document.querySelector('.gcash-bt').classList.add('active');
-                document.getElementById('qrImage').src = '/assets/Commencement/BCS_CASH_QR_1.png'; // Set Gcash QR image
+                document.getElementById('qrImage').src = '/assets/Commencement/BCS_GCASH_QR_2.png'; // Set Gcash QR image
                 document.getElementById('paymentDetails').innerHTML = 'AN****O LI**S A.<br>+63 949 993 7470'; // Update details for Gcash
             } else if (buttonType === 'unionbank') {
                 document.querySelector('.ub-bt').classList.add('active');
@@ -1553,7 +1556,7 @@
                         }
                     });
 
-                    totalCostElement.textContent = `Total Amount: Php ${totalAmount.toFixed(2)}`;
+                    totalCostElement.textContent = `Php ${totalAmount.toFixed(2)}`;
                 }
 
                 // Attach event listeners to checkboxes
@@ -1567,7 +1570,7 @@
     <!-- - This is a script tag, which contains JavaScript code -->
     <script>
         // This line declares a variable called "url" and assigns it a value of "Api_Endpoint_Url"
-        let url = "https://script.google.com/macros/s/AKfycbwBo9j788_2HXvEXSa5uYByssyAL0EwC7UrueR01-ApM8UpocgOhdVTQsQ3zXJ9t2M71g/exec";
+        let url = "https://script.google.com/macros/s/AKfycbwOi-diOafE3OPymQ5unF9ug6u8QMpprUTEbH6f_iRBGnuKKi0HQyy21SKmKp4QaIGyqg/exec";
         // This line declares a variable called "file" and assigns it the value of the file input element
         let file = document.getElementById("file");
         // This line declares a variable called "nameInput" and assigns it the value of the name input element
@@ -1665,6 +1668,7 @@
                 successModal.style.display = 'none'; // Hide the success modal
             });
     </script>
+
 
 </body>
 
