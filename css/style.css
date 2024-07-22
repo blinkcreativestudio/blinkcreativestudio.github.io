@@ -3664,6 +3664,10 @@ div.mce_inline_error {
   background-color: #808080;
 }
 
+.totalamount {
+  font-weight: 700;
+}
+
 .commencement-line-vertical {
   width: 1px;
   height: 370px;
