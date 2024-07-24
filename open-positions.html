@@ -229,13 +229,17 @@
               <h2 class="mb-2">Creatives</h2>
               <p class="num-posting">
                 <svg class="positions-toggle" width="14" height="14">
-                  <image href="/assets/positions-collapse.svg" width="14" height="14" />
+                  <image
+                    href="/assets/positions-collapse.svg"
+                    width="14"
+                    height="14"
+                  />
                 </svg>
-                3 JOBS POSTING
+                2 JOBS POSTING
               </p>
             </div>
             <div class="dept-positions">
-              <div class="container mt-3 py-4 job-item position-item">
+              <!-- <div class="container mt-3 py-4 job-item position-item">
                 <div>
                   <h3>Creative Director</h3>
                   <h4 class="mt-1 mb-3">In-House</h4>
@@ -246,7 +250,7 @@
                     <span>Learn more </span>
                   </button>
                 </a>
-              </div>
+              </div> -->
               <div class="container mt-3 py-4 job-item position-item">
                 <div>
                   <h3>Art Director</h3>
@@ -278,13 +282,17 @@
               <h2 class="mb-2">Finance</h2>
               <p class="num-posting">
                 <svg class="positions-toggle" width="14" height="14">
-                  <image href="/assets/positions-collapse.svg" width="14" height="14" />
+                  <image
+                    href="/assets/positions-collapse.svg"
+                    width="14"
+                    height="14"
+                  />
                 </svg>
-                1 JOB POSTING
+                0 JOB POSTING
               </p>
             </div>
             <div class="dept-positions">
-              <div class="container mt-3 py-4 job-item position-item">
+              <!-- <div class="container mt-3 py-4 job-item position-item">
                 <div>
                   <h3>Finance Officer</h3>
                   <h4 class="mt-1 mb-3">In-House</h4>
@@ -295,39 +303,68 @@
                     <span> Learn more </span>
                   </button>
                 </a>
-              </div>
+              </div> -->
             </div>
           </div>
-          <div class="dept" id="creatives">
+          <div class="dept" id="development">
             <div class="container">
               <h2 class="mb-2">Development</h2>
               <p class="num-posting">
-                <svg width="14" height="14">
+                <svg class="positions-toggle" width="14" height="14">
                   <image
-                    href="/assets/positions-expand.svg"
+                    href="/assets/positions-collapse.svg"
                     width="14"
                     height="14"
                   />
                 </svg>
-                0 JOBS POSTING
+                0 JOB POSTING
               </p>
             </div>
+            <div class="dept-positions">
+              <!-- <div class="container mt-3 py-4 job-item position-item">
+                <div>
+                  <h3>Finance Officer</h3>
+                  <h4 class="mt-1 mb-3">In-House</h4>
+                  <p>2F Left Wing, ES Plaza, Los Baños Laguna</p>
+                </div>
+                <a href="/FO">
+                  <button class="button-slanted job-btn">
+                    <span> Learn more </span>
+                  </button>
+                </a>
+              </div> -->
+            </div>
           </div>
-          <div class="dept" id="creatives">
+          <div class="dept" id="external">
             <div class="container">
               <h2 class="mb-2">External</h2>
               <p class="num-posting">
-                <svg width="14" height="14">
+                <svg class="positions-toggle" width="14" height="14">
                   <image
-                    href="/assets/positions-expand.svg"
+                    href="/assets/positions-collapse.svg"
                     width="14"
                     height="14"
                   />
                 </svg>
-                0 JOBS POSTING
+                0 JOB POSTING
               </p>
             </div>
+            <div class="dept-positions">
+              <!-- <div class="container mt-3 py-4 job-item position-item">
+                <div>
+                  <h3>Finance Officer</h3>
+                  <h4 class="mt-1 mb-3">In-House</h4>
+                  <p>2F Left Wing, ES Plaza, Los Baños Laguna</p>
+                </div>
+                <a href="/FO">
+                  <button class="button-slanted job-btn">
+                    <span> Learn more </span>
+                  </button>
+                </a>
+              </div> -->
+            </div>
           </div>
+          
         </div>
       </section>
     </header>
@@ -602,27 +639,27 @@
     <script src="/js/main.js" type="module"></script>
 
     <script>
-      let expanded = true;
-      const toggleBtn = document.querySelector(".positions-toggle");
+      document.querySelectorAll(".dept").forEach((dept) => {
+        let expanded = true;
+        const toggleBtn = dept.querySelector(".positions-toggle");
+        const positions = dept.querySelector(".dept-positions");
 
-      const positions = document.querySelector(".dept-positions");
-      toggleBtn.addEventListener("click", () => {
-        if (expanded) {
-          positions.style.maxHeight = "0";
-          positions.style.opacity = 0;
-          positions.style.transform = "scaleY(0)";
-
-          toggleBtn.style.transform = "rotate(-90deg)";
-          expanded = false;
-        } else {
-          positions.style.maxHeight =
-            "1000px"; /* Set a value larger than the content's actual height */
-          positions.style.opacity = 1;
-          positions.style.transform = "scaleY(1)";
-          toggleBtn.style.transform = "rotate(0)";
-
-          expanded = true;
-        }
+        toggleBtn.addEventListener("click", () => {
+          if (expanded) {
+            positions.style.maxHeight = "0";
+            positions.style.opacity = 0;
+            positions.style.transform = "scaleY(0)";
+            toggleBtn.style.transform = "rotate(-90deg)";
+            expanded = false;
+          } else {
+            positions.style.maxHeight =
+              "1000px"; /* Set a value larger than the content's actual height */
+            positions.style.opacity = 1;
+            positions.style.transform = "scaleY(1)";
+            toggleBtn.style.transform = "rotate(0)";
+            expanded = true;
+          }
+        });
       });
     </script>
   </body>
