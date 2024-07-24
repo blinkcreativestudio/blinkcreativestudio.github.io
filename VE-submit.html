@@ -599,17 +599,64 @@
         let successModal = document.getElementById("successModal");
         let closeModalButton = document.getElementById("closeModal");
 
+        const validateInputs = () => {
+          let isValid = true;
+
+          if (!firstNameInput.value) {
+            firstNameInput.style.border = "1px solid red";
+            isValid = false;
+          } else {
+            firstNameInput.style.border = "1px solid black";
+          }
+
+          if (!lastNameInput.value) {
+            lastNameInput.style.border = "1px solid red";
+            isValid = false;
+          } else {
+            lastNameInput.style.border = "1px solid black";
+          }
+
+          if (!emailInput.value) {
+            emailInput.style.border = "1px solid red";
+            isValid = false;
+          } else {
+            emailInput.style.border = "1px solid black";
+          }
+
+          if (!contactNumberInput.value) {
+            contactNumberInput.style.border = "1px solid red";
+            isValid = false;
+          } else {
+            contactNumberInput.style.border = "1px solid black";
+          }
+
+          if (!addressInput.value) {
+            addressInput.style.border = "1px solid red";
+            isValid = false;
+          } else {
+            addressInput.style.border = "1px solid black";
+          }
+
+          if (!resumeFile.files.length) {
+            resumeFile.style.border = "1px solid red";
+            isValid = false;
+          } else {
+            resumeFile.style.border = "1px solid black";
+          }
+
+          if (!coverLetterFile.files.length) {
+            coverLetterFile.style.border = "1px solid red";
+            isValid = false;
+          } else {
+            coverLetterFile.style.border = "1px solid black";
+          }
+
+          return isValid;
+        };
+
         submitButton.addEventListener("click", () => {
-          if (
-            !firstNameInput.value ||
-            !lastNameInput.value ||
-            !emailInput.value ||
-            !contactNumberInput.value ||
-            !addressInput.value ||
-            !resumeFile.files.length ||
-            !coverLetterFile.files.length
-          ) {
-            alert("Please fill out all required fields.");
+          if (!validateInputs()) {
+            // alert("Please fill out all required fields.");
             return;
           }
 
