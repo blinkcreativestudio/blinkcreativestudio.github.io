@@ -1449,7 +1449,7 @@
                 const mobileImageSrc = '/assets/Commencement/BCS_UPLB_52nd_CE_MobileHero_copy.jpg'; // Path to the mobile-specific image
 
                 function updateHeroImage() {
-                    if (window.innerWidth < 768) {
+                    if (window.innerWidth <= 768) {
                         heroImage.src = mobileImageSrc;
                     } else {
                         heroImage.src = '/assets/Commencement/BCS_UPLB_52nd_CE_HERO_copy.jpg';
