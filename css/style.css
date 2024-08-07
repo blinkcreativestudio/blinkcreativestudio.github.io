@@ -3386,13 +3386,13 @@ div.mce_inline_error {
   text-decoration: none;
 }
 
-.event-section:nth-child(even) {
+.event-section:nth-child(odd) {
   align-items: flex-start;
   text-align: left;
 }
 
-.event-section:nth-child(even) .event-heading,
-.event-section:nth-child(even) .event-sub {
+.event-section:nth-child(odd) .event-heading,
+.event-section:nth-child(odd) .event-sub {
   text-align: left;
   margin-left: 350px;
 }
@@ -3494,8 +3494,8 @@ div.mce_inline_error {
     margin-top: 15px;
   }
 
-    .event-section:nth-child(even) .event-heading,
-    .event-section:nth-child(even) .event-sub {
+    .event-section:nth-child(odd) .event-heading,
+    .event-section:nth-child(odd) .event-sub {
       text-align: center;
       margin: 0 auto;
     }
