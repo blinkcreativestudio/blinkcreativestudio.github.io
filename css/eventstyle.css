@@ -1,0 +1,400 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+        "Source Han Sans CN", sans-serif;
+}
+
+/* .main-container {
+    overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+    box-sizing: border-box;
+} */
+
+input,
+select,
+textarea,
+button {
+    outline: 0;
+}
+
+.main-container {
+    position: relative;
+    width: 1024px;
+    height: auto;
+    /* margin: 0 auto; */
+    /* font-size: 0px; */
+    /* background: #ffffff; */
+    /* overflow: hidden; */
+}
+
+.upcoming-events {
+    display: block;
+    position: relative;
+    height: 44px;
+    margin: 24px 0 0 118px;
+    color: #a30a24;
+    font-family: Inter, var(--default-font-family);
+    font-size: 2.14rem;
+    font-weight: 700;
+    line-height: 43.568px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.line {
+    position: relative;
+    width: 1080px;
+    height: 2px;
+    margin: 38px 0 0 123px;
+    /* background: url(./assets/images/caa28222-4225-49df-9e33-02cd2a347ff7.png) no-repeat center; */
+    background-size: cover;
+    background-color: #000000;
+    z-index: 1;
+}
+
+.flex-row-ed {
+    position: relative;
+    width: 1538px;
+    height: 312px;
+    margin: 76px 0 0 123px;
+    z-index: 28;
+}
+
+.aug {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 44px;
+    top: 0;
+    left: 0;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 2.14rem;
+    font-weight: 700;
+    line-height: 43.568px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 24;
+}
+
+.rectangle {
+    position: absolute;
+    width: 473px;
+    height: 304px;
+    top: 8px;
+    left: 143px;
+    background: url(../assets/EventsTab/vivamax.jpg) no-repeat center;
+    background-size: cover;
+    z-index: 23;
+}
+
+.private-tutor {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 77px;
+    top: 8px;
+    left: 684px;
+    color: #000000;
+    font-family: Aileron, var(--default-font-family);
+    font-size: 2.14rem;
+    font-weight: 700;
+    line-height: 76.8px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 21;
+}
+
+.number-27 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 77px;
+    top: 41px;
+    left: 0;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 77px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 25;
+}
+
+.lorem-ipsum {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    width: 549px;
+    height: 88px;
+    top: 103px;
+    left: 689px;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 43.568px;
+    text-align: left;
+    z-index: 22;
+}
+
+.view-event-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 39px;
+    top: 225px;
+    left: 689px;
+    color: #a30a24;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38.727px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 27;
+}
+
+
+.line-1 {
+    position: relative;
+        width: 1080px;
+        height: 2px;
+        margin: 38px 0 0 123px;
+        /* background: url(./assets/images/caa28222-4225-49df-9e33-02cd2a347ff7.png) no-repeat center; */
+        background-size: cover;
+        background-color: #000000;
+        z-index: 1;
+}
+
+.flex-row-e {
+    position: relative;
+    width: 1534px;
+    height: 312px;
+    margin: 80px 0 0 121px;
+    z-index: 19;
+}
+
+.aug-2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 44px;
+    top: 0;
+    left: 0;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 2.14rem;
+    font-weight: 700;
+    line-height: 43.568px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 14;
+}
+
+.rectangle-3 {
+    position: absolute;
+        width: 473px;
+        height: 304px;
+        top: 8px;
+        left: 142px;
+        background: url(../assets/EventsTab/BCS_Senior_Soiree_Thumbnail.jpg) no-repeat center;
+        background-size: cover;
+        z-index: 7;
+}
+
+/* .bcs-senior-soiree-poster {
+    position: relative;
+    width: 390px;
+    height: 255px;
+    margin: 24px 0 0 41px;
+    background: url(../assets/EventsTab/night.png) no-repeat center;
+    background-size: cover;
+    z-index: 29;
+} */
+
+.a-night-to-remember {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 77px;
+    top: 8px;
+    left: 684px;
+    color: #000000;
+    font-family: Aileron, var(--default-font-family);
+    font-size: 2.14rem;
+    font-weight: 700;
+    line-height: 76.8px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 11;
+}
+
+.text-30 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 77px;
+    top: 41px;
+    left: 0;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 77px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 15;
+}
+
+.dinner-dance-party {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 44px;
+    top: 103px;
+    left: 689px;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 43.568px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 12;
+}
+
+.view-event-details-4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 39px;
+    top: 225px;
+    left: 689px;
+    color: #a30a24;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38.727px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 18;
+}
+
+
+.line-6 {
+    position: relative;
+        width: 1080px;
+        height: 2px;
+        margin: 38px 0 0 123px;
+        /* background: url(./assets/images/caa28222-4225-49df-9e33-02cd2a347ff7.png) no-repeat center; */
+        background-size: cover;
+        background-color: #000000;
+        z-index: 1;
+}
+
+.flex-row-b {
+    position: relative;
+    width: 1538px;
+    height: 312px;
+    margin: 80px 0 0 123px;
+    z-index: 16;
+}
+
+.dash {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 44px;
+    top: 0;
+    left: 0;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43.568px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 16;
+}
+
+.rectangle-7 {
+    position: absolute;
+    width: 473px;
+    height: 304px;
+    top: 8px;
+    left: 142px;
+    background: url(../assets/EventsTab/herspective.jpg) no-repeat center;
+    background-size: cover;
+    z-index: 7;
+}
+
+.her-spective {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 77px;
+    top: 8px;
+    left: 683px;
+    color: #000000;
+    font-family: Aileron, var(--default-font-family);
+    font-size: 2.14rem;
+    font-weight: 700;
+    line-height: 76.8px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.watch-out-women {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 44px;
+    top: 103px;
+    left: 688px;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 43.568px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 6;
+}
+
+.view-event-details-8 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 39px;
+    top: 225px;
+    left: 688px;
+    color: #a30a24;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 38.727px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 9;
+}
