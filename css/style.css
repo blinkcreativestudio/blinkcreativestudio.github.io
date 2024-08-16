@@ -3362,7 +3362,7 @@ div.mce_inline_error {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   padding: 140px 300px 100px 300px;
   background-color: #f5f5f5;
   gap: 40px;
