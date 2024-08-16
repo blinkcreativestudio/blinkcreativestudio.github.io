@@ -1,0 +1,48 @@
+.vivamax-content-container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.private-title {
+    color: #a30a24;
+    font-size: 2.14rem;
+}
+
+.ratedr-sub-span {
+    font-size: 1.14rem;
+}
+
+.sub-span-light {
+    color: #808080;
+    font-weight: 300;
+}
+
+.line-viva {
+    position: relative;
+    width: 1600px;
+    height: 1px;
+    margin: 32px 0 0 0;
+    /* background: url(./assets/images/caa28222-4225-49df-9e33-02cd2a347ff7.png) no-repeat center; */
+    /* background-size: cover; */
+    background-color: #000000;
+    z-index: 1;
+}
+
+.viva-title {
+    margin-top: 44px;
+}
+
+.viva-details {
+    margin-top: 44px;
+}
+
+.viva-sub-details {
+    font-size: 1.34rem;
+}
+
+.name-underline {
+    text-decoration: underline;
+}
