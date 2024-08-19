@@ -110,8 +110,14 @@
         width: 360px;
     }
 
+    .event-month {
+        font-size: 1rem;
+        color: #ababab;
+        font-weight: 400;
+    }
+    
     .date-number {
-        font-size: 2.5rem;
+        font-size: 1rem;
         /* Reduce font size */
     }
 
@@ -122,6 +128,7 @@
     
     .events-date-container {
         text-align: left;
+        margin: 12px 0 12px 0;
     }
 
     .upcoming-title,
