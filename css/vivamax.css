@@ -1,9 +1,9 @@
 .vivamax-content-container {
-    width: 100%;
+    width: 1024px;
     padding-right: var(--bs-gutter-x, 0.75rem);
     padding-left: var(--bs-gutter-x, 0.75rem);
-    margin-right: 100px;
-    margin-left: 100px;
+    margin-right: auto;
+        margin-left: auto;
 }
 
 .private-title {
@@ -12,7 +12,7 @@
 }
 
 .ratedr-sub-span {
-    font-size: 1.14rem;
+    font-size: 1.34rem;
 }
 
 .sub-span-light {
@@ -22,11 +22,9 @@
 
 .line-viva {
     position: relative;
-    width: 1600px;
+    width: 100%;
     height: 1px;
     margin: 32px 0 0 0;
-    /* background: url(./assets/images/caa28222-4225-49df-9e33-02cd2a347ff7.png) no-repeat center; */
-    /* background-size: cover; */
     background-color: #000000;
     z-index: 1;
 }
@@ -37,12 +35,113 @@
 
 .viva-details {
     margin-top: 44px;
+    color: #212121;
 }
 
 .viva-sub-details {
-    font-size: 1.34rem;
+    font-size: 15px;
 }
 
 .name-underline {
     text-decoration: underline;
+}
+
+.thin-text {
+    font-weight: 200;
+}
+
+.viva-trailer {
+    margin-top: 44px;
+    font-size: 1.34rem;
+    color: #a30a24;
+    text-decoration: underline;
+}
+
+.viva-behind {
+    margin-top: 44px;
+    margin-bottom: 140px;
+}
+
+.viva-bts {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* Ensures the video does not overflow */
+}
+
+.viva-bts video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 40px;
+    /* Ensures the video covers the container without stretching */
+}
+
+
+/* For Mobile Devices - 480px */
+@media (max-width: 480px) {
+    .vivamax-content-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .private-title {
+        font-size: 1.8rem;
+    }
+
+    .ratedr-sub-span {
+        font-size: 1.2rem;
+    }
+
+    .viva-trailer,
+    .viva-title,
+    .viva-details,
+    .viva-behind {
+        margin-top: 32px;
+    }
+}
+
+/* For Tablets - 834px */
+@media (max-width: 834px) {
+    .vivamax-content-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .private-title {
+        font-size: 2rem;
+    }
+
+    .ratedr-sub-span {
+        font-size: 1.25rem;
+    }
+
+    .viva-trailer,
+    .viva-title,
+    .viva-details,
+    .viva-behind {
+        margin-top: 40px;
+    }
+}
+
+/* For Laptops - 1440px */
+@media (min-width: 1440px) {
+    .vivamax-content-container {
+        width: 1024px;
+    }
+
+    .private-title {
+        font-size: 2.14rem;
+    }
+
+    .ratedr-sub-span {
+        font-size: 1.34rem;
+    }
+
+    .viva-trailer,
+    .viva-title,
+    .viva-details,
+    .viva-behind {
+        margin-top: 44px;
+    }
 }
