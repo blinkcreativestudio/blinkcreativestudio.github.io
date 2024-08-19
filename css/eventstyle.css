@@ -1,58 +1,27 @@
-:root {
-    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-        "Source Han Sans CN", sans-serif;
-}
-
-/* .main-container {
-    overflow: hidden;
-}
-
-.main-container,
-.main-container * {
-    box-sizing: border-box;
-} */
-
-input,
-select,
-textarea,
-button {
-    outline: 0;
-}
-
-
-
 
 
 /*my code*/
 
 .container-event {
     position: relative;
-    width: 1000px;
 }
 
 .line {
     position: relative;
-    width: 1000px;
+    /* width: 1000px; */
     height: 2px;
     margin: 32px 0 0 0;
-    /* background: url(./assets/images/caa28222-4225-49df-9e33-02cd2a347ff7.png) no-repeat center; */
-    /* background-size: cover; */
     background-color: #000000;
     z-index: 1;
 }
 
 .per-events-container {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 32px;
-    /* Adjust the gap between grid items if needed */
-    padding: 16px;
-    /* Optional padding inside the container */
+    grid-template-columns: minmax(5%, 1fr) 47% 35%;
+    text-wrap: wrap;
+    gap: 16px;
+    padding: 16px 0 0 0;
     grid-auto-flow: dense;
-    /* Helps to fill empty spaces if content varies in size */
-    /* background-color: #a30a24; */
 }
 
 .events-date-container {
@@ -60,7 +29,7 @@ button {
 }
 
 .herspective-image {
-    margin-left: 32px;
+    /* margin-left: 32px; */
 }
 
 .date-number {
@@ -73,7 +42,6 @@ button {
     align-items: start;
     justify-content: center;
     text-align: start;
-    /* gap: 32px; */
 }
 
 .events-title {
@@ -97,4 +65,75 @@ button {
     color: #a30a24;
     text-decoration: none;
     margin-top: 80px;
+}
+
+.viva-image {
+    /* width: 100%; */
+}
+
+/* .event-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+@media (max-width: 1560px) {
+    .per-events-container {
+        grid-template-columns: minmax(5%, 1fr) 47% 35%;
+        grid-auto-flow: column;
+    }
+
+    .viva-image {
+        width: 95%;
+    }
+        
+}
+@media (max-width: 1240px) {
+    .per-events-container {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+        width: 450px;
+    }
+
+        .viva-image {
+            width: 100%;
+        }
+        
+}
+
+/* Additional media query for screens below 480px */
+@media (max-width: 480px) {
+    .per-events-container {
+        grid-template-columns: 1fr;
+        padding: 8px;
+        text-align: center;
+        width: 360px;
+    }
+
+    .date-number {
+        font-size: 2.5rem;
+        /* Reduce font size */
+    }
+
+    .events-title {
+        font-size: 1.5rem;
+        /* Reduce title size */
+    }
+    
+    .events-date-container {
+        text-align: left;
+    }
+
+    .upcoming-title,
+    .ratedr-span {
+        font-size: 1.2rem;
+    }
+
+    .link-deco {
+        margin-top: 40px;
+        /* Adjust margin */
+    }
+    .viva-image {
+        width: 100%;
+    }
 }

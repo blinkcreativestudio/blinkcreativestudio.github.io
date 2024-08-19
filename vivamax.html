@@ -537,28 +537,62 @@
               <span class="name-underline">VJ VERA</span><br /><br />
             </h4>
           </div>
-          <div>
-            <h4>Director: <span>Ryan Evangelista</span></h4>
-            <h4>Writer: <span>Randy Q. Villanueva</span></h4>
+          <div class="viva-sub-details">
+            <h4>Director: <span class="thin-text">Ryan Evangelista</span></h4>
+            <h4>Writer: <span class="thin-text">Randy Q. Villanueva</span></h4>
             <h4>
               Line Producer:
-              <span>Blink Creative Studio and Nice One Productions</span>
+              <span class="thin-text"
+                >Blink Creative Studio and Nice One Productions</span
+              >
             </h4>
           </div>
-          <div>
-            <p>
+          <div class="viva-details">
+            <p class="viva-sub-details">
               Parental Advisory: <br />This content contains mature themes and
               language that are not suitable for some audiences.
             </p>
           </div>
-          <a href="">
-            <h6>Watch Trailer</h6>
+          <a href="https://www.vivamax.net/movie/T99838#/extra">
+            <h6 class="viva-trailer">Watch Trailer</h6>
           </a>
-          <div>
-            <h1>Behind the Scenes</h1>
-            <video id="banner-video" autoplay muted loop>
-              <source src="/assets/herspective/WebBanner.mp4" />
-            </video>
+          <div class="viva-behind">
+            <h1 class="private-title">Behind the Scenes</h1>
+            <div class="row hero-banner viva-bts">
+              <video id="banner-video" autoplay loop>
+                <source src="./assets/vivamax/Final_BCS_BTS_PRIVATE_TUTOR.mp4" />
+              </video>
+            </div>
+
+            <!-- <div class="row hero-banner viva-bts">
+              <div class="thumb" onclick="" data-video-id="workVideo4">
+                <div class="vid-icon" style="margin-top: 70px;" onclick="">
+                  <svg width="60" height="60">
+                    <image
+                      href="/assets/works/Play_Button.svg"
+                      width="60"
+                      height="60"
+                    />
+                  </svg>
+                </div>
+                <video
+                  poster="/assets/vivamax/vivamaxbanner.jpg"
+                  class="thumb-video va-bottom"
+                  id="workVideo4"
+                  preload="metadata"
+                  width="100%"
+                  loop
+                  playsinline
+                  onclick=""
+                >
+                  <source
+                    src="/assets/vivamax/BCS_BTS_PRIVATE_TUTOR.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -1552,7 +1586,7 @@
     </script>
 
     <!-- swap video src based on viewport width -->
-    <script>
+    <!-- <script>
       function adjustVideoSource() {
         const video = document.getElementById("banner-video");
 
@@ -1573,6 +1607,98 @@
       // Run the function on page load and when the window is resized
       window.addEventListener("load", adjustVideoSource);
       window.addEventListener("resize", adjustVideoSource);
+    </script> -->
+    <script type="text/javascript">
+      // ISOTOPE JS
+      $(document).ready(function () {
+        $(".projects").isotope({
+          itemSelector: ".project-item",
+        });
+      });
+
+      $(".works .btn-filter").click(function () {
+        $(".works .btn-filter").removeClass("active");
+        $(this).addClass("active");
+
+        var selector = $(this).attr("data-filter");
+        $(".projects").isotope({
+          filter: selector,
+        });
+        return false;
+      });
+
+      // PLAY ON HOVER
+      // $(".thumb").hover(function () {
+      //     $(this).children("video")[0].play();
+      // }, function () {
+      //     $(this).children("video")[0].pause();
+      //     $(this).children("video")[0].currentTime = 0;
+      // });
+      var currentVideo = null; // Variable to store the currently playing video
+
+      $(".thumb").on({
+        mouseenter: function () {
+          $(this).children(".thumb-details").css("opacity", 1);
+          $(this).children(".vid-icon").css("opacity", 1);
+        },
+        mouseleave: function () {
+          $(this).children(".thumb-details").css("opacity", 0);
+          $(this).children(".vid-icon").css("opacity", 0);
+        },
+      });
+
+      $(".vid-icon").click(function () {
+        var video = $(this).siblings("video")[0];
+        var image = $(this).find("image"); // Find the image element
+
+        // Reset all other videos
+        $(".vid-icon")
+          .not(this)
+          .each(function () {
+            var otherVideo = $(this).siblings("video")[0];
+            otherVideo.load();
+          });
+
+        // Check if the clicked video is the same as the currently playing video
+        if (video === currentVideo) {
+          // If it is, pause the video
+          if (!video.paused && !video.ended) {
+            video.pause();
+          }
+          // Set currentVideo to null since the video is paused
+          currentVideo = null;
+          // Reset the href attribute
+          image.attr("href", "/assets/works/Play_Button.svg");
+        } else {
+          // If it's a different video, pause the currently playing video (if any)
+          if (currentVideo && !currentVideo.paused && !currentVideo.ended) {
+            currentVideo.load();
+          }
+          // Set the new video as the current video
+          currentVideo = video;
+
+          // Play the clicked video
+          video.play();
+
+          // Hide details and vid-icon
+          $(this).siblings(".thumb-details").css("opacity", 0);
+          $(this).css("opacity", 0);
+
+          // Change the href attribute
+          image.attr("href", "/assets/works/Pause_button.svg"); // Change this to the desired href
+        }
+      });
+      // PLAY ON TOUCH
+      $(".thumb").on("touchstart", function () {
+        $("video").each(function () {
+          this.pause();
+          this.currentTime = 0;
+        });
+
+        $("#" + $(this).data("video-id"))
+          .get(0)
+          .play();
+      });
     </script>
   </body>
 </html>
