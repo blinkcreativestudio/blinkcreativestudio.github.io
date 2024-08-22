@@ -4192,3 +4192,16 @@ label {
   -o-transition: all .4s ease-in-out;
 }
 
+.soiree-sub-details {
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.soiree-sub-details-bt {
+  font-size: 15px;
+  margin-bottom: 80px;
+}
+
+.why-bullet {
+  margin: 20px;
+}
