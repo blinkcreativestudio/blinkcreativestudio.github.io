@@ -4168,3 +4168,27 @@ label {
 .events-section {
   background-color: #214394;
 }
+
+
+/* For test run only */
+
+.img-shadow-1:hover {
+  transform: scale(1.015);
+  -webkit-transform: scale(1.015);
+  -moz-transform: scale(1.015);
+  -ms-transform: scale(1.015);
+  -o-transform: scale(1.015);
+
+  /* -webkit-box-shadow: 0 58px 36px -56px black;
+  -moz-box-shadow: 0 58px 36px -56px black; */
+  /* box-shadow: 0 58px 36px -56px black; */
+}
+
+.img-shadow-1 {
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+}
+
