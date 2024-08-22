@@ -480,10 +480,12 @@
     <header class="pb-0 overflow-hidden" id="events-header" data-aos="fade-in">
       <div class="text-start text-md-center">
         <div class="row hero-banner">
-          <video autoplay muted loop>
+          <video id="hero-video" autoplay muted loop>
             <source
-              src="./assets/Soiree//BCS_Senior_Soiree_Website_HeroBanner.mp4"
+              src="./assets/Soiree/BCS_Senior_Soiree_Website_HeroBanner.mp4"
+              type="video/mp4"
             />
+            Your browser does not support the video tag.
           </video>
         </div>
       </div>
@@ -1686,6 +1688,31 @@
           .get(0)
           .play();
       });
+    </script>
+    <script>
+      function updateVideoSource() {
+        const videoElement = document.getElementById("hero-video");
+        const mobileSource =
+          "./assets/Soiree/BCS_Senior_Soiree_Website_MobileBanner.mp4"; // Change to your mobile video source
+        const desktopSource =
+          "./assets/Soiree/BCS_Senior_Soiree_Website_HeroBanner.mp4"; // Original source
+
+        // Check the screen width
+        if (window.innerWidth <= 480) {
+          videoElement.src = mobileSource;
+        } else {
+          videoElement.src = desktopSource;
+        }
+
+        // Load the new video source
+        videoElement.load();
+      }
+
+      // Update video source on page load
+      window.onload = updateVideoSource;
+
+      // Update video source on window resize
+      window.onresize = updateVideoSource;
     </script>
   </body>
 </html>
