@@ -480,7 +480,7 @@
     <header class="pb-0 overflow-hidden" id="events-header" data-aos="fade-in">
       <div class="text-start text-md-center">
         <div class="row hero-banner">
-          <video id="hero-video" autoplay muted loop>
+          <video id="soiree-video" autoplay muted loop>
             <source
               src="./assets/Soiree/BCS_Senior_Soiree_Website_HeroBanner.mp4"
               type="video/mp4"
@@ -1690,29 +1690,28 @@
       });
     </script>
     <script>
-      function updateVideoSource() {
-        const videoElement = document.getElementById("hero-video");
-        const mobileSource =
-          "./assets/Soiree/BCS_Senior_Soiree_Website_MobileBanner.mp4"; // Change to your mobile video source
-        const desktopSource =
-          "./assets/Soiree/BCS_Senior_Soiree_Website_HeroBanner.mp4"; // Original source
+      function adjustVideoSource() {
+        const video = document.getElementById("soiree-video");
 
-        // Check the screen width
-        if (window.innerWidth <= 480) {
-          videoElement.src = mobileSource;
+        const regBanner = document.querySelector(".sign-up-header");
+        const viewportWidth = window.innerWidth;
+
+        if (viewportWidth <= 768) {
+          video.src =
+            "/assets/Soiree/BCS_Senior_Soiree_Website_MobileBanner.mp4"; // Change to mobile version
+
+          regBanner.src =
+            "/assets/Soiree/BCS_Senior_Soiree_Website_MobileBanner.mp4";
         } else {
-          videoElement.src = desktopSource;
+          video.src = "/assets/Soiree/BCS_Senior_Soiree_Website_HeroBanner.mp4"; // Default to web version
+          regBanner.src =
+            "/assets/Soiree/BCS_Senior_Soiree_Website_HeroBanner.mp4";
         }
-
-        // Load the new video source
-        videoElement.load();
       }
 
-      // Update video source on page load
-      window.onload = updateVideoSource;
-
-      // Update video source on window resize
-      window.onresize = updateVideoSource;
+      // Run the function on page load and when the window is resized
+      window.addEventListener("load", adjustVideoSource);
+      window.addEventListener("resize", adjustVideoSource);
     </script>
   </body>
 </html>
