@@ -19,7 +19,7 @@
     display: grid;
     grid-template-columns: minmax(5%, 1fr) 47% 35%;
     text-wrap: wrap;
-    gap: 16px;
+    gap: 116px;
     padding: 16px 0 0 0;
     grid-auto-flow: dense;
 }
