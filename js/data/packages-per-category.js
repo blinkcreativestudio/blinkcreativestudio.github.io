@@ -216,7 +216,7 @@ const packages = [
         name: "Couple A",
         price: "399.00",
         desc: "Celebrate your bond with a couples studio photoshoot! Whether it’s an engagement, an anniversary, a moment with your bestie, or simply a way to capture your relationship, our package is designed to highlight your connection. Book your session today and let us preserve your most special moments together!",
-        desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc2: "Downpayment should not exceed more than 2 sdays after booking.",
         inclusions: ["1 attire", "3 digital copies"],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/solo-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
