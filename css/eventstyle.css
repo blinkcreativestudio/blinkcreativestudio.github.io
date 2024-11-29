@@ -35,6 +35,9 @@
 .date-number {
     font-size: 3.14rem;
 }
+.mernelsdate-number {
+    font-size: 2.14rem;
+}
 
 .per-events-details {
     display: flex;
