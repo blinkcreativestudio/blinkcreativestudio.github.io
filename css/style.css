@@ -3397,7 +3397,6 @@ div.mce_inline_error {
   margin-left: 350px;
 }
 
-
 .event-section:hover {
   background-color: #f2f2f2;
 }
@@ -3451,9 +3450,9 @@ div.mce_inline_error {
   .event-section {
     max-width: 750px;
   }
-    .event-heading {
-      padding-right: 200px;
-    }
+  .event-heading {
+    padding-right: 200px;
+  }
 }
 
 /* Mobile styles */
@@ -3494,11 +3493,11 @@ div.mce_inline_error {
     margin-top: 15px;
   }
 
-    .event-section:nth-child(odd) .event-heading,
-    .event-section:nth-child(odd) .event-sub {
-      text-align: center;
-      margin: 0 auto;
-    }
+  .event-section:nth-child(odd) .event-heading,
+  .event-section:nth-child(odd) .event-sub {
+    text-align: center;
+    margin: 0 auto;
+  }
 
   .event-section:hover {
     background-color: #f2f2f2;
@@ -3576,27 +3575,25 @@ div.mce_inline_error {
 }
 
 @media (max-width: 768px) {
+  #hero-image-mobile {
+    display: block;
+  }
+  .text-container {
+    top: auto;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+  }
 
-    #hero-image-mobile {
-      display: block;
-    }
-        .text-container {
-          top: auto;
-          bottom: 8%;
-          left: 50%;
-          transform: translateX(-50%);
-          text-align: center;
-          width: 100%;
+  .commencement-title {
+    font-size: 4.8vw;
+  }
 
-        }
-
-                .commencement-title {
-                  font-size: 4.8vw;
-                }
-        
-                .commencement-sub {
-                  font-size: 3.5vw;
-                }
+  .commencement-sub {
+    font-size: 3.5vw;
+  }
 }
 
 .exponent {
@@ -3665,7 +3662,7 @@ div.mce_inline_error {
   padding: 15px;
   margin-top: 20px;
 }
-    
+
 .instruction-ol li::before {
   content: counter(item);
   color: #ffffff;
@@ -3684,7 +3681,7 @@ div.mce_inline_error {
   justify-content: center;
   text-align: center;
 }
-    
+
 .instruction-highlights {
   font-weight: 700;
   color: #a30a24;
@@ -3695,7 +3692,7 @@ div.mce_inline_error {
   height: 1px;
   background-color: #808080;
   margin-top: 20px;
-} 
+}
 
 .commencement-line-horizontal-form {
   width: 100%;
@@ -3724,60 +3721,60 @@ div.mce_inline_error {
 .commencement-line-vertical {
   width: 1px;
   height: 370px;
-  background-color: #DBDBDB;
+  background-color: #dbdbdb;
   margin-top: 20px;
   position: absolute;
   margin-left: 20px;
   margin-top: 50px;
 }
 
-    .commencement-button button {
-      background-color: #a30a24;
-      color: white;
-      border: none;
-      padding: 10px 35px;
-      font-size: 16px;
-      cursor: pointer;
-      transform: skew(-20deg);
-      position: relative;
-      overflow: hidden;
-      margin: 40px 0 40px 0; 
-      margin-left: 20px;
-    }
-  
-    .commencement-button button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -10px;
-      right: -10px;
-      background-color: inherit;
-      transform: skew(20deg);
-      z-index: -1;
-    }
-  
-    .commencement-button button span {
-      display: inline-block;
-      transform: skew(20deg);
-    }
-  
-    .commencement-button button:hover {
-      background-color: transparent;
-        color: #a30a24;
-        border: 2px solid #a30a24;
-        padding: 8px 35px;
-        font-size: 16px;
-        cursor: pointer;
-        transform: skew(-20deg);
-        position: relative;
-        overflow: hidden;
-        margin: 40px 0 40px 0;
-        margin-left: 20px;
-    }
+.commencement-button button {
+  background-color: #a30a24;
+  color: white;
+  border: none;
+  padding: 10px 35px;
+  font-size: 16px;
+  cursor: pointer;
+  transform: skew(-20deg);
+  position: relative;
+  overflow: hidden;
+  margin: 40px 0 40px 0;
+  margin-left: 20px;
+}
 
-    /* start of modal */
-    /* .commencement-modal {
+.commencement-button button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -10px;
+  right: -10px;
+  background-color: inherit;
+  transform: skew(20deg);
+  z-index: -1;
+}
+
+.commencement-button button span {
+  display: inline-block;
+  transform: skew(20deg);
+}
+
+.commencement-button button:hover {
+  background-color: transparent;
+  color: #a30a24;
+  border: 2px solid #a30a24;
+  padding: 8px 35px;
+  font-size: 16px;
+  cursor: pointer;
+  transform: skew(-20deg);
+  position: relative;
+  overflow: hidden;
+  margin: 40px 0 40px 0;
+  margin-left: 20px;
+}
+
+/* start of modal */
+/* .commencement-modal {
       display: none;
       position: fixed;
       top: 0;
@@ -3861,7 +3858,7 @@ div.mce_inline_error {
 
 .gcash-bt.active {
   background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .gcash-bt:hover {
@@ -3871,21 +3868,21 @@ div.mce_inline_error {
 
 .gu-style {
   width: 70px;
-    height: auto;
+  height: auto;
 }
 
 .ub-bt {
   width: 20%;
-    height: auto;
-    background-image: url("../assets/Commencement/UB_logo.png");
-    background-color: #f2f2f2;
-    background-size: 100px;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: 1px solid #808080;
-    padding: 10px 35px;
-    text-indent: -9999px;
-    overflow: hidden;
+  height: auto;
+  background-image: url("../assets/Commencement/UB_logo.png");
+  background-color: #f2f2f2;
+  background-size: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #808080;
+  padding: 10px 35px;
+  text-indent: -9999px;
+  overflow: hidden;
 }
 
 .ub-bt.active {
@@ -3899,7 +3896,7 @@ div.mce_inline_error {
 .payment-bt {
   /* padding: 10px; */
   margin-top: 10px;
-} 
+}
 
 .flex-container {
   display: flex;
@@ -3995,11 +3992,11 @@ label {
 }
 
 .commencement-receipt {
- margin: 30px 0 0 0;
+  margin: 30px 0 0 0;
 }
 
 .application-attachment {
- margin: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 
 .receipt-label {
@@ -4095,7 +4092,9 @@ label {
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {  .instruction-content, .application-content {
+@media (max-width: 768px) {
+  .instruction-content,
+  .application-content {
     width: 100%;
   }
 
@@ -4104,11 +4103,12 @@ label {
     margin: 0px;
   }
 
-    .instruction-form-section {
-      margin-top: 50px;
-    }
+  .instruction-form-section {
+    margin-top: 50px;
+  }
 
-  .flex-container, .application-flex-container {
+  .flex-container,
+  .application-flex-container {
     flex-direction: column;
   }
 
@@ -4138,25 +4138,25 @@ label {
     text-align: center;
   }
 
-    .gcash-qr-details {
-      flex-direction: column;
-      align-items: center;
-    }
+  .gcash-qr-details {
+    flex-direction: column;
+    align-items: center;
+  }
 
-        .centered-text {
-          margin: 10px 0 20px 0;
-        }
-  
-    /* Ensure the image size stays the same */
-    .gcash-img {
-      width: 100%;
-      /* Keep the same size */
-    }
-        .ub-bt,
-        .gcash-bt {
-          width: 40%;
-          height: auto;
-        }
+  .centered-text {
+    margin: 10px 0 20px 0;
+  }
+
+  /* Ensure the image size stays the same */
+  .gcash-img {
+    width: 100%;
+    /* Keep the same size */
+  }
+  .ub-bt,
+  .gcash-bt {
+    width: 40%;
+    height: auto;
+  }
 }
 
 .division-line {
@@ -4168,7 +4168,6 @@ label {
 .events-section {
   background-color: #214394;
 }
-
 
 /* For test run only */
 
@@ -4185,11 +4184,11 @@ label {
 }
 
 .img-shadow-1 {
-  transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  -moz-transition: all .4s ease-in-out;
-  -ms-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
 }
 
 .soiree-sub-details {
@@ -4205,3 +4204,4 @@ label {
 .why-bullet {
   margin: 20px;
 }
+
