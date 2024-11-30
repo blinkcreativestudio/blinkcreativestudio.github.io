@@ -595,7 +595,9 @@
 
         var price = document.createElement("h3");
         var desc = document.createElement("p");
+        var desc1 = document.createElement("p");
         var desc2 = document.createElement("p");
+        var desc3 = document.createElement("p");
         var inclusions = document.createElement("ul");
         var inclusionsHeader = document.createElement("p");
 
@@ -603,7 +605,9 @@
 
         price.innerText = pesoSign + " " + activePackage.price;
         desc.innerText = activePackage.desc;
+        desc1.innerText = activePackage.desc1;
         desc2.innerText = activePackage.desc2;
+        desc3.innerText = activePackage.desc3;
         console.log("activePackage.calendly_link", activePackage.calendly_link);
         appointmentBtn.href = activePackage.calendly_link;
 
@@ -634,13 +638,17 @@
         appointmentBtn.classList.add("open-calendly-button");
         appointmentBtn.id = "product-details-btn";
         desc.classList.add("package-desc");
+        desc1.classList.add("package-desc");
         desc2.classList.add("package-desc");
+        desc3.classList.add("package-desc");
         inclusions.classList.add("package-inclusions");
 
         appointmentBtn.appendChild(appointmentBtnText);
         packageDetails.appendChild(price);
         packageDetails.appendChild(desc);
+        packageDetails.appendChild(desc1);
         packageDetails.appendChild(desc2);
+        packageDetails.appendChild(desc3);
 
         if (activePackage.inclusions2) {
           let inclusionsHeader2 = document.createElement("p");
