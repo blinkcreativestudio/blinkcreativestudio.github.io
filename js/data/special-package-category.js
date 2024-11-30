@@ -1,12 +1,53 @@
 const packages = [
   {
     id: "1",
+    category: "holiday-special",
+    categoryName: "Sweet Holiday Moments",
+    image: "/assets/appointments/Mernels.png",
+    packages: [
+      {
+        id: "1-1",
+        package: "solo-c-promo",
+        name: "Solo C Promo",
+        price: "700.00",
+        desc: "Regular Price - ₱ 999.00 MerNel’s DISCOUNT - ₱ 700 (Simply present your MerNel’s receipt!) Whether you need a professional headshot, a striking portrait, or a creative solo photoshoot, our studio package is perfect for capturing your individuality. Let us highlight your unique personality and style with every shot. Book your session today and let us create stunning images you'll cherish forever!",
+        desc2: "Downpayment should not exceed more than 2 days after booking.",
+        inclusions: [],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/solo-c-clone-1?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "1-2",
+        package: "couple-c-promo",
+        name: "Couple C Promo",
+        price: "770.00",
+        desc: "Regular Price - ₱ 1,099.00 MerNel’s DISCOUNT - ₱ 770 (Simply present your MerNel’s receipt!) Celebrate togetherness with a family or barkada studio photoshoot! Whether you're capturing cherished moments with your loved ones or creating memories with your closest friends, our package is designed to bring out the joy and connection that define your unique bond. Our skilled photographers will craft timeless portraits you'll treasure forever.",
+        desc2: "Downpayment should not exceed more than 2 days after booking.",
+        inclusions: [],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/couple-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "1-3",
+        package: "family-c-promo",
+        name: "Family / Barkada C Promo",
+        price: "1050.00",
+        desc: "Regular Price - ₱ 1,499.00 MerNel’s DISCOUNT - ₱ 1050 (Simply present your MerNel’s receipt!) Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. You can even make this a barkada shoot! Book today!",
+        desc2: "Downpayment should not exceed more than 2 days after booking.",
+        inclusions: [],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/family-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+    ],
+  },
+  {
+    id: "2",
     category: "studio-rental",
     categoryName: "Studio Rental",
     image: "/assets/appointments/studio_rental.png",
     packages: [
       {
-        id: "1-1",
+        id: "2-1",
         package: "studio-rental",
         name: "Studio Rental",
         price: "699.00 /hr",
@@ -114,13 +155,13 @@ const packages = [
   //   ],
   // },
   {
-    id: "2",
+    id: "3",
     category: "solo-package",
     categoryName: "Solo Package",
     image: "/assets/appointments/Solo.png",
     packages: [
       {
-        id: "2-1",
+        id: "3-1",
         package: "solo-a",
         name: "Solo A",
         price: "299.00",
@@ -132,7 +173,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/solo-a?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "2-2",
+        id: "3-2",
         package: "solo-b",
         name: "Solo B",
         price: "499.00",
@@ -149,7 +190,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/solo-b?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "2-3",
+        id: "3-3",
         package: "solo-c",
         name: "Solo C",
         price: "999.00",
@@ -205,13 +246,13 @@ const packages = [
     ],
   },
   {
-    id: "3",
+    id: "4",
     category: "couple-package",
     categoryName: "Couple Package",
     image: "/assets/appointments/Couple.png",
     packages: [
       {
-        id: "3-1",
+        id: "4-1",
         package: "couple-a",
         name: "Couple A",
         price: "399.00",
@@ -222,7 +263,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/solo-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "3-2",
+        id: "4-2",
         package: "couple-b",
         name: "Couple B",
         price: "599.00",
@@ -233,7 +274,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/couple-a-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "3-3",
+        id: "4-3",
         package: "couple-c",
         name: "Couple C",
         price: "1,099.00",
@@ -246,13 +287,13 @@ const packages = [
     ],
   },
   {
-    id: "4",
+    id: "5",
     category: "fam-package",
     categoryName: "Family Package",
     image: "/assets/appointments/family.png",
     packages: [
       {
-        id: "4-1",
+        id: "5-1",
         package: "family-a",
         name: "Family A",
         price: "799.00",
@@ -263,7 +304,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/fam-package-family-bonds?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "4-2",
+        id: "5-2",
         package: "family-b",
         name: "Family B",
         price: "1,099.00",
@@ -279,7 +320,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/family-package-love-n-laughter?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "4-3",
+        id: "5-3",
         package: "family-c",
         name: "Family C",
         price: "1,499.00",
@@ -314,13 +355,13 @@ const packages = [
     ],
   },
   {
-    id: "5",
+    id: "6",
     category: "grad-package",
     categoryName: "Graduation Package",
     image: "/assets/appointments/graduation.png",
     packages: [
       {
-        id: "5-1",
+        id: "6-1",
         package: "bronze",
         name: "Bronze",
         price: "849.00",
@@ -337,7 +378,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "5-2",
+        id: "6-2",
         package: "silver",
         name: "Silver",
         price: "1,359.00",
@@ -357,7 +398,7 @@ const packages = [
     ],
   },
   {
-    id: "6",
+    id: "7",
     category: "up-grad-package",
     categoryName: "UP Graduation Package",
     image: "/assets/appointments/UP_graduation.png",
@@ -375,7 +416,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/up-graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "6-2",
+        id: "7-2",
         package: "silver",
         name: "Silver",
         price: "1,699.00",
@@ -393,7 +434,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/up-graduation-package-silver?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "6-3",
+        id: "7-3",
         package: "gold",
         name: "Gold",
         price: "2,699.00",
@@ -411,7 +452,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/up-graduation-package-gold?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "6-4",
+        id: "7-4",
         package: "platinum",
         name: "Platinum",
         price: "3,299.00",
@@ -429,7 +470,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/up-graduation-package-platinum?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "6-5",
+        id: "7-5",
         package: "diamond",
         name: "Diamond",
         price: "3,749.00",
@@ -449,13 +490,13 @@ const packages = [
     ],
   },
   {
-    id: "7",
+    id: "8",
     category: "maternity-package",
     categoryName: "Maternity Package",
     image: "/assets/appointments/maternity.png",
     packages: [
       {
-        id: "7-1",
+        id: "8-1",
         package: "baby-bump-bliss",
         name: "Baby Bump Bliss",
         price: "1,499.00",
@@ -472,7 +513,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/maternity-package-baby-bump?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "7-2",
+        id: "8-2",
         package: "great-expectations",
         name: "Great Expectations",
         price: "1,999.00",
@@ -491,13 +532,13 @@ const packages = [
     ],
   },
   {
-    id: "8",
+    id: "9",
     category: "baby-milestone-package",
     categoryName: "Baby Milestone Package",
     image: "/assets/appointments/baby_milestone.png",
     packages: [
       {
-        id: "8-1",
+        id: "9-1",
         package: "baby-steps",
         name: "Baby Steps",
         price: "4,000.00",
@@ -520,7 +561,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/baby-milestone-package-baby-steps?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "8-2",
+        id: "9-2",
         package: "little-blessings",
         name: "Little Blessings",
         price: "5,000.00",
@@ -543,7 +584,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/baby-milestone-package-little-blessings?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "8-3",
+        id: "9-3",
         package: "bouncing-baby",
         name: "Bouncing Baby",
         price: "6,499.00",
@@ -562,7 +603,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/baby-milestone-package-bouncing-baby?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "8-4",
+        id: "9-4",
         package: "bundle-of-joy",
         name: "Bundle of Joy",
         price: "7,499.00",
@@ -581,7 +622,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/baby-milestone-package-bundle-of-joy?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "8-5",
+        id: "9-5",
         package: "elite-infant-collection",
         name: "The Elite Infant Collection",
         price: "24,000.00",
@@ -600,13 +641,13 @@ const packages = [
     ],
   },
   {
-    id: "9",
+    id: "10",
     category: "kid-package",
     categoryName: "Toddler/Kiddie/Pre-Birthday Package",
     image: "/assets/appointments/kiddie.png",
     packages: [
       {
-        id: "9-1",
+        id: "10-1",
         package: "little-stars",
         name: "Little Stars",
         price: "849.00",
@@ -623,7 +664,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/kid-package-little-stars?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "9-2",
+        id: "10-2",
         package: "pitter-patter",
         name: "Pitter Patter",
         price: "1,499.00",
@@ -640,7 +681,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/kiddie-pre-birthday-package-pitter-patter?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "9-3",
+        id: "10-3",
         package: "magical-moments",
         name: "Magical Moments",
         price: "1,999.00",
@@ -661,13 +702,13 @@ const packages = [
     ],
   },
   {
-    id: "10",
+    id: "11",
     category: "wed-package",
     categoryName: "Wedding Package",
     image: "/assets/appointments/wedding.png",
     packages: [
       {
-        id: "10-1",
+        id: "11-1",
         package: "everlasting-bliss",
         name: "Everlasting Bliss",
         price: "70,000.00",
@@ -692,7 +733,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/wedding-package-everlasting-bliss?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "10-2",
+        id: "11-2",
         package: "eternal-love",
         name: "Eternal Love",
         price: "75,000.00",
@@ -720,13 +761,13 @@ const packages = [
     ],
   },
   {
-    id: "11",
+    id: "12",
     category: "debut-package",
     categoryName: "Debut Package",
     image: "/assets/appointments/debut.png",
     packages: [
       {
-        id: "11-1",
+        id: "12-1",
         package: "elegance",
         name: "Elegance",
         price: "35,000.00",
@@ -748,7 +789,7 @@ const packages = [
           "https://calendly.com/blinkcreativestudio/debut-package-elegance?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
-        id: "11-2",
+        id: "12-2",
         package: "glamour",
         name: "Glamour",
         price: "40,000.00",
@@ -769,47 +810,6 @@ const packages = [
         ],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/debut-package-glamour?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-    ],
-  },
-  {
-    id: "12",
-    category: "holiday-special",
-    categoryName: "Sweet Holiday Moments",
-    image: "/assets/appointments/Mernels.png",
-    packages: [
-      {
-        id: "12-1",
-        package: "solo-c-promo",
-        name: "Solo C Promo",
-        price: "700.00",
-        desc: "Regular Price - ₱ 999.00 MerNel’s DISCOUNT - ₱ 700 (Simply present your MerNel’s receipt!) Whether you need a professional headshot, a striking portrait, or a creative solo photoshoot, our studio package is perfect for capturing your individuality. Let us highlight your unique personality and style with every shot. Book your session today and let us create stunning images you'll cherish forever!",
-        desc2: "Downpayment should not exceed more than 2 days after booking.",
-        inclusions: [],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/solo-c-clone-1?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-      {
-        id: "12-2",
-        package: "couple-c-promo",
-        name: "Couple C Promo",
-        price: "770.00",
-        desc: "Regular Price - ₱ 1,099.00 MerNel’s DISCOUNT - ₱ 770 (Simply present your MerNel’s receipt!) Celebrate togetherness with a family or barkada studio photoshoot! Whether you're capturing cherished moments with your loved ones or creating memories with your closest friends, our package is designed to bring out the joy and connection that define your unique bond. Our skilled photographers will craft timeless portraits you'll treasure forever.",
-        desc2: "Downpayment should not exceed more than 2 days after booking.",
-        inclusions: [],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/couple-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-      {
-        id: "12-3",
-        package: "family-c-promo",
-        name: "Family / Barkada C Promo",
-        price: "1050.00",
-        desc: "Regular Price - ₱ 1,499.00 MerNel’s DISCOUNT - ₱ 1050 (Simply present your MerNel’s receipt!) Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. You can even make this a barkada shoot! Book today!",
-        desc2: "Downpayment should not exceed more than 2 days after booking.",
-        inclusions: [],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/family-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
     ],
   },
