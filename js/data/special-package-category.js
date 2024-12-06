@@ -3,7 +3,7 @@ const packages = [
     id: "1",
     category: "holiday-special",
     categoryName: "Sweet Holiday Moments",
-    image: "/assets/appointments/Mernels.png",
+    image: "/assets/appointments/Mernels2.png",
     packages: [
       {
         id: "1-1",
