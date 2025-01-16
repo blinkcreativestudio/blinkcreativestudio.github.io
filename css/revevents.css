@@ -1,0 +1,159 @@
+.events {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  margin-top: 64px;
+  padding: 0 16px; /* Add padding for small screens */
+}
+
+.up-event {
+  width: 100%; /* Make it responsive */
+  max-width: 1020px; /* Limit the maximum width */
+  padding: 56px 12px;
+}
+
+.line {
+  position: relative;
+  height: 1px;
+  margin: 16px 0; /* Add more space on small screens */
+  background-color: #000000;
+  z-index: 1;
+}
+
+.per-events-link {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit text color */
+}
+
+.per-events-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr; /* Default layout for larger screens */
+  gap: 20px; /* Adjust the space between columns */
+  align-items: center;
+  margin-block: 40px;
+}
+
+.per-events-container {
+  text-align: start;
+}
+
+.herspective-image img {
+  max-width: 100%; /* Ensure the image scales properly */
+  height: auto;
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.link-deco {
+  text-decoration: none; /* Remove underline from the link */
+  color: #a30a24;
+}
+
+.link-deco h2:hover {
+  text-decoration: underline; /* Optional: Add hover effect for the link */
+}
+
+.date-event {
+  text-align: center;
+}
+
+.upcoming-title {
+  color: #a30a24;
+  font-size: 34.24px;
+}
+
+.per-events-details {
+  text-align: start;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1020px) {
+  .per-events-container {
+    grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
+  }
+
+  .upcoming-title {
+    font-size: 28px; /* Smaller font size for titles */
+  }
+
+  .line {
+    margin: 12px 0; /* Reduce margin for lines */
+  }
+
+  .per-events-details {
+    text-align: center;
+  }
+
+  .herspective-image img {
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners */
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .per-events-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 16px;
+    text-align: center; /* Center-align all text content */
+    justify-items: center; /* Center grid items horizontally */
+  }
+
+  .date-event {
+    margin-bottom: 16px; /* Add space between the date and other content */
+    text-align: center; /* Ensure date text is centered */
+  }
+
+  .herspective-image img {
+    width: 100%; /* Ensure the image is responsive */
+    max-width: 300px; /* Optional: Limit max width for images */
+    height: auto;
+    margin: 0 auto; /* Center image horizontally */
+  }
+
+  .per-events-details {
+    text-align: center; /* Center-align event details */
+  }
+
+  .link-deco h2 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .up-event {
+    padding: 24px 8px; /* Reduce padding for small screens */
+  }
+
+  .upcoming-title {
+    font-size: 24px; /* Adjust title size */
+    text-align: center; /* Center the title */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .per-events-container {
+    text-align: center; /* Center content on very small screens */
+  }
+
+  .date-event {
+    margin-bottom: 16px; /* Add space between date and other content */
+  }
+
+  .herspective-image img {
+    width: 100%; /* Make images fully responsive */
+  }
+
+  .up-event {
+    padding: 24px 8px;
+  }
+
+  .upcoming-title {
+    font-size: 20px; /* Further reduce title size */
+  }
+
+  .per-events-details {
+    text-align: center;
+  }
+}
