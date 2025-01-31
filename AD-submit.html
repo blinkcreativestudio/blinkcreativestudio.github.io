@@ -267,6 +267,16 @@
               required
             />
           </div>
+          <div class="application-flex-container">
+            <input
+              class="input-field"
+              type="text"
+              id="portfolio"
+              name="portfolio"
+              placeholder="Portfolio Link*"
+              required
+            />
+          </div>
 
           <p class="apply-form-header">Professional Details</p>
 
@@ -295,7 +305,6 @@
               required
             />
           </div>
-
           <div class="commencement-button-submit">
             <button
               type="button"
@@ -582,7 +591,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- MAIN -->
     <script src="/js/main.js" type="module"></script>
-
     <script>
       document.addEventListener("DOMContentLoaded", (event) => {
         let url =
@@ -592,6 +600,7 @@
         let emailInput = document.getElementById("email");
         let contactNumberInput = document.getElementById("mobile");
         let addressInput = document.getElementById("address");
+        let portfolioInput = document.getElementById("portfolio");
         let resumeFile = document.getElementById("resume");
         let coverLetterFile = document.getElementById("coverLetter");
         let submitButton = document.getElementById("submit-button");
@@ -599,64 +608,18 @@
         let successModal = document.getElementById("successModal");
         let closeModalButton = document.getElementById("closeModal");
 
-        const validateInputs = () => {
-          let isValid = true;
-
-          if (!firstNameInput.value) {
-            firstNameInput.style.border = "1px solid red";
-            isValid = false;
-          } else {
-            firstNameInput.style.border = "1px solid black";
-          }
-
-          if (!lastNameInput.value) {
-            lastNameInput.style.border = "1px solid red";
-            isValid = false;
-          } else {
-            lastNameInput.style.border = "1px solid black";
-          }
-
-          if (!emailInput.value) {
-            emailInput.style.border = "1px solid red";
-            isValid = false;
-          } else {
-            emailInput.style.border = "1px solid black";
-          }
-
-          if (!contactNumberInput.value) {
-            contactNumberInput.style.border = "1px solid red";
-            isValid = false;
-          } else {
-            contactNumberInput.style.border = "1px solid black";
-          }
-
-          if (!addressInput.value) {
-            addressInput.style.border = "1px solid red";
-            isValid = false;
-          } else {
-            addressInput.style.border = "1px solid black";
-          }
-
-          if (!resumeFile.files.length) {
-            resumeFile.style.border = "1px solid red";
-            isValid = false;
-          } else {
-            resumeFile.style.border = "1px solid black";
-          }
-
-          if (!coverLetterFile.files.length) {
-            coverLetterFile.style.border = "1px solid red";
-            isValid = false;
-          } else {
-            coverLetterFile.style.border = "1px solid black";
-          }
-
-          return isValid;
-        };
-
         submitButton.addEventListener("click", () => {
-          if (!validateInputs()) {
-            // alert("Please fill out all required fields.");
+          if (
+            !firstNameInput.value ||
+            !lastNameInput.value ||
+            !emailInput.value ||
+            !contactNumberInput.value ||
+            !addressInput.value ||
+            !portfolioInput.value ||
+            !resumeFile.files.length ||
+            !coverLetterFile.files.length
+          ) {
+            alert("Please fill out all required fields.");
             return;
           }
 
@@ -680,6 +643,7 @@
                   email: emailInput.value,
                   contactNumber: contactNumberInput.value,
                   address: addressInput.value,
+                  portfolio: portfolioInput.value,
                   resume: {
                     base64: resumeSpt,
                     type: resumeFile.files[0].type,
@@ -706,6 +670,7 @@
                     emailInput.value = "";
                     contactNumberInput.value = "";
                     addressInput.value = "";
+                    portfolioInput.value = "";
                     resumeFile.value = "";
                     coverLetterFile.value = "";
                   })
