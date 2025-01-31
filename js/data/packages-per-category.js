@@ -1,5 +1,97 @@
 const packages = [
   {
+    id: "6",
+    category: "up-grad-package",
+    categoryName: "UP Graduation Package",
+    image: "/assets/appointments/UP_graduation.png",
+    packages: [
+      {
+        id: "6-1",
+        package: "bronze",
+        name: "Bronze",
+        price: "1,100.00",
+        desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+        desc2:
+          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        inclusions: ["1 attire (sablay/toga)", "1 enhanced digital copy"],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/up-graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "6-2",
+        package: "silver",
+        name: "Silver",
+        price: "1,699.00",
+        desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+        desc2:
+          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        inclusions: [
+          "2 attires (sablay/toga/corporate)",
+          "1 pc. 8R portrait (printed and framed)",
+          "1 pc. 5R print",
+          "4 pcs. wallet size prints",
+          "2 enhanced digital copy",
+        ],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/up-graduation-package-silver?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "6-3",
+        package: "gold",
+        name: "Gold",
+        price: "2,699.00",
+        desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+        desc2:
+          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        inclusions: [
+          "2 attires (1 sablay/toga/corporate, 1 creative)",
+          "2 pc. 8R portrait (printed and framed)",
+          "2 pcs. 5R print",
+          "4 pcs. wallet size prints",
+          "2 enhanced digital copy",
+        ],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/up-graduation-package-gold?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "6-4",
+        package: "platinum",
+        name: "Platinum",
+        price: "3,299.00",
+        desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+        desc2:
+          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        inclusions: [
+          "3 attires (2 sablay/toga/corporate, 1 creative)",
+          "2 pcs. 8R portrait (printed and framed)",
+          "3 pcs. 5R print",
+          "4 pcs. wallet size prints",
+          "3 enhanced digital copy",
+        ],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/up-graduation-package-platinum?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "6-5",
+        package: "diamond",
+        name: "Diamond",
+        price: "3,749.00",
+        desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+        desc2:
+          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        inclusions: [
+          "4 attires (1 sablay, 1 toga, 1 corporate, 1 creative)",
+          "1 pc 12R portrait (printed and framed)",
+          "4 pcs. 5R print",
+          "8 pcs. wallet size prints",
+          "4 enhanced digital copy",
+        ],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/up-graduation-package-diamond?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+    ],
+  },
+  {
     id: "1",
     category: "studio-rental",
     categoryName: "Studio Rental",
@@ -356,98 +448,98 @@ const packages = [
       },
     ],
   },
-  {
-    id: "6",
-    category: "up-grad-package",
-    categoryName: "UP Graduation Package",
-    image: "/assets/appointments/UP_graduation.png",
-    packages: [
-      {
-        id: "6-1",
-        package: "bronze",
-        name: "Bronze",
-        price: "1,100.00",
-        desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
-        desc2:
-          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-        inclusions: ["1 attire (sablay/toga)", "1 enhanced digital copy"],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/up-graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-      {
-        id: "6-2",
-        package: "silver",
-        name: "Silver",
-        price: "1,699.00",
-        desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
-        desc2:
-          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-        inclusions: [
-          "2 attires (sablay/toga/corporate)",
-          "1 pc. 8R portrait (printed and framed)",
-          "1 pc. 5R print",
-          "4 pcs. wallet size prints",
-          "2 enhanced digital copy",
-        ],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/up-graduation-package-silver?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-      {
-        id: "6-3",
-        package: "gold",
-        name: "Gold",
-        price: "2,699.00",
-        desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
-        desc2:
-          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-        inclusions: [
-          "2 attires (1 sablay/toga/corporate, 1 creative)",
-          "2 pc. 8R portrait (printed and framed)",
-          "2 pcs. 5R print",
-          "4 pcs. wallet size prints",
-          "2 enhanced digital copy",
-        ],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/up-graduation-package-gold?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-      {
-        id: "6-4",
-        package: "platinum",
-        name: "Platinum",
-        price: "3,299.00",
-        desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
-        desc2:
-          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-        inclusions: [
-          "3 attires (2 sablay/toga/corporate, 1 creative)",
-          "2 pcs. 8R portrait (printed and framed)",
-          "3 pcs. 5R print",
-          "4 pcs. wallet size prints",
-          "3 enhanced digital copy",
-        ],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/up-graduation-package-platinum?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-      {
-        id: "6-5",
-        package: "diamond",
-        name: "Diamond",
-        price: "3,749.00",
-        desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
-        desc2:
-          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-        inclusions: [
-          "4 attires (1 sablay, 1 toga, 1 corporate, 1 creative)",
-          "1 pc 12R portrait (printed and framed)",
-          "4 pcs. 5R print",
-          "8 pcs. wallet size prints",
-          "4 enhanced digital copy",
-        ],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/up-graduation-package-diamond?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-    ],
-  },
+  // {
+  //   id: "6",
+  //   category: "up-grad-package",
+  //   categoryName: "UP Graduation Package",
+  //   image: "/assets/appointments/UP_graduation.png",
+  //   packages: [
+  //     {
+  //       id: "6-1",
+  //       package: "bronze",
+  //       name: "Bronze",
+  //       price: "1,100.00",
+  //       desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+  //       desc2:
+  //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+  //       inclusions: ["1 attire (sablay/toga)", "1 enhanced digital copy"],
+  //       calendly_link:
+  //         "https://calendly.com/blinkcreativestudio/up-graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+  //     },
+  //     {
+  //       id: "6-2",
+  //       package: "silver",
+  //       name: "Silver",
+  //       price: "1,699.00",
+  //       desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+  //       desc2:
+  //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+  //       inclusions: [
+  //         "2 attires (sablay/toga/corporate)",
+  //         "1 pc. 8R portrait (printed and framed)",
+  //         "1 pc. 5R print",
+  //         "4 pcs. wallet size prints",
+  //         "2 enhanced digital copy",
+  //       ],
+  //       calendly_link:
+  //         "https://calendly.com/blinkcreativestudio/up-graduation-package-silver?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+  //     },
+  //     {
+  //       id: "6-3",
+  //       package: "gold",
+  //       name: "Gold",
+  //       price: "2,699.00",
+  //       desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+  //       desc2:
+  //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+  //       inclusions: [
+  //         "2 attires (1 sablay/toga/corporate, 1 creative)",
+  //         "2 pc. 8R portrait (printed and framed)",
+  //         "2 pcs. 5R print",
+  //         "4 pcs. wallet size prints",
+  //         "2 enhanced digital copy",
+  //       ],
+  //       calendly_link:
+  //         "https://calendly.com/blinkcreativestudio/up-graduation-package-gold?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+  //     },
+  //     {
+  //       id: "6-4",
+  //       package: "platinum",
+  //       name: "Platinum",
+  //       price: "3,299.00",
+  //       desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+  //       desc2:
+  //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+  //       inclusions: [
+  //         "3 attires (2 sablay/toga/corporate, 1 creative)",
+  //         "2 pcs. 8R portrait (printed and framed)",
+  //         "3 pcs. 5R print",
+  //         "4 pcs. wallet size prints",
+  //         "3 enhanced digital copy",
+  //       ],
+  //       calendly_link:
+  //         "https://calendly.com/blinkcreativestudio/up-graduation-package-platinum?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+  //     },
+  //     {
+  //       id: "6-5",
+  //       package: "diamond",
+  //       name: "Diamond",
+  //       price: "3,749.00",
+  //       desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+  //       desc2:
+  //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+  //       inclusions: [
+  //         "4 attires (1 sablay, 1 toga, 1 corporate, 1 creative)",
+  //         "1 pc 12R portrait (printed and framed)",
+  //         "4 pcs. 5R print",
+  //         "8 pcs. wallet size prints",
+  //         "4 enhanced digital copy",
+  //       ],
+  //       calendly_link:
+  //         "https://calendly.com/blinkcreativestudio/up-graduation-package-diamond?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+  //     },
+  //   ],
+  // },
   {
     id: "7",
     category: "maternity-package",
