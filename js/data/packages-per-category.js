@@ -11,8 +11,10 @@ const packages = [
         name: "Bronze",
         price: "1,100.00",
         desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+        desc1: "",
         desc2:
           "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: ["1 attire (sablay/toga)", "1 enhanced digital copy"],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/up-graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
@@ -23,8 +25,10 @@ const packages = [
         name: "Silver",
         price: "1,699.00",
         desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+        desc1: "",
         desc2:
           "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "2 attires (sablay/toga/corporate)",
           "1 pc. 8R portrait (printed and framed)",
@@ -41,8 +45,10 @@ const packages = [
         name: "Gold",
         price: "2,699.00",
         desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+        desc1: "",
         desc2:
           "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "2 attires (1 sablay/toga/corporate, 1 creative)",
           "2 pc. 8R portrait (printed and framed)",
@@ -59,8 +65,10 @@ const packages = [
         name: "Platinum",
         price: "3,299.00",
         desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+        desc1: "",
         desc2:
           "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "3 attires (2 sablay/toga/corporate, 1 creative)",
           "2 pcs. 8R portrait (printed and framed)",
@@ -77,8 +85,10 @@ const packages = [
         name: "Diamond",
         price: "3,749.00",
         desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
+        desc1: "",
         desc2:
           "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "4 attires (1 sablay, 1 toga, 1 corporate, 1 creative)",
           "1 pc 12R portrait (printed and framed)",
@@ -103,7 +113,9 @@ const packages = [
         name: "Studio Rental",
         price: "699.00 /hr",
         desc: "Unlock your creative vision at Blink’s state-of-the-art space! We are equipped with professional-grade equipment, versatile setups, top-notch amenities, and a dedicated team ready to assist you every step of the way. Book today and bring your ideas to life!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/studio-booking?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
@@ -122,8 +134,10 @@ const packages = [
   //       name: "Basic A",
   //       price: "299.00",
   //       desc: "Whether it's a professional headshot, a creative photoshoot, or simply preserving precious memories, our studio photography package is designed to exceed your expectations. Book your session today and let us capture the essence of who you are!",
-  //       desc2: "Downpayment should not exceed more than 2 days after booking.",
-  //       inclusions: [
+  // desc1: "",
+  // desc2: "Downpayment should not exceed more than 2 days after booking.",
+  // desc3: "",
+  // inclusions: [
   //         "1 attire",
   //         "1 photographer",
   //         "3 shots",
@@ -138,8 +152,10 @@ const packages = [
   //       name: "Basic B",
   //       price: "999.00",
   //       desc: "Whether it's a professional headshot, a creative photoshoot, or simply preserving precious memories, our studio photography package is designed to exceed your expectations. Book your session today and let us capture the essence of who you are!",
-  //       desc2: "Downpayment should not exceed more than 2 days after booking.",
-  //       inclusions: [
+  // desc1: "",
+  // desc2: "Downpayment should not exceed more than 2 days after booking.",
+  // desc3: "",
+  // inclusions: [
   //         "1 attire",
   //         "1 photographer",
   //         "10 shots",
@@ -154,9 +170,11 @@ const packages = [
   //       name: "Standard",
   //       price: "1,499.00",
   //       desc: "Whether it's a professional headshot, a creative photoshoot, or simply preserving precious memories, our studio photography package is designed to exceed your expectations. Book your session today and let us capture the essence of who you are!",
-  //       desc2:
+  // desc1: "",
+  // desc2:
   //         "Up to 6 persons only. Downpayment should not exceed more than 2 days after booking.",
-  //       inclusions: [
+  // desc3: "",
+  // inclusions: [
   //         "1 attire",
   //         "30 mins. photo session",
   //         "1 photographer",
@@ -172,9 +190,11 @@ const packages = [
   //       name: "Deluxe",
   //       price: "1,699.00",
   //       desc: "Whether it's a professional headshot, a creative photoshoot, or simply preserving precious memories, our studio photography package is designed to exceed your expectations. Book your session today and let us capture the essence of who you are!",
-  //       desc2:
+  // desc1: "",
+  // desc2:
   //         "Up to 6 persons only. Downpayment should not exceed more than 2 days after booking.",
-  //       inclusions: [
+  // desc3: "",
+  // inclusions: [
   //         "3 attires",
   //         "1 hour photo session",
   //         "1 photographer",
@@ -190,9 +210,11 @@ const packages = [
   //       name: "Premium",
   //       price: "3,749.00",
   //       desc: "Whether it's a professional headshot, a creative photoshoot, or simply preserving precious memories, our studio photography package is designed to exceed your expectations. Book your session today and let us capture the essence of who you are!",
-  //       desc2:
+  // desc1: "",
+  // desc2:
   //         "Up to 6 persons only. Downpayment should not exceed more than 2 days after booking.",
-  //       inclusions: [
+  // desc3: "",
+  // inclusions: [
   //         "3 attires",
   //         "1 hour photo session",
   //         "1 photographer",
@@ -217,7 +239,9 @@ const packages = [
         name: "Solo A",
         price: "299.00",
         desc: "Whether you need a professional headshot, a striking portrait, or a creative solo photoshoot, our studio package is perfect for capturing your individuality. Let us highlight your unique personality and style with every shot. Book your session today and let us create stunning images you'll cherish forever!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: ["2 attire", "1 photographer", "3 digital copies"],
         calendly_link:
           // "https://calendly.com/blinkcreativestudio/studio-package-basic-a?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
@@ -229,7 +253,9 @@ const packages = [
         name: "Solo B",
         price: "499.00",
         desc: "Whether you need a professional headshot, a striking portrait, or a creative solo photoshoot, our studio package is perfect for capturing your individuality. Let us highlight your unique personality and style with every shot. Book your session today and let us create stunning images you'll cherish forever!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "2 attire",
           "1 photographer",
@@ -246,7 +272,9 @@ const packages = [
         name: "Solo C",
         price: "999.00",
         desc: "Whether you need a professional headshot, a striking portrait, or a creative solo photoshoot, our studio package is perfect for capturing your individuality. Let us highlight your unique personality and style with every shot. Book your session today and let us create stunning images you'll cherish forever!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "2 attire",
           "1 photographer",
@@ -263,9 +291,11 @@ const packages = [
       //   name: "Deluxe",
       //   price: "1,699.00",
       //   desc: "Whether it's a professional headshot, a creative photoshoot, or simply preserving precious memories, our studio photography package is designed to exceed your expectations. Book your session today and let us capture the essence of who you are!",
-      //   desc2:
+      // desc1: "",
+      // desc2:
       //     "Up to 6 persons only. Downpayment should not exceed more than 2 days after booking.",
-      //   inclusions: [
+      // desc3: "",
+      // inclusions: [
       //     "3 attires",
       //     "1 hour photo session",
       //     "1 photographer",
@@ -281,9 +311,11 @@ const packages = [
       //   name: "Premium",
       //   price: "3,749.00",
       //   desc: "Whether it's a professional headshot, a creative photoshoot, or simply preserving precious memories, our studio photography package is designed to exceed your expectations. Book your session today and let us capture the essence of who you are!",
-      //   desc2:
+      // desc1: "",
+      // desc2:
       //     "Up to 6 persons only. Downpayment should not exceed more than 2 days after booking.",
-      //   inclusions: [
+      // desc3: "",
+      // inclusions: [
       //     "3 attires",
       //     "1 hour photo session",
       //     "1 photographer",
@@ -308,7 +340,9 @@ const packages = [
         name: "Couple A",
         price: "399.00",
         desc: "Celebrate your bond with a couples studio photoshoot! Whether it’s an engagement, an anniversary, a moment with your bestie, or simply a way to capture your relationship, our package is designed to highlight your connection. Book your session today and let us preserve your most special moments together!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: ["1 attire", "3 digital copies"],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/solo-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
@@ -319,7 +353,9 @@ const packages = [
         name: "Couple B",
         price: "599.00",
         desc: "Celebrate your bond with a couples studio photoshoot! Whether it’s an engagement, an anniversary, a moment with your bestie, or simply a way to capture your relationship, our package is designed to highlight your connection. Book your session today and let us preserve your most special moments together!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: ["1 attire", "10 digital copies", "2 5R Print"],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/couple-a-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
@@ -330,7 +366,9 @@ const packages = [
         name: "Couple C",
         price: "1,099.00",
         desc: "Celebrate your bond with a couples studio photoshoot! Whether it’s an engagement, an anniversary, a moment with your bestie, or simply a way to capture your relationship, our package is designed to highlight your connection. Book your session today and let us preserve your most special moments together!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: ["1 attire", "10 digital copies", "8R with Frame"],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/couple-b-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
@@ -349,7 +387,9 @@ const packages = [
         name: "Family A",
         price: "799.00",
         desc: "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. Book today!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: ["1 attire", "1 photographer", "15 digital copies"],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/fam-package-family-bonds?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
@@ -360,7 +400,9 @@ const packages = [
         name: "Family B",
         price: "1,099.00",
         desc: "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. Book today!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "1 attire",
           "1 photographer",
@@ -376,7 +418,9 @@ const packages = [
         name: "Family C",
         price: "1,499.00",
         desc: "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. Book today!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "1 attires",
           "1 photographer",
@@ -392,8 +436,10 @@ const packages = [
       //   name: "Generations Legacy",
       //   price: "2,499.00",
       //   desc: "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. Book today!",
-      //   desc2: "Downpayment should not exceed more than 2 days after booking.",
-      //   inclusions: [
+      // desc1: "",
+      // desc2: "Downpayment should not exceed more than 2 days after booking.",
+      // desc3: "",
+      // inclusions: [
       //     "2 attires",
       //     "1 photographer",
       //     "Unlimited shots",
@@ -417,8 +463,10 @@ const packages = [
         name: "Bronze",
         price: "849.00",
         desc: "Celebrate your academic success in style with our exclusive graduation packages. Let us take care of the details while you focus on enjoying this milestone moment with your loved ones. Book with us and create lifelong memories of your academic success.",
+        desc1: "",
         desc2:
           "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "1 attire (toga/filipiniana/barong)",
           "1 pc. 8R print",
@@ -434,8 +482,10 @@ const packages = [
         name: "Silver",
         price: "1,359.00",
         desc: "Celebrate your academic success in style with our exclusive graduation packages. Let us take care of the details while you focus on enjoying this milestone moment with your loved ones. Book with us and create lifelong memories of your academic success.",
+        desc1: "",
         desc2:
           "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "2 attires (toga/filipiniana/barong)",
           "1 pc. 8R portrait (printed and framed)",
@@ -460,9 +510,11 @@ const packages = [
   //       name: "Bronze",
   //       price: "1,100.00",
   //       desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
-  //       desc2:
+  // desc1: "",
+  // desc2:
   //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-  //       inclusions: ["1 attire (sablay/toga)", "1 enhanced digital copy"],
+  // desc3: "",
+  // inclusions: ["1 attire (sablay/toga)", "1 enhanced digital copy"],
   //       calendly_link:
   //         "https://calendly.com/blinkcreativestudio/up-graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
   //     },
@@ -472,9 +524,11 @@ const packages = [
   //       name: "Silver",
   //       price: "1,699.00",
   //       desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
-  //       desc2:
+  // desc1: "",
+  // desc2:
   //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-  //       inclusions: [
+  // desc3: "",
+  // inclusions: [
   //         "2 attires (sablay/toga/corporate)",
   //         "1 pc. 8R portrait (printed and framed)",
   //         "1 pc. 5R print",
@@ -490,9 +544,11 @@ const packages = [
   //       name: "Gold",
   //       price: "2,699.00",
   //       desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
-  //       desc2:
+  // desc1: "",
+  // desc2:
   //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-  //       inclusions: [
+  // desc3: "",
+  // inclusions: [
   //         "2 attires (1 sablay/toga/corporate, 1 creative)",
   //         "2 pc. 8R portrait (printed and framed)",
   //         "2 pcs. 5R print",
@@ -508,9 +564,11 @@ const packages = [
   //       name: "Platinum",
   //       price: "3,299.00",
   //       desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
-  //       desc2:
+  // desc1: "",
+  // desc2:
   //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-  //       inclusions: [
+  // desc3: "",
+  // inclusions: [
   //         "3 attires (2 sablay/toga/corporate, 1 creative)",
   //         "2 pcs. 8R portrait (printed and framed)",
   //         "3 pcs. 5R print",
@@ -526,9 +584,11 @@ const packages = [
   //       name: "Diamond",
   //       price: "3,749.00",
   //       desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
-  //       desc2:
+  // desc1: "",
+  // desc2:
   //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-  //       inclusions: [
+  // desc3: "",
+  // inclusions: [
   //         "4 attires (1 sablay, 1 toga, 1 corporate, 1 creative)",
   //         "1 pc 12R portrait (printed and framed)",
   //         "4 pcs. 5R print",
@@ -552,7 +612,9 @@ const packages = [
         name: "Baby Bump Bliss",
         price: "1,499.00",
         desc: "Let the miracle of motherhood shine with our exclusive maternity packages. Our skilled photographers specialize in capturing the beauty and joy of pregnancy, from elegant solo shots to heartwarming family moments. Book today!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "30-45 mins studio time",
           "1 attire",
@@ -569,7 +631,9 @@ const packages = [
         name: "Great Expectations",
         price: "1,999.00",
         desc: "Let the miracle of motherhood shine with our exclusive maternity packages. Our skilled photographers specialize in capturing the beauty and joy of pregnancy, from elegant solo shots to heartwarming family moments. Book today!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "1 hour studio time",
           "2 attires",
@@ -594,7 +658,9 @@ const packages = [
         name: "Baby Steps",
         price: "4,000.00",
         desc: "Capture the joyous moments of your baby's journey with our professional baby photo packages. Our skilled photographers will capture their adorable smiles, curious expressions, and heartwarming milestones, from newborn sessions and beyond.",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "4 sessions (newborn, 3 months, 6 months, 9 months)",
           "2 attires (from BLINK)",
@@ -617,7 +683,9 @@ const packages = [
         name: "Little Blessings",
         price: "5,000.00",
         desc: "Capture the joyous moments of your baby's journey with our professional baby photo packages. Our skilled photographers will capture their adorable smiles, curious expressions, and heartwarming milestones, from newborn sessions and beyond.",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "4 sessions (newborn, 3 months, 6 months, 9 months)",
           "2 attires (from BLINK)",
@@ -640,7 +708,9 @@ const packages = [
         name: "Bouncing Baby",
         price: "6,499.00",
         desc: "Capture the joyous moments of your baby's journey with our professional baby photo packages. Our skilled photographers will capture their adorable smiles, curious expressions, and heartwarming milestones, from newborn sessions and beyond.",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "1 hour studio time",
           "Photoshoot of baby",
@@ -659,7 +729,9 @@ const packages = [
         name: "Bundle of Joy",
         price: "7,499.00",
         desc: "Capture the joyous moments of your baby's journey with our professional baby photo packages. Our skilled photographers will capture their adorable smiles, curious expressions, and heartwarming milestones, from newborn sessions and beyond.",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "1.5 hours studio time",
           "Photoshoot of baby with family",
@@ -678,8 +750,10 @@ const packages = [
         name: "The Elite Infant Collection",
         price: "24,000.00",
         desc: "Capture the joyous moments of your baby's journey with our professional baby photo packages. Our skilled photographers will capture their adorable smiles, curious expressions, and heartwarming milestones, from newborn sessions and beyond.",
+        desc1: "",
         desc2:
           "12 Sessions (1-12 months). Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "30-45 mins. studio time",
           "Unlimited shots",
@@ -703,8 +777,10 @@ const packages = [
         name: "Little Stars",
         price: "849.00",
         desc: "Childhood is the most magical time of our lives. Capture your kiddo’s milestones and special moments with our fun and engaging photo packages for toddlers and kiddies. Book your pre-birthday package or kiddie photo session and let the magic unfold.",
+        desc1: "",
         desc2:
           "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "1 attire",
           "30 mins. studio time",
@@ -720,8 +796,10 @@ const packages = [
         name: "Pitter Patter",
         price: "1,499.00",
         desc: "Childhood is the most magical time of our lives. Capture your kiddo’s milestones and special moments with our fun and engaging photo packages for toddlers and kiddies. Book your pre-birthday package or kiddie photo session and let the magic unfold.",
+        desc1: "",
         desc2:
           "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "2 attires",
           "1 hour studio time",
@@ -737,8 +815,10 @@ const packages = [
         name: "Magical Moments",
         price: "1,999.00",
         desc: "Childhood is the most magical time of our lives. Capture your kiddo’s milestones and special moments with our fun and engaging photo packages for toddlers and kiddies. Book your pre-birthday package or kiddie photo session and let the magic unfold.",
+        desc1: "",
         desc2:
           "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "2 attires (1 from client, 1 from BLINK)",
           "1 hour studio time",
@@ -764,7 +844,9 @@ const packages = [
         name: "Everlasting Bliss",
         price: "70,000.00",
         desc: "Capture the magic of your wedding day. Our expert photographers and videographers will document every moment, from the heartfelt vows to the lively reception. Let us tell your love story. Book now and create memories that will last a lifetime.",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "Unlimited photos",
           "1-2 outfit changes",
@@ -789,7 +871,9 @@ const packages = [
         name: "Eternal Love",
         price: "75,000.00",
         desc: "Capture the magic of your wedding day. Our expert photographers and videographers will document every moment, from the heartfelt vows to the lively reception. Let us tell your love story. Book now and create memories that will last a lifetime.",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "Unlimited photos",
           "2-3 outfit changes",
@@ -823,7 +907,9 @@ const packages = [
         name: "Elegance",
         price: "35,000.00",
         desc: "Celebrate your coming-of-age milestone in style. From the grand entrance to the heartfelt speeches, we'll be there to preserve the essence and excitement of your debut. Let us create a stunning visual narrative that you can cherish for a lifetime. Book today!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "Unlimited photos",
           "Save-the-date video",
@@ -845,7 +931,9 @@ const packages = [
         name: "Glamour",
         price: "40,000.00",
         desc: "Celebrate your coming-of-age milestone in style. From the grand entrance to the heartfelt speeches, we'll be there to preserve the essence and excitement of your debut. Let us create a stunning visual narrative that you can cherish for a lifetime. Book today!",
+        desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
         inclusions: [
           "Unlimited photos",
           "Save-the-date video",
