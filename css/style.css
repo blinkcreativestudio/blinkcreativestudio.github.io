@@ -4206,3 +4206,21 @@ label {
   margin: 20px;
 }
 
+.dominic-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-box {
+  width: 100px;
+  /* Adjust size as needed */
+  height: 20px;
+  /* Adjust size as needed */
+  background-color: black;
+  position: absolute;
+  top: 23%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+}
