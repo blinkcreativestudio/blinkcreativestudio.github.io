@@ -242,7 +242,7 @@ const packages = [
         desc1: "",
         desc2: "Downpayment should not exceed more than 2 days after booking.",
         desc3: "",
-        inclusions: ["2 attire", "1 photographer", "3 digital copies"],
+        inclusions: ["1 attire", "1 photographer", "3 digital copies"],
         calendly_link:
           // "https://calendly.com/blinkcreativestudio/studio-package-basic-a?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
           "https://calendly.com/blinkcreativestudio/solo-a?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
@@ -257,7 +257,7 @@ const packages = [
         desc2: "Downpayment should not exceed more than 2 days after booking.",
         desc3: "",
         inclusions: [
-          "2 attire",
+          "1 attire",
           "1 photographer",
           "10 digital copies",
           " 2 5R print",
@@ -276,7 +276,7 @@ const packages = [
         desc2: "Downpayment should not exceed more than 2 days after booking.",
         desc3: "",
         inclusions: [
-          "2 attire",
+          "1 attire",
           "1 photographer",
           "8R with frame",
           "10 digital copies",
