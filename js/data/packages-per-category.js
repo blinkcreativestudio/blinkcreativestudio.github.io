@@ -952,59 +952,59 @@ const packages = [
       },
     ],
   },
-  {
-    id: "12",
-    category: "holiday-special",
-    categoryName: "Sweet Holiday Moments",
-    image: "/assets/appointments/Mernels2.png",
-    packages: [
-      {
-        id: "12-1",
-        package: "solo-c-promo",
-        name: "Solo C Promo",
-        price: "700.00",
-        desc: "Regular Price - ₱ 999.00",
-        desc1:
-          "MerNel’s DISCOUNT - ₱ 700.00 (Simply present your MerNel’s receipt!)",
-        desc2:
-          "Whether you need a professional headshot, a striking portrait, or a creative solo photoshoot, our studio package is perfect for capturing your individuality. Let us highlight your unique personality and style with every shot. Book your session today and let us create stunning images you'll cherish forever!",
-        desc3: "Downpayment should not exceed more than 2 days after booking.",
-        inclusions: [],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/solo-c-clone-1?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-      {
-        id: "12-2",
-        package: "couple-c-promo",
-        name: "Couple C Promo",
-        price: "770.00",
-        desc: "Regular Price - ₱ 1,099.00",
-        desc1:
-          "MerNel’s DISCOUNT - ₱ 770.00 (Simply present your MerNel’s receipt!)",
-        desc2:
-          "Celebrate togetherness with a family or barkada studio photoshoot! Whether you're capturing cherished moments with your loved ones or creating memories with your closest friends, our package is designed to bring out the joy and connection that define your unique bond. Our skilled photographers will craft timeless portraits you'll treasure forever.",
-        desc3: "Downpayment should not exceed more than 2 days after booking.",
-        inclusions: [],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/couple-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-      {
-        id: "12-3",
-        package: "family-c-promo",
-        name: "Family / Barkada C Promo",
-        price: "1050.00",
-        desc: "Regular Price - ₱ 1,499.00",
-        desc1:
-          "MerNel’s DISCOUNT - ₱ 1,050.00 (Simply present your MerNel’s receipt!)",
-        desc2:
-          "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. You can even make this a barkada shoot! Book today!",
-        desc3: "Downpayment should not exceed more than 2 days after booking.",
-        inclusions: [],
-        calendly_link:
-          "https://calendly.com/blinkcreativestudio/family-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-      },
-    ],
-  },
+  // {
+  //   id: "12",
+  //   category: "holiday-special",
+  //   categoryName: "Sweet Holiday Moments",
+  //   image: "/assets/appointments/Mernels2.png",
+  //   packages: [
+  //     {
+  //       id: "12-1",
+  //       package: "solo-c-promo",
+  //       name: "Solo C Promo",
+  //       price: "700.00",
+  //       desc: "Regular Price - ₱ 999.00",
+  //       desc1:
+  //         "MerNel’s DISCOUNT - ₱ 700.00 (Simply present your MerNel’s receipt!)",
+  //       desc2:
+  //         "Whether you need a professional headshot, a striking portrait, or a creative solo photoshoot, our studio package is perfect for capturing your individuality. Let us highlight your unique personality and style with every shot. Book your session today and let us create stunning images you'll cherish forever!",
+  //       desc3: "Downpayment should not exceed more than 2 days after booking.",
+  //       inclusions: [],
+  //       calendly_link:
+  //         "https://calendly.com/blinkcreativestudio/solo-c-clone-1?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+  //     },
+  //     {
+  //       id: "12-2",
+  //       package: "couple-c-promo",
+  //       name: "Couple C Promo",
+  //       price: "770.00",
+  //       desc: "Regular Price - ₱ 1,099.00",
+  //       desc1:
+  //         "MerNel’s DISCOUNT - ₱ 770.00 (Simply present your MerNel’s receipt!)",
+  //       desc2:
+  //         "Celebrate togetherness with a family or barkada studio photoshoot! Whether you're capturing cherished moments with your loved ones or creating memories with your closest friends, our package is designed to bring out the joy and connection that define your unique bond. Our skilled photographers will craft timeless portraits you'll treasure forever.",
+  //       desc3: "Downpayment should not exceed more than 2 days after booking.",
+  //       inclusions: [],
+  //       calendly_link:
+  //         "https://calendly.com/blinkcreativestudio/couple-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+  //     },
+  //     {
+  //       id: "12-3",
+  //       package: "family-c-promo",
+  //       name: "Family / Barkada C Promo",
+  //       price: "1050.00",
+  //       desc: "Regular Price - ₱ 1,499.00",
+  //       desc1:
+  //         "MerNel’s DISCOUNT - ₱ 1,050.00 (Simply present your MerNel’s receipt!)",
+  //       desc2:
+  //         "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. You can even make this a barkada shoot! Book today!",
+  //       desc3: "Downpayment should not exceed more than 2 days after booking.",
+  //       inclusions: [],
+  //       calendly_link:
+  //         "https://calendly.com/blinkcreativestudio/family-c-clone?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+  //     },
+  //   ],
+  // },
 ];
 
 export default packages;
