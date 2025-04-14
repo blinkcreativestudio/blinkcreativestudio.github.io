@@ -43,7 +43,7 @@ const packages = [
         id: "6-3",
         package: "silver-barkada",
         name: "Silver Barkada",
-        price: "8,000.00",
+        price: "8,000.00 – Barkada Graduation Package (Good for 5 Persons)",
         desc: "Friends who graduate together stay iconic together!  Celebrate with the people who saved your behind in thesis, fed you during deadlines, and never judged your eye bags. Book your package today!",
         desc1: "",
         desc2:
@@ -119,7 +119,7 @@ const packages = [
         id: "6-6",
         package: "gold-barkada",
         name: "Gold Barkada",
-        price: "13,000.00",
+        price: "13,000.00 – Barkada Graduation Package (Good for 5 Persons)",
         desc: "Friends who graduate together stay iconic together!  Celebrate with the people who saved your behind in thesis, fed you during deadlines, and never judged your eye bags. Book your package today!",
         desc1: "",
         desc2:
