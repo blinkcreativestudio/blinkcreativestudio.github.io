@@ -1326,23 +1326,23 @@ form #mce-error-response a {
   width: 100%;
 }
 
-.mission-btn-expand {
+.mission-toggle-btn {
   color: var(--primary-color);
   background: none;
   border: none;
   font-weight: bold;
   font-size: 18px;
   transform: translateY(4px);
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.mission-btn-collapse {
-  color: white;
-  display: inline-block;
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: 18px;
-  transform: translateY(4px);
+.mission-toggle-btn .icon {
+  transition: transform 0.3s ease;
+}
+
+.mission-toggle-btn.rotated .icon {
+  transform: rotate(180deg);
 }
 
 .mission-expanded {
@@ -1355,6 +1355,14 @@ form #mce-error-response a {
   transition: transform 0.3s ease-in, max-height 0.5s ease-in-out,
     opacity 0.3s ease-in;
   transform-origin: top;
+  transform: scaleY(0);
+}
+
+.mission-expanded.active {
+  opacity: 1;
+  max-height: 2000px;
+  /* big enough for your content */
+  transform: scaleY(1);
 }
 
 .mission-expanded p {

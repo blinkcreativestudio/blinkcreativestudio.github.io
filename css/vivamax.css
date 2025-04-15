@@ -157,3 +157,17 @@
   color: #a30a24; /* Change to your desired color */
   font-weight: bold;
 }
+
+#toggle-audio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+  color: #a30a24;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
