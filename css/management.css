@@ -1,0 +1,68 @@
+.management-section {
+    margin: 100px 0 50px 0;
+    background-color: #ffffff;
+}
+
+.management-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.management-content-details {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 500px;
+    /* was 500px */
+    height: 250px;
+    /* was 200px */
+    margin: 0 auto 50px auto;
+}
+
+.rectangle-bg {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    z-index: 0;
+}
+
+.profile-image {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.name {
+    color: #a30a24;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.position {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.phone,
+.email {
+    color: #666;
+    font-size: 14px;
+    margin: -4px;
+}
