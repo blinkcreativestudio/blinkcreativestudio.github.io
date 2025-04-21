@@ -65,4 +65,8 @@
     color: #666;
     font-size: 14px;
     margin: -4px;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -webkit-transform: translateZ(0);
+    /* force GPU rendering in Safari */
 }
