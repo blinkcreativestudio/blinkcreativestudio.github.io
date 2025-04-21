@@ -62,7 +62,8 @@
 
 .phone,
 .email {
-    color: #666;
+    color: #666 !important;
+    text-decoration: none !important;
     font-size: 14px;
     margin: -4px;
     display: block;
