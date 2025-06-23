@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Mona Sans from Fontshare -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=mona-sans@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config: Set Mona Sans as the default sans font -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Mona Sans"', "ui-sans-serif", "system-ui"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <title>Species Advancement Tech Forum</title>
+  </head>
+  <body class="m-0 p-0 bg-[#FEF9DB] font-sans">
+    <div class="relative w-full h-auto">
+      <img
+        class="w-full h-[720px] block"
+        src="/assets/satf/BG.png"
+        alt="Background Image"
+      />
+
+      <div
+        class="absolute top-0 left-0 w-full flex flex-col items-center justify-center pt-10 px-4 text-center text-white"
+      >
+        <img
+          class="max-w-[615px] w-full h-auto mb-4"
+          src="/assets/satf/Logos/SATF LOGO.png"
+          alt="SATF Logo"
+        />
+        <p
+          class="text-[30px] italic font-semibold leading-[23px] text-center mt-10 mb-12"
+        >
+          Shaping the Future of Livestock Innovation.
+        </p>
+
+        <div
+          class="flex flex-wrap justify-center items-center gap-10 max-w-full w-full mb-12"
+        >
+          <!-- Event Card 1 -->
+          <div class="flex flex-shrink-0 w-[476px] h-auto border rounded-[8px]">
+            <div
+              class="text-white p-4 flex flex-col items-center justify-center rounded-l-lg bg-gradient-to-l from-[#3EAD35] to-[#0060DC]"
+            >
+              <div class="text-[50px] font-extrabold -mt-4">17</div>
+              <div class="text-[21px] leading-tight -mt-4">JULY<br />2025</div>
+            </div>
+            <div class="flex flex-col justify-center px-[8px]">
+              <p class="text-white text-[18px] font-bold text-start uppercase">
+                EGGSPONENTIAL PROGRESS: SHAPING THE FUTURE OF LAYER PRODUCTION
+                WITH CONFIDENCE
+              </p>
+              <div class="flex">
+                <svg
+                  class="w-4 h-5"
+                  viewBox="0 0 14 20"
+                  fill="white"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 20C6.76667 20 6.56667 19.9333 6.4 19.8C6.23333 19.6667 6.10833 19.4917 6.025 19.275C5.70833 18.3417 5.30833 17.4667 4.825 16.65C4.35833 15.8333 3.7 14.875 2.85 13.775C2 12.675 1.30833 11.625 0.775 10.625C0.258333 9.625 0 8.41667 0 7C0 5.05 0.675 3.4 2.025 2.05C3.39167 0.683333 5.05 0 7 0C8.95 0 10.6 0.683333 11.95 2.05C13.3167 3.4 14 5.05 14 7C14 8.51667 13.7083 9.78333 13.125 10.8C12.5583 11.8 11.9 12.7917 11.15 13.775C10.25 14.975 9.56667 15.975 9.1 16.775C8.65 17.5583 8.275 18.3917 7.975 19.275C7.89167 19.5083 7.75833 19.6917 7.575 19.825C7.40833 19.9417 7.21667 20 7 20ZM7 9.5C7.7 9.5 8.29167 9.25833 8.775 8.775C9.25833 8.29167 9.5 7.7 9.5 7C9.5 6.3 9.25833 5.70833 8.775 5.225C8.29167 4.74167 7.7 4.5 7 4.5C6.3 4.5 5.70833 4.74167 5.225 5.225C4.74167 5.70833 4.5 6.3 4.5 7C4.5 7.7 4.74167 8.29167 5.225 8.775C5.70833 9.25833 6.3 9.5 7 9.5Z"
+                  />
+                </svg>
+                <p>Crimson Hotel, Alabang, Muntinlupa City</p>
+              </div>
+            </div>
+          </div>
+          <dvi class="flex flex-shrink-0 w-[476px] h-auto border rounded-[8px]">
+            <div
+              class="text-white p-4 flex flex-col items-center justify-center rounded-l-lg bg-gradient-to-l from-[#3EAD35] to-[#0060DC]"
+            >
+              <div class="text-[50px] font-extrabold -mt-4">24</div>
+              <div class="text-[21px] leading-tight -mt-4">JULY<br />2025</div>
+            </div>
+            <div class="flex flex-col justify-center px-[8px]">
+              <p class="text-white text-[18px] font-bold text-start uppercase">
+                Pork Forward: Trailblazing the Path to Advanced Swine Production
+              </p>
+              <div class="flex">
+                <svg
+                  class="w-4 h-5"
+                  viewBox="0 0 14 20"
+                  fill="white"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 20C6.76667 20 6.56667 19.9333 6.4 19.8C6.23333 19.6667 6.10833 19.4917 6.025 19.275C5.70833 18.3417 5.30833 17.4667 4.825 16.65C4.35833 15.8333 3.7 14.875 2.85 13.775C2 12.675 1.30833 11.625 0.775 10.625C0.258333 9.625 0 8.41667 0 7C0 5.05 0.675 3.4 2.025 2.05C3.39167 0.683333 5.05 0 7 0C8.95 0 10.6 0.683333 11.95 2.05C13.3167 3.4 14 5.05 14 7C14 8.51667 13.7083 9.78333 13.125 10.8C12.5583 11.8 11.9 12.7917 11.15 13.775C10.25 14.975 9.56667 15.975 9.1 16.775C8.65 17.5583 8.275 18.3917 7.975 19.275C7.89167 19.5083 7.75833 19.6917 7.575 19.825C7.40833 19.9417 7.21667 20 7 20ZM7 9.5C7.7 9.5 8.29167 9.25833 8.775 8.775C9.25833 8.29167 9.5 7.7 9.5 7C9.5 6.3 9.25833 5.70833 8.775 5.225C8.29167 4.74167 7.7 4.5 7 4.5C6.3 4.5 5.70833 4.74167 5.225 5.225C4.74167 5.70833 4.5 6.3 4.5 7C4.5 7.7 4.74167 8.29167 5.225 8.775C5.70833 9.25833 6.3 9.5 7 9.5Z"
+                  />
+                </svg>
+                <p>Crimson Hotel, Alabang, Muntinlupa City</p>
+              </div>
+            </div>
+          </dvi>
+        </div>
+        <button
+          class="px-[50px] py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 transition"
+        >
+          Register Now
+        </button>
+        <img
+          class="-mt-4"
+          src="/assets/satf/Chicken_Pig.png"
+          alt="Pig-Chicken-Egg"
+        />
+      </div>
+      <div class="flex flex-col justify-center items-center mt-64">
+        <div class="text-center mt-12">
+          <h1
+            class="text-[#0035E6] font-sans text-[60px] font-bold leading-[54px]"
+          >
+            ABOUT THE EVENT
+          </h1>
+          <div
+            class="w-[185px] h-1 mx-auto my-6 rounded"
+            style="
+              background: linear-gradient(
+                to right,
+                #0035e6,
+                #3ead35,
+                #fec205,
+                #ef1748
+              );
+            "
+          ></div>
+        </div>
+        <div class="relative w-full my-20">
+          <div
+            class="w-[900px] h-1 mx-auto my-20 rounded bg-gradient-to-r from-blue-500 via-green-500 via-yellow-400 to-red-500"
+          ></div>
+
+          <div
+            class="absolute top-2 left-1/2 -translate-x-1/2 flex justify-between w-[900px] px-20"
+          >
+            <div class="flex flex-col justify-center items-center gap-2">
+              <div
+                class="w-[143px] h-[143px] rounded-full bg-[#0035E6] flex justify-center items-center"
+              >
+                <img src="/assets/satf/Icons/egg.png" alt="EGG" />
+              </div>
+              <h3 class="text-[30px] font-semibold">Layers</h3>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-2">
+              <div
+                class="w-[143px] h-[143px] rounded-full bg-[#3EAD35] flex justify-center items-center"
+              >
+                <img src="/assets/satf/Icons/pig.png" alt="PIG" />
+              </div>
+              <h3 class="text-[30px] font-semibold">Swine</h3>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-2">
+              <div
+                class="w-[143px] h-[143px] rounded-full bg-[#FEC205] flex justify-center items-center"
+              >
+                <img src="/assets/satf/Icons/chicken.png" alt="CHICKEN" />
+              </div>
+              <h3 class="text-[30px] font-semibold">Broilers</h3>
+            </div>
+          </div>
+        </div>
+        <div class="max-w-[900px] px-2 mt-4">
+          <p class="text-center text-[18px]">
+            The first
+            <span class="font-bold"
+              > Species Advancement Tech Forum (SATF) </span
+            >is set to become the premier platform for pioneering the future of
+            livestock through science, technology, and strategic collaboration.
+            SATF brings together leading minds in genetics, nutrition, housing,
+            and animal health to drive species development into the next
+            generation. Expect powerful keynote talks, cutting-edge science, and
+            immersive networking, designed for industry leaders shaping what
+            comes next. <br /><br />
+            Whether you're mapping genomes, optimizing feed, or building the
+            next smart farm-<span class="font-bold"
+              >this is where advancement begins!</span
+            >
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center items-center mt-28">
+        <div
+          class="text-center mt-12 flex flex-col justify-center items-center"
+        >
+          <h1
+            class="text-[#0035E6] font-sans text-[60px] font-bold leading-[54px]"
+          >
+            SEE YOU SOON
+          </h1>
+          <div
+            class="w-[185px] h-1 mx-auto my-6 rounded"
+            style="
+              background: linear-gradient(
+                to right,
+                #0035e6,
+                #3ead35,
+                #fec205,
+                #ef1748
+              );
+            "
+          ></div>
+          <h3 class="text-[30px] font-semibold leading-[39px]">
+            Thursday, 17 July 2025
+          </h3>
+          <div class="px-2 my-4">
+            <p class="text-center text-[18px]">
+              Eggsponential Progress: Shaping the Future of Layer Production
+              with Confidence
+            </p>
+          </div>
+          <div
+            class="flex justify-center white font-bold tabular-nums gap-x-20"
+          >
+            <!-- Days -->
+            <div class="flex items-center">
+              <div
+                id="days-17"
+                class="text-[#0035E6] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
+              >
+                00
+              </div>
+              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
+                >Days</span
+              >
+            </div>
+
+            <!-- Hours -->
+            <div class="flex items-center">
+              <div
+                id="hours-17"
+                class="text-[#3EAD35] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
+              >
+                00
+              </div>
+              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
+                >Hours</span
+              >
+            </div>
+
+            <!-- Minutes -->
+            <div class="flex items-center">
+              <div
+                id="minutes-17"
+                class="text-[#FEC205] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
+              >
+                00
+              </div>
+              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
+                >Minutes</span
+              >
+            </div>
+
+            <!-- Seconds -->
+            <div class="flex items-center">
+              <div
+                id="seconds-17"
+                class="text-[#EF1748] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
+              >
+                00
+              </div>
+              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
+                >Seconds</span
+              >
+            </div>
+          </div>
+          <div
+            class="max-w-[895px] w-full h-[1px] bg-[#C4C4C4] mt-12 mb-12"
+          ></div>
+          <h3 class="text-[30px] font-semibold leading-[39px]">
+            Thursday, 24 July 2025
+          </h3>
+          <div class="px-2 my-4">
+            <p class="text-center text-[18px]">
+              Eggsponential Progress: Shaping the Future of Layer Production
+              with Confidence
+            </p>
+          </div>
+          <div
+            class="flex justify-center white font-bold tabular-nums gap-x-20"
+          >
+            <!-- Days -->
+            <div class="flex items-center">
+              <div
+                id="days-24"
+                class="text-[#0035E6] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
+              >
+                00
+              </div>
+              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
+                >Days</span
+              >
+            </div>
+
+            <!-- Hours -->
+            <div class="flex items-center">
+              <div
+                id="hours-24"
+                class="text-[#3EAD35] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
+              >
+                00
+              </div>
+              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
+                >Hours</span
+              >
+            </div>
+
+            <!-- Minutes -->
+            <div class="flex items-center">
+              <div
+                id="minutes-24"
+                class="text-[#FEC205] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
+              >
+                00
+              </div>
+              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
+                >Minutes</span
+              >
+            </div>
+
+            <!-- Seconds -->
+            <div class="flex items-center">
+              <div
+                id="seconds-24"
+                class="text-[#EF1748] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
+              >
+                00
+              </div>
+              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
+                >Seconds</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function startCountdown(targetDate, ids) {
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
+
+          if (distance <= 0) {
+            document.getElementById(ids.days).textContent = "00";
+            document.getElementById(ids.hours).textContent = "00";
+            document.getElementById(ids.minutes).textContent = "00";
+            document.getElementById(ids.seconds).textContent = "00";
+            return;
+          }
+
+          const days = String(
+            Math.floor(distance / (1000 * 60 * 60 * 24))
+          ).padStart(2, "0");
+          const hours = String(
+            Math.floor((distance / (1000 * 60 * 60)) % 24)
+          ).padStart(2, "0");
+          const minutes = String(
+            Math.floor((distance / (1000 * 60)) % 60)
+          ).padStart(2, "0");
+          const seconds = String(Math.floor((distance / 1000) % 60)).padStart(
+            2,
+            "0"
+          );
+
+          document.getElementById(ids.days).textContent = days;
+          document.getElementById(ids.hours).textContent = hours;
+          document.getElementById(ids.minutes).textContent = minutes;
+          document.getElementById(ids.seconds).textContent = seconds;
+        }
+
+        updateCountdown(); // Initial call
+        setInterval(updateCountdown, 1000); // Update every second
+      }
+
+      // Countdown for July 17, 2025 08:00 AM
+      startCountdown(new Date("July 17, 2025 08:00:00").getTime(), {
+        days: "days-17",
+        hours: "hours-17",
+        minutes: "minutes-17",
+        seconds: "seconds-17",
+      });
+
+      // Countdown for July 24, 2025 08:00 AM
+      startCountdown(new Date("July 24, 2025 08:00:00").getTime(), {
+        days: "days-24",
+        hours: "hours-24",
+        minutes: "minutes-24",
+        seconds: "seconds-24",
+      });
+    </script>
+    <div class="flex flex-col justify-center items-center">
+      <div class="flex flex-col justify-center items-center mt-28">
+        <div
+          class="text-center mt-12 flex flex-col justify-center items-center"
+        >
+          <h1
+            class="text-[#0035E6] font-sans text-[60px] font-bold leading-[54px]"
+          >
+            SPEAKERS
+          </h1>
+          <div
+            class="w-[185px] h-1 mx-auto my-6 rounded"
+            style="
+              background: linear-gradient(
+                to right,
+                #0035e6,
+                #3ead35,
+                #fec205,
+                #ef1748
+              );
+            "
+          ></div>
+        </div>
+        <div class="max-w-[900px] px-2 mt-1">
+          <p class="text-center text-[18px]">
+            Get to know the visionary scientists, innovators, and experts who
+            are leading the conversation on species advancement and breakthrough
+            technologies. Learn from their research, insights, and real-world
+            applications shaping the future of life sciences and biotechnology.
+          </p>
+        </div>
+      </div>
+      <div
+        id="speaker-container"
+        class="flex flex-wrap max-w-[1210px] w-full justify-center items-centers gap-5 mt-14"
+      ></div>
+
+      <script>
+        fetch("/js/data/speakers.json")
+          .then((res) => res.json())
+          .then((speakers) => {
+            const container = document.getElementById("speaker-container");
+
+            speakers.forEach((speaker, index) => {
+              const speakerCard = `
+          <div class="speaker-card flex flex-col w-[286px] h-[500px] justify-between items-start gap-5" data-color="${speaker.gradientEnd}" data-index="${index}">
+            <!-- Image Section -->
+            <div class="image-section group relative bg-[#00072C] w-full h-[367px] flex-shrink-0 rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden">
+              <img
+                src="${speaker.image}"
+                alt="${speaker.name}"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+              <div
+                class="absolute inset-0 group-hover:opacity-0 transition-opacity duration-300"
+                style="background: ${speaker.gradient};"
+              ></div>
+              <div class="absolute bottom-4 right-4 cursor-pointer toggle-btn">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 22L22 2M22 2H2M22 2V22"
+                    stroke="#FEF9DB"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Info Section -->
+            <div class="info-section w-full px-3 flex flex-col gap-3 flex-grow">
+              <div class="border-[1px] rounded-full px-[10px] py-[5px] border-[#0035E6] w-fit">
+                <h2 class="text-[16.5px] text-[#0035E6] font-bold whitespace-nowrap truncate max-w-full">
+                  ${speaker.name}
+                </h2>
+              </div>
+              <p class="text-[#4a4a4a] font-semibold text-[16px] leading-[1.4] min-h-[48px]">
+                ${speaker.title}
+              </p>
+            </div>
+
+            <!-- Description -->
+            <div class="description flex flex-col gap-3 h-[500px] px-4 py-4 text-[16px] text-white font-semibold hidden rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px]" style="background-color: ${speaker.descriptionBg};">
+              <div class="border-[1px] rounded-full px-[10px] py-[5px] border-white w-fit">
+                <h2 class="text-[16.5px] font-bold whitespace-nowrap truncate max-w-full">
+                  ${speaker.name}
+                </h2>
+              </div>
+              <p class="font-semibold text-[16px] leading-[1.4] min-h-[48px]">
+                ${speaker.title}
+              </p>
+              <p class="text-[14px]">
+                ${speaker.description}
+              </p>
+            </div>
+          </div>
+        `;
+              container.insertAdjacentHTML("beforeend", speakerCard);
+            });
+
+            // Interaction logic
+            let currentOpenCard = null;
+
+            function closeOpenCard() {
+              if (currentOpenCard) {
+                const imageSection =
+                  currentOpenCard.querySelector(".image-section");
+                const infoSection =
+                  currentOpenCard.querySelector(".info-section");
+                const description =
+                  currentOpenCard.querySelector(".description");
+
+                imageSection.classList.remove("hidden");
+                infoSection.classList.remove("hidden");
+                description.classList.add("hidden");
+
+                currentOpenCard.style.backgroundColor = "transparent";
+                currentOpenCard = null;
+              }
+            }
+
+            // Add click listeners
+            document.querySelectorAll(".speaker-card").forEach((card) => {
+              const toggleBtn = card.querySelector(".toggle-btn");
+              const imageSection = card.querySelector(".image-section");
+              const infoSection = card.querySelector(".info-section");
+              const description = card.querySelector(".description");
+              const gradientEndColor = card.getAttribute("data-color");
+
+              toggleBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                if (currentOpenCard !== card) {
+                  closeOpenCard();
+
+                  imageSection.classList.add("hidden");
+                  infoSection.classList.add("hidden");
+                  card.style.backgroundColor = gradientEndColor;
+                  description.classList.remove("hidden");
+
+                  currentOpenCard = card;
+                } else {
+                  closeOpenCard();
+                }
+              });
+            });
+
+            // Click outside any card
+            document.addEventListener("click", (e) => {
+              if (currentOpenCard && !currentOpenCard.contains(e.target)) {
+                closeOpenCard();
+              }
+            });
+          });
+      </script>
+      <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-col justify-center items-center mt-28">
+          <div
+            class="text-center mt-12 flex flex-col justify-center items-center"
+          >
+            <h1
+              class="text-[#0035E6] font-sans text-[60px] font-bold leading-[54px]"
+            >
+              SPONSORS
+            </h1>
+            <div
+              class="w-[185px] h-1 mx-auto my-6 rounded"
+              style="
+                background: linear-gradient(
+                  to right,
+                  #0035e6,
+                  #3ead35,
+                  #fec205,
+                  #ef1748
+                );
+              "
+            ></div>
+          </div>
+          <div class="max-w-[900px] px-2 mt-1">
+            <p class="text-center text-[18px]">
+              Organized by the following partner companies.
+            </p>
+          </div>
+          <div class="flex gap-16 mt-12">
+            <div class="flex flex-col justify-center items-center gap-6">
+              <p>In partnership with</p>
+              <div class="flex gap-16 justify-center items-center">
+                <img
+                  class="max-w-[132px] w-full h-[68px]"
+                  src="/assets/satf/Logos/BCS_LOGO_ALT_OG 3.png"
+                  alt="BLINK CREATIVE STUDIO"
+                />
+                <img
+                  class="max-w-[106px] w-full h-[62px]"
+                  src="/assets/satf/Logos/DSM_FIRMENICH_BLACK_2 3.png"
+                  alt="DSM"
+                />
+              </div>
+            </div>
+            <div class="w-[1px] h-[158px] bg-[#4a4a4a]"></div>
+            <div class="flex flex-col justify-center items-center">
+              <p>In collaboration with</p>
+              <div class="flex gap-16 justify-center items-center">
+                <img
+                  class="max-w-[83px] w-full h-[117px]"
+                  src="/assets/satf/Logos/logo-lohmann 1.png"
+                  alt="LOHMAN"
+                />
+                <img
+                  class="max-w-[63px] w-full h-[91px]"
+                  src="/assets/satf/Logos/cropped-cropped-pic_logo2 3.png"
+                  alt="PIC"
+                />
+                <img
+                  class="max-w-[150px] w-full h-[45px]"
+                  src="/assets/satf/Logos/BI_LOGO_DARKGREEN 3.png"
+                  alt="BI"
+                />
+                <img
+                  class="max-w-[189px] w-full h-[74px]"
+                  src="/assets/satf/Logos/Big_Dutchman_Logo.svg 2.png"
+                  alt="BIG DUTCHMAN"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
