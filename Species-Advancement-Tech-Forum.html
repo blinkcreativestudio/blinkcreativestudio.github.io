@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Species Advancement Tech Forum</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -11,7 +12,8 @@
     />
 
     <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="./output.css" rel="stylesheet" />
 
     <!-- Tailwind Config: Set Mona Sans as the default sans font -->
     <script>
@@ -26,47 +28,57 @@
       };
     </script>
 
-    <title>Species Advancement Tech Forum</title>
+    <style>
+      .font-sans {
+        font-family: "Mona Sans", sans-serif;
+      }
+    </style>
   </head>
-  <body class="m-0 p-0 bg-[#FEF9DB] font-sans">
-    <div class="relative w-full h-auto">
+  <body class="m-0 p-0 bg-[#FEF9DB] font-sans max-w-screen w-full">
+    <div class="relative w-full h-auto overflow-hidden">
       <img
-        class="w-full h-[720px] block"
+        class="w-full h-[720px] object-cover block"
         src="/assets/satf/BG.png"
         alt="Background Image"
       />
 
       <div
-        class="absolute top-0 left-0 w-full flex flex-col items-center justify-center pt-10 px-4 text-center text-white"
+        class="absolute top-0 left-0 w-full flex flex-col items-center justify-center mt-10 px-4 text-center text-white"
       >
         <img
-          class="max-w-[615px] w-full h-auto mb-4"
+          class="w-[288px] md:w-[512px] lg:w-[615px] h-auto mb-4"
           src="/assets/satf/Logos/SATF LOGO.png"
           alt="SATF Logo"
         />
         <p
-          class="text-[30px] italic font-semibold leading-[23px] text-center mt-10 mb-12"
+          class="text-[16px] md:text-[30px] italic font-semibold leading-[23px] text-center mt-2 md:mt-10 "
         >
           Shaping the Future of Livestock Innovation.
         </p>
 
         <div
-          class="flex flex-wrap justify-center items-center gap-10 max-w-full w-full mb-12"
+          class="flex flex-wrap justify-center items-center gap-10 max-w-full w-full my-8 md:my-12"
         >
           <!-- Event Card 1 -->
-          <div class="flex flex-shrink-0 w-[476px] h-auto border rounded-[8px]">
+          <div
+            class="flex flex-shrink-0 w-[366px] md:w-[476px] h-auto rounded-[8px]"
+          >
             <div
-              class="text-white p-4 flex flex-col items-center justify-center rounded-l-lg bg-gradient-to-l from-[#3EAD35] to-[#0060DC]"
+              class="text-white w-[80px] p-4 flex flex-col items-center justify-center rounded-l-lg bg-gradient-to-l from-[#3EAD35] to-[#0060DC]"
             >
               <div class="text-[50px] font-extrabold -mt-4">17</div>
               <div class="text-[21px] leading-tight -mt-4">JULY<br />2025</div>
             </div>
-            <div class="flex flex-col justify-center px-[8px]">
-              <p class="text-white text-[18px] font-bold text-start uppercase">
+            <div
+              class="flex flex-col justify-center px-[8px] gap-2 border-t border-r border-b rounded-tr-[8px] rounded-br-[8px]"
+            >
+              <p
+                class="text-white text-[15px] md:text-[18px] font-bold text-start uppercase"
+              >
                 EGGSPONENTIAL PROGRESS: SHAPING THE FUTURE OF LAYER PRODUCTION
                 WITH CONFIDENCE
               </p>
-              <div class="flex">
+              <div class="flex gap-2 justify-start items-center">
                 <svg
                   class="w-4 h-5"
                   viewBox="0 0 14 20"
@@ -77,22 +89,26 @@
                     d="M7 20C6.76667 20 6.56667 19.9333 6.4 19.8C6.23333 19.6667 6.10833 19.4917 6.025 19.275C5.70833 18.3417 5.30833 17.4667 4.825 16.65C4.35833 15.8333 3.7 14.875 2.85 13.775C2 12.675 1.30833 11.625 0.775 10.625C0.258333 9.625 0 8.41667 0 7C0 5.05 0.675 3.4 2.025 2.05C3.39167 0.683333 5.05 0 7 0C8.95 0 10.6 0.683333 11.95 2.05C13.3167 3.4 14 5.05 14 7C14 8.51667 13.7083 9.78333 13.125 10.8C12.5583 11.8 11.9 12.7917 11.15 13.775C10.25 14.975 9.56667 15.975 9.1 16.775C8.65 17.5583 8.275 18.3917 7.975 19.275C7.89167 19.5083 7.75833 19.6917 7.575 19.825C7.40833 19.9417 7.21667 20 7 20ZM7 9.5C7.7 9.5 8.29167 9.25833 8.775 8.775C9.25833 8.29167 9.5 7.7 9.5 7C9.5 6.3 9.25833 5.70833 8.775 5.225C8.29167 4.74167 7.7 4.5 7 4.5C6.3 4.5 5.70833 4.74167 5.225 5.225C4.74167 5.70833 4.5 6.3 4.5 7C4.5 7.7 4.74167 8.29167 5.225 8.775C5.70833 9.25833 6.3 9.5 7 9.5Z"
                   />
                 </svg>
-                <p>Crimson Hotel, Alabang, Muntinlupa City</p>
+                <p class="text-[12px] md:text-[14px]">
+                  Crimson Hotel, Alabang, Muntinlupa City
+                </p>
               </div>
             </div>
           </div>
-          <dvi class="flex flex-shrink-0 w-[476px] h-auto border rounded-[8px]">
+          <dvi
+            class="flex flex-shrink-0 w-[366px] md:w-[476px] h-auto"
+          >
             <div
-              class="text-white p-4 flex flex-col items-center justify-center rounded-l-lg bg-gradient-to-l from-[#3EAD35] to-[#0060DC]"
+              class="text-white w-[80px] p-4 flex flex-col items-center justify-center rounded-l-lg bg-gradient-to-l from-[#3EAD35] to-[#0060DC]"
             >
               <div class="text-[50px] font-extrabold -mt-4">24</div>
               <div class="text-[21px] leading-tight -mt-4">JULY<br />2025</div>
             </div>
-            <div class="flex flex-col justify-center px-[8px]">
-              <p class="text-white text-[18px] font-bold text-start uppercase">
+            <div class="flex flex-col justify-center px-[8px] gap-2 border-t border-r border-b rounded-tr-[8px] rounded-br-[8px]">
+              <p class="text-white text-[15px] md:text-[18px] font-bold text-start uppercase"">
                 Pork Forward: Trailblazing the Path to Advanced Swine Production
               </p>
-              <div class="flex">
+              <div class="flex gap-2 justify-start items-center">
                 <svg
                   class="w-4 h-5"
                   viewBox="0 0 14 20"
@@ -103,18 +119,20 @@
                     d="M7 20C6.76667 20 6.56667 19.9333 6.4 19.8C6.23333 19.6667 6.10833 19.4917 6.025 19.275C5.70833 18.3417 5.30833 17.4667 4.825 16.65C4.35833 15.8333 3.7 14.875 2.85 13.775C2 12.675 1.30833 11.625 0.775 10.625C0.258333 9.625 0 8.41667 0 7C0 5.05 0.675 3.4 2.025 2.05C3.39167 0.683333 5.05 0 7 0C8.95 0 10.6 0.683333 11.95 2.05C13.3167 3.4 14 5.05 14 7C14 8.51667 13.7083 9.78333 13.125 10.8C12.5583 11.8 11.9 12.7917 11.15 13.775C10.25 14.975 9.56667 15.975 9.1 16.775C8.65 17.5583 8.275 18.3917 7.975 19.275C7.89167 19.5083 7.75833 19.6917 7.575 19.825C7.40833 19.9417 7.21667 20 7 20ZM7 9.5C7.7 9.5 8.29167 9.25833 8.775 8.775C9.25833 8.29167 9.5 7.7 9.5 7C9.5 6.3 9.25833 5.70833 8.775 5.225C8.29167 4.74167 7.7 4.5 7 4.5C6.3 4.5 5.70833 4.74167 5.225 5.225C4.74167 5.70833 4.5 6.3 4.5 7C4.5 7.7 4.74167 8.29167 5.225 8.775C5.70833 9.25833 6.3 9.5 7 9.5Z"
                   />
                 </svg>
-                <p>Crimson Hotel, Alabang, Muntinlupa City</p>
+                <p class="text-[12px] md:text-[14px]">
+                  Crimson Hotel, Alabang, Muntinlupa City
+                </p>
               </div>
             </div>
           </dvi>
         </div>
         <button
-          class="px-[50px] py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 transition"
+          class="mt-4 md:mt-0 px-[50px] py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 transition"
         >
           Register Now
         </button>
         <img
-          class="-mt-4"
+          class="mt-0 md:-mt-4 w-[469px] md:w-[856px] h-auto"
           src="/assets/satf/Chicken_Pig.png"
           alt="Pig-Chicken-Egg"
         />
@@ -563,6 +581,75 @@
             });
           });
       </script>
+      <div class="flex flex-col justify-center items-center px-4">
+        <div class="flex flex-col justify-center items-center mt-28 w-full">
+          <div class="text-center mt-12">
+            <h1
+              class="text-[#0035E6] font-sans text-[40px] md:text-[60px] font-bold leading-[1.2]"
+            >
+              SPONSORS
+            </h1>
+            <div
+              class="w-[150px] md:w-[185px] h-1 mx-auto my-6 rounded"
+              style="
+                background: linear-gradient(
+                  to right,
+                  #0035e6,
+                  #3ead35,
+                  #fec205,
+                  #ef1748
+                );
+              "
+            ></div>
+          </div>
+
+          <div
+            class="max-w-[900px] mt-1 flex flex-col gap-4 md:gap-[30px] px-4 text-center"
+          >
+            <p class="text-[16px] md:text-[18px]">
+              Organized by the following partner companies.
+            </p>
+            <p class="text-[16px] md:text-[18px] font-semibold">Presented by</p>
+          </div>
+
+          <!-- Responsive Logos -->
+          <div
+            class="flex flex-wrap justify-center items-center gap-6 md:gap-10 mt-12 w-full"
+          >
+            <img
+              class="h-[40px] md:h-[68px] w-auto"
+              src="/assets/satf/Logos/BCS_LOGO_ALT_OG 3.png"
+              alt="BLINK CREATIVE STUDIO"
+            />
+            <img
+              class="h-[35px] md:h-[62px] w-auto"
+              src="/assets/satf/Logos/DSM_FIRMENICH_BLACK_2 3.png"
+              alt="DSM"
+            />
+            <img
+              class="h-[60px] md:h-[117px] w-auto"
+              src="/assets/satf/Logos/logo-lohmann 1.png"
+              alt="LOHMAN"
+            />
+            <img
+              class="h-[50px] md:h-[91px] w-auto"
+              src="/assets/satf/Logos/cropped-cropped-pic_logo2 3.png"
+              alt="PIC"
+            />
+            <img
+              class="h-[30px] md:h-[45px] w-auto"
+              src="/assets/satf/Logos/BI_LOGO_DARKGREEN 3.png"
+              alt="BI"
+            />
+            <img
+              class="h-[40px] md:h-[74px] w-auto"
+              src="/assets/satf/Logos/Big_Dutchman_Logo.svg 2.png"
+              alt="BIG DUTCHMAN"
+            />
+          </div>
+        </div>
+      </div>
+
       <div class="flex flex-col justify-center items-center">
         <div class="flex flex-col justify-center items-center mt-28">
           <div
@@ -571,7 +658,7 @@
             <h1
               class="text-[#0035E6] font-sans text-[60px] font-bold leading-[54px]"
             >
-              SPONSORS
+              FORUM SCHEDULE
             </h1>
             <div
               class="w-[185px] h-1 mx-auto my-6 rounded"
@@ -588,54 +675,241 @@
           </div>
           <div class="max-w-[900px] px-2 mt-1">
             <p class="text-center text-[18px]">
-              Organized by the following partner companies.
+              From keynote addresses to panel discussions and networking breaks
+              — explore the full schedule of the forum. Plan your day and don’t
+              miss key sessions that match your passion for innovation, species
+              research, and tech-driven transformation.
             </p>
           </div>
-          <div class="flex gap-16 mt-12">
-            <div class="flex flex-col justify-center items-center gap-6">
-              <p>In partnership with</p>
-              <div class="flex gap-16 justify-center items-center">
-                <img
-                  class="max-w-[132px] w-full h-[68px]"
-                  src="/assets/satf/Logos/BCS_LOGO_ALT_OG 3.png"
-                  alt="BLINK CREATIVE STUDIO"
-                />
-                <img
-                  class="max-w-[106px] w-full h-[62px]"
-                  src="/assets/satf/Logos/DSM_FIRMENICH_BLACK_2 3.png"
-                  alt="DSM"
-                />
+        </div>
+        <div
+          class="flex flex-col w-full justify-center items-center gap-6 mt-20"
+        >
+          <!-- Tabs -->
+          <div class="w-full flex justify-between px-[60px]">
+            <button
+              id="tab-17"
+              class="tab-btn text-[30px] font-semibold leading-[39px] border-[#00072C] cursor-pointer"
+            >
+              Thursday, 17 July 2025
+            </button>
+            <button
+              id="tab-24"
+              class="tab-btn text-[30px] font-semibold leading-[39px] text-[#A0A0A0] border-transparent cursor-pointer"
+            >
+              Thursday, 24 July 2025
+            </button>
+          </div>
+
+          <!-- Program container -->
+          <div
+            id="program-container"
+            class="flex flex-col gap-4 max-w-[900px] w-full"
+          ></div>
+        </div>
+        <script>
+          const container = document.getElementById("program-container");
+          const tab17 = document.getElementById("tab-17");
+          const tab24 = document.getElementById("tab-24");
+
+          let programData = {};
+
+          function renderProgram(schedule) {
+            container.innerHTML = ""; // Clear previous content
+
+            schedule.forEach((item) => {
+              let subContent = "";
+
+              if (item.sub && Array.isArray(item.sub)) {
+                item.sub.forEach((entry) => {
+                  if (typeof entry === "string") {
+                    subContent += `<h3 class="mt-1">${entry}</h3>`;
+                  } else if (entry.badges) {
+                    subContent += `<div class="grid grid-cols-2 gap-[10px] ml-[20px] mt-2 w-fit">`;
+                    entry.badges.forEach((badge) => {
+                      const name =
+                        typeof badge === "string" ? badge : badge.name;
+                      const color =
+                        typeof badge === "string" ? "#ffffff" : badge.color;
+                      subContent += `
+                <h3 class="border border-[${color}] text-[${color}] rounded-full flex justify-center items-center w-fit h-fit px-2 py-2 text-[16.5px]">
+                  ${name}
+                </h3>
+              `;
+                    });
+                    subContent += `</div>`;
+                  }
+                });
+              }
+
+              const block = `
+        <div class="bg-[#00072C] text-white text-[20px] font-bold max-w-[898px] w-full h-auto py-[24px] pl-[60px] pr-[20px] rounded-[20px]">
+          <div class="grid grid-cols-[25%_75%]">
+            <h3>${item.time}</h3>
+            <div>
+              <h3>${item.title}</h3>
+              ${subContent}
+            </div>
+          </div>
+        </div>
+      `;
+              container.insertAdjacentHTML("beforeend", block);
+            });
+          }
+
+          // Fetch data
+          fetch("/js/data/program.json")
+            .then((res) => res.json())
+            .then((data) => {
+              programData = data;
+              renderProgram(programData.july17); // default tab
+            });
+
+          // Tab listeners
+          tab17.addEventListener("click", () => {
+            tab17.classList.add("text-black", "border-[#00072C]");
+            tab17.classList.remove("text-[#A0A0A0]", "border-transparent");
+            tab24.classList.remove("text-black", "border-[#00072C]");
+            tab24.classList.add("text-[#A0A0A0]", "border-transparent");
+
+            renderProgram(programData.july17);
+          });
+
+          tab24.addEventListener("click", () => {
+            tab24.classList.add("text-black", "border-[#00072C]");
+            tab24.classList.remove("text-[#A0A0A0]", "border-transparent");
+            tab17.classList.remove("text-black", "border-[#00072C]");
+            tab17.classList.add("text-[#A0A0A0]", "border-transparent");
+
+            renderProgram(programData.july24);
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <!-- CTA Section -->
+    <div class="w-full mt-32">
+      <div class="relative w-full h-[316px] overflow-hidden">
+        <img
+          class="w-full h-full object-cover block"
+          src="/assets/satf/FooterBG.png"
+          alt="Background Image"
+        />
+        <div
+          class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-6 px-4 text-center text-white"
+        >
+          <p class="text-[24px] sm:text-[30px] leading-[1.4] tracking-[0.2em]">
+            BE PART OF THE NEXT
+          </p>
+          <p
+            class="text-[36px] sm:text-[48px] md:text-[60px] text-[#FEF9DB] font-bold leading-[1.2]"
+          >
+            WAVE OF INNOVATION
+          </p>
+
+          <button
+            class="mt-4 px-6 sm:px-[50px] py-3 sm:py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 transition"
+          >
+            Register Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Info Section -->
+    <div class="w-full">
+      <div
+        class="bg-[#282828] text-white w-full flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8"
+      >
+        <div class="flex flex-col gap-10 w-full max-w-[1209px]">
+          <!-- Main Info Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <!-- Logo & Description -->
+            <div
+              class="flex flex-col gap-6 items-center lg:items-start text-center lg:text-left"
+            >
+              <img
+                class="max-w-[300px] w-full h-auto"
+                src="/assets/satf/Logos/SATF LOGO COLORED.png"
+                alt="SATF LOGO COLORED"
+              />
+              <p class="text-[16px] leading-[28px] max-w-[90%]">
+                SATF is a forward-looking forum on breakthrough tech in animal
+                production—delivering expert insights that drive real-world
+                gains.
+              </p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="flex flex-col gap-6">
+              <div>
+                <h3
+                  class="text-[24px] sm:text-[30px] font-semibold leading-[39px]"
+                >
+                  Contact Us
+                </h3>
+                <p class="text-[16px] leading-[28px]">
+                  Connect with the organizing team for assistance
+                </p>
+              </div>
+              <div class="flex flex-col gap-4">
+                <!-- Email -->
+                <div class="flex items-start gap-4">
+                  <div class="w-[24px] flex-shrink-0">
+                    <svg
+                      width="24"
+                      height="18"
+                      viewBox="0 0 24 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 2.11556V1.5C0 1.10218 0.158035 0.720644 0.43934 0.43934C0.720644 0.158035 1.10218 0 1.5 0L22.5 0C22.8978 0 23.2794 0.158035 23.5607 0.43934C23.842 0.720644 24 1.10218 24 1.5V2.11556L12 9.61556L0 2.11556ZM12.3975 11.1362C12.2783 11.2106 12.1405 11.2501 12 11.2501C11.8595 11.2501 11.7217 11.2106 11.6025 11.1362L0 3.88444V16.5C0 16.8978 0.158035 17.2794 0.43934 17.5607C0.720644 17.842 1.10218 18 1.5 18H22.5C22.8978 18 23.2794 17.842 23.5607 17.5607C23.842 17.2794 24 16.8978 24 16.5V3.88444L12.3975 11.1362Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-[16px] leading-[24px]">
+                    info@blinkcreativestudio.com
+                  </p>
+                </div>
+                <!-- Phone -->
+                <div class="flex items-start gap-4">
+                  <div class="w-[24px] flex-shrink-0">
+                    <svg
+                      width="16"
+                      height="25"
+                      viewBox="0 0 16 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5714 0H3.42857C1.53714 0 0 1.52841 0 3.40909V21.5909C0 23.4716 1.53714 25 3.42857 25H12.5714C14.4629 25 16 23.4716 16 21.5909V3.40909C16 1.52841 14.4629 0 12.5714 0ZM10.2857 22.7273H5.71429V21.5909H10.2857V22.7273ZM14 19.3182H2V3.40909H14V19.3182Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <p class="text-[16px] leading-[24px]">
+                    0949-993-7469 / (049)-501-6681
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="w-[1px] h-[158px] bg-[#4a4a4a]"></div>
-            <div class="flex flex-col justify-center items-center">
-              <p>In collaboration with</p>
-              <div class="flex gap-16 justify-center items-center">
-                <img
-                  class="max-w-[83px] w-full h-[117px]"
-                  src="/assets/satf/Logos/logo-lohmann 1.png"
-                  alt="LOHMAN"
-                />
-                <img
-                  class="max-w-[63px] w-full h-[91px]"
-                  src="/assets/satf/Logos/cropped-cropped-pic_logo2 3.png"
-                  alt="PIC"
-                />
-                <img
-                  class="max-w-[150px] w-full h-[45px]"
-                  src="/assets/satf/Logos/BI_LOGO_DARKGREEN 3.png"
-                  alt="BI"
-                />
-                <img
-                  class="max-w-[189px] w-full h-[74px]"
-                  src="/assets/satf/Logos/Big_Dutchman_Logo.svg 2.png"
-                  alt="BIG DUTCHMAN"
-                />
-              </div>
-            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="w-full h-[1px] bg-[#B5B5B5]"></div>
+
+          <!-- Footer Bottom -->
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center text-[16px] gap-2 sm:gap-0"
+          >
+            <p>SATF © 2025. All rights reserved.</p>
+            <p>Powered by BLINK CREATIVE STUDIO.</p>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </footer>
 </html>

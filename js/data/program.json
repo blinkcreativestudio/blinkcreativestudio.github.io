@@ -1,0 +1,72 @@
+{
+  "july17": [
+    {
+      "time": "7:00 AM - 8:00 AM",
+      "title": "REGISTRATION"
+    },
+    {
+      "time": "8:00 AM - 8:30 AM",
+      "title": "OPENING CEREMONIES",
+      "sub": [
+        "WELCOME MESSAGE",
+        {
+          "badges": ["SECRETARY OF AGRICULTURE", "DR. DANTE PALABRICA (BAI)"]
+        },
+        "UNVEILING OF THE FIRST SAINT"
+      ]
+    },
+    {
+      "time": "8:30 AM - 9:00 AM",
+      "title": "TECHNICAL SESSION 1 (GENETICS)",
+      "sub": [
+        "TITLE OF PRESENTATION",
+        {
+          "badges": [
+            { "name": "DR. LING LING", "color": "#FEC205" }
+          ]
+        }
+      ]
+    },
+    {
+      "time": "9:00 AM - 9:45 AM",
+      "title": "TECHNICAL SESSION 2 (NUTRITION)",
+      "sub": [
+        "TITLE OF PRESENTATION",
+        {
+          "badges": [
+            { "name": "DR. TAKEHIKO HAYAKAWA", "color": "#007AFF" }
+          ]
+        }
+      ]
+    }
+  ],
+  "july24": [
+    {
+      "time": "7:30 AM - 8:15 AM",
+      "title": "SECOND DAY REGISTRATION"
+    },
+    {
+      "time": "8:15 AM - 9:00 AM",
+      "title": "KEYNOTE SESSION",
+      "sub": [
+        "INSPIRATIONAL MESSAGE",
+        {
+          "badges": [{ "name": "ENGR. MARIA CRUZ", "color": "#FFA500" }]
+        }
+      ]
+    },
+    {
+      "time": "9:00 AM - 10:00 AM",
+      "title": "TECHNICAL SESSION (BIOSECURITY)",
+      "sub": [
+        "PANEL DISCUSSION",
+        {
+          "badges": [
+            { "name": "DR. JOHN SMITH", "color": "#00C49F" },
+            { "name": "DR. MAY TAN", "color": "#FF4444" }
+          ]
+        }
+      ]
+    }
+  ]
+}
