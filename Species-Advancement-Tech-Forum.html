@@ -48,7 +48,90 @@
       .font-sans {
         font-family: "Mona Sans", sans-serif;
       }
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-in-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .fade-in-up-s1,
+      .fade-in-up-s2,
+      .fade-in-up-s3,
+      .fade-in-up-s4 {
+        opacity: 0;
+        transform: translateY(120px);
+      }
+
+      .fade-in-up-s1.visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-in-up-s2.visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .fade-in-up-s3.visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+      .fade-in-up-s4.visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+      }
+
+      .program-fade {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .program-fade.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                // Prevents retriggering
+                // observer.unobserve(entry.target);
+              } else {
+                // Optional: Remove class when out of view
+                entry.target.classList.remove("visible");
+              }
+            });
+          },
+          { threshold: 0.3 }
+        ); // Adjust threshold if needed
+
+        document
+          .querySelectorAll(
+            ".fade-in-up, .fade-in-up-s1, .fade-in-up-s2, .fade-in-up-s3, .fade-in-up-s4"
+          )
+          .forEach((el) => {
+            observer.observe(el);
+          });
+      });
+    </script>
   </head>
   <body class="m-0 p-0 bg-[#FEF9DB] font-sans max-w-screen w-full">
     <div class="relative w-full h-auto overflow-hidden">
@@ -81,6 +164,7 @@
       <div
         class="absolute top-0 left-0 w-full flex flex-col items-center justify-center mt-12 md:mt-10 px-4 text-center text-white"
       >
+        <!-- Your content -->
         <div
           class="absolute -top-8 left-0 block lg:hidden w-[37px] h-[60px] bg-[#D9D9D9]"
         ></div>
@@ -88,12 +172,12 @@
           class="absolute top-4 right-0 block lg:hidden w-[37px] h-[60px] bg-[#D9D9D9]"
         ></div>
         <img
-          class="w-[288px] md:w-[512px] lg:w-[615px] h-auto mb-4"
+          class="w-[288px] md:w-[512px] lg:w-[615px] h-auto mb-4 fade-in-up"
           src="/assets/satf/Logos/SATF LOGO.png"
           alt="SATF Logo"
         />
         <p
-          class="text-[16px] md:text-[30px] italic font-semibold leading-[23px] text-center mt-2 md:mt-10"
+          class="text-[16px] md:text-[30px] italic font-semibold leading-[23px] text-center mt-2 md:mt-10 fade-in-up"
         >
           Shaping the Future of Livestock Innovation.
         </p>
@@ -103,7 +187,7 @@
         >
           <!-- Event Card 1 -->
           <div
-            class="flex flex-shrink-0 w-[366px] md:w-[476px] h-auto rounded-[8px]"
+            class="flex flex-shrink-0 w-[366px] md:w-[476px] h-auto rounded-[8px] fade-in-up"
           >
             <div
               class="text-white w-[80px] p-4 flex flex-col items-center justify-center rounded-l-lg bg-gradient-to-l from-[#3EAD35] to-[#0060DC]"
@@ -137,7 +221,9 @@
               </div>
             </div>
           </div>
-          <dvi class="flex flex-shrink-0 w-[366px] md:w-[476px] h-auto">
+          <dvi
+            class="flex flex-shrink-0 w-[366px] md:w-[476px] h-auto rounded-[8px] fade-in-up"
+          >
             <div
               class="text-white w-[80px] p-4 flex flex-col items-center justify-center rounded-l-lg bg-gradient-to-l from-[#3EAD35] to-[#0060DC]"
             >
@@ -170,13 +256,19 @@
             </div>
           </dvi>
         </div>
-        <button
-          class="mt-4 md:mt-0 px-[50px] py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 transition"
+        <a
+          href="https://sat-forum-registration.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Register Now
-        </button>
+          <button
+            class="mt-4 md:mt-0 px-[50px] py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 transition fade-in-up"
+          >
+            Register Now
+          </button>
+        </a>
         <img
-          class="absolute md:static -bottom-64 md:bottom-auto left-1/2 md:left-auto transform md:transform-none -translate-x-1/2 md:translate-x-0 w-[469px] md:w-[856px] h-auto z-0 pointer-events-none"
+          class="absolute -bottom-64 md:-bottom-[440px] left-1/2 md:left-auto transform md:transform-none -translate-x-1/2 md:translate-x-0 w-[469px] md:w-[856px] h-auto z-0 pointer-events-none fade-in-up"
           src="/assets/satf/Chicken_Pig.png"
           alt="Pig-Chicken-Egg"
         />
@@ -184,12 +276,12 @@
       <div class="flex flex-col justify-center items-center mt-20 md:mt-64">
         <div class="text-center mt-12">
           <h1
-            class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-[54px]"
+            class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-[54px] fade-in-up"
           >
             ABOUT THE EVENT
           </h1>
           <div
-            class="w-[185px] h-1 mx-auto my-2 md:my-6 rounded"
+            class="w-[185px] h-1 mx-auto my-2 md:my-6 rounded fade-in-up"
             style="
               background: linear-gradient(
                 to right,
@@ -201,7 +293,7 @@
             "
           ></div>
         </div>
-        <div class="relative w-full mt-0 md:mt-4 px-8">
+        <div class="relative w-full mt-0 md:mt-4 px-8 fade-in-up">
           <!-- Gradient Line -->
           <div
             class="w-full max-w-[900px] h-1 mx-auto my-20 rounded [background:linear-gradient(90deg,#0035E6_0%,#3EAD35_32.21%,#FEC205_69.23%,#EF1748_100%)]"
@@ -244,7 +336,7 @@
         </div>
 
         <div class="max-w-[900px] px-8 md:px-8 mt-10 md:mt-24">
-          <p class="text-center text-[14px] md:text-[18px]">
+          <p class="text-center text-[14px] md:text-[18px] fade-in-up">
             The first
             <span class="font-bold"
               > Species Advancement Tech Forum (SATF) </span
@@ -269,14 +361,14 @@
           class="text-center mt-12 flex flex-col justify-center items-center px-8"
         >
           <h1
-            class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-tight"
+            class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-tight fade-in-up"
           >
             SEE YOU SOON
           </h1>
 
           <!-- Gradient Line -->
           <div
-            class="w-[150px] sm:w-[185px] h-1 mx-auto my-2 md:my-6 rounded"
+            class="w-[150px] sm:w-[185px] h-1 mx-auto my-2 md:my-6 rounded fade-in-up"
             style="
               background: linear-gradient(
                 to right,
@@ -293,12 +385,12 @@
             class="flex flex-col justify-center items-center gap-4 md:gap-6m mt-4 md:mt-0"
           >
             <h3
-              class="text-[18px] md:text-[30px] font-semibold leading-snug text-center"
+              class="text-[18px] md:text-[30px] font-semibold leading-snug text-center fade-in-up"
             >
               Thursday, 17 July 2025
             </h3>
             <p
-              class="text-center text-[14px] sm:text-[16px] md:text-[18px] max-w-[700px] px-2"
+              class="text-center text-[14px] sm:text-[16px] md:text-[18px] max-w-[700px] px-2 fade-in-up"
             >
               Eggsponential Progress: Shaping the Future of Layer Production
               with Confidence
@@ -306,7 +398,7 @@
 
             <!-- Countdown 17 -->
             <div
-              class="flex justify-center font-bold tabular-nums gap-x-6 gap-y-6 md:gap-x-20 mt-4"
+              class="flex justify-center font-bold tabular-nums gap-x-6 gap-y-6 md:gap-x-20 mt-4 fade-in-up"
             >
               <!-- Days -->
               <div class="flex flex-col lg:flex-row items-center gap-2">
@@ -368,18 +460,18 @@
 
           <!-- Divider -->
           <div
-            class="max-w-[895px] w-full h-[1px] bg-[#C4C4C4] mt-10 md:mt-12 mb-10 md:mb-12"
+            class="max-w-[895px] w-full h-[1px] bg-[#C4C4C4] mt-10 md:mt-12 mb-10 md:mb-12 fade-in-up"
           ></div>
 
           <!-- Event 2 -->
           <div class="flex flex-col justify-center items-center gap-4 md:gap-6">
             <h3
-              class="text-[18px] md:text-[30px] font-semibold leading-snug text-center"
+              class="text-[18px] md:text-[30px] font-semibold leading-snug text-center fade-in-up"
             >
               Thursday, 24 July 2025
             </h3>
             <p
-              class="text-center text-[14px] sm:text-[16px] md:text-[18px] max-w-[700px] px-2"
+              class="text-center text-[14px] sm:text-[16px] md:text-[18px] max-w-[700px] px-2 fade-in-up"
             >
               Eggsponential Progress: Shaping the Future of Layer Production
               with Confidence
@@ -387,7 +479,7 @@
 
             <!-- Countdown 24 -->
             <div
-              class="flex flex-wrap justify-center font-bold tabular-nums gap-x-6 gap-y-6 md:gap-x-20 mt-4"
+              class="flex flex-wrap justify-center font-bold tabular-nums gap-x-6 gap-y-6 md:gap-x-20 mt-4 fade-in-up"
             >
               <!-- Days -->
               <div class="flex flex-col lg:flex-row items-center gap-2">
@@ -509,12 +601,12 @@
           class="text-center mt-12 flex flex-col justify-center items-center"
         >
           <h1
-            class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-tight"
+            class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-tight fade-in-up"
           >
             SPEAKERS
           </h1>
           <div
-            class="w-[150px] sm:w-[185px] h-1 mx-auto my-2 md:my-6 rounded"
+            class="w-[150px] sm:w-[185px] h-1 mx-auto my-2 md:my-6 rounded fade-in-up"
             style="
               background: linear-gradient(
                 to right,
@@ -527,7 +619,7 @@
           ></div>
         </div>
         <div class="max-w-[900px] px-8 md:px-2 mt-1">
-          <p class="text-center text-[14px] md:text-[18px]">
+          <p class="text-center text-[14px] md:text-[18px] fade-in-up">
             Get to know the visionary scientists, innovators, and experts who
             are leading the conversation on species advancement and breakthrough
             technologies. Learn from their research, insights, and real-world
@@ -541,14 +633,33 @@
       ></div>
 
       <script>
+        // Define the observer first, outside fetch
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                // Optional: stop watching once animated
+                // observer.unobserve(entry.target);
+              } else {
+                // Optional: Remove class when out of view
+                entry.target.classList.remove("visible");
+              }
+            });
+          },
+          { threshold: 0.3 } // You can adjust this as needed
+        );
+
+        // Now load speaker data and build cards
         fetch("/js/data/speakers.json")
           .then((res) => res.json())
           .then((speakers) => {
             const container = document.getElementById("speaker-container");
 
             speakers.forEach((speaker, index) => {
+              const fadeClass = `fade-in-up-s${(index % 4) + 1}`;
               const speakerCard = `
-          <div class="speaker-card flex flex-col w-[286px] h-[500px] justify-between items-start gap-5" data-color="${speaker.gradientEnd}" data-index="${index}">
+          <div class="speaker-card ${fadeClass} flex flex-col w-[286px] h-[500px] justify-between items-start gap-5" data-color="${speaker.gradientEnd}" data-index="${index}">
             <!-- Image Section -->
             <div class="image-section group relative bg-[#00072C] w-full h-[367px] flex-shrink-0 rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden">
               <img
@@ -610,7 +721,16 @@
               container.insertAdjacentHTML("beforeend", speakerCard);
             });
 
-            // Interaction logic
+            // Observe newly added elements
+            document
+              .querySelectorAll(
+                ".fade-in-up-s1, .fade-in-up-s2, .fade-in-up-s3, .fade-in-up-s4"
+              )
+              .forEach((el) => {
+                observer.observe(el);
+              });
+
+            // Handle card toggle interaction
             let currentOpenCard = null;
 
             function closeOpenCard() {
@@ -631,7 +751,6 @@
               }
             }
 
-            // Add click listeners
             document.querySelectorAll(".speaker-card").forEach((card) => {
               const toggleBtn = card.querySelector(".toggle-btn");
               const imageSection = card.querySelector(".image-section");
@@ -641,15 +760,12 @@
 
               toggleBtn.addEventListener("click", (e) => {
                 e.stopPropagation();
-
                 if (currentOpenCard !== card) {
                   closeOpenCard();
-
                   imageSection.classList.add("hidden");
                   infoSection.classList.add("hidden");
                   card.style.backgroundColor = gradientEndColor;
                   description.classList.remove("hidden");
-
                   currentOpenCard = card;
                 } else {
                   closeOpenCard();
@@ -657,7 +773,6 @@
               });
             });
 
-            // Click outside any card
             document.addEventListener("click", (e) => {
               if (currentOpenCard && !currentOpenCard.contains(e.target)) {
                 closeOpenCard();
@@ -665,18 +780,19 @@
             });
           });
       </script>
+
       <div class="flex flex-col justify-center items-center px-4">
         <div
           class="flex flex-col justify-center items-center mt-8 md:mt-28 w-full"
         >
           <div class="text-center mt-12">
             <h1
-              class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-[1.2]"
+              class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-[1.2] fade-in-up"
             >
               SPONSORS
             </h1>
             <div
-              class="w-[150px] md:w-[185px] h-1 mx-auto my-6 rounded"
+              class="w-[150px] md:w-[185px] h-1 mx-auto my-6 rounded fade-in-up"
               style="
                 background: linear-gradient(
                   to right,
@@ -692,10 +808,12 @@
           <div
             class="max-w-[900px] mt-1 flex flex-col gap-4 md:gap-[30px] px-4 text-center"
           >
-            <p class="text-center text-[14px] md:text-[18px]">
+            <p class="text-center text-[14px] md:text-[18px] fade-in-up">
               Organized by the following partner companies.
             </p>
-            <p class="text-[16px] md:text-[18px] font-semibold">Presented by</p>
+            <p class="text-[16px] md:text-[18px] font-semibold fade-in-up">
+              Presented by
+            </p>
           </div>
 
           <!-- Responsive Logos -->
@@ -703,32 +821,32 @@
             class="flex flex-wrap justify-center items-center gap-8 md:gap-20 mt-4 md:mt-12 w-full"
           >
             <img
-              class="h-[40px] md:h-[68px] w-auto"
+              class="h-[40px] md:h-[68px] w-auto fade-in-up"
               src="/assets/satf/Logos/BCS_LOGO_ALT_OG 3.png"
               alt="BLINK CREATIVE STUDIO"
             />
             <img
-              class="h-[35px] md:h-[62px] w-auto"
+              class="h-[35px] md:h-[62px] w-auto fade-in-up"
               src="/assets/satf/Logos/DSM_FIRMENICH_BLACK_2 3.png"
               alt="DSM"
             />
             <img
-              class="h-[60px] md:h-[117px] w-auto"
+              class="h-[60px] md:h-[117px] w-auto fade-in-up"
               src="/assets/satf/Logos/logo-lohmann 1.png"
               alt="LOHMAN"
             />
             <img
-              class="h-[50px] md:h-[91px] w-auto"
+              class="h-[50px] md:h-[91px] w-auto fade-in-up"
               src="/assets/satf/Logos/cropped-cropped-pic_logo2 3.png"
               alt="PIC"
             />
             <img
-              class="h-[30px] md:h-[45px] w-auto"
+              class="h-[30px] md:h-[45px] w-auto fade-in-up"
               src="/assets/satf/Logos/BI_LOGO_DARKGREEN 3.png"
               alt="BI"
             />
             <img
-              class="h-[40px] md:h-[74px] w-auto"
+              class="h-[40px] md:h-[74px] w-auto fade-in-up"
               src="/assets/satf/Logos/Big_Dutchman_Logo.svg 2.png"
               alt="BIG DUTCHMAN"
             />
@@ -742,12 +860,12 @@
             class="text-center mt-12 flex flex-col justify-center items-center"
           >
             <h1
-              class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-[1.2]"
+              class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-[1.2] fade-in-up"
             >
               FORUM SCHEDULE
             </h1>
             <div
-              class="w-[185px] h-1 mx-auto my-6 rounded"
+              class="w-[185px] h-1 mx-auto my-6 rounded fade-in-up"
               style="
                 background: linear-gradient(
                   to right,
@@ -760,7 +878,7 @@
             ></div>
           </div>
           <div class="max-w-[900px] px-8 mt-1">
-            <p class="text-center text-[14px] md:text-[18px]">
+            <p class="text-center text-[14px] md:text-[18px] fade-in-up">
               From keynote addresses to panel discussions and networking breaks
               — explore the full schedule of the forum. Plan your day and don’t
               miss key sessions that match your passion for innovation, species
@@ -777,13 +895,13 @@
           >
             <button
               id="tab-17"
-              class="tab-btn text-[18px] md:text-[30px] font-semibold leading-[39px] border-[#00072C] cursor-pointer"
+              class="tab-btn text-[18px] md:text-[30px] font-semibold leading-[39px] border-[#00072C] cursor-pointer fade-in-up"
             >
               Thursday, 17 July 2025
             </button>
             <button
               id="tab-24"
-              class="tab-btn text-[18px] md:text-[30px] font-semibold leading-[39px] text-[#A0A0A0] border-transparent cursor-pointer"
+              class="tab-btn text-[18px] md:text-[30px] font-semibold leading-[39px] text-[#A0A0A0] border-transparent cursor-pointer fade-in-up"
             >
               Thursday, 24 July 2025
             </button>
@@ -794,44 +912,68 @@
             id="program-container"
             class="flex flex-col gap-4 max-w-[900px] w-full px-0 md:px-4"
           ></div>
-        </div>
-        <script>
-          const container = document.getElementById("program-container");
-          const tab17 = document.getElementById("tab-17");
-          const tab24 = document.getElementById("tab-24");
+          <!-- Animation Observer Script -->
+          <script>
+            function observeProgramBlocks() {
+              const observer = new IntersectionObserver(
+                (entries, observer) => {
+                  entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                      entry.target.classList.add("visible");
+                      // observer.unobserve(entry.target);
+                    } else {
+                      // Allows re-animation when it enters again
+                      entry.target.classList.remove("visible");
+                    }
+                  });
+                },
+                { threshold: 0.3 }
+              );
 
-          let programData = {};
+              document.querySelectorAll(".program-fade").forEach((el) => {
+                observer.observe(el);
+              });
+            }
+          </script>
 
-          function renderProgram(schedule) {
-            container.innerHTML = ""; // Clear previous content
+          <!-- Main Program Logic -->
+          <script>
+            const container = document.getElementById("program-container");
+            const tab17 = document.getElementById("tab-17");
+            const tab24 = document.getElementById("tab-24");
 
-            schedule.forEach((item) => {
-              let subContent = "";
+            let programData = {};
 
-              if (item.sub && Array.isArray(item.sub)) {
-                item.sub.forEach((entry) => {
-                  if (typeof entry === "string") {
-                    subContent += `<h3 class="mt-1">${entry}</h3>`;
-                  } else if (entry.badges) {
-                    subContent += `<div class="grid grid-cols-1 md:grid-cols-2 gap-[10px] ml-[20px] mt-2 w-fit">`;
-                    entry.badges.forEach((badge) => {
-                      const name =
-                        typeof badge === "string" ? badge : badge.name;
-                      const color =
-                        typeof badge === "string" ? "#ffffff" : badge.color;
-                      subContent += `
+            function renderProgram(schedule) {
+              container.innerHTML = ""; // Clear previous content
+
+              schedule.forEach((item) => {
+                let subContent = "";
+
+                if (item.sub && Array.isArray(item.sub)) {
+                  item.sub.forEach((entry) => {
+                    if (typeof entry === "string") {
+                      subContent += `<h3 class="mt-1">${entry}</h3>`;
+                    } else if (entry.badges) {
+                      subContent += `<div class="grid grid-cols-1 md:grid-cols-2 gap-[10px] ml-[20px] mt-2 w-fit">`;
+                      entry.badges.forEach((badge) => {
+                        const name =
+                          typeof badge === "string" ? badge : badge.name;
+                        const color =
+                          typeof badge === "string" ? "#ffffff" : badge.color;
+                        subContent += `
                 <h3 class="border border-[${color}] text-[${color}] rounded-full flex justify-center items-center w-fit h-fit px-2 py-2 text-[16.5px]">
                   ${name}
                 </h3>
               `;
-                    });
-                    subContent += `</div>`;
-                  }
-                });
-              }
+                      });
+                      subContent += `</div>`;
+                    }
+                  });
+                }
 
-              const block = `
-        <div class="bg-[#00072C] text-white text-[20px] font-bold max-w-[898px] w-full h-auto py-[24px] pl-[60px] pr-[20px] rounded-[20px]">
+                const block = `
+        <div class="program-fade bg-[#00072C] text-white text-[20px] font-bold max-w-[898px] w-full h-auto py-[24px] pl-[60px] pr-[20px] rounded-[20px]">
           <div class="grid md:grid-cols-[25%_75%] grid-cols-1 auto-rows-auto gap-2 md:gap-8">
             <h3 class="self-start">${item.time}</h3>
             <div>
@@ -841,37 +983,41 @@
           </div>
         </div>
       `;
-              container.insertAdjacentHTML("beforeend", block);
+                container.insertAdjacentHTML("beforeend", block);
+              });
+
+              // Observe animation after rendering
+              observeProgramBlocks();
+            }
+
+            // Fetch JSON
+            fetch("/js/data/program.json")
+              .then((res) => res.json())
+              .then((data) => {
+                programData = data;
+                renderProgram(programData.july17); // default tab
+              });
+
+            // Tab switch handlers
+            tab17.addEventListener("click", () => {
+              tab17.classList.add("text-black", "border-[#00072C]");
+              tab17.classList.remove("text-[#A0A0A0]", "border-transparent");
+              tab24.classList.remove("text-black", "border-[#00072C]");
+              tab24.classList.add("text-[#A0A0A0]", "border-transparent");
+
+              renderProgram(programData.july17);
             });
-          }
 
-          // Fetch data
-          fetch("/js/data/program.json")
-            .then((res) => res.json())
-            .then((data) => {
-              programData = data;
-              renderProgram(programData.july17); // default tab
+            tab24.addEventListener("click", () => {
+              tab24.classList.add("text-black", "border-[#00072C]");
+              tab24.classList.remove("text-[#A0A0A0]", "border-transparent");
+              tab17.classList.remove("text-black", "border-[#00072C]");
+              tab17.classList.add("text-[#A0A0A0]", "border-transparent");
+
+              renderProgram(programData.july24);
             });
-
-          // Tab listeners
-          tab17.addEventListener("click", () => {
-            tab17.classList.add("text-black", "border-[#00072C]");
-            tab17.classList.remove("text-[#A0A0A0]", "border-transparent");
-            tab24.classList.remove("text-black", "border-[#00072C]");
-            tab24.classList.add("text-[#A0A0A0]", "border-transparent");
-
-            renderProgram(programData.july17);
-          });
-
-          tab24.addEventListener("click", () => {
-            tab24.classList.add("text-black", "border-[#00072C]");
-            tab24.classList.remove("text-[#A0A0A0]", "border-transparent");
-            tab17.classList.remove("text-black", "border-[#00072C]");
-            tab17.classList.add("text-[#A0A0A0]", "border-transparent");
-
-            renderProgram(programData.july24);
-          });
-        </script>
+          </script>
+        </div>
       </div>
     </div>
   </body>
@@ -880,27 +1026,34 @@
     <div class="w-full mt-32">
       <div class="relative w-full h-[316px] overflow-hidden">
         <img
-          class="w-full h-full object-cover block"
+          class="w-full h-full object-cover block fade-in-up"
           src="/assets/satf/FooterBG.png"
           alt="Background Image"
         />
         <div
           class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center gap-6 px-4 text-center text-white"
         >
-          <p class="text-[24px] sm:text-[30px] leading-[1.4] tracking-[0.2em]">
+          <p
+            class="text-[24px] sm:text-[30px] leading-[1.4] tracking-[0.2em] fade-in-up"
+          >
             BE PART OF THE NEXT
           </p>
           <p
-            class="text-[36px] sm:text-[48px] md:text-[60px] text-[#FEF9DB] font-bold leading-[1.2]"
+            class="text-[36px] sm:text-[48px] md:text-[60px] text-[#FEF9DB] font-bold leading-[1.2] fade-in-up"
           >
             WAVE OF INNOVATION
           </p>
-
-          <button
-            class="mt-4 px-6 sm:px-[50px] py-3 sm:py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 transition"
+          <a
+            href="https://sat-forum-registration.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Register Now
-          </button>
+            <button
+              class="mt-4 px-6 sm:px-[50px] py-3 sm:py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 transition fade-in-up"
+            >
+              Register Now
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -918,11 +1071,11 @@
               class="flex flex-col gap-6 items-center lg:items-start text-center lg:text-left"
             >
               <img
-                class="max-w-[300px] w-full h-auto"
+                class="max-w-[300px] w-full h-auto fade-in-up"
                 src="/assets/satf/Logos/SATF LOGO COLORED.png"
                 alt="SATF LOGO COLORED"
               />
-              <p class="text-[16px] leading-[28px] max-w-[90%]">
+              <p class="text-[16px] leading-[28px] max-w-[90%] fade-in-up">
                 SATF is a forward-looking forum on breakthrough tech in animal
                 production—delivering expert insights that drive real-world
                 gains.
@@ -933,18 +1086,18 @@
             <div class="flex flex-col gap-6">
               <div>
                 <h3
-                  class="text-[24px] sm:text-[30px] font-semibold leading-[39px]"
+                  class="text-[24px] sm:text-[30px] font-semibold leading-[39px] fade-in-up"
                 >
                   Contact Us
                 </h3>
-                <p class="text-[16px] leading-[28px]">
+                <p class="text-[16px] leading-[28px] fade-in-up">
                   Connect with the organizing team for assistance
                 </p>
               </div>
               <div class="flex flex-col gap-4">
                 <!-- Email -->
                 <div class="flex items-start gap-4">
-                  <div class="w-[24px] flex-shrink-0">
+                  <div class="w-[24px] flex-shrink-0 fade-in-up">
                     <svg
                       width="24"
                       height="18"
@@ -958,13 +1111,13 @@
                       />
                     </svg>
                   </div>
-                  <p class="text-[16px] leading-[24px]">
+                  <p class="text-[16px] leading-[24px] fade-in-up">
                     info@blinkcreativestudio.com
                   </p>
                 </div>
                 <!-- Phone -->
                 <div class="flex items-start gap-4">
-                  <div class="w-[24px] flex-shrink-0">
+                  <div class="w-[24px] flex-shrink-0 fade-in-up">
                     <svg
                       width="16"
                       height="25"
@@ -978,7 +1131,7 @@
                       />
                     </svg>
                   </div>
-                  <p class="text-[16px] leading-[24px]">
+                  <p class="text-[16px] leading-[24px] fade-in-up">
                     0949-993-7469 / (049)-501-6681
                   </p>
                 </div>
@@ -987,11 +1140,11 @@
           </div>
 
           <!-- Divider -->
-          <div class="w-full h-[1px] bg-[#B5B5B5]"></div>
+          <div class="w-full h-[1px] bg-[#B5B5B5] fade-in-up"></div>
 
           <!-- Footer Bottom -->
           <div
-            class="flex flex-col sm:flex-row justify-between items-center text-[16px] gap-2 sm:gap-0"
+            class="flex flex-col sm:flex-row justify-between items-center text-[16px] gap-2 sm:gap-0 fade-in-up"
           >
             <p>SATF © 2025. All rights reserved.</p>
             <p>Powered by BLINK CREATIVE STUDIO.</p>
