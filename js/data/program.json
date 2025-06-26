@@ -1,72 +1,164 @@
 {
   "july17": [
     {
-      "time": "7:00 AM - 8:00 AM",
-      "title": "REGISTRATION"
+      "time": "7:00 AM – 8:00 AM",
+      "title": "Registration and demo stage"
     },
     {
-      "time": "8:00 AM - 8:30 AM",
-      "title": "OPENING CEREMONIES",
+      "time": "8:00 AM – 9:00 AM",
+      "title": "Opening Ceremonies Welcome message",
       "sub": [
-        "WELCOME MESSAGE",
+        "",
         {
-          "badges": ["SECRETARY OF AGRICULTURE", "DR. DANTE PALABRICA (BAI)"]
+          "badges": ["Sec. Francisco Tiu Laurel Jr.", "Dr. Dante Palabrica (BAI)"]
         },
-        "UNVEILING OF THE FIRST SAINT"
+        "Unveiling of the First SATF"
       ]
     },
     {
-      "time": "8:30 AM - 9:00 AM",
-      "title": "TECHNICAL SESSION 1 (GENETICS)",
+      "time": "9:00 AM – 9:45 AM",
+      "title": "Technical Session 1 (Genetics)",
       "sub": [
-        "TITLE OF PRESENTATION",
+        "What Genetics Has in Store for the Future of Table Egg Production",
         {
           "badges": [
-            { "name": "DR. LING LING", "color": "#FEC205" }
+            { "name": "Mr. Eduardo Bernardi", "color": "#FEC205" }
           ]
         }
       ]
     },
     {
-      "time": "9:00 AM - 9:45 AM",
-      "title": "TECHNICAL SESSION 2 (NUTRITION)",
+      "time": "10:00 AM – 10:45 AM",
+      "title": "Technical Session 2 (Nutrition)",
       "sub": [
-        "TITLE OF PRESENTATION",
+        "Value-Added Eggs: How Branding and Fortification Drive Consumer Trust",
         {
           "badges": [
-            { "name": "DR. TAKEHIKO HAYAKAWA", "color": "#007AFF" }
+            { "name": "Dr. Takehiko Hayakawa", "color": "#0035E6" }
           ]
         }
       ]
+    },
+    {
+      "time": "10:45 AM – 11:30 AM",
+      "title": "Q&A and Key Takeaways"
+    },
+    {
+      "time": "1:15 PM – 2:00 PM",
+      "title": "Technical Session 3 (Housing)",
+      "sub": [
+        "Ventilation Control and Digitalization in Modern Farming",
+        {
+          "badges": [
+            { "name": "MR. TOMMY LIM", "color": "#FEC205" }
+          ]
+        }
+      ]
+    },
+    {
+      "time": "2:15 PM – 3:00 PM",
+      "title": "Technical Session 4 (Health)",
+      "sub": [
+        "Advanced Baculovirus Platform: Enabling Multiclade Defense and DIVa Strategy Against HPAI",
+        {
+          "badges": [
+            { "name": "DR. EMIL DELA PEÑA", "color": "#3EAD35" }
+          ]
+        }
+      ]
+    },
+    {
+      "time": "3:00 PM – 3:30 PM",
+      "title": "Q&A and Key Takeaways"
+    },
+    {
+      "time": "3:30 PM – 4:00 PM",
+      "title": "Raffle Draw and Interactive Segment"
+    },
+    {
+      "time": "4:00 PM – 5:00 PM",
+      "title": "Recognition and Closing"
     }
   ],
+
   "july24": [
     {
-      "time": "7:30 AM - 8:15 AM",
-      "title": "SECOND DAY REGISTRATION"
+      "time": "7:00 AM – 8:00 AM",
+      "title": "Registration and demo stage"
     },
     {
-      "time": "8:15 AM - 9:00 AM",
-      "title": "KEYNOTE SESSION",
+      "time": "8:00 AM – 9:00 AM",
+      "title": "Opening Ceremonies Welcome message",
       "sub": [
-        "INSPIRATIONAL MESSAGE",
+        "",
         {
-          "badges": [{ "name": "ENGR. MARIA CRUZ", "color": "#FFA500" }]
+          "badges": [{ "name": "Dr. Dante Palabrica" }]
         }
       ]
     },
     {
-      "time": "9:00 AM - 10:00 AM",
-      "title": "TECHNICAL SESSION (BIOSECURITY)",
+      "time": "9:00 AM – 9:45 AM",
+      "title": "Technical Session 1 (Genetics)",
       "sub": [
-        "PANEL DISCUSSION",
+        "From a Great Start to a Strong Finish: Driving Productivity in Wean-to-Finish",
         {
           "badges": [
-            { "name": "DR. JOHN SMITH", "color": "#00C49F" },
-            { "name": "DR. MAY TAN", "color": "#FF4444" }
+            { "name": "DR. MELVIN GANAPIN", "color": "#EF1748" }
           ]
         }
       ]
+    },
+    {
+      "time": "10:00 AM – 10:45 AM",
+      "title": "Technical Session 2 (Nutrition)",
+      "sub": [
+        "Feed Smarter, Grow Bigger: Advanced Nutritional Strategies for Leaner, Heavier Pigs",
+        {
+          "badges": [
+            { "name": "Dr. Rommel C. Sulabo", "color": "#0035E6" }
+          ]
+        }
+      ]
+    },
+    {
+      "time": "10:45 AM – 11:30 AM",
+      "title": "Q&A and Key Takeaways"
+    },
+    {
+      "time": "1:15 PM – 2:00 PM",
+      "title": "Technical Session 3 (Housing)",
+      "sub": [
+        "The First Defense: Site Location, Farm Layout, and Design are Key to Effective Biosecurity.",
+        {
+          "badges": [
+            { "name": "BD Mr. Erwin G. Fajardo", "color": "#FEC205" }
+          ]
+        }
+      ]
+    },
+    {
+      "time": "2:15 PM – 3:00 PM",
+      "title": "Technical Session 4 (Health)",
+      "sub": [
+        "Antibiotics stewardship and reduction of antibiotic use in swine farming",
+        {
+          "badges": [
+            { "name": "DR. ANDRES BULAY", "color": "#3EAD35" }
+          ]
+        }
+      ]
+    },
+     {
+      "time": "3:00 PM – 3:30 PM",
+      "title": "Q&A and Key Takeaways"
+    },
+    {
+      "time": "3:30 PM – 4:00 PM",
+      "title": "Raffle Draw and Interactive Segment"
+    },
+    {
+      "time": "4:00 PM – 5:00 PM",
+      "title": "Recognition and Closing"
     }
   ]
 }

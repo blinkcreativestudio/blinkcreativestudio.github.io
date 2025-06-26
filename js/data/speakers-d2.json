@@ -1,0 +1,34 @@
+[
+  {
+    "name": "DR. MELVIN GANAPIN",
+    "title": "Techical Services Officer, PIC Philippines Inc.",
+    "image": "/assets/satf/Speakers/DAY2/PIC_Melvin B. Ganapin.png",
+    "gradient": "linear-gradient(180deg, rgba(0, 7, 44, 0.00) 48.88%, #EF1748 176.51%)",
+    "description": "Dr. Melvin Ganapin is responsible for overseeing pig health, nutrition, and environment from weaning to market weight, while troubleshooting issues to ensure optimal growth and performance. He is also responsible for the implementation of after sales by providing recommendations and solutions on concerns of delivered animals and performances of external customers.",
+     "descriptionBg": "#EF1748 "
+  },
+  {
+    "name": "Dr. Rommel C. Sulabo",
+    "title": "Director, Institute of Animal Science, University of the Philippines Los Banos",
+    "image": "/assets/satf/Speakers/DAY2/DSM_Rommel Sulabo.png",
+    "gradient": "linear-gradient(180deg, rgba(0, 7, 44, 0.00) 48.88%, #0035E6 176.51%)",
+    "description": "Dr. Sulabo is a leading animal science scholar in the Philippines, with over 50 published works in ISI and non-ISI journals. He has received multiple awards, including the NAST-DOST Outstanding Young Scientist (2014) and PSAS Distinguished Researcher (2019). Ranked Top 1 in the Philippines for Animal Science by the AD Scientific Index 2022, he continues to drive scientific advancement in the field.",
+     "descriptionBg": "#0035E6 "
+  },
+  {
+    "name": "Mr. Erwin G. Fajardo",
+    "title": "Managing Director Big Dutchman-Philippines",
+    "image": "/assets/satf/Speakers/DAY2/BD_Erwin G. Fajardo.png",
+    "gradient": "linear-gradient(180deg, rgba(0, 7, 44, 0.00) 48.88%, #FEC205 176.51%)",
+    "description": "",
+     "descriptionBg": "#FEC205 "
+  },
+  {
+    "name": "DR. ANDRES BULAY",
+    "title": "Senior Technical Manager at Boehringer Ingelheim",
+    "image": "/assets/satf/Speakers/DAY2/BI_DR. ANDRES C BULAY III.png",
+    "gradient": "linear-gradient(180deg, rgba(0, 7, 44, 0.00) 48.88%, #3EAD35 176.51%)",
+    "description": "DR. ANDRES BULAY is the Senior Technical Manager at Boehringer Ingelheim and a Fellow of the Philippine College of Swine Practitioners, with over 30 years of experience in the swine industry. His work has contributed significantly to the field through published research on Porcine Circovirus Type 2 (PCV2), Mycoplasma hyopneumoniae (MHYO), and Ileitis—focusing on vaccine efficacy, disease control strategies, and improving overall herd health.",
+     "descriptionBg": "#3EAD35 "
+  }
+]
