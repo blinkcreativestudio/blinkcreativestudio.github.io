@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Species Advancement Tech Forum</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Species Advancement Tech Forum</title>
+    <meta
+      name="description"
+      content="SATF is a forward-looking forum on breakthrough tech in animal production—delivering expert insights that drive real-world gains."
+    />
+    <meta property="og:title" content="Species Advancement Tech Forum" />
+    <meta
+      property="og:description"
+      content="SATF is a forward-looking forum on breakthrough tech in animal production—delivering expert insights that drive real-world gains."
+    />
+    <meta
+      property="og:image"
+      content="https://www.blinkcreativestudio.com/assets/satf/seo/satf-cover.jpg"
+    />
+
+    <link rel="shortcut icon" href="/assets/satf/Icons/favicon.png" />
 
     <!-- Mona Sans from Fontshare -->
     <link
@@ -36,22 +52,48 @@
   </head>
   <body class="m-0 p-0 bg-[#FEF9DB] font-sans max-w-screen w-full">
     <div class="relative w-full h-auto overflow-hidden">
+      <!-- Mobile only -->
       <img
-        class="w-full h-[720px] object-cover block"
+        class="w-full h-[710px] object-cover block md:hidden"
+        src="/assets/satf/MOBILEBG.jpg"
+        alt="Mobile Background Image"
+      />
+
+      <!-- Tablet and up -->
+      <img
+        class="w-full h-[850px] lg:h-[710px] object-cover hidden md:block"
         src="/assets/satf/BG.png"
         alt="Background Image"
       />
+      <div class="absolute top-0 left-0 w-full h-[710px] overflow-hidden">
+        <img
+          class="hidden lg:block lg:absolute -top-72 -left-64 pointer-events-none"
+          src="/assets/satf/HEX_1_TOP_RIGHT.png"
+          alt="HEX 1"
+        />
+        <img
+          class="hidden lg:block lg:absolute top-64 -right-64 pointer-events-none"
+          src="/assets/satf/HEX_2_BOTTOM_RIGHT.png"
+          alt="HEX 2"
+        />
+      </div>
 
       <div
-        class="absolute top-0 left-0 w-full flex flex-col items-center justify-center mt-10 px-4 text-center text-white"
+        class="absolute top-0 left-0 w-full flex flex-col items-center justify-center mt-12 md:mt-10 px-4 text-center text-white"
       >
+        <div
+          class="absolute -top-8 left-0 block lg:hidden w-[37px] h-[60px] bg-[#D9D9D9]"
+        ></div>
+        <div
+          class="absolute top-4 right-0 block lg:hidden w-[37px] h-[60px] bg-[#D9D9D9]"
+        ></div>
         <img
           class="w-[288px] md:w-[512px] lg:w-[615px] h-auto mb-4"
           src="/assets/satf/Logos/SATF LOGO.png"
           alt="SATF Logo"
         />
         <p
-          class="text-[16px] md:text-[30px] italic font-semibold leading-[23px] text-center mt-2 md:mt-10 "
+          class="text-[16px] md:text-[30px] italic font-semibold leading-[23px] text-center mt-2 md:mt-10"
         >
           Shaping the Future of Livestock Innovation.
         </p>
@@ -95,17 +137,19 @@
               </div>
             </div>
           </div>
-          <dvi
-            class="flex flex-shrink-0 w-[366px] md:w-[476px] h-auto"
-          >
+          <dvi class="flex flex-shrink-0 w-[366px] md:w-[476px] h-auto">
             <div
               class="text-white w-[80px] p-4 flex flex-col items-center justify-center rounded-l-lg bg-gradient-to-l from-[#3EAD35] to-[#0060DC]"
             >
               <div class="text-[50px] font-extrabold -mt-4">24</div>
               <div class="text-[21px] leading-tight -mt-4">JULY<br />2025</div>
             </div>
-            <div class="flex flex-col justify-center px-[8px] gap-2 border-t border-r border-b rounded-tr-[8px] rounded-br-[8px]">
-              <p class="text-white text-[15px] md:text-[18px] font-bold text-start uppercase"">
+            <div
+              class="flex flex-col justify-center px-[8px] gap-2 border-t border-r border-b rounded-tr-[8px] rounded-br-[8px]"
+            >
+              <p
+                class="text-white text-[15px] md:text-[18px] font-bold text-start uppercase"
+              >
                 Pork Forward: Trailblazing the Path to Advanced Swine Production
               </p>
               <div class="flex gap-2 justify-start items-center">
@@ -132,20 +176,20 @@
           Register Now
         </button>
         <img
-          class="mt-0 md:-mt-4 w-[469px] md:w-[856px] h-auto"
+          class="absolute md:static -bottom-64 md:bottom-auto left-1/2 md:left-auto transform md:transform-none -translate-x-1/2 md:translate-x-0 w-[469px] md:w-[856px] h-auto z-0 pointer-events-none"
           src="/assets/satf/Chicken_Pig.png"
           alt="Pig-Chicken-Egg"
         />
       </div>
-      <div class="flex flex-col justify-center items-center mt-64">
+      <div class="flex flex-col justify-center items-center mt-20 md:mt-64">
         <div class="text-center mt-12">
           <h1
-            class="text-[#0035E6] font-sans text-[60px] font-bold leading-[54px]"
+            class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-[54px]"
           >
             ABOUT THE EVENT
           </h1>
           <div
-            class="w-[185px] h-1 mx-auto my-6 rounded"
+            class="w-[185px] h-1 mx-auto my-2 md:my-6 rounded"
             style="
               background: linear-gradient(
                 to right,
@@ -157,42 +201,50 @@
             "
           ></div>
         </div>
-        <div class="relative w-full my-20">
+        <div class="relative w-full mt-0 md:mt-4 px-8">
+          <!-- Gradient Line -->
           <div
-            class="w-[900px] h-1 mx-auto my-20 rounded bg-gradient-to-r from-blue-500 via-green-500 via-yellow-400 to-red-500"
+            class="w-full max-w-[900px] h-1 mx-auto my-20 rounded [background:linear-gradient(90deg,#0035E6_0%,#3EAD35_32.21%,#FEC205_69.23%,#EF1748_100%)]"
           ></div>
 
+          <!-- Icons Container -->
           <div
-            class="absolute top-2 left-1/2 -translate-x-1/2 flex justify-between w-[900px] px-20"
+            class="absolute top-10 md:top-2 left-1/2 -translate-x-1/2 flex flex-row md:flex-row justify-center md:justify-between items-center gap-12 md:gap-0 w-full max-w-[900px] px-4 md:px-20"
           >
+            <!-- Layers -->
             <div class="flex flex-col justify-center items-center gap-2">
               <div
-                class="w-[143px] h-[143px] rounded-full bg-[#0035E6] flex justify-center items-center"
+                class="w-[80px] h-[80px] md:w-[143px] md:h-[143px] rounded-full bg-[#0035E6] flex justify-center items-center p-2"
               >
                 <img src="/assets/satf/Icons/egg.png" alt="EGG" />
               </div>
-              <h3 class="text-[30px] font-semibold">Layers</h3>
+              <h3 class="text-[18px] md:text-[30px] font-semibold">Layers</h3>
             </div>
+
+            <!-- Swine -->
             <div class="flex flex-col justify-center items-center gap-2">
               <div
-                class="w-[143px] h-[143px] rounded-full bg-[#3EAD35] flex justify-center items-center"
+                class="w-[80px] h-[80px] md:w-[143px] md:h-[143px] rounded-full bg-[#3EAD35] flex justify-center items-center p-2"
               >
                 <img src="/assets/satf/Icons/pig.png" alt="PIG" />
               </div>
-              <h3 class="text-[30px] font-semibold">Swine</h3>
+              <h3 class="text-[18px] md:text-[30px] font-semibold">Swine</h3>
             </div>
+
+            <!-- Broilers -->
             <div class="flex flex-col justify-center items-center gap-2">
               <div
-                class="w-[143px] h-[143px] rounded-full bg-[#FEC205] flex justify-center items-center"
+                class="w-[80px] h-[80px] md:w-[143px] md:h-[143px] rounded-full bg-[#FEC205] flex justify-center items-center p-2"
               >
                 <img src="/assets/satf/Icons/chicken.png" alt="CHICKEN" />
               </div>
-              <h3 class="text-[30px] font-semibold">Broilers</h3>
+              <h3 class="text-[18px] md:text-[30px] font-semibold">Broilers</h3>
             </div>
           </div>
         </div>
-        <div class="max-w-[900px] px-2 mt-4">
-          <p class="text-center text-[18px]">
+
+        <div class="max-w-[900px] px-8 md:px-8 mt-10 md:mt-24">
+          <p class="text-center text-[14px] md:text-[18px]">
             The first
             <span class="font-bold"
               > Species Advancement Tech Forum (SATF) </span
@@ -210,17 +262,21 @@
           </p>
         </div>
       </div>
-      <div class="flex flex-col justify-center items-center mt-28">
+      <div
+        class="w-full flex flex-col justify-center items-center mt-8 md:mt-28 px-4"
+      >
         <div
-          class="text-center mt-12 flex flex-col justify-center items-center"
+          class="text-center mt-12 flex flex-col justify-center items-center px-8"
         >
           <h1
-            class="text-[#0035E6] font-sans text-[60px] font-bold leading-[54px]"
+            class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-tight"
           >
             SEE YOU SOON
           </h1>
+
+          <!-- Gradient Line -->
           <div
-            class="w-[185px] h-1 mx-auto my-6 rounded"
+            class="w-[150px] sm:w-[185px] h-1 mx-auto my-2 md:my-6 rounded"
             style="
               background: linear-gradient(
                 to right,
@@ -231,135 +287,163 @@
               );
             "
           ></div>
-          <h3 class="text-[30px] font-semibold leading-[39px]">
-            Thursday, 17 July 2025
-          </h3>
-          <div class="px-2 my-4">
-            <p class="text-center text-[18px]">
+
+          <!-- Event 1 -->
+          <div
+            class="flex flex-col justify-center items-center gap-4 md:gap-6m mt-4 md:mt-0"
+          >
+            <h3
+              class="text-[18px] md:text-[30px] font-semibold leading-snug text-center"
+            >
+              Thursday, 17 July 2025
+            </h3>
+            <p
+              class="text-center text-[14px] sm:text-[16px] md:text-[18px] max-w-[700px] px-2"
+            >
               Eggsponential Progress: Shaping the Future of Layer Production
               with Confidence
             </p>
+
+            <!-- Countdown 17 -->
+            <div
+              class="flex justify-center font-bold tabular-nums gap-x-6 gap-y-6 md:gap-x-20 mt-4"
+            >
+              <!-- Days -->
+              <div class="flex flex-col lg:flex-row items-center gap-2">
+                <div
+                  id="days-17"
+                  class="text-[#0035E6] px-4 py-3 md:px-6 md:py-4 rounded text-center text-[35px] md:text-[60px] min-w-[4rem]"
+                >
+                  00
+                </div>
+                <span
+                  class="text-[14px] md:text-[25px] text-[#4A4A4A] font-semibold"
+                  >Days</span
+                >
+              </div>
+
+              <!-- Hours -->
+              <div class="flex flex-col lg:flex-row items-center gap-2">
+                <div
+                  id="hours-17"
+                  class="text-[#3EAD35] px-4 py-3 md:px-6 md:py-4 rounded text-center text-[35px] md:text-[60px] min-w-[4rem]"
+                >
+                  00
+                </div>
+                <span
+                  class="text-[14px] md:text-[25px] text-[#4A4A4A] font-semibold"
+                  >Hours</span
+                >
+              </div>
+
+              <!-- Minutes -->
+              <div class="flex flex-col lg:flex-row items-center gap-2">
+                <div
+                  id="minutes-17"
+                  class="text-[#FEC205] px-4 py-3 md:px-6 md:py-4 rounded text-center text-[35px] md:text-[60px] min-w-[4rem]"
+                >
+                  00
+                </div>
+                <span
+                  class="text-[14px] md:text-[25px] text-[#4A4A4A] font-semibold"
+                  >Minutes</span
+                >
+              </div>
+
+              <!-- Seconds -->
+              <div class="flex flex-col lg:flex-row items-center gap-2">
+                <div
+                  id="seconds-17"
+                  class="text-[#EF1748] px-4 py-3 md:px-6 md:py-4 rounded text-center text-[35px] md:text-[60px] min-w-[4rem]"
+                >
+                  00
+                </div>
+                <span
+                  class="text-[14px] md:text-[25px] text-[#4A4A4A] font-semibold"
+                  >Seconds</span
+                >
+              </div>
+            </div>
           </div>
+
+          <!-- Divider -->
           <div
-            class="flex justify-center white font-bold tabular-nums gap-x-20"
-          >
-            <!-- Days -->
-            <div class="flex items-center">
-              <div
-                id="days-17"
-                class="text-[#0035E6] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
-              >
-                00
-              </div>
-              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
-                >Days</span
-              >
-            </div>
-
-            <!-- Hours -->
-            <div class="flex items-center">
-              <div
-                id="hours-17"
-                class="text-[#3EAD35] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
-              >
-                00
-              </div>
-              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
-                >Hours</span
-              >
-            </div>
-
-            <!-- Minutes -->
-            <div class="flex items-center">
-              <div
-                id="minutes-17"
-                class="text-[#FEC205] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
-              >
-                00
-              </div>
-              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
-                >Minutes</span
-              >
-            </div>
-
-            <!-- Seconds -->
-            <div class="flex items-center">
-              <div
-                id="seconds-17"
-                class="text-[#EF1748] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
-              >
-                00
-              </div>
-              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
-                >Seconds</span
-              >
-            </div>
-          </div>
-          <div
-            class="max-w-[895px] w-full h-[1px] bg-[#C4C4C4] mt-12 mb-12"
+            class="max-w-[895px] w-full h-[1px] bg-[#C4C4C4] mt-10 md:mt-12 mb-10 md:mb-12"
           ></div>
-          <h3 class="text-[30px] font-semibold leading-[39px]">
-            Thursday, 24 July 2025
-          </h3>
-          <div class="px-2 my-4">
-            <p class="text-center text-[18px]">
+
+          <!-- Event 2 -->
+          <div class="flex flex-col justify-center items-center gap-4 md:gap-6">
+            <h3
+              class="text-[18px] md:text-[30px] font-semibold leading-snug text-center"
+            >
+              Thursday, 24 July 2025
+            </h3>
+            <p
+              class="text-center text-[14px] sm:text-[16px] md:text-[18px] max-w-[700px] px-2"
+            >
               Eggsponential Progress: Shaping the Future of Layer Production
               with Confidence
             </p>
-          </div>
-          <div
-            class="flex justify-center white font-bold tabular-nums gap-x-20"
-          >
-            <!-- Days -->
-            <div class="flex items-center">
-              <div
-                id="days-24"
-                class="text-[#0035E6] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
-              >
-                00
-              </div>
-              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
-                >Days</span
-              >
-            </div>
 
-            <!-- Hours -->
-            <div class="flex items-center">
-              <div
-                id="hours-24"
-                class="text-[#3EAD35] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
-              >
-                00
+            <!-- Countdown 24 -->
+            <div
+              class="flex flex-wrap justify-center font-bold tabular-nums gap-x-6 gap-y-6 md:gap-x-20 mt-4"
+            >
+              <!-- Days -->
+              <div class="flex flex-col lg:flex-row items-center gap-2">
+                <div
+                  id="days-24"
+                  class="text-[#0035E6] px-4 py-3 md:px-6 md:py-4 rounded text-center text-[35px] md:text-[60px] min-w-[4rem]"
+                >
+                  00
+                </div>
+                <span
+                  class="text-[14px] md:text-[25px] text-[#4A4A4A] font-semibold"
+                  >Days</span
+                >
               </div>
-              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
-                >Hours</span
-              >
-            </div>
 
-            <!-- Minutes -->
-            <div class="flex items-center">
-              <div
-                id="minutes-24"
-                class="text-[#FEC205] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
-              >
-                00
+              <!-- Hours -->
+              <div class="flex flex-col lg:flex-row items-center gap-2">
+                <div
+                  id="hours-24"
+                  class="text-[#3EAD35] px-4 py-3 md:px-6 md:py-4 rounded text-center text-[35px] md:text-[60px] min-w-[4rem]"
+                >
+                  00
+                </div>
+                <span
+                  class="text-[14px] md:text-[25px] text-[#4A4A4A] font-semibold"
+                  >Hours</span
+                >
               </div>
-              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
-                >Minutes</span
-              >
-            </div>
 
-            <!-- Seconds -->
-            <div class="flex items-center">
-              <div
-                id="seconds-24"
-                class="text-[#EF1748] px-6 py-4 rounded min-w-[4.5rem] text-center text-[60px]"
-              >
-                00
+              <!-- Minutes -->
+              <div class="flex flex-col lg:flex-row items-center gap-2">
+                <div
+                  id="minutes-24"
+                  class="text-[#FEC205] px-4 py-3 md:px-6 md:py-4 rounded text-center text-[35px] md:text-[60px] min-w-[4rem]"
+                >
+                  00
+                </div>
+                <span
+                  class="text-[14px] md:text-[25px] text-[#4A4A4A] font-semibold"
+                  >Minutes</span
+                >
               </div>
-              <span class="text-[25px] mt-2 text-[#4A4A4A] font-semibold"
-                >Seconds</span
-              >
+
+              <!-- Seconds -->
+              <div class="flex flex-col lg:flex-row items-center gap-2">
+                <div
+                  id="seconds-24"
+                  class="text-[#EF1748] px-4 py-3 md:px-6 md:py-4 rounded text-center text-[35px] md:text-[60px] min-w-[4rem]"
+                >
+                  00
+                </div>
+                <span
+                  class="text-[14px] md:text-[25px] text-[#4A4A4A] font-semibold"
+                  >Seconds</span
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -420,17 +504,17 @@
       });
     </script>
     <div class="flex flex-col justify-center items-center">
-      <div class="flex flex-col justify-center items-center mt-28">
+      <div class="flex flex-col justify-center items-center mt-8 md:mt-28">
         <div
           class="text-center mt-12 flex flex-col justify-center items-center"
         >
           <h1
-            class="text-[#0035E6] font-sans text-[60px] font-bold leading-[54px]"
+            class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-tight"
           >
             SPEAKERS
           </h1>
           <div
-            class="w-[185px] h-1 mx-auto my-6 rounded"
+            class="w-[150px] sm:w-[185px] h-1 mx-auto my-2 md:my-6 rounded"
             style="
               background: linear-gradient(
                 to right,
@@ -442,8 +526,8 @@
             "
           ></div>
         </div>
-        <div class="max-w-[900px] px-2 mt-1">
-          <p class="text-center text-[18px]">
+        <div class="max-w-[900px] px-8 md:px-2 mt-1">
+          <p class="text-center text-[14px] md:text-[18px]">
             Get to know the visionary scientists, innovators, and experts who
             are leading the conversation on species advancement and breakthrough
             technologies. Learn from their research, insights, and real-world
@@ -453,7 +537,7 @@
       </div>
       <div
         id="speaker-container"
-        class="flex flex-wrap max-w-[1210px] w-full justify-center items-centers gap-5 mt-14"
+        class="flex flex-wrap max-w-[1210px] w-full justify-center items-centers gap-5 mt-8 md:mt-14"
       ></div>
 
       <script>
@@ -582,10 +666,12 @@
           });
       </script>
       <div class="flex flex-col justify-center items-center px-4">
-        <div class="flex flex-col justify-center items-center mt-28 w-full">
+        <div
+          class="flex flex-col justify-center items-center mt-8 md:mt-28 w-full"
+        >
           <div class="text-center mt-12">
             <h1
-              class="text-[#0035E6] font-sans text-[40px] md:text-[60px] font-bold leading-[1.2]"
+              class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-[1.2]"
             >
               SPONSORS
             </h1>
@@ -606,7 +692,7 @@
           <div
             class="max-w-[900px] mt-1 flex flex-col gap-4 md:gap-[30px] px-4 text-center"
           >
-            <p class="text-[16px] md:text-[18px]">
+            <p class="text-center text-[14px] md:text-[18px]">
               Organized by the following partner companies.
             </p>
             <p class="text-[16px] md:text-[18px] font-semibold">Presented by</p>
@@ -614,7 +700,7 @@
 
           <!-- Responsive Logos -->
           <div
-            class="flex flex-wrap justify-center items-center gap-6 md:gap-10 mt-12 w-full"
+            class="flex flex-wrap justify-center items-center gap-8 md:gap-20 mt-4 md:mt-12 w-full"
           >
             <img
               class="h-[40px] md:h-[68px] w-auto"
@@ -656,7 +742,7 @@
             class="text-center mt-12 flex flex-col justify-center items-center"
           >
             <h1
-              class="text-[#0035E6] font-sans text-[60px] font-bold leading-[54px]"
+              class="text-[#0035E6] font-sans text-[35px] md:text-[60px] font-bold leading-[1.2]"
             >
               FORUM SCHEDULE
             </h1>
@@ -673,8 +759,8 @@
               "
             ></div>
           </div>
-          <div class="max-w-[900px] px-2 mt-1">
-            <p class="text-center text-[18px]">
+          <div class="max-w-[900px] px-8 mt-1">
+            <p class="text-center text-[14px] md:text-[18px]">
               From keynote addresses to panel discussions and networking breaks
               — explore the full schedule of the forum. Plan your day and don’t
               miss key sessions that match your passion for innovation, species
@@ -683,19 +769,21 @@
           </div>
         </div>
         <div
-          class="flex flex-col w-full justify-center items-center gap-6 mt-20"
+          class="flex flex-col w-full justify-center items-center gap-6 mt-10 md:mt-20 px-8 md:px-0"
         >
           <!-- Tabs -->
-          <div class="w-full flex justify-between px-[60px]">
+          <div
+            class="w-full flex flex-col md:flex-row justify-between px-[60px]"
+          >
             <button
               id="tab-17"
-              class="tab-btn text-[30px] font-semibold leading-[39px] border-[#00072C] cursor-pointer"
+              class="tab-btn text-[18px] md:text-[30px] font-semibold leading-[39px] border-[#00072C] cursor-pointer"
             >
               Thursday, 17 July 2025
             </button>
             <button
               id="tab-24"
-              class="tab-btn text-[30px] font-semibold leading-[39px] text-[#A0A0A0] border-transparent cursor-pointer"
+              class="tab-btn text-[18px] md:text-[30px] font-semibold leading-[39px] text-[#A0A0A0] border-transparent cursor-pointer"
             >
               Thursday, 24 July 2025
             </button>
@@ -704,7 +792,7 @@
           <!-- Program container -->
           <div
             id="program-container"
-            class="flex flex-col gap-4 max-w-[900px] w-full"
+            class="flex flex-col gap-4 max-w-[900px] w-full px-0 md:px-4"
           ></div>
         </div>
         <script>
@@ -725,7 +813,7 @@
                   if (typeof entry === "string") {
                     subContent += `<h3 class="mt-1">${entry}</h3>`;
                   } else if (entry.badges) {
-                    subContent += `<div class="grid grid-cols-2 gap-[10px] ml-[20px] mt-2 w-fit">`;
+                    subContent += `<div class="grid grid-cols-1 md:grid-cols-2 gap-[10px] ml-[20px] mt-2 w-fit">`;
                     entry.badges.forEach((badge) => {
                       const name =
                         typeof badge === "string" ? badge : badge.name;
@@ -744,8 +832,8 @@
 
               const block = `
         <div class="bg-[#00072C] text-white text-[20px] font-bold max-w-[898px] w-full h-auto py-[24px] pl-[60px] pr-[20px] rounded-[20px]">
-          <div class="grid grid-cols-[25%_75%]">
-            <h3>${item.time}</h3>
+          <div class="grid md:grid-cols-[25%_75%] grid-cols-1 auto-rows-auto gap-2 md:gap-8">
+            <h3 class="self-start">${item.time}</h3>
             <div>
               <h3>${item.title}</h3>
               ${subContent}
