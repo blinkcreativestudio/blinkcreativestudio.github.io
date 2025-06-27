@@ -113,11 +113,11 @@
               if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
                 // Prevents retriggering
-                // observer.unobserve(entry.target);
-              } else {
-                // Optional: Remove class when out of view
-                entry.target.classList.remove("visible");
+                observer.unobserve(entry.target);
               }
+              // else {
+              //   entry.target.classList.remove("visible");
+              // }
             });
           },
           { threshold: 0.3 }
@@ -262,7 +262,7 @@
           rel="noopener noreferrer"
         >
           <button
-            class="mt-4 md:mt-0 px-[50px] py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 transition fade-in-up"
+            class="mt-4 md:mt-0 px-[50px] py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 fade-in-up cursor-pointer hover:scale-[102%] transition-transform ease-in-out duration-1000"
           >
             Register Now
           </button>
@@ -281,7 +281,7 @@
             ABOUT THE EVENT
           </h1>
           <div
-            class="w-[185px] h-1 mx-auto my-2 md:my-6 rounded fade-in-up"
+            class="w-[150px] sm:w-[185px] h-[5px] mx-auto my-2 md:my-12 rounded fade-in-up"
             style="
               background: linear-gradient(
                 to right,
@@ -335,7 +335,7 @@
           </div>
         </div>
 
-        <div class="max-w-[900px] px-8 md:px-8 mt-10 md:mt-24">
+        <div class="max-w-[900px] px-8 md:px-8 mt-20 md:mt-40">
           <p class="text-center text-[14px] md:text-[18px] fade-in-up">
             The first
             <span class="font-bold"
@@ -367,7 +367,7 @@
             SPEAKERS
           </h1>
           <div
-            class="w-[150px] sm:w-[185px] h-1 mx-auto my-2 md:my-6 rounded fade-in-up"
+            class="w-[150px] sm:w-[185px] h-[5px] mx-auto my-2 md:my-6 rounded fade-in-up"
             style="
               background: linear-gradient(
                 to right,
@@ -379,7 +379,7 @@
             "
           ></div>
         </div>
-        <div class="max-w-[900px] px-8 md:px-2 mt-1">
+        <div class="max-w-[900px] px-8 md:px-2 mt-8 md:mt-8">
           <p class="text-center text-[14px] md:text-[18px] fade-in-up">
             Get to know the visionary scientists, innovators, and experts who
             are leading the conversation on species advancement and breakthrough
@@ -466,7 +466,7 @@
       </div>
       <div
         id="speaker-container1"
-        class="flex flex-wrap max-w-[1210px] w-full justify-center items-centers gap-5 mt-8 md:mt-14"
+        class="flex flex-wrap max-w-[1210px] w-full justify-center items-centers gap-12 md:gap-5 mt-8 md:mt-14"
       ></div>
 
       <!-- Divider -->
@@ -566,7 +566,7 @@
               SPONSORS
             </h1>
             <div
-              class="w-[150px] md:w-[185px] h-1 mx-auto my-6 rounded fade-in-up"
+              class="w-[150px] sm:w-[185px] h-[5px] mx-auto my-2 md:my-8 rounded fade-in-up"
               style="
                 background: linear-gradient(
                   to right,
@@ -580,7 +580,7 @@
           </div>
 
           <div
-            class="max-w-[900px] mt-1 flex flex-col gap-4 md:gap-[30px] px-4 text-center"
+            class="max-w-[900px] flex flex-col gap-4 md:gap-[30px] px-4 text-center mt-8 md:mt-1"
           >
             <p class="text-center text-[14px] md:text-[18px] fade-in-up">
               The Layers and Swine forums are organized by the following partner
@@ -645,7 +645,7 @@
               FORUM SCHEDULE
             </h1>
             <div
-              class="w-[185px] h-1 mx-auto my-6 rounded fade-in-up"
+              class="w-[150px] sm:w-[185px] h-[5px] mx-auto my-2 md:my-8 rounded fade-in-up"
               style="
                 background: linear-gradient(
                   to right,
@@ -657,7 +657,7 @@
               "
             ></div>
           </div>
-          <div class="max-w-[900px] px-8 mt-1">
+          <div class="max-w-[900px] px-8 mt-8 md:mt-1">
             <p class="text-center text-[14px] md:text-[18px] fade-in-up">
               From keynote addresses to panel discussions and networking breaks
               — explore the full schedule of the forum. Plan your day and don’t
@@ -671,7 +671,7 @@
         >
           <!-- Tabs -->
           <div
-            class="w-full flex flex-col md:flex-row justify-between px-[60px]"
+            class="w-full flex flex-col lg:flex-row justify-between px-[60px] gap-6"
           >
             <button
               id="tab-17"
@@ -690,7 +690,7 @@
           <!-- Program container -->
           <div
             id="program-container"
-            class="flex flex-col gap-4 max-w-[900px] w-full px-0 md:px-4"
+            class="flex flex-col gap-4 max-w-[900px] w-full px-0 md:px-4 mt-8 md:mt-12"
           ></div>
           <!-- Animation Observer Script -->
           <script>
@@ -700,11 +700,11 @@
                   entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                       entry.target.classList.add("visible");
-                      // observer.unobserve(entry.target);
-                    } else {
-                      // Allows re-animation when it enters again
-                      entry.target.classList.remove("visible");
+                      observer.unobserve(entry.target);
                     }
+                    // else {
+                    //   entry.target.classList.remove("visible");
+                    // }
                   });
                 },
                 { threshold: 0.3 }
@@ -735,14 +735,14 @@
                     if (typeof entry === "string") {
                       subContent += `<h3 class="mt-1">${entry}</h3>`;
                     } else if (entry.badges) {
-                      subContent += `<div class="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-[10px] ml-[20px] mt-2 w-fit">`;
+                      subContent += `<div class="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-[10px] ml-0 md:ml-[20px] mt-2 w-full lg:w-fit">`;
                       entry.badges.forEach((badge) => {
                         const name =
                           typeof badge === "string" ? badge : badge.name;
                         const color =
                           typeof badge === "string" ? "#ffffff" : badge.color;
                         subContent += `
-                <h3 class="border border-[${color}] text-[${color}] rounded-full flex justify-center items-center w-fit h-fit px-2 py-2 text-[16.5px] font-bold">
+                <h3 class="border border-[${color}] text-[${color}] rounded-full flex justify-center items-center w-full lg:w-fit h-fit px-2 py-2 text-[16.5px] font-bold transition-colors duration-300 group-hover:border-white group-hover:text-white">
                   ${name}
                 </h3>
               `;
@@ -753,7 +753,7 @@
                 }
 
                 const block = `
-          <div class="program-fade bg-[#00072C] text-white text-[20px] max-w-[898px] w-full h-auto py-[24px] pl-[20px] md:pl-[60px] pr-[20px] rounded-[20px]">
+          <div class="program-fade group bg-[#00072C] text-white text-[20px] max-w-[898px] w-full h-auto py-[24px] pl-[20px] md:pl-[60px] pr-[20px] rounded-[20px] hover:bg-[#FEC205] hover:text-white transition-colors duration-300">
             <div class="grid md:grid-cols-[25%_75%] grid-cols-1 auto-rows-auto gap-2 md:gap-8 text-center md:text-start justify-center items-center">
               <h3 class="self-start text-[#FEF9DB] font-bold">${item.time}</h3>
               <div class="flex flex-col justify-center items-center md:items-start pr-[0px] md:pr-[60px]">
@@ -829,7 +829,7 @@
             rel="noopener noreferrer"
           >
             <button
-              class="mt-4 px-6 sm:px-[50px] py-3 sm:py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 transition fade-in-up"
+              class="mt-4 px-6 sm:px-[50px] py-3 sm:py-[20px] rounded-[8px] text-[16px] font-bold bg-gradient-to-r from-[#0060DC] to-[#12CF6A] hover:opacity-90 fade-in-up cursor-pointer hover:scale-[102%] transition-transform ease-in-out duration-1000"
             >
               Register Now
             </button>
@@ -863,8 +863,12 @@
             </div>
 
             <!-- Contact Info -->
-            <div class="flex flex-col gap-6">
-              <div>
+            <div
+              class="flex flex-col gap-6 justify-center items-center lg:justify-start lg:items-start"
+            >
+              <div
+                class="flex flex-col justify-center items-center lg:justify-start lg:items-start"
+              >
                 <h3
                   class="text-[24px] sm:text-[30px] font-semibold leading-[39px] fade-in-up"
                 >
@@ -897,7 +901,9 @@
                 </div>
                 <!-- Phone -->
                 <div class="flex items-start gap-4">
-                  <div class="w-[24px] flex-shrink-0 fade-in-up">
+                  <div
+                    class="w-[24px] flex justify-center items-center fade-in-up"
+                  >
                     <svg
                       width="16"
                       height="25"
@@ -924,7 +930,7 @@
 
           <!-- Footer Bottom -->
           <div
-            class="flex flex-col sm:flex-row justify-between items-center text-[16px] gap-2 sm:gap-0 fade-in-up"
+            class="flex flex-col md:flex-row justify-between items-center text-[16px] gap-2 sm:gap-0 fade-in-up"
           >
             <p>SATF © 2025. All rights reserved.</p>
             <p>Powered by BLINK CREATIVE STUDIO.</p>
@@ -1017,14 +1023,15 @@
     }
   </style>
 
+  <div id="speaker-container1" class="flex flex-wrap gap-6"></div>
+
   <script>
     const observer1 = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-          } else {
-            entry.target.classList.remove("visible");
+            observer1.unobserve(entry.target);
           }
         });
       },
@@ -1039,76 +1046,76 @@
         speakers.forEach((speaker, index) => {
           const fadeClass = `fade-in-up-s${(index % 4) + 1}`;
           const speakerCard = `
-          <div class="speaker-card ${fadeClass} relative flex flex-col w-[286px] h-[500px] justify-between items-start gap-5" data-color="${speaker.gradientEnd}" data-index="${index} cursor-pointer toggle-btn">
-            <!-- Image Section -->
-            <div class="image-section group relative bg-[#00072C] w-full h-[367px] flex-shrink-0 rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden cursor-pointer toggle-btn">
-              <img
-                src="${speaker.image}"
-                alt="${speaker.name}"
-                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
-              <div
-                class="absolute inset-0 group-hover:opacity-0 transition-opacity duration-300"
-                style="background: ${speaker.gradient};"
-              ></div>
-              <div class="absolute bottom-4 right-4 cursor-pointer toggle-btn transform transition-transform duration-300 group-hover:rotate-90">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2 22L22 2M22 2H2M22 2V22"
-                    stroke="#FEF9DB"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <!-- Info Section -->
-            <div class="info-section w-full px-3 flex flex-col gap-3 flex-grow">
-              <div class="border-[1px] rounded-full px-[10px] py-[5px] border-[#0035E6] w-fit">
-                <h2 class="text-[16.5px] text-[#0035E6] font-bold whitespace-nowrap truncate max-w-full uppercase">
-                  ${speaker.name}
-                </h2>
-              </div>
-              <p class="text-[#4a4a4a] font-semibold text-[16px] leading-[1.4] min-h-[48px]">
-                ${speaker.title}
-              </p>
-            </div>
-
-            <!-- Description -->
-            <div class="description flex flex-col gap-3 h-[500px] px-4 py-4 text-[16px] text-white font-semibold rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px]" style="background-color: ${speaker.descriptionBg};">
-              <div class="border-[1px] rounded-full px-[10px] py-[5px] border-white w-fit">
-                <h2 class="text-[16.5px] font-bold whitespace-nowrap truncate max-w-full uppercase">
-                  ${speaker.name}
-                </h2>
-              </div>
-              <p class="font-semibold text-[16px] leading-[1.4] min-h-[48px]">
-                ${speaker.title}
-              </p>
-              <p class="text-[14px]">
-                ${speaker.description}
-              </p>
+        <div class="speaker-card ${fadeClass} relative flex flex-col w-[286px] h-[500px] justify-between items-start gap-5 cursor-pointer" data-color="${speaker.gradientEnd}" data-index="${index}">
+          <!-- Image Section -->
+          <div class="image-section group relative bg-[#00072C] w-full h-[367px] flex-shrink-0 rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden toggle-btn">
+            <img
+              src="${speaker.image}"
+              alt="${speaker.name}"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+            />
+            <div
+              class="absolute inset-0 group-hover:opacity-0 transition-opacity duration-300"
+              style="background: ${speaker.gradient};"
+            ></div>
+            <div class="absolute bottom-4 right-4 transform transition-transform duration-300 group-hover:rotate-90 toggle-btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 22L22 2M22 2H2M22 2V22"
+                  stroke="#FEF9DB"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
           </div>
-        `;
+
+          <!-- Info Section -->
+          <div class="info-section w-full px-3 flex flex-col gap-3 flex-grow toggle-btn">
+            <div class="border-[1px] rounded-full px-[10px] py-[5px] border-[#0035E6] w-fit">
+              <h2 class="text-[16.5px] text-[#0035E6] font-bold whitespace-nowrap truncate max-w-full uppercase">
+                ${speaker.name}
+              </h2>
+            </div>
+            <p class="text-[#4a4a4a] font-semibold text-[16px] leading-[1.4] min-h-[48px]">
+              ${speaker.title}
+            </p>
+          </div>
+
+          <!-- Description -->
+          <div class="description flex flex-col gap-3 h-[500px] px-4 py-4 text-[16px] text-white font-semibold rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px]" style="background-color: ${speaker.descriptionBg};">
+            <div class="border-[1px] rounded-full px-[10px] py-[5px] border-white w-fit">
+              <h2 class="text-[16.5px] font-bold whitespace-nowrap truncate max-w-full uppercase">
+                ${speaker.name}
+              </h2>
+            </div>
+            <p class="font-semibold text-[16px] leading-[1.4] min-h-[48px]">
+              ${speaker.title}
+            </p>
+            <p class="text-[14px]">
+              ${speaker.description}
+            </p>
+          </div>
+        </div>
+      `;
           container.insertAdjacentHTML("beforeend", speakerCard);
         });
 
-        // Animate in with IntersectionObserver
+        // Animate cards in view
         document
           .querySelectorAll(
             ".fade-in-up-s1, .fade-in-up-s2, .fade-in-up-s3, .fade-in-up-s4"
           )
           .forEach((el) => observer1.observe(el));
 
-        // Toggle logic with animation
+        // Toggle logic
         let currentOpenCard = null;
 
         function closeOpenCard() {
@@ -1120,22 +1127,25 @@
         }
 
         document.querySelectorAll(".speaker-card").forEach((card) => {
-          const toggleBtn = card.querySelector(".toggle-btn");
+          const toggleBtns = card.querySelectorAll(".toggle-btn");
           const gradientEndColor = card.getAttribute("data-color");
 
-          toggleBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            if (currentOpenCard !== card) {
-              closeOpenCard();
-              card.classList.add("show-description");
-              card.style.backgroundColor = gradientEndColor;
-              currentOpenCard = card;
-            } else {
-              closeOpenCard();
-            }
+          toggleBtns.forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              if (currentOpenCard !== card) {
+                closeOpenCard();
+                card.classList.add("show-description");
+                card.style.backgroundColor = gradientEndColor;
+                currentOpenCard = card;
+              } else {
+                closeOpenCard();
+              }
+            });
           });
         });
 
+        // Close when clicking outside
         document.addEventListener("click", (e) => {
           if (currentOpenCard && !currentOpenCard.contains(e.target)) {
             closeOpenCard();
@@ -1145,14 +1155,13 @@
   </script>
 
   <script>
-    // Define the observer first
+    // Define the observer for speaker-container2
     const observer2 = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-          } else {
-            entry.target.classList.remove("visible");
+            observer2.unobserve(entry.target); // ✅ fixed typo
           }
         });
       },
@@ -1167,106 +1176,111 @@
         speakers.forEach((speaker, index) => {
           const fadeClass = `fade-in-up-s${(index % 4) + 1}`;
           const speakerCard = `
-          <div class="speaker-card ${fadeClass} relative flex flex-col w-[286px] h-[500px] justify-between items-start gap-5" data-color="${speaker.gradientEnd}" data-index="${index} cursor-pointer toggle-btn">
-            <!-- Image Section -->
-            <div class="image-section group relative bg-[#00072C] w-full h-[367px] flex-shrink-0 rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden cursor-pointer toggle-btn">
-              <img
-                src="${speaker.image}"
-                alt="${speaker.name}"
-                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
-              />
-              <div
-                class="absolute inset-0 group-hover:opacity-0 transition-opacity duration-300"
-                style="background: ${speaker.gradient};"
-              ></div>
-              <div class="absolute bottom-4 right-4 cursor-pointer toggle-btn transform transition-transform duration-300 group-hover:rotate-90">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2 22L22 2M22 2H2M22 2V22"
-                    stroke="#FEF9DB"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            </div>
-
-            <!-- Info Section -->
-            <div class="info-section w-full px-3 flex flex-col gap-3 flex-grow">
-              <div class="border-[1px] rounded-full px-[10px] py-[5px] border-[#0035E6] w-fit">
-                <h2 class="text-[16.5px] text-[#0035E6] font-bold whitespace-nowrap truncate max-w-full uppercase">
-                  ${speaker.name}
-                </h2>
-              </div>
-              <p class="text-[#4a4a4a] font-semibold text-[16px] leading-[1.4] min-h-[48px]">
-                ${speaker.title}
-              </p>
-            </div>
-
-            <!-- Description -->
-            <div class="description flex flex-col gap-3 h-[500px] px-4 py-4 text-[16px] text-white font-semibold rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px]" style="background-color: ${speaker.descriptionBg};">
-              <div class="border-[1px] rounded-full px-[10px] py-[5px] border-white w-fit">
-                <h2 class="text-[16.5px] font-bold whitespace-nowrap truncate max-w-full uppercase">
-                  ${speaker.name}
-                </h2>
-              </div>
-              <p class="font-semibold text-[16px] leading-[1.4] min-h-[48px]">
-                ${speaker.title}
-              </p>
-              <p class="text-[14px]">
-                ${speaker.description}
-              </p>
+        <div class="speaker-card ${fadeClass} relative flex flex-col w-[286px] h-[500px] justify-between items-start gap-5 cursor-pointer" data-color="${speaker.gradientEnd}" data-index="${index}">
+          <!-- Image Section -->
+          <div class="image-section group relative bg-[#00072C] w-full h-[367px] flex-shrink-0 rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden toggle-btn">
+            <img
+              src="${speaker.image}"
+              alt="${speaker.name}"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+            />
+            <div
+              class="absolute inset-0 group-hover:opacity-0 transition-opacity duration-300"
+              style="background: ${speaker.gradient};"
+            ></div>
+            <div class="absolute bottom-4 right-4 transform transition-transform duration-300 group-hover:rotate-90 toggle-btn">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 22L22 2M22 2H2M22 2V22"
+                  stroke="#FEF9DB"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
           </div>
-        `;
+
+          <!-- Info Section -->
+          <div class="info-section w-full px-3 flex flex-col gap-3 flex-grow toggle-btn">
+            <div class="border-[1px] rounded-full px-[10px] py-[5px] border-[#0035E6] w-fit">
+              <h2 class="text-[16.5px] text-[#0035E6] font-bold whitespace-nowrap truncate max-w-full uppercase">
+                ${speaker.name}
+              </h2>
+            </div>
+            <p class="text-[#4a4a4a] font-semibold text-[16px] leading-[1.4] min-h-[48px]">
+              ${speaker.title}
+            </p>
+          </div>
+
+          <!-- Description -->
+          <div class="description flex flex-col gap-3 h-[500px] px-4 py-4 text-[16px] text-white font-semibold rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px]" style="background-color: ${speaker.descriptionBg};">
+            <div class="border-[1px] rounded-full px-[10px] py-[5px] border-white w-fit">
+              <h2 class="text-[16.5px] font-bold whitespace-nowrap truncate max-w-full uppercase">
+                ${speaker.name}
+              </h2>
+            </div>
+            <p class="font-semibold text-[16px] leading-[1.4] min-h-[48px]">
+              ${speaker.title}
+            </p>
+            <p class="text-[14px]">
+              ${speaker.description}
+            </p>
+          </div>
+        </div>
+      `;
           container.insertAdjacentHTML("beforeend", speakerCard);
         });
 
-        // Observe animations
+        // Fade-in animation
         document
           .querySelectorAll(
             ".fade-in-up-s1, .fade-in-up-s2, .fade-in-up-s3, .fade-in-up-s4"
           )
           .forEach((el) => observer2.observe(el));
 
-        // Toggle logic
-        let currentOpenCard = null;
+        // Independent toggle logic for speaker-container2
+        let currentOpenCard2 = null;
 
-        function closeOpenCard() {
-          if (currentOpenCard) {
-            currentOpenCard.classList.remove("show-description");
-            currentOpenCard.style.backgroundColor = "transparent";
-            currentOpenCard = null;
+        function closeOpenCard2() {
+          if (currentOpenCard2) {
+            currentOpenCard2.classList.remove("show-description");
+            currentOpenCard2.style.backgroundColor = "transparent";
+            currentOpenCard2 = null;
           }
         }
 
-        document.querySelectorAll(".speaker-card").forEach((card) => {
-          const toggleBtn = card.querySelector(".toggle-btn");
-          const gradientEndColor = card.getAttribute("data-color");
+        document
+          .querySelectorAll("#speaker-container2 .speaker-card")
+          .forEach((card) => {
+            const toggleBtns = card.querySelectorAll(".toggle-btn");
+            const gradientEndColor = card.getAttribute("data-color");
 
-          toggleBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            if (currentOpenCard !== card) {
-              closeOpenCard();
-              card.classList.add("show-description");
-              card.style.backgroundColor = gradientEndColor;
-              currentOpenCard = card;
-            } else {
-              closeOpenCard();
-            }
+            toggleBtns.forEach((btn) => {
+              btn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                if (currentOpenCard2 !== card) {
+                  closeOpenCard2();
+                  card.classList.add("show-description");
+                  card.style.backgroundColor = gradientEndColor;
+                  currentOpenCard2 = card;
+                } else {
+                  closeOpenCard2();
+                }
+              });
+            });
           });
-        });
 
+        // Click outside to close for speaker-container2
         document.addEventListener("click", (e) => {
-          if (currentOpenCard && !currentOpenCard.contains(e.target)) {
-            closeOpenCard();
+          if (currentOpenCard2 && !currentOpenCard2.contains(e.target)) {
+            closeOpenCard2();
           }
         });
       });
