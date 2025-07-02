@@ -113,6 +113,7 @@
 
   .private-title {
     font-size: 2rem;
+    font-weight: 700;
   }
 
   .ratedr-sub-span {
@@ -171,4 +172,8 @@
   cursor: pointer;
   font-size: 18px;
   z-index: 10;
+}
+
+.event-title-padding {
+  padding-inline: 12px;
 }

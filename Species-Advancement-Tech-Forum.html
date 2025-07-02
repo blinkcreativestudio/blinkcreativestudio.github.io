@@ -597,27 +597,27 @@
             class="flex flex-wrap justify-center items-center gap-8 md:gap-20 mt-4 md:mt-8 w-full"
           >
             <img
-              class="h-[40px] md:h-[74px] w-auto fade-in-up"
+              class="h-[50px] md:h-[74px] w-auto fade-in-up"
               src="/assets/satf/Logos/Big_Dutchman_Logo.svg 2.png"
               alt="BIG DUTCHMAN"
             />
             <img
-              class="h-[30px] md:h-[45px] w-auto fade-in-up"
+              class="h-[38px] md:h-[45px] w-auto fade-in-up"
               src="/assets/satf/Logos/BI_LOGO_DARKGREEN 3.png"
               alt="BI"
             />
             <img
-              class="h-[35px] md:h-[62px] w-auto fade-in-up"
+              class="h-[44px] md:h-[62px] w-auto fade-in-up"
               src="/assets/satf/Logos/DSM_FIRMENICH_BLACK_2 3.png"
               alt="DSM"
             />
             <img
-              class="h-[60px] md:h-[117px] w-auto fade-in-up"
+              class="h-[75px] md:h-[117px] w-auto fade-in-up"
               src="/assets/satf/Logos/logo-lohmann 1.png"
               alt="LOHMAN"
             />
             <img
-              class="h-[50px] md:h-[91px] w-auto fade-in-up"
+              class="h-[63px] md:h-[91px] w-auto fade-in-up"
               src="/assets/satf/Logos/cropped-cropped-pic_logo2 3.png"
               alt="PIC"
             />
@@ -1047,7 +1047,9 @@
         speakers.forEach((speaker, index) => {
           const fadeClass = `fade-in-up-s${(index % 4) + 1}`;
           const speakerCard = `
-        <div class="speaker-card ${fadeClass} relative flex flex-col w-[286px] h-[500px] justify-between items-start gap-5 cursor-pointer" data-color="${speaker.gradientEnd}" data-index="${index}">
+        <div class="speaker-card ${fadeClass} relative flex flex-col w-[286px] h-[500px] justify-between items-start gap-5 cursor-pointer" data-color="${
+            speaker.gradientEnd
+          }" data-index="${index}">
           <!-- Image Section -->
           <div class="image-section group relative bg-[#00072C] w-full h-[367px] flex-shrink-0 rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden toggle-btn">
             <img
@@ -1086,19 +1088,21 @@
               </h2>
             </div>
             <p class="text-[#4a4a4a] font-semibold text-[16px] leading-[1.4] min-h-[48px]">
-              ${speaker.title}
+              ${speaker.title.replace(/\n/g, "<br/>")}
             </p>
           </div>
 
           <!-- Description -->
-          <div class="description flex flex-col gap-3 h-[500px] px-4 py-4 text-[16px] text-white font-semibold rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px]" style="background-color: ${speaker.descriptionBg};">
+          <div class="description flex flex-col gap-3 h-[500px] px-4 py-4 text-[16px] text-white font-semibold rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px]" style="background-color: ${
+            speaker.descriptionBg
+          };">
             <div class="border-[1px] rounded-full px-[10px] py-[5px] border-white w-fit">
               <h2 class="text-[16.5px] font-bold whitespace-nowrap truncate max-w-full uppercase">
                 ${speaker.name}
               </h2>
             </div>
             <p class="font-semibold text-[16px] leading-[1.4] min-h-[48px]">
-              ${speaker.title}
+              ${speaker.title.replace(/\n/g, "<br/>")}
             </p>
             <p class="text-[14px]">
               ${speaker.description}
@@ -1177,7 +1181,9 @@
         speakers.forEach((speaker, index) => {
           const fadeClass = `fade-in-up-s${(index % 4) + 1}`;
           const speakerCard = `
-        <div class="speaker-card ${fadeClass} relative flex flex-col w-[286px] h-[500px] justify-between items-start gap-5 cursor-pointer" data-color="${speaker.gradientEnd}" data-index="${index}">
+        <div class="speaker-card ${fadeClass} relative flex flex-col w-[286px] h-[500px] justify-between items-start gap-5 cursor-pointer" data-color="${
+            speaker.gradientEnd
+          }" data-index="${index}">
           <!-- Image Section -->
           <div class="image-section group relative bg-[#00072C] w-full h-[367px] flex-shrink-0 rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px] overflow-hidden toggle-btn">
             <img
@@ -1216,19 +1222,21 @@
               </h2>
             </div>
             <p class="text-[#4a4a4a] font-semibold text-[16px] leading-[1.4] min-h-[48px]">
-              ${speaker.title}
+              ${speaker.title.replace(/\n/g, "<br/>")}
             </p>
           </div>
 
           <!-- Description -->
-          <div class="description flex flex-col gap-3 h-[500px] px-4 py-4 text-[16px] text-white font-semibold rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px]" style="background-color: ${speaker.descriptionBg};">
+          <div class="description flex flex-col gap-3 h-[500px] px-4 py-4 text-[16px] text-white font-semibold rounded-tr-[20px] rounded-bl-[20px] rounded-br-[20px]" style="background-color: ${
+            speaker.descriptionBg
+          };">
             <div class="border-[1px] rounded-full px-[10px] py-[5px] border-white w-fit">
               <h2 class="text-[16.5px] font-bold whitespace-nowrap truncate max-w-full uppercase">
                 ${speaker.name}
               </h2>
             </div>
             <p class="font-semibold text-[16px] leading-[1.4] min-h-[48px]">
-              ${speaker.title}
+             ${speaker.title.replace(/\n/g, "<br/>")}
             </p>
             <p class="text-[14px]">
               ${speaker.description}
