@@ -736,14 +736,14 @@
                     if (typeof entry === "string") {
                       subContent += `<h3 class="mt-1">${entry}</h3>`;
                     } else if (entry.badges) {
-                      subContent += `<div class="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-[10px] ml-0 md:ml-[20px] mt-2 w-full lg:w-fit">`;
+                      subContent += `<div class="flex flex-wrap justify-center md:justify-start items-center gap-[10px] ml-0 md:ml-[20px] mt-2 w-full lg:w-fit">`;
                       entry.badges.forEach((badge) => {
                         const name =
                           typeof badge === "string" ? badge : badge.name;
                         const color =
                           typeof badge === "string" ? "#ffffff" : badge.color;
                         subContent += `
-                <h3 class="border border-[${color}] text-[${color}] rounded-full flex justify-center items-center w-full lg:w-fit h-fit px-2 py-2 text-[16.5px] font-bold transition-colors duration-300 group-hover:border-white group-hover:text-white">
+                <h3 class="border border-[${color}] text-[${color}] rounded-full flex justify-center items-center w-fit md:w-full lg:w-fit h-fit px-2 py-2 text-[16.5px] font-bold transition-colors duration-300 group-hover:border-white group-hover:text-white">
                   ${name}
                 </h3>
               `;
@@ -757,7 +757,7 @@
           <div class="program-fade group bg-[#00072C] text-white text-[20px] max-w-[898px] w-full h-auto py-[24px] pl-[20px] md:pl-[60px] pr-[20px] rounded-[20px] hover:bg-[#FEC205] hover:text-white transition-colors duration-300">
             <div class="grid md:grid-cols-[25%_75%] grid-cols-1 auto-rows-auto gap-2 md:gap-8 text-center md:text-start justify-center items-center">
               <h3 class="self-start text-[#FEF9DB] font-bold">${item.time}</h3>
-              <div class="flex flex-col justify-center items-center md:items-start pr-[0px] md:pr-[60px]">
+              <div class="flex flex-col justify-center items-center md:items-start pr-[0px] md:pr-[40px]">
                 <h3 class="uppercase font-bold">${item.title}</h3>
                 <p>${subContent}</p>
               </div>

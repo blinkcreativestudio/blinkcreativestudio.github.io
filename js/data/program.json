@@ -10,7 +10,7 @@
       "sub": [
         "",
         {
-          "badges": ["Sec. Francisco Tiu Laurel Jr.", "Dr. Dante Palabrica (BAI)"]
+          "badges": ["Sec. Francisco Tiu Laurel Jr. (DA)", "Dr. Dante Palabrica (BAI)"]
         },
         "Unveiling of the First SATF"
       ]
@@ -92,7 +92,7 @@
       "sub": [
         "",
         {
-          "badges": [{ "name": "Dr. Dante Palabrica" }]
+          "badges": [{ "name": "Dr. Dante Palabrica (BAI)" }]
         }
       ]
     },
@@ -131,7 +131,7 @@
         "The First Defense: Site Location, Farm Layout, and Design are Key to Effective Biosecurity.",
         {
           "badges": [
-            { "name": "BD Mr. Erwin G. Fajardo", "color": "#FEC205" }
+            { "name": "Mr. Erwin G. Fajardo", "color": "#FEC205" }
           ]
         }
       ]
