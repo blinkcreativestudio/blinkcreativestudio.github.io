@@ -758,7 +758,10 @@
             <div class="grid md:grid-cols-[25%_75%] grid-cols-1 auto-rows-auto gap-2 md:gap-8 text-center md:text-start justify-center items-center">
               <h3 class="self-start text-[#FEF9DB] font-bold">${item.time}</h3>
               <div class="flex flex-col justify-center items-center md:items-start pr-[0px] md:pr-[40px]">
-                <h3 class="uppercase font-bold">${item.title}</h3>
+                <h3 class="uppercase font-bold">${item.title.replace(
+                  /\n/g,
+                  "<br/>"
+                )}</h3>
                 <p>${subContent}</p>
               </div>
             </div>

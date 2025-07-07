@@ -6,11 +6,11 @@
     },
     {
       "time": "8:00 AM – 9:00 AM",
-      "title": "Opening Ceremonies Welcome message",
+      "title": "Opening Ceremonies\nWelcome message",
       "sub": [
         "",
         {
-          "badges": ["Sec. Francisco Tiu Laurel Jr. (DA)", "Dr. Dante Palabrica (BAI)"]
+          "badges": ["Sec. Francisco Tiu Laurel Jr. (DA)"]
         },
         "Unveiling of the First SATF"
       ]
@@ -88,13 +88,7 @@
     },
     {
       "time": "8:00 AM – 9:00 AM",
-      "title": "Opening Ceremonies Welcome message",
-      "sub": [
-        "",
-        {
-          "badges": [{ "name": "Dr. Dante Palabrica (BAI)" }]
-        }
-      ]
+      "title": "Opening Ceremonies\nWelcome message"
     },
     {
       "time": "9:00 AM – 9:45 AM",
