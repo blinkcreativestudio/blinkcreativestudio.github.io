@@ -1,0 +1,110 @@
+.scroll-animations-example .scrollsection {
+    padding: 10vh 10vh 10vh 10vmax;
+    min-width: 550vh;
+    white-space: nowrap;
+}
+
+.scroll-animations-example .scrollsection .item {
+    display: inline-block;
+    position: relative;
+    margin: 0 -30vh 0 3vh;
+}
+
+.scroll-animations-example .scrollsection .item.-big {
+    height: 80vh;
+    width: 60vh;
+}
+
+.scroll-animations-example .scrollsection .item.-big.-horizontal {
+    height: 60vh;
+    width: 80vh;
+}
+
+.scroll-animations-example .scrollsection .item.-normal {
+    height: 60vh;
+    width: 45vh;
+    z-index: 1;
+}
+
+.scroll-animations-example .scrollsection .item.-normal.-horizontal {
+    height: 45vh;
+    width: 60vh;
+}
+
+.scroll-animations-example .scrollsection .item.-small {
+    height: 40vh;
+    width: 30vh;
+    z-index: 2;
+}
+
+.scroll-animations-example .scrollsection .item.-small.-horizontal {
+    height: 30vh;
+    width: 40vh;
+}
+
+/* Image states */
+.scroll-animations-example .scrollsection .item .image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(0) translateY(0) scale(1);
+    transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
+}
+
+/* Active state */
+.scroll-animations-example .scrollsection .item .image.-active {
+    opacity: 0.8;
+    pointer-events: auto;
+}
+
+/* Clicked zoom */
+.scroll-animations-example .scrollsection .item .image.-clicked {
+    transform: scale(5);
+    opacity: 0;
+}
+
+/* Hover */
+.scroll-animations-example .scrollsection .item .image.-active:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Fake UI */
+.fake-ui .logo {
+    position: fixed;
+    top: 2vh;
+    left: 2vh;
+    height: 3vh;
+    width: 2.5vh;
+    border: solid 1vh #999;
+}
+
+.fake-ui .nav {
+    position: fixed;
+    top: 2vh;
+    right: 2vh;
+}
+
+.fake-ui .nav .item {
+    background: #999;
+    display: inline-block;
+    height: 2vh;
+    width: 10vh;
+    margin-left: 2vh;
+}
+
+.fake-ui .footer {
+    position: fixed;
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2vh;
+    width: 40vh;
+    background: #999;
+}

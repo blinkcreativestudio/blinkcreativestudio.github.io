@@ -1223,3 +1223,26 @@ form {
   align-items: center;
   justify-content: center;
 }
+
+.video-container-10 {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+}
+
+/* Make embedded fb-video scale on mobile */
+.fb-video {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    border-radius: 6px;
+  }
+}
