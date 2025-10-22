@@ -1,110 +1,174 @@
-.scroll-animations-example .scrollsection {
-    padding: 10vh 10vh 10vh 10vmax;
-    min-width: 550vh;
-    white-space: nowrap;
+.gallery-section {
+    background-color: #000;
+    /* black background */
+    padding: 150px 0 100px 0;
+    /* optional spacing */
+    color: #fff;
+    /* make text visible if any */
 }
 
-.scroll-animations-example .scrollsection .item {
-    display: inline-block;
-    position: relative;
-    margin: 0 -30vh 0 3vh;
+.wrapper_1 {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    height: 250px;
 }
 
-.scroll-animations-example .scrollsection .item.-big {
-    height: 80vh;
-    width: 60vh;
+.wrapper_1 .image_1 {
+    width: 70px;
+    overflow: hidden;
+    margin: 0 10px;
+    filter: saturate(0);
+    transition: all 0.3s ease-in-out;
 }
 
-.scroll-animations-example .scrollsection .item.-big.-horizontal {
-    height: 60vh;
-    width: 80vh;
-}
-
-.scroll-animations-example .scrollsection .item.-normal {
-    height: 60vh;
-    width: 45vh;
-    z-index: 1;
-}
-
-.scroll-animations-example .scrollsection .item.-normal.-horizontal {
-    height: 45vh;
-    width: 60vh;
-}
-
-.scroll-animations-example .scrollsection .item.-small {
-    height: 40vh;
-    width: 30vh;
-    z-index: 2;
-}
-
-.scroll-animations-example .scrollsection .item.-small.-horizontal {
-    height: 30vh;
-    width: 40vh;
-}
-
-/* Image states */
-.scroll-animations-example .scrollsection .item .image {
+.wrapper_1 .image_1 img {
     height: 100%;
+    transform: translateX(-35%);
+}
+
+.wrapper_1 .image_1:hover {
+    transform: scale(1.04);
+    animation: colorize_1 0.6s linear forwards;
+}
+
+@keyframes colorize_1 {
+    0% {
+        filter: saturate(0.5);
+    }
+
+    100% {
+        filter: saturate(1);
+    }
+}
+
+/* YouTube Button */
+.button-container_1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.button_1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.button_1.learn-more_1 {
+    width: 12rem;
+    height: auto;
+}
+
+.button_1.learn-more_1 .circle_1 {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border-radius: 1.625rem;
+}
+
+.button_1.learn-more_1 .circle_1 #ytLogo_1 {
     width: 100%;
+    height: 100%;
+}
+
+.button_1.learn-more_1 .circle_1 .icon_1 {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+.button_1.learn-more_1 .circle_1 .icon_1.arrow_1 {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+.button_1.learn-more_1 .circle_1 .icon_1.arrow_1::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    background-size: contain;
+}
+
+.button_1.learn-more_1 .button-text_1 {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
     left: 0;
-    filter: grayscale(1);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(0) translateY(0) scale(1);
-    transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #ef2626;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-/* Active state */
-.scroll-animations-example .scrollsection .item .image.-active {
-    opacity: 0.8;
-    pointer-events: auto;
+.button_1:hover .circle_1 {
+    width: 100%;
 }
 
-/* Clicked zoom */
-.scroll-animations-example .scrollsection .item .image.-clicked {
-    transform: scale(5);
-    opacity: 0;
+.button_1:hover .circle_1 .icon_1.arrow_1 {
+    background: #fff;
+    transform: translate(1rem, 0);
 }
 
-/* Hover */
-.scroll-animations-example .scrollsection .item .image.-active:hover {
-    filter: grayscale(0);
-    opacity: 1;
+.button_1:hover .button-text_1 {
+    color: #fff;
+}
+
+.lightbox_1 {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox_1 img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.lightbox_1 .close_1 {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-/* Fake UI */
-.fake-ui .logo {
-    position: fixed;
-    top: 2vh;
-    left: 2vh;
-    height: 3vh;
-    width: 2.5vh;
-    border: solid 1vh #999;
-}
-
-.fake-ui .nav {
-    position: fixed;
-    top: 2vh;
-    right: 2vh;
-}
-
-.fake-ui .nav .item {
-    background: #999;
-    display: inline-block;
-    height: 2vh;
-    width: 10vh;
-    margin-left: 2vh;
-}
-
-.fake-ui .footer {
-    position: fixed;
-    bottom: 3vh;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 2vh;
-    width: 40vh;
-    background: #999;
+.image_1 img {
+    cursor: pointer;
 }

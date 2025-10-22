@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="/css/grid.css" />
     <link rel="shortcut icon" href="/assets/favicon.png" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/galugad.css" />
     <link rel="stylesheet" href="/css/eventstyle.css" />
     <link rel="stylesheet" href="/css/vivamax.css" />
     <link rel="stylesheet" href="/dist/aos/aos.css" />
@@ -71,201 +72,6 @@
 
       gtag("config", "UA-196753480-1");
     </script>
-
-    <style>
-      html,
-      body {
-        height: 100%;
-        background: #eee;
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
-
-      body {
-        overflow: hidden;
-      }
-
-      .scroll-animations-example > .scrollsection {
-        padding: 10vh 10vh 10vh 10vmax;
-        min-width: 550vh;
-        white-space: nowrap;
-      }
-
-      .scroll-animations-example > .scrollsection > .item {
-        display: inline-block;
-        position: relative;
-        margin: 0 -30vh 0 3vh;
-      }
-
-      .scroll-animations-example > .scrollsection > .item::before {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        height: 100%;
-      }
-
-      .scroll-animations-example > .scrollsection > .item.-big {
-        height: 80vh;
-        width: 60vh;
-      }
-
-      .scroll-animations-example > .scrollsection > .item.-big.-horizontal {
-        height: 60vh;
-        width: 80vh;
-      }
-
-      .scroll-animations-example > .scrollsection > .item.-normal {
-        height: 60vh;
-        width: 45vh;
-        z-index: 1;
-      }
-
-      .scroll-animations-example > .scrollsection > .item.-normal.-horizontal {
-        height: 45vh;
-        width: 60vh;
-      }
-
-      .scroll-animations-example
-        > .scrollsection
-        > .item.-normal:nth-of-type(3n) {
-        bottom: 5vh;
-      }
-
-      .scroll-animations-example
-        > .scrollsection
-        > .item.-normal:nth-of-type(4n) {
-        bottom: -5vh;
-      }
-
-      .scroll-animations-example > .scrollsection > .item.-small {
-        height: 40vh;
-        width: 30vh;
-        z-index: 2;
-      }
-
-      .scroll-animations-example > .scrollsection > .item.-small.-horizontal {
-        height: 30vh;
-        width: 40vh;
-      }
-
-      .scroll-animations-example
-        > .scrollsection
-        > .item.-small:nth-of-type(3n) {
-        bottom: 13vh;
-      }
-
-      .scroll-animations-example
-        > .scrollsection
-        > .item.-small:nth-of-type(4n) {
-        bottom: -13vh;
-      }
-
-      .scroll-animations-example > .scrollsection > .item > .image {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        filter: grayscale(1);
-        opacity: 0;
-        pointer-events: none;
-        transform: translateX(0) translateY(0) scale(1);
-        transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
-      }
-
-      .scroll-animations-example
-        > .scrollsection
-        > .item:nth-of-type(4n)
-        > .image {
-        transform: translateX(-30vh) translateY(-30vh) scale(0.8);
-        transition-delay: 0;
-      }
-
-      .scroll-animations-example
-        > .scrollsection
-        > .item:nth-of-type(4n - 1)
-        > .image {
-        transform: translateX(30vh) translateY(30vh) scale(0.8);
-        transition-delay: 0.05s;
-      }
-
-      .scroll-animations-example
-        > .scrollsection
-        > .item:nth-of-type(4n - 2)
-        > .image {
-        transform: translateX(-30vh) translateY(30vh) scale(0.8);
-        transition-delay: 0.1s;
-      }
-
-      .scroll-animations-example
-        > .scrollsection
-        > .item:nth-of-type(4n - 3)
-        > .image {
-        transform: translateX(-30vh) translateY(-30vh) scale(0.8);
-        transition-delay: 0.15s;
-      }
-
-      .scroll-animations-example > .scrollsection > .item > .image.-active {
-        transform: translateX(0) translateY(0) scale(1);
-        opacity: 0.8;
-        pointer-events: auto;
-        transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
-      }
-
-      .scroll-animations-example > .scrollsection > .item > .image.-clicked {
-        transform: translateX(0) translateY(0) scale(5);
-        opacity: 0;
-        pointer-events: auto;
-        transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
-      }
-
-      .scroll-animations-example
-        > .scrollsection
-        > .item
-        > .image.-active:hover {
-        filter: grayscale(0);
-        opacity: 1;
-        cursor: pointer;
-      }
-
-      .fake-ui {
-        font-size: 0;
-      }
-
-      .fake-ui > .logo {
-        position: fixed;
-        top: 2vh;
-        left: 2vh;
-        height: 3vh;
-        width: 2.5vh;
-        border: solid 1vh #999;
-      }
-
-      .fake-ui > .nav {
-        position: fixed;
-        top: 2vh;
-        right: 2vh;
-      }
-
-      .fake-ui > .nav > .item {
-        background: #999;
-        display: inline-block;
-        height: 2vh;
-        width: 10vh;
-        margin-left: 2vh;
-      }
-
-      .fake-ui > .footer {
-        position: fixed;
-        bottom: 3vh;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 2vh;
-        width: 40vh;
-        background: #999;
-      }
-    </style>
   </head>
 
   <body class="overflow">
@@ -695,205 +501,58 @@
       />
     </div> -->
 
-    <!-- Become an Exhibitor button  -->
-    <div class="row mt-4">
-      <!-- <div class="d-flex justify-content-center">
-        <div class="open-modal-button events-cta mb-2">
-          <span class="">Become an Exhibitor</span>
-        </div>
-      </div> -->
-    </div>
-
-    <section class="main-content mt-3 mb-4">
+    <section class="main-content gallery-section">
       <div class="vivamax-content-container">
-        <!-- <h2 class="intro-heading mb-1 mb-lg-2">Art in HER+SPECTIVE</h2>
-        <p class="intro-body text-lg-center lato">
-          We regret to inform you that due to unforeseen scheduling conflicts,
-          HER+SPECTIVE 2024, our annual art fair celebrating Women's Month
-          scheduled for March 23, will now be postponed to a later date. We
-          apologize for any inconvenience this may cause and appreciate your
-          understanding. Rest assured, we remain committed to celebrating
-          women's creativity and empowerment through HER+SPECTIVE, and we look
-          forward to welcoming you when the art fair takes place. You may still
-          register using the link provided.
-        </p> -->
-        <div class="scroll-animations-example" data-scroll-container>
-          <div class="scrollsection" data-scroll-section>
-            <div class="item -normal" data-scroll data-scroll-speed="2">
-              <img class="image" src="https://picsum.photos/id/1005/300/400" />
-            </div>
-            <div class="item -big" data-scroll data-scroll-speed="1">
-              <img class="image" src="https://picsum.photos/id/1019/600/800" />
-            </div>
-            <div
-              class="item -small -horizontal"
-              data-scroll
-              data-scroll-speed="4"
-            >
-              <img class="image" src="https://picsum.photos/id/1027/400/300" />
-            </div>
-            <div class="item -normal" data-scroll data-scroll-speed="3">
-              <img class="image" src="https://picsum.photos/id/1028/300/400" />
-            </div>
-            <div
-              class="item -normal -horizontal"
-              data-scroll
-              data-scroll-speed="2"
-            >
-              <img class="image" src="https://picsum.photos/id/1041/400/300" />
-            </div>
-            <div
-              class="item -big -horizontal"
-              data-scroll
-              data-scroll-speed="4"
-            >
-              <img class="image" src="https://picsum.photos/id/1042/800/600" />
-            </div>
-            <div class="item -small" data-scroll data-scroll-speed="2">
-              <img class="image" src="https://picsum.photos/id/1049/300/400" />
-            </div>
-            <div
-              class="item -normal -horizontal"
-              data-scroll
-              data-scroll-speed="1"
-            >
-              <img class="image" src="https://picsum.photos/id/1056/300/400" />
-            </div>
-            <div
-              class="item -small -horizontal"
-              data-scroll
-              data-scroll-speed="3"
-            >
-              <img class="image" src="https://picsum.photos/id/1062/400/300" />
-            </div>
-            <div class="item -big" data-scroll data-scroll-speed="1">
-              <img class="image" src="https://picsum.photos/id/1068/600/800" />
-            </div>
-            <div
-              class="item -normal -horizontal"
-              data-scroll
-              data-scroll-speed="2"
-            >
-              <img class="image" src="https://picsum.photos/id/1069/400/300" />
-            </div>
-            <div
-              class="item -normal -horizontal"
-              data-scroll
-              data-scroll-speed="1"
-            >
-              <img class="image" src="https://picsum.photos/id/1072/300/400" />
-            </div>
-            <div
-              class="item -small -horizontal"
-              data-scroll
-              data-scroll-speed="4"
-            >
-              <img class="image" src="https://picsum.photos/id/1075/400/300" />
-            </div>
-            <div class="item -big" data-scroll data-scroll-speed="3">
-              <img class="image" src="https://picsum.photos/id/1081/600/800" />
-            </div>
-            <div
-              class="item -normal -horizontal"
-              data-scroll
-              data-scroll-speed="2"
-            >
-              <img class="image" src="https://picsum.photos/id/111/400/300" />
-            </div>
-            <div
-              class="item -small -horizontal"
-              data-scroll
-              data-scroll-speed="4"
-            >
-              <img class="image" src="https://picsum.photos/id/129/400/300" />
-            </div>
-            <div class="item -big" data-scroll data-scroll-speed="2">
-              <img class="image" src="https://picsum.photos/id/137/600/800" />
-            </div>
-            <div
-              class="item -normal -horizontal"
-              data-scroll
-              data-scroll-speed="1"
-            >
-              <img class="image" src="https://picsum.photos/id/141/300/400" />
-            </div>
-            <div
-              class="item -small -horizontal"
-              data-scroll
-              data-scroll-speed="3"
-            >
-              <img class="image" src="https://picsum.photos/id/145/400/300" />
-            </div>
-            <div class="item -normal" data-scroll data-scroll-speed="1">
-              <img class="image" src="https://picsum.photos/id/147/300/400" />
-            </div>
+        <div class="wrapper_1">
+          <div class="image_1">
+            <img src="/assets/galugad/GALUGAD_1.jpg" alt="" />
+          </div>
+          <div class="image_1">
+            <img src="/assets/galugad/GALUGAD_2.jpg" alt="" />
+          </div>
+          <div class="image_1">
+            <img src="/assets/galugad/GALUGAD_3.jpg" alt="" />
+          </div>
+          <div class="image_1">
+            <img src="/assets/galugad/GALUGAD_4.jpg" alt="" />
+          </div>
+          <div class="image_1">
+            <img src="/assets/galugad/GALUGAD_5.jpg" alt="" />
+          </div>
+          <div class="image_1">
+            <img src="/assets/galugad/GALUGAD_6.jpg" alt="" />
           </div>
         </div>
-
-        <div class="fake-ui">
-          <div class="logo"></div>
-          <div class="nav">
-            <span class="item"></span>
-            <span class="item"></span>
-            <span class="item"></span>
-          </div>
-          <div class="footer"></div>
-        </div>
-
-        <!-- Locomotive Scroll Script -->
-        <script src="https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
-
-        <script>
-          class Example {
-            constructor(options) {
-              this.root = options.root;
-              this.init();
-              setTimeout(this.showImages.bind(this), 1000);
-            }
-
-            init() {
-              this.scroll = new LocomotiveScroll({
-                el: this.root,
-                direction: "horizontal",
-                smooth: true,
-                lerp: 0.05,
-                tablet: { smooth: true },
-                smartphone: { smooth: true },
-              });
-
-              this.images = this.root.querySelectorAll(".image");
-
-              this.images.forEach((image) => {
-                image.addEventListener("click", () => {
-                  image.classList.add("-clicked");
-                  this.hideImages();
-                });
-              });
-            }
-
-            showImages() {
-              this.images.forEach((image) => {
-                image.classList.remove("-clicked");
-                image.classList.add("-active");
-              });
-            }
-
-            hideImages() {
-              this.images.forEach((image) => {
-                image.classList.remove("-active");
-              });
-              setTimeout(this.showImages.bind(this), 2000);
-            }
-          }
-
-          window.addEventListener("DOMContentLoaded", () => {
-            new Example({
-              root: document.querySelector(".scroll-animations-example"),
-            });
-          });
-        </script>
       </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox_1" id="lightbox_1">
+        <span class="close_1">&times;</span>
+        <img class="lightbox-img_1" src="" alt="Full view" />
+      </div>
+      <script>
+        const images = document.querySelectorAll(".image_1 img");
+        const lightbox = document.getElementById("lightbox_1");
+        const lightboxImg = document.querySelector(".lightbox-img_1");
+        const closeBtn = document.querySelector(".close_1");
+
+        images.forEach((img) => {
+          img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+          });
+        });
+
+        closeBtn.addEventListener("click", () => {
+          lightbox.style.display = "none";
+        });
+
+        lightbox.addEventListener("click", (e) => {
+          if (e.target === lightbox) lightbox.style.display = "none";
+        });
+      </script>
     </section>
+
     <!-- End of Hero Section -->
 
     <!-- <div class="events-container">
