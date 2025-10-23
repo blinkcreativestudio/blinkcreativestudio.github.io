@@ -1,174 +1,296 @@
 .gallery-section {
     background-color: #000;
-    /* black background */
     padding: 150px 0 100px 0;
-    /* optional spacing */
     color: #fff;
-    /* make text visible if any */
-}
-
-.wrapper_1 {
     display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    height: 250px;
-}
-
-.wrapper_1 .image_1 {
-    width: 70px;
-    overflow: hidden;
-    margin: 0 10px;
-    filter: saturate(0);
-    transition: all 0.3s ease-in-out;
-}
-
-.wrapper_1 .image_1 img {
-    height: 100%;
-    transform: translateX(-35%);
-}
-
-.wrapper_1 .image_1:hover {
-    transform: scale(1.04);
-    animation: colorize_1 0.6s linear forwards;
-}
-
-@keyframes colorize_1 {
-    0% {
-        filter: saturate(0.5);
-    }
-
-    100% {
-        filter: saturate(1);
-    }
-}
-
-/* YouTube Button */
-.button-container_1 {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.button_1 {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    outline: none;
-    border: 0;
-    vertical-align: middle;
-    text-decoration: none;
-    background: transparent;
-    padding: 0;
-    font-size: inherit;
-    font-family: inherit;
-}
-
-.button_1.learn-more_1 {
-    width: 12rem;
-    height: auto;
-}
-
-.button_1.learn-more_1 .circle_1 {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: relative;
-    display: block;
-    margin: 0;
-    width: 3rem;
-    height: 3rem;
-    background: transparent;
-    border-radius: 1.625rem;
-}
-
-.button_1.learn-more_1 .circle_1 #ytLogo_1 {
-    width: 100%;
-    height: 100%;
-}
-
-.button_1.learn-more_1 .circle_1 .icon_1 {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    background: #fff;
-}
-
-.button_1.learn-more_1 .circle_1 .icon_1.arrow_1 {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    left: 0.625rem;
-    width: 1.125rem;
-    height: 0.125rem;
-    background: none;
-}
-
-.button_1.learn-more_1 .circle_1 .icon_1.arrow_1::before {
-    position: absolute;
-    content: "";
-    top: -0.25rem;
-    right: 0.0625rem;
-    width: 0.625rem;
-    height: 0.625rem;
-    background-size: contain;
-}
-
-.button_1.learn-more_1 .button-text_1 {
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem;
-    color: #ef2626;
-    font-weight: 700;
-    line-height: 1.6;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.button_1:hover .circle_1 {
-    width: 100%;
-}
-
-.button_1:hover .circle_1 .icon_1.arrow_1 {
-    background: #fff;
-    transform: translate(1rem, 0);
-}
-
-.button_1:hover .button-text_1 {
-    color: #fff;
-}
-
-.lightbox_1 {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 7rem;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    /* ✅ ensures content layers above the background */
+
+    /* base tone */
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+    filter: sepia(0.3) contrast(1.1) brightness(0.9);
 }
 
-.lightbox_1 img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 10px;
-}
-
-.lightbox_1 .close_1 {
+/* ✨ add vintage film textures & light leaks */
+.gallery-section::before {
+    content: "";
     position: absolute;
-    top: 30px;
-    right: 40px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 30% 10%, rgba(255, 120, 0, 0.15), transparent 70%),
+        radial-gradient(circle at 70% 90%, rgba(255, 0, 150, 0.1), transparent 70%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 2px 2px;
+    background-blend-mode: screen;
+    opacity: 0.4;
+    pointer-events: none;
+    animation: flicker 6s infinite ease-in-out alternate;
+    z-index: -2;
+    /* ✅ push the light leaks behind the gallery */
 }
 
-.image_1 img {
+/* 📽 subtle vignette edges */
+.gallery-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+    pointer-events: none;
+    z-index: -1;
+    /* ✅ vignette sits behind content but above background */
+}
+
+/* 🎞 subtle flicker animation */
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: translate(0, 0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-1%, 0%);
+    }
+}
+
+.container_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    max-width: 1000px;
+    height: 500px; 
+    transition: all 0.5s ease;
+}
+
+.box_1 {
+    flex: 1;
+    height: 110%;
+    background-image: var(--img_1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+    filter: grayscale(0%) opacity(100%);
+    border-radius: 6px;
+    border: 1px solid #fff;
+    /* cursor: pointer; */
+}
+
+.box_1:hover {
+    flex: 7;
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.02);
+}
+
+/* 📱 Responsive for Tablet Portrait */
+@media (max-width: 768px) {
+    .container_1 {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .box_1 {
+        width: 100%;
+        height: 200px;
+        flex: none;
+        transition: all 0.4s ease;
+    }
+
+    .box_1:hover {
+        height: 400px;
+        /* expands vertically instead of horizontally */
+        flex: none;
+        transform: scale(1.02);
+    }
+}
+
+/* 📱 Responsive for Mobile */
+@media (max-width: 425px) {
+    .container_1 {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .box_1 {
+        width: 100%;
+        height: 200px;
+        flex: none;
+        transition: all 0.4s ease;
+    }
+
+    .box_1:hover {
+        height: 310px;
+        /* expands vertically */
+        flex: none;
+        transform: scaleY(1.05);
+        /* ✅ only expands along Y-axis */
+        filter: grayscale(0%) opacity(100%);
+    }
+}
+
+.video-container_1 {
+    position: relative;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-container_1 video {
+    width: 100%;
+    max-height: 900px;
+    object-fit: contain;
+    background-color: #000;
+}
+
+/* Facebook-like mute button */
+.mute-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 32px;
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+    backdrop-filter: blur(6px);
+    padding: 0;
+}
+
+.mute-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+.mute-btn img {
+    width: 18px;
+    height: 18px;
+    transition: opacity 0.25s ease;
+    filter: invert(1);
+    /* makes white icons visible on dark bg */
+}
+
+@media (max-width: 768px) {
+    /* Facebook-like mute button */
+        .mute-btn {
+            width: 30px;
+            height: 30px;
+        }
+
+                .mute-btn:hover {
+                    background: rgba(255, 255, 255, 0.8);
+                    transform: scale(1.05);
+                }
+        
+                .mute-btn img {
+                    width: 16px;
+                    height: 16px;
+                    transition: opacity 0.25s ease;
+                    filter: invert(1);
+                    /* makes white icons visible on dark bg */
+                }
+}
+
+@media (max-width: 425px) {
+
+    /* Facebook-like mute button */
+    .mute-btn {
+        width: 20px;
+        height: 20px;
+            bottom: 16px;
+                right: 22px;
+    }
+
+    .mute-btn:hover {
+        background: rgba(255, 255, 255, 0.8);
+        transform: scale(1.05);
+    }
+
+    .mute-btn img {
+        width: 12px;
+        height: 12px;
+        transition: opacity 0.25s ease;
+        filter: invert(1);
+        /* makes white icons visible on dark bg */
+    }
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* space between icons */
+}
+
+.social-btn {
+    display: flex;
+    flex-direction: column;
+    /* stack icon + label */
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    /* label color */
+    font-family: 'Lato', sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.avatar-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.social-label {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Hover effects */
+.social-btn:hover .avatar-wrapper {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.facebook-btn .avatar-wrapper {
+    border-color: #ffffff;
+}
+
+.email-btn .avatar-wrapper {
+    border-color: #ffffff;
 }

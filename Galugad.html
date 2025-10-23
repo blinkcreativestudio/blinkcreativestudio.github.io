@@ -333,69 +333,6 @@
     </div>
     <!-- End Mailing Modal -->
 
-    <!-- Start Thank You Modal -->
-    <!-- <div class="modal-container thank-you">
-      <i class="fa fa-close close-modal-button"></i>
-      <div class="modal">
-        <div class="sign-up-header-container">
-          <img
-            src="/assets/herspective/Hespective letterhead 600PX.png"
-            alt="Her+Spective Art Fair Sign Up Header"
-            class="sign-up-header"
-          />
-        </div>
-
-        <h2 class="mb-3" id="thank-you-modal-heading">Success!</h2>
-        <div class="modal-content lato" id="thank-you-modal-text">
-          Thank you for registering for the HER+SPECTIVE Art Fair as an
-          exhibitor. We have received your registration details and are excited
-          to have you as a participant in this event.
-        </div>
-      </div>
-    </div> -->
-    <!-- End Thank You Modal -->
-
-    <!-- Start Featured Artist Modal  -->
-    <!-- <div class="fa-modal-container" aria-hidden="true">
-      <i class="fa fa-close close-modal-button" aria-label="Close"></i>
-      <div class="modal" id="fa-modal">
-        <div id="fa-header-web">
-          <div id="fa-header-bg-web">
-            <img src="" id="fa-header-bg-image" />
-          </div>
-
-          <div id="fa-header-name-container-web" class="col-5">
-            <img src="" alt="" id="fa-header-name-web" />
-            <p class="artist-title lato" id="fa-header-title-web">
-              Visual Artist
-            </p>
-          </div>
-        </div>
-
-        <div id="fa-header-mobile">
-          <div id="fa-header-bg-mobile">
-            <img src="" id="fa-header-bg-image-mobile" />
-          </div>
-
-          <div id="fa-header-name-container-mobile" class="">
-            <div id="fa-name-image-container">
-              <img src="" alt="" id="fa-header-name-mobile" />
-            </div>
-            <p class="artist-title lato" id="fa-header-title-mobile">
-              Visual Artist
-            </p>
-          </div>
-        </div>
-
-        <div class="modal-content">
-          <div id="fa-bio">
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- End Featured Artist Modal  -->
-
     <!-- Start Nav  -->
     <nav class="navbar" data-aos="fade-in" data-aos-delay="50">
       <div class="container d-flex justify-content-between align-items-center">
@@ -478,404 +415,146 @@
     <!-- End nav  -->
 
     <!-- Start of Hero Section -->
-    <!-- <header class="pb-0 overflow-hidden" id="events-header" data-aos="fade-in">
+    <header class="pb-0 overflow-hidden" id="events-header" data-aos="fade-in">
       <div class="text-start text-md-center">
-        <div class="row hero-banner">
-          <img
-            src="./assets/EventsTab/GALUGAD_WEB_POSTER_2.png"
-            alt="vivamax banner"
-          />
+        <div class="row hero-banner_1">
+          <div class="video-container_1">
+            <video id="heroVideo_1" autoplay playsinline muted></video>
+
+            <!-- Mute / Unmute Button -->
+            <button id="muteToggle" class="mute-btn" aria-label="Toggle sound">
+              <img
+                id="muteIcon"
+                src="/assets/galugad/no-sound.png"
+                alt="Mute Icon"
+              />
+            </button>
+          </div>
         </div>
       </div>
-    </header> -->
-    <!-- <div class="col-7 col-sm-6 text-start main-logo-container">
-      <img
-        src="/assets/herspective/HerSpective Logo.svg"
-        alt="Her+Spective Art Fair March 25, 2023 9am to 5pm"
-      />
-    </div>
-    <div class="col-5 col-sm-6 main-image-container">
-      <img
-        src="/assets/herspective/BCS_HerSpective_MainBanner.png"
-        alt="Her+Spective Art Fair March 25, 2023 9am to 5pm"
-      />
-    </div> -->
+    </header>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const videoElement = document.getElementById("heroVideo_1");
+        const muteToggle = document.getElementById("muteToggle");
+        const muteIcon = document.getElementById("muteIcon");
+
+        const videos = [
+          "https://shvutlcgljqiidqxqrru.supabase.co/storage/v1/object/public/galugad/Galugad%20Teaser%20Main%20-%20Made%20with%20Clipchamp.mp4",
+          "https://shvutlcgljqiidqxqrru.supabase.co/storage/v1/object/public/galugad/Azazel%20Trailer.mp4",
+          "https://shvutlcgljqiidqxqrru.supabase.co/storage/v1/object/public/galugad/Pormalin%20Trailer%20FINAL.mp4",
+        ];
+
+        let currentIndex = 0;
+        let isMuted = true;
+
+        // ✅ Preload videos for seamless transition
+        videos.forEach((url) => {
+          const link = document.createElement("link");
+          link.rel = "preload";
+          link.as = "video";
+          link.href = url;
+          document.head.appendChild(link);
+        });
+
+        function playVideo(index) {
+          videoElement.src = videos[index];
+          videoElement.load();
+          videoElement.muted = isMuted;
+
+          videoElement.play().catch((err) => {
+            console.warn("Autoplay blocked:", err);
+          });
+        }
+
+        videoElement.addEventListener("ended", function () {
+          currentIndex = (currentIndex + 1) % videos.length;
+          playVideo(currentIndex);
+        });
+
+        muteToggle.addEventListener("click", function () {
+          isMuted = !isMuted;
+          videoElement.muted = isMuted;
+          videoElement.play();
+
+          muteIcon.style.opacity = 0;
+          setTimeout(() => {
+            muteIcon.src = isMuted
+              ? "/assets/galugad/no-sound.png"
+              : "/assets/galugad/volume.png";
+            muteIcon.style.opacity = 1;
+          }, 200);
+        });
+
+        playVideo(currentIndex);
+      });
+    </script>
 
     <section class="main-content gallery-section">
-      <div class="vivamax-content-container">
-        <div class="wrapper_1">
-          <div class="image_1">
-            <img src="/assets/galugad/GALUGAD_1.jpg" alt="" />
-          </div>
-          <div class="image_1">
-            <img src="/assets/galugad/GALUGAD_2.jpg" alt="" />
-          </div>
-          <div class="image_1">
-            <img src="/assets/galugad/GALUGAD_3.jpg" alt="" />
-          </div>
-          <div class="image_1">
-            <img src="/assets/galugad/GALUGAD_4.jpg" alt="" />
-          </div>
-          <div class="image_1">
-            <img src="/assets/galugad/GALUGAD_5.jpg" alt="" />
-          </div>
-          <div class="image_1">
-            <img src="/assets/galugad/GALUGAD_6.jpg" alt="" />
-          </div>
-        </div>
+      <div class="container_1">
+        <div
+          class="box_1"
+          style="--img_1: url(/assets/galugad/GALUGAD_1.jpg)"
+        ></div>
+        <div
+          class="box_1"
+          style="--img_1: url(/assets/galugad/GALUGAD_2.jpg)"
+        ></div>
+        <div
+          class="box_1"
+          style="--img_1: url(/assets/galugad/GALUGAD_3.jpg)"
+        ></div>
+        <div
+          class="box_1"
+          style="--img_1: url(/assets/galugad/GALUGAD_4.jpg)"
+        ></div>
+        <div
+          class="box_1"
+          style="--img_1: url(/assets/galugad/GALUGAD_5.jpg)"
+        ></div>
+        <div
+          class="box_1"
+          style="--img_1: url(/assets/galugad/GALUGAD_6.jpg)"
+        ></div>
       </div>
 
-      <!-- Lightbox -->
-      <div class="lightbox_1" id="lightbox_1">
-        <span class="close_1">&times;</span>
-        <img class="lightbox-img_1" src="" alt="Full view" />
+      <div class="social-container">
+        <a
+          href="https://www.facebook.com/Galugad.Exhibit"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-btn facebook-btn"
+          aria-label="Visit Galugad Exhibit on Facebook"
+        >
+          <div class="avatar-wrapper">
+            <img
+              src="/assets/galugad/galugad_facebook.jpg"
+              alt="Facebook Icon"
+              class="social-icon"
+            />
+          </div>
+          <span class="social-label">Facebook</span>
+        </a>
+
+        <a
+          href="mailto:galugadexhibit@gmail.com"
+          class="social-btn email-btn"
+          aria-label="Email Galugad Exhibit"
+        >
+          <div class="avatar-wrapper">
+            <img
+              src="/assets/galugad/galugad_email.webp"
+              alt="Email Icon"
+              class="social-icon"
+            />
+          </div>
+          <span class="social-label">Email</span>
+        </a>
       </div>
-      <script>
-        const images = document.querySelectorAll(".image_1 img");
-        const lightbox = document.getElementById("lightbox_1");
-        const lightboxImg = document.querySelector(".lightbox-img_1");
-        const closeBtn = document.querySelector(".close_1");
-
-        images.forEach((img) => {
-          img.addEventListener("click", () => {
-            lightbox.style.display = "flex";
-            lightboxImg.src = img.src;
-          });
-        });
-
-        closeBtn.addEventListener("click", () => {
-          lightbox.style.display = "none";
-        });
-
-        lightbox.addEventListener("click", (e) => {
-          if (e.target === lightbox) lightbox.style.display = "none";
-        });
-      </script>
     </section>
 
     <!-- End of Hero Section -->
-
-    <!-- <div class="events-container">
-        <a href="commencement.html" class="event-section" id="section1">
-            <h2 class="event-heading">UPLB 52 Commencement Exercises</h2>
-            <p class="event-sub">Lorem ipsum dolor sit amet consectetur. Ultricies tortor tempor in nibh gravida
-                curabitur ac
-                natoque...</p>
-            <img src="assets/52ndCommencement/BCS_UPLB_52nd_CE_Events 1.png" alt="Event Image" class="event-image1" />
-        </a>
-        <a href="herspective.html" class="event-section" id="section2">
-            <img src="assets/52ndCommencement/BCS_HerSpective_MainBanner 1.png" alt="Event Image"
-                class="event-image2" />
-            <h2 class="event-heading">HER+SPECTIVE 2024</h2>
-            <p class="event-sub">Lorem ipsum dolor sit amet consectetur. Ultricies tortor tempor in nibh gravida
-                curabitur ac natoque...</p>
-            <div class="upcoming-square">
-                <h1 class="upcoming-text">UPCOMING</h1>
-            </div>
-        </a>
-    </div> -->
-
-    <!-- Featured Artists Section  -->
-    <!-- <section class="container main-content mb-4"> 
-        <div class="intro text-center">
-            <h2 class="intro-heading mb-1 mb-lg-3">Featured Artists</h2>
-        </div>
-        <div class="m-2 m-lg-3 artist-card-container">
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-1">
-                <div class="artist-card-image-container" onclick="openFAModal(1)">
-                    <img src="/assets/herspective/Icons/Domiel.png"/>
-                </div>
-                <h5 class="artist-name lato">Domiel May R. Mercado-Campos</h5>
-                <p class="artist-title lato">Visual Artist</p>
-            </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-2">
-                <div class="artist-card-image-container" onclick="openFAModal(2)">
-                    <img src="/assets/herspective/Icons/Yvette.png" />
-                </div>
-                <h5 class="artist-name lato">Yvette Co</h5>
-                <p class="artist-title lato">Painter, Sculptor, Environmental Artist</p>
-            </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-3">
-                <div class="artist-card-image-container" onclick="openFAModal(3)">
-                    <img src="/assets/herspective/Icons/Betsy.png" />
-                </div>
-                <h5 class="artist-name lato">Mary Elizabeth "Betsy" Alejo-Aytin</h5>
-                <p class="artist-title lato">Visual Artist</p>
-            </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-4">
-                <div class="artist-card-image-container" onclick="openFAModal(4)">
-                <img src="/assets/herspective/Icons/Helga.png"/>
-            </div>
-                <h5 class="artist-name lato">Helga Payawal-Vergara</h5>
-                <p class="artist-title lato">Visual Artist</p>
-            </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-5">
-                <div class="artist-card-image-container" onclick="openFAModal(5)">
-                    <img src="/assets/herspective/Icons/Kishan.png" />
-                </div>
-                <h5 class="artist-name lato">Kishan</h5>
-                <p class="artist-title lato">Tattoo Artist</p>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Program Section  -->
-    <!-- <section class="container main-content mb-5 pb-4" id="program">
-      <div class="intro text-center">
-        <h2 class="intro-heading mb-1 mb-lg-3">Program</h2>
-      </div>
-      <div class="program-container">
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/Fair Opens.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">9:00 AM | 25 Mar 2023</h4>
-            <h4 class="lato">
-                        <i class="fa fa-location-dot close-modal-button" aria-label="Close"></i>
-                        <span> Quadrangle ES Plaza, Los Baños</span>
-                    </h4>
-            <h2 class="program-title lato"><strong>Fair Opens</strong></h2>
-          </div>
-        </div>
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/Domiel.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">
-              9:30 AM - 10:00 AM | 25 Mar 2023
-            </h4>
-            <h2 class="program-title lato">
-              <strong>Conversations with the Artists</strong>
-            </h2>
-            <p class="lato pb-3" style="padding-left: 1rem">
-              with Domiel May Mercado-Campos
-            </p>
-            <p class="lato">
-              Domiel May R. Mercado-Campos is a multi-talented individual with a
-              Bachelor's degree in Tourism from the Philippine Women's
-              University. She's a successful model and an accomplished artist
-              who produces paintings and short films. Domiel has organized an
-              art contest and has been featured in numerous art exhibits. She's
-              also a devoted mother who inspires others to express their
-              creative passions.
-            </p>
-          </div>
-        </div>
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/Betsy.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">
-              10:00 AM - 10:30 AM | 25 Mar 2023
-            </h4>
-            <h2 class="program-title lato">
-              <strong>Conversations with the Artists</strong>
-            </h2>
-            <p class="lato pb-3" style="padding-left: 1rem">
-              with Mary Elizabeth "Betsy" Alejo-Aytin
-            </p>
-            <p class="lato">
-              Betsy Alejo-Aytin is an unconventional artist who uses unique
-              materials like quail, chicken, and ostrich eggs, discarded wine
-              bottles, old glass windows, and found objects. She started
-              painting in college and was influenced by social realism. After
-              motherhood, her art shifted to projects that showcase Philippine
-              culture, history, and nature's beauty. Betsy's style is folk art
-              with artisanal techniques, inspired by Frida Kahlo's works and
-              guided by her quote, "I paint my own reality."
-            </p>
-          </div>
-        </div>
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/Kishan.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">
-              10:30 AM - 11:00 AM | 25 Mar 2023
-            </h4>
-            <h2 class="program-title lato">
-              <strong>Conversations with the Artists</strong>
-            </h2>
-            <p class="lato pb-2" style="padding-left: 1rem">with Kishan</p>
-            <p class="lato">
-              Kishan is a multi-disciplinary artist currently focusing on Tattoo
-              Art and Illustration. Her works revolve around themes of
-              spirituality, divine femininity, and nature.
-            </p>
-          </div>
-        </div>
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/Lunch Break copy.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">
-              11:00 AM - 1:00 PM | 25 Mar 2023
-            </h4>
-            <h2 class="program-title lato pb-1">
-              <strong>Lunch Break</strong>
-            </h2>
-            <p class="lato">
-              Join us for a delicious dining experience at ES Plaza's
-              restaurants! Come and enjoy a memorable meal with friends and
-              family in a cozy and inviting atmosphere.
-            </p>
-          </div>
-        </div>
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/UPFC copy.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">
-              1:00 PM - 1:30 PM | 25 Mar 2023
-            </h4>
-            <h2 class="program-title lato pb-1">
-              <strong>Film Showing</strong>
-            </h2>
-            <p class="lato pb-3">
-              Short films allow filmmakers to experiment with new techniques and
-              styles, and provide a platform for emerging filmmakers to showcase
-              their talents.
-            </p>
-            <p style="padding-left: 2rem">UP Film Circle Shorts</p>
-          </div>
-        </div>
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img
-              src="/assets/herspective/Program/PORMALIN copy.jpg"
-              style="margin-right: -1rem"
-            />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">
-              1:30 PM - 2:30 PM | 25 Mar 2023
-            </h4>
-            <h2 class="program-title lato">
-              <strong
-                >Film Showing and Conversations with the Filmmakers</strong
-              >
-            </h2>
-            <p class="lato pb-2">
-              Set against the backdrop of the brutal Martial Law era in Samar, a
-              young boy works as a telegram courier to support his siblings
-              while they wait for their father to reappear. The film is based on
-              the filmmaker’s childhood.
-            </p>
-            <p style="padding-left: 2rem">
-              <em>Pormalin</em> by Alfredo "Doy" Ongleo
-            </p>
-          </div>
-        </div>
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/Helga.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">
-              2:30 PM - 3:00 PM | 25 Mar 2023
-            </h4>
-            <h2 class="program-title lato">
-              <strong>Conversations with the Artists</strong>
-            </h2>
-            <p class="lato pb-3" style="padding-left: 1rem">
-              with Helga Payawal-Vergara
-            </p>
-            <p class="lato">
-              Helga Payawal-Vergara is an assistant professor at UP Los Baños
-              and a self-taught painter who found her passion for art in 2015.
-              She aims to inspire her students to appreciate art and recognize
-              its benefits to mental health. Using watercolor on paper, she
-              creates vibrant paintings of the flora in her hometown. Helga
-              finds inner peace through art, and her dedication to teaching and
-              the arts is inspiring. Her work shows how creativity can improve
-              emotional well-being.
-            </p>
-          </div>
-        </div>
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/Special Performance.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">
-              3:00 PM - 3:15 PM | 25 Mar 2023
-            </h4>
-            <h2 class="program-title lato">
-              <strong>Special Performance</strong>
-            </h2>
-            <p class="lato pb-3" style="padding-left: 1rem">
-              with Leanne Ocampo
-            </p>
-            <p class="lato">
-              Leanne Ocampo, a third-year Doctor of Veterinary Medicine student
-              at the University of the Philippines Los Baños, has been
-              passionate about creating music and singing since she was a child.
-              Singing has been her escape during trying times and her outlet for
-              expression on her best days. It has given her the opportunity to
-              showcase her skills, confidence, and passion. Through singing,
-              Leanne has been able to connect with like-minded individuals who
-              share the same attachment to music, as well as develop inner peace
-              and strength.
-            </p>
-          </div>
-        </div>
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/Tattoo Pop UP.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">
-              3:15 PM - 5:00 PM | 25 Mar 2023
-            </h4>
-            <h2 class="program-title lato pb-1">
-              <strong>Tattoo Pop-Up</strong>
-            </h2>
-            <p class="lato">
-              Get inked at the expert hands of our featured artist, Kishan.
-            </p>
-          </div>
-        </div>
-
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/Yvette.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">
-              4:30 PM - 5:00 PM | 25 Mar 2023
-            </h4>
-            <h2 class="program-title lato">
-              <strong>Conversations with the Artists</strong>
-            </h2>
-            <p class="lato pb-3" style="padding-left: 1rem">with Yvette Co</p>
-            <p class="lato">
-              Yvette Co is a painter, sculptor, and environmental artist. Her
-              works are inspired by the environment, drawing from her
-              experiences living in Los Baños and creating commissioned works
-              for organizations like the ASEAN Center for Biodiversity, the
-              United Nations, and various colleges under the University of the
-              Philippines Los Baños, among others.
-            </p>
-          </div>
-        </div>
-
-        <div class="program-item col px-0 align-items-center m-3 shadow">
-          <div class="image-container col-sm-3 p-0">
-            <img src="/assets/herspective/Program/Fair Closes.jpg" />
-          </div>
-          <div class="program-details text-start px-4 py-5 col-sm-9">
-            <h4 class="program-time lato pb-1">5:00 PM | 25 Mar 2023</h4>
-            <h2 class="program-title lato"><strong>Fair Closes</strong></h2>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- Start Prefooter  -->
     <section class="tagline py-75 py-md-5">
