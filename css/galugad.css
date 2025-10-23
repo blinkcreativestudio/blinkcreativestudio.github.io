@@ -91,13 +91,14 @@
     flex: 7;
     filter: grayscale(0%) opacity(100%);
     transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* 📱 Responsive for Tablet Portrait */
 @media (max-width: 768px) {
     .container_1 {
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         height: auto;
     }
 
@@ -109,7 +110,7 @@
     }
 
     .box_1:hover {
-        height: 400px;
+        height: 600px;
         /* expands vertically instead of horizontally */
         flex: none;
         transform: scale(1.02);
@@ -120,7 +121,7 @@
 @media (max-width: 425px) {
     .container_1 {
         flex-direction: column;
-        width: 100%;
+        width: 80%;
         height: auto;
     }
 
@@ -163,7 +164,7 @@
     position: absolute;
     bottom: 16px;
     right: 32px;
-    background: rgba(255, 255, 255, 0.6);
+    background: none;
     border: none;
     border-radius: 50%;
     width: 36px;
@@ -178,7 +179,7 @@
 }
 
 .mute-btn:hover {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
     transform: scale(1.05);
 }
 
@@ -186,7 +187,7 @@
     width: 18px;
     height: 18px;
     transition: opacity 0.25s ease;
-    filter: invert(1);
+    /* filter: invert(1); */
     /* makes white icons visible on dark bg */
 }
 
@@ -198,7 +199,7 @@
         }
 
                 .mute-btn:hover {
-                    background: rgba(255, 255, 255, 0.8);
+                    background: rgba(255, 255, 255, 0.3);
                     transform: scale(1.05);
                 }
         
@@ -206,7 +207,7 @@
                     width: 16px;
                     height: 16px;
                     transition: opacity 0.25s ease;
-                    filter: invert(1);
+                    /* filter: invert(1); */
                     /* makes white icons visible on dark bg */
                 }
 }
@@ -222,7 +223,7 @@
     }
 
     .mute-btn:hover {
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.3);
         transform: scale(1.05);
     }
 
@@ -230,7 +231,7 @@
         width: 12px;
         height: 12px;
         transition: opacity 0.25s ease;
-        filter: invert(1);
+        /* filter: invert(1); */
         /* makes white icons visible on dark bg */
     }
 }
