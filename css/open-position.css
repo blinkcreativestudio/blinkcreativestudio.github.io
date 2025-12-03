@@ -1,0 +1,85 @@
+/* Blink Creative Studio roster block */
+
+/* Container card */
+.blink-roster {
+    max-width: 900px;
+    margin: 28px auto;
+    background: linear-gradient(180deg, #ffffff, #fbfcff);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(15, 23, 42, 0.03);
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Optional left icon */
+.blink-roster__media {
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ecfeff, #f0fdf4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #065f46;
+    box-shadow: 0 4px 10px rgba(14, 165, 163, 0.06);
+    font-size: 18px;
+}
+
+/* Text */
+.blink-roster__content {
+    flex: 1 1 auto;
+}
+
+.blink-roster__text {
+    margin: 0 0 14px 0;
+    color: #0f172a;
+    font-size: 0.99rem;
+    line-height: 1.7;
+}
+
+/* CTA row */
+.blink-roster__cta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Email pill */
+.blink-roster__email {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(6, 95, 70, 0.08);
+    color: #065f46;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(6, 95, 70, 0.08);
+}
+
+.blink-roster__note {
+    color: #6b7280;
+    font-size: 0.88rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .blink-roster {
+        flex-direction: column;
+        padding: 1rem;
+        font-size: 15px;
+    }
+
+    .blink-roster__media {
+        width: 56px;
+        height: 56px;
+        font-size: 16px;
+    }
+}
