@@ -565,53 +565,7 @@ const packages = [
       // },
     ],
   },
-  // {
-  //   id: "5",
-  //   category: "grad-package",
-  //   categoryName: "Graduation Package",
-  //   image: "/assets/appointments/graduation.png",
-  //   packages: [
-  //     {
-  //       id: "5-1",
-  //       package: "bronze",
-  //       name: "Bronze",
-  //       price: "849.00",
-  //       desc: "Celebrate your academic success in style with our exclusive graduation packages. Let us take care of the details while you focus on enjoying this milestone moment with your loved ones. Book with us and create lifelong memories of your academic success.",
-  //       desc1: "",
-  //       desc2:
-  //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-  //       desc3: "",
-  //       inclusions: [
-  //         "1 attire (toga/filipiniana/barong)",
-  //         "1 pc. 8R print",
-  //         "2 pcs. wallet size prints",
-  //         "1 enhanced digital copy",
-  //       ],
-  //       calendly_link:
-  //         "https://calendly.com/blinkcreativestudio/graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-  //     },
-  //     {
-  //       id: "5-2",
-  //       package: "silver",
-  //       name: "Silver",
-  //       price: "1,359.00",
-  //       desc: "Celebrate your academic success in style with our exclusive graduation packages. Let us take care of the details while you focus on enjoying this milestone moment with your loved ones. Book with us and create lifelong memories of your academic success.",
-  //       desc1: "",
-  //       desc2:
-  //         "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
-  //       desc3: "",
-  //       inclusions: [
-  //         "2 attires (toga/filipiniana/barong)",
-  //         "1 pc. 8R portrait (printed and framed)",
-  //         "2 pcs. 5R prints",
-  //         "4 pcs. wallet size prints",
-  //         "2 enhanced digital copy",
-  //       ],
-  //       calendly_link:
-  //         "https://calendly.com/blinkcreativestudio/graduation-package-silver?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-  //     },
-  //   ],
-  // },
+
   // {
   //   id: "6",
   //   category: "up-grad-package",
@@ -1119,6 +1073,109 @@ const packages = [
   //     },
   //   ],
   // },
+  {
+    id: "5",
+    category: "grad-package",
+    categoryName: "Graduation Package",
+    image: "/assets/appointments/graduation.png",
+    packages: [
+      {
+        id: "5-1",
+        package: "bronze",
+        name: "Bronze",
+        price: "1199.00",
+        desc: "Celebrate your academic success in style with our exclusive graduation packages. Let us take care of the details while you focus on enjoying this milestone moment with your loved ones. Book with us and create lifelong memories of your academic success.",
+        desc1: "",
+        desc2:
+          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
+        inclusions: ["1 attire (sablay/toga)", "1 enhanced digital copy"],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "5-2",
+        package: "silver",
+        name: "Silver",
+        price: "1,699.00",
+        desc: "Celebrate your academic success in style with our exclusive graduation packages. Let us take care of the details while you focus on enjoying this milestone moment with your loved ones. Book with us and create lifelong memories of your academic success.",
+        desc1: "",
+        desc2:
+          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
+        inclusions: [
+          "2 attires (sablay/toga/corporate)",
+          "1 pc. 8R portrait (printed and framed)",
+          "4 pcs. wallet size prints",
+          "2 enhanced digital copy",
+          "Free Digital Copy",
+        ],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/graduation-package-silver?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "5-3",
+        package: "gold",
+        name: "Gold",
+        price: "2,699.00",
+        desc: "Celebrate your academic success in style with our exclusive graduation packages. Let us take care of the details while you focus on enjoying this milestone moment with your loved ones. Book with us and create lifelong memories of your academic success.",
+        desc1: "",
+        desc2:
+          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
+        inclusions: [
+          "2 attires (1 sablay/toga/corporate, 1 creative)",
+          "2 pc. 8R portrait (printed and framed)",
+          "4 pcs. wallet size prints",
+          "2 enhanced digital copy",
+          "Free Digital Copy",
+        ],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/graduation-package-gold?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "5-4",
+        package: "platinum",
+        name: "Platinum",
+        price: "3,299.00",
+        desc: "Celebrate your academic success in style with our exclusive graduation packages. Let us take care of the details while you focus on enjoying this milestone moment with your loved ones. Book with us and create lifelong memories of your academic success.",
+        desc1: "",
+        desc2:
+          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
+        inclusions: [
+          "3 attires (sablay/toga/corporate, 1 creative)",
+          "2 pc. 8R portrait (printed and framed)",
+          "4 pcs. wallet size prints",
+          "3 enhanced digital copy",
+          "Free Digital Copy",
+        ],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/graduation-package-platinum?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "5-5",
+        package: "diamond",
+        name: "Diamond",
+        price: "3,749.00",
+        desc: "Celebrate your academic success in style with our exclusive graduation packages. Let us take care of the details while you focus on enjoying this milestone moment with your loved ones. Book with us and create lifelong memories of your academic success.",
+        desc1: "",
+        desc2:
+          "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
+        desc3: "",
+        inclusions: [
+          "4 attires (1 sablay, 1 toga, 1 corporate, 1 creative)",
+          "1 pc. 12R portrait (printed and framed)",
+          "4 pcs. 5R print",
+          "8 pcs. wallet size prints",
+          "4 enhanced digital copy",
+          "Free Digital Copy",
+        ],
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/graduation-package-diamond?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+    ],
+  },
 ];
 
 export default packages;
