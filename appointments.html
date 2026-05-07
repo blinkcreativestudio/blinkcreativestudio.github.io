@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -584,17 +584,17 @@
         var detailsContent = detailsDiv.children[0];
         var detailsContentChildren = [...detailsContent.children];
         var packageDetailsContainer = detailsContentChildren.find((el) =>
-          el.classList.contains("package-details-container")
+          el.classList.contains("package-details-container"),
         );
         var packageDetailsContainerChildren = [
           ...packageDetailsContainer.children,
         ];
         var packageDropdown = packageDetailsContainerChildren.find((el) =>
-          el.classList.contains("package-dropdown")
+          el.classList.contains("package-dropdown"),
         );
         var packageDropdownChildren = [...packageDropdown.children];
         var packageDropdownContent = packageDropdownChildren.find((el) =>
-          el.classList.contains("package-dropdown-content")
+          el.classList.contains("package-dropdown-content"),
         );
 
         if (packageDropdownContent.classList.contains("active")) {
@@ -605,17 +605,17 @@
       const showPackageDetails = (
         packageName,
         dropdownMenu,
-        packageDetails
+        packageDetails,
       ) => {
         var dropdownMenuChildren = [...dropdownMenu.children];
         var dropdownButton = dropdownMenuChildren.find(
-          (el) => el.id === "package-dropdown-btn"
+          (el) => el.id === "package-dropdown-btn",
         );
         var activeCategory = packages.find(
-          (el) => el.categoryName === packageName.innerText
+          (el) => el.categoryName === packageName.innerText,
         );
         var activePackage = activeCategory.packages.find(
-          (el) => el.name === dropdownButton.innerText
+          (el) => el.name === dropdownButton.innerText,
         );
         // var appointmentBtn = packageName.parentNode.nextElementSibling;
         var appointmentBtn = document.createElement("button");
@@ -649,7 +649,7 @@
                 textColor: "#ffffff",
                 branding: undefined,
               },
-              true
+              true,
             );
           }
         });
@@ -818,11 +818,11 @@
         var swiperWrapper = document.querySelector(".swiper-wrapper");
         var swipperWrapperChildren = [...swiperWrapper.children];
         var activeSlide = swipperWrapperChildren.find((el) =>
-          el.classList.contains("swiper-slide-active")
+          el.classList.contains("swiper-slide-active"),
         );
         var activeSlideChildren = [...activeSlide.children];
         var swiperContent = activeSlideChildren.find((el) =>
-          el.classList.contains("swiper-content")
+          el.classList.contains("swiper-content"),
         );
 
         if (
@@ -842,7 +842,7 @@
 
       // Initialize dropdown menu
       for (const dropdown of document.querySelectorAll(
-        ".package-dropdown-btn"
+        ".package-dropdown-btn",
       )) {
         dropdown.addEventListener("click", (e) => {
           let packageDropdown = e.target.parentNode;
@@ -854,7 +854,7 @@
 
       // Initialize dropdown items
       for (const dropdownItem of document.querySelectorAll(
-        ".package-dropdown-item"
+        ".package-dropdown-item",
       )) {
         var packageName, dropdownMenu, packageDetails;
 
@@ -866,13 +866,13 @@
           ];
 
           packageName = packageContentChildren.find(
-            (c) => c.id === "package-name"
+            (c) => c.id === "package-name",
           );
           dropdownMenu = packageContentChildren.find((c) =>
-            c.classList.contains("package-dropdown")
+            c.classList.contains("package-dropdown"),
           );
           packageDetails = packageContentChildren.find((c) =>
-            c.classList.contains("select-package-details")
+            c.classList.contains("select-package-details"),
           );
 
           packageDropdownBtn.innerText = e.target.innerText;
@@ -883,6 +883,69 @@
 
       // Last to call to initialize the slides before initializing the swiper
       const swiper = createNewSwiper();
+
+      // Hash-based auto-open: navigate to and open the slide matching the URL hash
+      const hashToCategory = {
+        graduation: "grad-package",
+        studio: "studio-rental",
+        solo: "solo-package",
+        couple: "couple-package",
+        family: "fam-package",
+        maternity: "maternity-package",
+        baby: "baby-milestone-package",
+        kiddie: "kid-package",
+        wedding: "wed-package",
+        debut: "debut-package",
+      };
+
+      // REPLACE the existing openSlideByCategory function and hash block with this:
+
+      function openSlideByCategory(categoryId) {
+        const realIndex = packages.findIndex(
+          (pkg) => pkg.category === categoryId,
+        );
+        if (realIndex === -1) return;
+
+        swiper.slideToLoop(realIndex, 800);
+
+        swiper.once("transitionEnd", () => {
+          // Find the slide whose real index matches, not just the DOM-active one
+          const allSlides = [
+            ...swiperWrapper.querySelectorAll(".swiper-slide"),
+          ];
+          const targetSlide = allSlides.find((slide) =>
+            slide.classList.contains("swiper-slide-active"),
+          );
+
+          if (!targetSlide) return;
+
+          const content = targetSlide.querySelector(".swiper-content");
+          if (content) showPackage(content);
+        });
+      }
+
+      function handleHashNavigation() {
+        const hash = window.location.hash.replace("#", "").toLowerCase();
+
+        if (!hash || !hashToCategory[hash]) return;
+
+        const categoryId = hashToCategory[hash];
+
+        // wait until swiper is fully initialized
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            openSlideByCategory(categoryId);
+          });
+        });
+      }
+
+      // REPLACE these two lines:
+      window.addEventListener("load", handleHashNavigation);
+      window.addEventListener("hashchange", handleHashNavigation);
+
+      // WITH:
+      setTimeout(handleHashNavigation, 300);
+      window.addEventListener("hashchange", handleHashNavigation);
 
       // Hide package on Enter when back button is focused on tab
       for (let backBtn of document.querySelectorAll("package-back-btn")) {
@@ -939,7 +1002,7 @@
         if (e.keyCode === 13) {
           let swiperWrapperChildren = [...swiperWrapper.children];
           let activeSlide = swiperWrapperChildren.find((el) =>
-            el.classList.contains("swiper-slide-active")
+            el.classList.contains("swiper-slide-active"),
           );
 
           showPackage(activeSlide.children[0]);
@@ -948,7 +1011,7 @@
         if (e.keyCode === 27) {
           let swiperWrapperChildren = [...swiperWrapper.children];
           let activeSlide = swiperWrapperChildren.find((el) =>
-            el.classList.contains("swiper-slide-active")
+            el.classList.contains("swiper-slide-active"),
           );
 
           hidePackage(activeSlide.children[0]);
