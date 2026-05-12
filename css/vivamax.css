@@ -1,5 +1,5 @@
 .vivamax-content-container {
-  width: 1024px;
+  width: auto;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
@@ -44,6 +44,7 @@
 
 .viva-sub-details {
   font-size: 15px;
+  padding: 4px;
 }
 
 .name-underline {
@@ -176,4 +177,37 @@
 
 .event-title-padding {
   padding-inline: 12px;
+}
+
+.bgs-hero-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bgs-hero-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Default */
+.bgs-desktop-video {
+  display: block;
+}
+
+.bgs-mobile-video {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .bgs-desktop-video {
+    display: none;
+  }
+
+  .bgs-mobile-video {
+    display: block;
+  }
 }
