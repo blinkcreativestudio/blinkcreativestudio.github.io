@@ -769,17 +769,17 @@
         dropdownMenu.id = category.category;
         dropdownButton.id = "package-dropdown-btn";
 
-        if (category.category !== "studio-rental") {
-          for (let item of category.packages) {
-            var subItem = document.createElement("p");
+        // if (category.category !== "studio-rental") {
+        for (let item of category.packages) {
+          var subItem = document.createElement("p");
 
-            subItem.classList.add("package-dropdown-item");
-            subItem.classList.add(item.package);
-            subItem.innerText = item.name;
+          subItem.classList.add("package-dropdown-item");
+          subItem.classList.add(item.package);
+          subItem.innerText = item.name;
 
-            dropdownContent.appendChild(subItem);
-          }
+          dropdownContent.appendChild(subItem);
         }
+        // }
 
         dropdownButton.innerText = category.packages[0].name;
 
