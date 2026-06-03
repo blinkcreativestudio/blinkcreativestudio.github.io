@@ -1167,7 +1167,7 @@ const packages = [
         id: "5-4",
         package: "platinum",
         name: "Platinum",
-        price: "3,299.00",
+        price: "3,799.00",
         desc: "Celebrate your academic success in style with our exclusive graduation packages. Let us take care of the details while you focus on enjoying this milestone moment with your loved ones. Book with us and create lifelong memories of your academic success.",
         desc1: "",
         desc2:
