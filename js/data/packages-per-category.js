@@ -1196,7 +1196,7 @@ const packages = [
         desc3: "",
         inclusions: [
           "Hair & Makeup Services Included",
-          "4 Attires (Sablay/Toga/Corporate)",
+          "4 Attires (Sablay/Toga/Corporate/Creative)",
           "FREE Digital Copy",
           "8 Wallet Size Prints",
           "4 5R Portrait (Printed)",
