@@ -381,7 +381,8 @@ const packages = [
         ],
         calendly_link:
           // "https://calendly.com/blinkcreativestudio/studio-package-basic-a?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-          "https://calendly.com/blinkcreativestudio/solo-a?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          // "https://calendly.com/blinkcreativestudio/solo-a?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          "https://calendly.com/blinkcreativestudio/solo-a-2?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
         id: "2-2",
@@ -401,7 +402,8 @@ const packages = [
         ],
         calendly_link:
           // "https://calendly.com/blinkcreativestudio/studio-package-basic-b?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-          "https://calendly.com/blinkcreativestudio/solo-b?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          // "https://calendly.com/blinkcreativestudio/solo-b?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          "https://calendly.com/blinkcreativestudio/solo-b-2?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
         id: "2-3",
@@ -421,7 +423,8 @@ const packages = [
         ],
         calendly_link:
           // "https://calendly.com/blinkcreativestudio/studio-package-basic-standard?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-          "https://calendly.com/blinkcreativestudio/solo-c?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          // "https://calendly.com/blinkcreativestudio/solo-c?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          "https://calendly.com/blinkcreativestudio/solo-c-2?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       // {
       //   id: "2-4",
@@ -1119,7 +1122,8 @@ const packages = [
           "Hair & Makeup Services Included",
         ],
         calendly_link:
-          "https://calendly.com/blinkcreativestudio/graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          // "https://calendly.com/blinkcreativestudio/graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          "https://calendly.com/blinkcreativestudio/graduation-package-bronze-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
         id: "5-2",
@@ -1140,7 +1144,8 @@ const packages = [
           "2 Enhanced Digital Copies",
         ],
         calendly_link:
-          "https://calendly.com/blinkcreativestudio/graduation-package-silver?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          // "https://calendly.com/blinkcreativestudio/graduation-package-silver?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          "https://calendly.com/blinkcreativestudio/graduation-package-silver-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
         id: "5-3",
@@ -1161,7 +1166,8 @@ const packages = [
           "2 Enhanced Digital Copies",
         ],
         calendly_link:
-          "https://calendly.com/blinkcreativestudio/graduation-package-gold?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          // "https://calendly.com/blinkcreativestudio/graduation-package-gold?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          "https://calendly.com/blinkcreativestudio/graduation-package-gold-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
         id: "5-4",
@@ -1182,7 +1188,8 @@ const packages = [
           "3 Enhanced Digital Copies",
         ],
         calendly_link:
-          "https://calendly.com/blinkcreativestudio/graduation-package-platinum?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          // "https://calendly.com/blinkcreativestudio/graduation-package-platinum?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          "https://calendly.com/blinkcreativestudio/graduation-package-platinum-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
         id: "5-5",
@@ -1204,7 +1211,8 @@ const packages = [
           "4 Enhanced Digital Copies",
         ],
         calendly_link:
-          "https://calendly.com/blinkcreativestudio/graduation-package-diamond?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          // "https://calendly.com/blinkcreativestudio/graduation-package-diamond?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+          "https://calendly.com/blinkcreativestudio/graduation-package-diamond-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
     ],
   },
