@@ -1,1480 +1,366 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blink Creative Studio – 54th UPLB Commencement Booking</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blink Creative Studio – Graduation Portrait & Getaway 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --brand:      #7B1728;
+      --brand-dark: #5C101C;
+      --radius:     10px;
+      --radius-sm:  6px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--brand);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      :root {
-        --brand: #7b1728;
-        --brand-dark: #5c101c;
-        --brand-light: #fff5f6;
-        --brand-mid: #f0997b;
-        --bg: #f5f4f0;
-        --surface: #ffffff;
-        --border: #e2e0db;
-        --border-dark: #c8c5be;
-        --text: #1a1816;
-        --text-muted: #6b6760;
-        --text-hint: #9c9890;
-        --green-bg: #eaf3de;
-        --green-text: #3b6d11;
-        --radius: 10px;
-        --radius-sm: 6px;
-      }
+    .wrapper {
+      width: 100%;
+      max-width: 680px;
+      padding: 3rem 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    /* ── LOGO ── */
+    .logo-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 2.5rem;
+    }
+    .logo-text {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+    }
 
-      body {
-        font-family: "Inter", sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        font-size: 15px;
-        line-height: 1.6;
-        min-height: 100vh;
-      }
+    /* ── H1 ── */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 7vw, 38px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    h1 em { font-style: normal; color: #F5C4B3; }
 
-      /* ── HERO ── */
-      .hero {
-        background: var(--brand);
-        color: #fff;
-        padding: 0;
-        position: relative;
+    /* ── H2 PRICE ── */
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 10vw, 58px);
+      font-weight: 600;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 2rem;
+    }
+    .price-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    /* ── SLIDER ── */
+    .slider-section {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+    .slides-wrap {
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .slides-track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    .slide {
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    .slide-img {
+        height: 360px;
         overflow: hidden;
-      }
-      .hero-inner {
-        max-width: 780px;
-        margin: 0 auto;
-        padding: 2.5rem 2rem;
+        background: rgba(0,0,0,0.25);
         position: relative;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        gap: 2rem;
-      }
-      .hero-text {
-        flex: 1;
-        min-width: 0;
-      }
-      .hero-slider-col {
-        flex: 0 0 300px;
-        width: 300px;
-      }
-      @media (max-width: 640px) {
-        .hero-inner {
-          flex-direction: column;
-          gap: 1.25rem;
-        }
-        .hero-slider-col {
-          flex: none;
-          width: 100%;
-        }
-      }
-      .logo-row {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 1.4rem;
-      }
-      .logo-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3px;
-        width: 26px;
-        height: 26px;
-        flex-shrink: 0;
-      }
-      .logo-grid span {
-        border-radius: 2px;
-        background: rgba(255, 255, 255, 0.9);
-      }
-      .logo-grid span:nth-child(2) {
-        opacity: 0.6;
-      }
-      .logo-grid span:nth-child(3) {
-        opacity: 0.6;
-      }
-      .logo-grid span:nth-child(4) {
-        opacity: 0.3;
-      }
-      .logo-text {
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: 0.12em;
-        color: rgba(255, 255, 255, 0.8);
-        text-transform: uppercase;
-      }
-      .hero h1 {
-        font-family: "Playfair Display", serif;
-        font-size: clamp(22px, 4vw, 32px);
-        font-weight: 600;
-        line-height: 1.2;
-        margin-bottom: 0.5rem;
-        color: #fff;
-      }
-      .hero h1 em {
-        font-style: normal;
-        color: #f5c4b3;
-      }
-      .hero-sub {
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.65);
-        margin-bottom: 1.25rem;
-      }
-      .hero-badges {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-      }
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        border-radius: 100px;
-        padding: 4px 12px;
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.88);
-      }
-
-      /* ── SLIDER ── */
-      .slider-wrap {
-        position: relative;
-        overflow: hidden;
-        border-radius: var(--radius);
-        /* border: 1px solid rgba(255,255,255,0.18); */
-      }
-      .slides {
-        display: flex;
-        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .slide {
-        min-width: 100%;
-        height: 280px;
-        position: relative;
-        flex-shrink: 0;
-        overflow: hidden;
-        background: #1a0810;
-      }
-      .slide img {
-        width: 100%;
-        height: 100%;
+    }
+    .slide-img img {
+        width: 100%; height: 100%;
         object-fit: cover;
         object-position: center top;
         display: block;
-        /* filter: brightness(0.72); */
         position: absolute;
-        top: 0;
-        left: 0;
-      }
-      .slide-caption {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 0.75rem 1rem;
-        background: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.6) 0%,
-          transparent 100%
-        );
-        color: #fff;
-        font-size: 12px;
-        font-weight: 500;
-      }
-      .slide-caption span {
-        font-size: 11px;
-        font-weight: 400;
-        opacity: 0.72;
-        display: block;
-        margin-top: 2px;
-      }
-      .slider-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.15);
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        color: #fff;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 11px;
-        transition: background 0.15s;
-        z-index: 2;
-      }
-      .slider-btn:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
-      .slider-btn.prev {
-        left: 8px;
-      }
-      .slider-btn.next {
-        right: 8px;
-      }
-      .slider-dots {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-        padding: 7px 0 0;
-      }
-      .dot {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.35);
-        cursor: pointer;
-        transition:
-          background 0.2s,
-          transform 0.2s;
-      }
-      .dot.active {
-        background: #fff;
-        transform: scale(1.3);
-      }
+        top: 0; left: 0;
+    }
+    @media (max-width: 400px) 
+        { 
+            .slide-img { height: 190px; } 
+        }
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 0 0;
+    }
+    .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .dot.active { background: #fff; transform: scale(1.3); }
 
-      /* ── LAYOUT ── */
-      .page {
-        max-width: 780px;
-        margin: 0 auto;
-        padding: 2rem 1.25rem 4rem;
-      }
+    /* ── GETAWAY BLOCK ── */
+    .getaway-block {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .getaway-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(20px, 5vw, 26px);
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .getaway-subtitle {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 1rem;
+    }
+    .getaway-prize {
+      font-size: 15px;
+      font-weight: 600;
+      color: #F5C4B3;
+      line-height: 1.5;
+    }
+    .getaway-prize i { margin-right: 6px; font-size: 14px; }
 
-      /* ── CARD SECTION ── */
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 1.75rem;
-        margin-bottom: 1.25rem;
-      }
-      .card-title {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+    /* ── CHOOSE BLINK ── */
+    .choose-blink {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 2rem;
+      letter-spacing: 0.02em;
+    }
+    .choose-blink span { color: #fff; }
+
+    /* ── CTA ── */
+    .cta-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .btn-book {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--brand);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-book:hover { background: #f5e8e9; transform: translateY(-1px); }
+    .btn-commencement {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn-commencement:hover { background: rgba(255,255,255,0.15); }
+
+    /* ── FOOTER CONTACTS ── */
+    .footer-contacts {
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    .footer-contacts p {
         font-size: 11px;
-        font-weight: 600;
+        color: rgba(255,255,255,0.4);
+        text-transform: uppercase;
         letter-spacing: 0.08em;
-        text-transform: uppercase;
-        color: var(--text-muted);
-        margin-bottom: 1.4rem;
-        padding-bottom: 0.9rem;
-        border-bottom: 1px solid var(--border);
-      }
-      .card-title i {
-        color: var(--brand);
-        font-size: 14px;
-      }
-
-      /* ── FORM FIELDS ── */
-      .field {
-        margin-bottom: 1.1rem;
-      }
-      .field:last-child {
-        margin-bottom: 0;
-      }
-      .field label {
-        display: block;
-        font-size: 13px;
-        font-weight: 500;
-        color: var(--text);
         margin-bottom: 6px;
-      }
-      .field label .req {
-        color: var(--brand);
-        margin-left: 2px;
-      }
-      .field input,
-      .field select,
-      .field textarea {
-        width: 100%;
-        border: 1px solid var(--border);
-        border-radius: var(--radius-sm);
-        padding: 9px 12px;
-        font-size: 14px;
-        font-family: "Inter", sans-serif;
-        color: var(--text);
-        background: #fff;
-        outline: none;
-        transition:
-          border-color 0.15s,
-          box-shadow 0.15s;
-        appearance: none;
-        -webkit-appearance: none;
-      }
-      .field select {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6760' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: right 12px center;
-        padding-right: 32px;
-        cursor: pointer;
-      }
-      .field input:focus,
-      .field select:focus,
-      .field textarea:focus {
-        border-color: var(--brand);
-        box-shadow: 0 0 0 3px rgba(123, 23, 40, 0.1);
-      }
-      .field input::placeholder,
-      .field textarea::placeholder {
-        color: var(--text-hint);
-      }
-      .hint {
-        font-size: 12px;
-        color: var(--text-hint);
-        margin-top: 5px;
-      }
-      .field-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-      }
-      @media (max-width: 520px) {
-        .field-row {
-          grid-template-columns: 1fr;
-        }
-      }
+    }
 
-      /* ── PACKAGE TABLE ── */
-      .pkg-table {
-        width: 100%;
-        border-collapse: collapse;
-        border: 1px solid var(--border);
-        border-radius: var(--radius-sm);
-        overflow: hidden;
-        font-size: 13px;
-      }
-      .pkg-table thead tr {
-        background: #f9f8f5;
-        border-bottom: 1px solid var(--border);
-      }
-      .pkg-table thead th {
-        padding: 10px 12px;
-        font-weight: 600;
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--text-muted);
-        text-align: center;
-      }
-      .pkg-table thead th:first-child {
-        text-align: left;
-        min-width: 160px;
-      }
-      .pkg-table tbody tr {
-        border-bottom: 1px solid var(--border);
-        transition: background 0.12s;
-        cursor: pointer;
-      }
-      .pkg-table tbody tr:last-child {
-        border-bottom: none;
-      }
-      .pkg-table tbody tr:hover {
-        background: #fafaf8;
-      }
-      .pkg-table tbody tr.selected {
-        background: var(--brand-light);
-      }
-      .pkg-table tbody tr.selected td:first-child {
-        border-left: 3px solid var(--brand);
-      }
-      .pkg-table td {
-        padding: 11px 12px;
-        vertical-align: middle;
-        text-align: center;
-      }
-      .pkg-table td:first-child {
-        text-align: left;
-        padding-left: 14px;
-      }
-      .pkg-name {
-        font-weight: 600;
-        color: var(--text);
-        font-size: 13px;
-      }
-      .pkg-desc {
-        font-size: 12px;
-        color: var(--text-muted);
-        margin-top: 2px;
-      }
-      .pkg-table input[type="radio"] {
-        accent-color: var(--brand);
-        width: 16px;
-        height: 16px;
-        cursor: pointer;
-      }
-      .pkg-note {
-        font-size: 12px;
-        color: var(--text-hint);
-        margin-top: 10px;
-      }
-      @media (max-width: 580px) {
-        .pkg-table {
-          font-size: 11px;
-        }
-        .pkg-table thead th,
-        .pkg-table td {
-          padding: 8px 6px;
-        }
-        .pkg-table thead th:first-child {
-          min-width: 110px;
-        }
-      }
+    .contact-item {
+      display: flex;
+      align-items: left;
+      justify-content: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+    }
+    .contact-item i { font-size: 12px; color: rgba(255,255,255,0.25); }
+  </style>
+</head>
+<body>
+<div class="wrapper">
 
-      /* ── PAYMENT CARDS ── */
-      .payment-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.85rem;
-        margin-bottom: 1.25rem;
-      }
-      @media (max-width: 420px) {
-        .payment-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-      .pay-card {
-        border: 1px solid var(--border);
-        border-radius: var(--radius-sm);
-        padding: 0.9rem 1rem;
-        cursor: pointer;
-        transition:
-          border-color 0.15s,
-          background 0.15s;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        user-select: none;
-      }
-      .pay-card:hover {
-        border-color: var(--brand);
-        background: var(--brand-light);
-      }
-      .pay-card.selected {
-        border-color: var(--brand);
-        border-width: 1.5px;
-        background: var(--brand-light);
-      }
-      .pay-card input[type="radio"] {
-        accent-color: var(--brand);
-      }
-      .pay-label {
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--text);
-      }
-      .pay-sub {
-        font-size: 12px;
-        color: var(--text-muted);
-        margin-top: 1px;
-      }
+  <!-- LOGO -->
+  <div class="logo-row">
+    <svg width="20" height="26" viewBox="0 0 27 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.24904 34.5529L0 36V7.35392L5.24904 5.90681V34.5529Z" fill="#fff"/>
+      <path d="M13.1155 11.294V9.74164L26.7183 5.9989V0L7.07715 5.4069V18.9505L26.7183 13.5502V7.55125L13.1155 11.294Z" fill="#fff"/>
+      <path d="M20.6799 24.3113V22.759L7.07715 26.5017V20.5028L26.7183 15.0959V28.6461L7.07715 34.053V28.0541L20.6799 24.3113Z" fill="#fff"/>
+    </svg>
+    <span class="logo-text">Blink Creative Studio</span>
+  </div>
 
-      /* ── UPLOAD ZONE ── */
-      .upload-zone {
-        border: 1.5px dashed var(--border-dark);
-        border-radius: var(--radius-sm);
-        padding: 1.5rem;
-        text-align: center;
-        cursor: pointer;
-        transition:
-          border-color 0.15s,
-          background 0.15s;
-        background: #fafaf8;
-      }
-      .upload-zone:hover {
-        border-color: var(--brand);
-        background: var(--brand-light);
-      }
-      .upload-zone i {
-        font-size: 22px;
-        color: var(--text-muted);
-        display: block;
-        margin-bottom: 8px;
-      }
-      .upload-zone p {
-        font-size: 13px;
-        color: var(--text-muted);
-      }
-      .upload-zone p strong {
-        color: var(--text);
-      }
-      .upload-zone .fmt {
-        font-size: 11px;
-        color: var(--text-hint);
-        margin-top: 4px;
-      }
-      .upload-zone input[type="file"] {
-        display: none;
-      }
-      .uploaded-file {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 9px 12px;
-        background: #f0f8e8;
-        border: 1px solid #c0dd97;
-        border-radius: var(--radius-sm);
-        font-size: 13px;
-        color: var(--green-text);
-        margin-top: 8px;
-      }
-      .uploaded-file i {
-        font-size: 15px;
-        color: var(--green-text);
-      }
-      .remove-file {
-        margin-left: auto;
-        color: var(--text-muted);
-        cursor: pointer;
-        font-size: 14px;
-        line-height: 1;
-      }
-      .remove-file:hover {
-        color: var(--brand);
-      }
+  <!-- H1 -->
+  <h1>Biyaheng graduation na kaya <em>PROUD KITA.</em></h1>
 
-      /* ── INFO BOX ── */
-      .info-box {
-        background: #fff8e6;
-        border: 1px solid #fac775;
-        border-radius: var(--radius-sm);
-        padding: 10px 14px;
-        font-size: 13px;
-        color: #633806;
-        display: flex;
-        align-items: flex-start;
-        gap: 8px;
-        margin-bottom: 1rem;
-      }
-      .info-box i {
-        font-size: 15px;
-        color: #ba7517;
-        flex-shrink: 0;
-        margin-top: 2px;
-      }
+  <!-- H2 PRICE -->
+  <div class="price-label">Starts at</div>
+  <h2>₱1,199</h2>
 
-      /* ── ERROR BOX ── */
-      .err-box {
-        background: #fff0f0;
-        border: 1px solid #f09595;
-        border-radius: var(--radius-sm);
-        padding: 10px 14px;
-        font-size: 13px;
-        color: #791f1f;
-        display: none;
-        align-items: flex-start;
-        gap: 8px;
-        margin-bottom: 1.25rem;
-      }
-      .err-box i {
-        font-size: 15px;
-        color: #e24b4a;
-        flex-shrink: 0;
-        margin-top: 2px;
-      }
-      .err-box.visible {
-        display: flex;
-      }
+  <!-- SLIDER -->
+  <div class="slider-section">
+    <div class="slides-wrap">
+      <div class="slides-track" id="slides">
 
-      /* ── SUBMIT BUTTON ── */
-      .submit-btn {
-        width: 100%;
-        padding: 14px;
-        background: var(--brand);
-        color: #fff;
-        border: none;
-        border-radius: var(--radius-sm);
-        font-size: 15px;
-        font-weight: 600;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        transition:
-          background 0.15s,
-          transform 0.1s;
-        font-family: "Inter", sans-serif;
-      }
-      .submit-btn:hover {
-        background: var(--brand-dark);
-      }
-      .submit-btn:active {
-        transform: scale(0.99);
-      }
-      .submit-btn i {
-        font-size: 16px;
-      }
-
-      /* ── SUCCESS SCREEN ── */
-      .success-screen {
-        display: none;
-        text-align: center;
-        padding: 4rem 2rem;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-      }
-      .success-screen.visible {
-        display: block;
-      }
-      .success-icon {
-        width: 72px;
-        height: 72px;
-        border-radius: 50%;
-        background: var(--green-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 1.5rem;
-      }
-      .success-icon i {
-        font-size: 32px;
-        color: var(--green-text);
-      }
-      .success-screen h2 {
-        font-family: "Playfair Display", serif;
-        font-size: 24px;
-        font-weight: 600;
-        color: var(--text);
-        margin-bottom: 0.75rem;
-      }
-      .success-screen p {
-        font-size: 14px;
-        color: var(--text-muted);
-        max-width: 380px;
-        margin: 0 auto 1.5rem;
-        line-height: 1.7;
-      }
-      .success-detail {
-        display: inline-block;
-        background: var(--brand-light);
-        border: 1px solid #f0997b;
-        border-radius: var(--radius-sm);
-        padding: 10px 20px;
-        font-size: 13px;
-        color: var(--brand);
-        font-weight: 500;
-      }
-
-      /* ── FOOTER ── */
-      footer {
-        text-align: center;
-        font-size: 12px;
-        color: var(--text-hint);
-        padding: 1rem 0 2rem;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-inner">
-        <!-- LEFT: text -->
-        <div class="hero-text">
-          <div class="logo-row">
-            <svg
-              width="22"
-              height="29"
-              viewBox="0 0 27 36"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.24904 34.5529L0 36V7.35392L5.24904 5.90681V34.5529Z"
-                fill="#ffffff"
-              />
-              <path
-                d="M13.1155 11.294V9.74164L26.7183 5.9989V0L7.07715 5.4069V18.9505L26.7183 13.5502V7.55125L13.1155 11.294Z"
-                fill="#ffffff"
-              />
-              <path
-                d="M20.6799 24.3113V22.759L7.07715 26.5017V20.5028L26.7183 15.0959V28.6461L7.07715 34.053V28.0541L20.6799 24.3113Z"
-                fill="#ffffff"
-              />
-            </svg>
-            <span class="logo-text">Blink Creative Studio</span>
-          </div>
-          <h1>
-            Official Photographer<br /><em>54th UPLB Commencement Exercises</em>
-          </h1>
-          <p class="hero-sub">
-            Reserve your graduation photo coverage — fill out the form below.
-          </p>
-          <div class="hero-badges">
-            <span class="badge"
-              ><i class="fa-solid fa-camera"></i> 2026 USC Official</span
-            >
-            <span class="badge"
-              ><i class="fa-solid fa-peso-sign"></i> Starts at ₱1,199</span
-            >
-          </div>
+        <div class="slide">
+          <div class="slide-img"><img src="./assets/USC/8R_FRAME_1.jpg" alt="Photo 1"></div>
+          <div class="slide-img"><img src="./assets/USC/8R_FRAME_2.jpg" alt="Photo 2"></div>
         </div>
 
-        <!-- RIGHT: slider -->
-        <div class="hero-slider-col">
-          <div class="slider-wrap">
-            <div class="slides" id="slides">
-              <div class="slide">
-                <img
-                  src="./assets/USC/UPLBCT1_17.jpg"
-                  alt="Marching photo sample"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="./assets/USC/UPLBCT1_73.jpg"
-                  alt="Stage photo sample"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="./assets/USC/BCS_GRAD_AD_OP.jpg"
-                  alt="Portrait sample"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="./assets/USC/RML02917.jpg"
-                  alt="Tarpaulin layout sample"
-                />
-              </div>
-              <div class="slide">
-                <img
-                  src="./assets/USC/RML03723.jpg"
-                  alt="Digital copies sample"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="slider-dots" id="dots"></div>
+        <div class="slide">
+          <div class="slide-img"><img src="./assets/USC/8R_FRAME_3.jpg" alt="Photo 3"></div>
+          <div class="slide-img"><img src="./assets/USC/8R_FRAME_4.jpg" alt="Photo 4"></div>
         </div>
+
+        <div class="slide">
+          <div class="slide-img"><img src="./assets/USC/8R_FRAME_5.jpg" alt="Photo 5"></div>
+          <div class="slide-img"><img src="./assets/USC/8R_FRAME_6.jpg" alt="Photo 6"></div>
+        </div>
+
       </div>
     </div>
+    <div class="slider-dots" id="dots"></div>
+  </div>
 
-    <!-- PAGE BODY -->
-    <div class="page">
-      <div id="form-wrapper">
-        <!-- PERSONAL INFO -->
-        <div class="card">
-          <div class="card-title">
-            <i class="fa-solid fa-user"></i> Personal information
-          </div>
-
-          <div class="field">
-            <label>Email address <span class="req">*</span></label>
-            <input
-              type="email"
-              id="f-email"
-              placeholder="yourname@example.com"
-            />
-          </div>
-
-          <div class="field">
-            <label>Full name <span class="req">*</span></label>
-            <input
-              type="text"
-              id="f-name"
-              placeholder="e.g. Vergara, Juana C."
-            />
-            <p class="hint">Format: Last Name, First Name, Middle Initial</p>
-          </div>
-
-          <div class="field-row">
-            <div class="field">
-              <label>Mobile number <span class="req">*</span></label>
-              <input
-                type="tel"
-                id="f-mobile"
-                placeholder="e.g. 09XX XXX XXXX"
-              />
-            </div>
-            <div class="field">
-              <label>College / Unit <span class="req">*</span></label>
-              <select id="f-college">
-                <option value="">Select your college</option>
-                <option>College of Agriculture and Food Science</option>
-                <option>College of Arts and Sciences</option>
-                <option>College of Development Communication</option>
-                <option>College of Economics and Management</option>
-                <option>
-                  College of Engineering and Agro-industrial Technology
-                </option>
-                <option>College of Forestry and Natural Resources</option>
-                <option>College of Human Ecology</option>
-                <option>College of Veterinary Medicine</option>
-                <option>College of Public Affairs and Development</option>
-                <option>UPLB Graduate School</option>
-                <option>School of Environmental Science and Management</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- PHOTO PACKAGE -->
-        <div class="card">
-          <div class="card-title">
-            <i class="fa-solid fa-box-open"></i> Photo package
-          </div>
-          <p
-            style="
-              font-size: 13px;
-              color: var(--text-muted);
-              margin-bottom: 1.1rem;
-            "
-          >
-            Select one package and your preferred event coverage.
-          </p>
-
-          <div style="overflow-x: auto">
-            <table class="pkg-table" id="pkg-table">
-              <thead>
-                <tr>
-                  <th>Package</th>
-                  <th>College Testimonial</th>
-                  <th>University Commencement</th>
-                  <th>Both Events</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr data-pkg="1">
-                  <td>
-                    <div class="pkg-name">Package 1</div>
-                    <div class="pkg-desc">
-                      1 × 5R print: Marching or Receiving
-                    </div>
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 1 – College Testimonial"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 1 – University Commencement"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 1 – Both Events"
-                    />
-                  </td>
-                </tr>
-                <tr data-pkg="2">
-                  <td>
-                    <div class="pkg-name">Package 2</div>
-                    <div class="pkg-desc">
-                      2 × 5R print: Marching and Receiving
-                    </div>
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 2 – College Testimonial"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 2 – University Commencement"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 2 – Both Events"
-                    />
-                  </td>
-                </tr>
-                <tr data-pkg="3">
-                  <td>
-                    <div class="pkg-name">Package 3</div>
-                    <div class="pkg-desc">
-                      4 × 5R prints: Testimonial and Commencement
-                    </div>
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 3 – College Testimonial"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 3 – University Commencement"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 3 – Both Events"
-                    />
-                  </td>
-                </tr>
-                <tr data-pkg="4">
-                  <td>
-                    <div class="pkg-name">Package 4</div>
-                    <div class="pkg-desc">
-                      4 × 5R prints and Digital Copy: Testimonial and
-                      Commencement
-                    </div>
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 4 – College Testimonial"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 4 – University Commencement"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 4 – Both Events"
-                    />
-                  </td>
-                </tr>
-                <tr data-pkg="5">
-                  <td>
-                    <div class="pkg-name">Package 5</div>
-                    <div class="pkg-desc">
-                      Digital Copy: Testimonial and Commencement
-                    </div>
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 5 – College Testimonial"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 5 – University Commencement"
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="radio"
-                      name="pkg"
-                      value="Package 5 – Both Events"
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="pkg-note">
-            <i class="fa-solid fa-circle-info" style="margin-right: 4px"></i
-            >Blink will contact you with the exact total after submission.
-          </p>
-        </div>
-
-        <!-- PAYMENT -->
-        <div class="card">
-          <div class="card-title">
-            <i class="fa-solid fa-credit-card"></i> Payment
-          </div>
-
-          <div class="payment-grid">
-            <div
-              class="pay-card"
-              id="pay-gcash"
-              onclick="selectPayment('gcash')"
-            >
-              <input type="radio" name="payment" value="gcash" id="r-gcash" />
-              <div>
-                <div class="pay-label">GCash</div>
-                <div class="pay-sub">Mobile wallet payment</div>
-              </div>
-            </div>
-            <div class="pay-card" id="pay-bpi" onclick="selectPayment('bpi')">
-              <input type="radio" name="payment" value="bpi" id="r-bpi" />
-              <div>
-                <div class="pay-label">BPI</div>
-                <div class="pay-sub">Bank transfer via BPI</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="field">
-            <label
-              >Bank / GCash reference number <span class="req">*</span></label
-            >
-            <input type="text" id="f-ref" placeholder="e.g. 12345678901" />
-          </div>
-
-          <div class="field">
-            <label>Proof of payment <span class="req">*</span></label>
-            <div class="info-box">
-              <i class="fa-solid fa-triangle-exclamation"></i>
-              Rename your file to your <strong>full name</strong> before
-              uploading. No correct file name = no reservation.
-            </div>
-            <div
-              class="upload-zone"
-              id="proof-zone"
-              onclick="document.getElementById('proof-input').click()"
-            >
-              <input
-                type="file"
-                id="proof-input"
-                accept="image/*,.pdf"
-                onchange="handleUpload(this, 'proof-display', 'proof-zone')"
-              />
-              <i class="fa-solid fa-cloud-arrow-up"></i>
-              <p><strong>Click to upload</strong> proof of payment</p>
-              <p class="fmt">JPG, PNG or PDF</p>
-            </div>
-            <div id="proof-display"></div>
-          </div>
-        </div>
-
-        <!-- SELFIE -->
-        <div class="card">
-          <div class="card-title">
-            <i class="fa-solid fa-face-smile"></i> Selfie for claiming
-          </div>
-          <p
-            style="
-              font-size: 13px;
-              color: var(--text-muted);
-              margin-bottom: 1.1rem;
-            "
-          >
-            Used exclusively for our facial recognition-based digital copy
-            claiming system.
-          </p>
-
-          <div
-            class="upload-zone"
-            id="selfie-zone"
-            onclick="document.getElementById('selfie-input').click()"
-          >
-            <input
-              type="file"
-              id="selfie-input"
-              accept="image/jpeg,image/png"
-              onchange="handleUpload(this, 'selfie-display', 'selfie-zone')"
-            />
-            <i class="fa-solid fa-camera"></i>
-            <p><strong>Click to upload</strong> a clear selfie photo</p>
-            <p class="fmt">JPG or PNG only</p>
-          </div>
-          <div id="selfie-display"></div>
-        </div>
-
-        <!-- ERROR -->
-        <div class="err-box" id="err-box">
-          <i class="fa-solid fa-circle-xmark"></i>
-          <span id="err-text">Please fill in all required fields.</span>
-        </div>
-
-        <!-- SUBMIT -->
-        <button class="submit-btn" id="submit-btn" onclick="submitForm()">
-          <i class="fa-solid fa-paper-plane"></i>
-          Submit reservation
-        </button>
-      </div>
-
-      <!-- SUCCESS -->
-      <div class="success-screen" id="success-screen">
-        <div class="success-icon"><i class="fa-solid fa-check"></i></div>
-        <h2>Reservation submitted!</h2>
-        <p>
-          Thank you, <span id="success-name">Isko/Iska</span>! Blink Creative
-          Studio will email or contact you with your schedule, total amount, and
-          photo pick-up details.
-        </p>
-        <div class="success-detail">
-          <i class="fa-solid fa-camera" style="margin-right: 6px"></i>Choose
-          Blink. Congratulations!
-        </div>
-      </div>
-
-      <footer>
-        © 2026 Blink Creative Studio · Official Photographer, 54th UPLB
-        Commencement Exercises
-      </footer>
-
-      <!-- PROMO AD -->
-      <div
-        style="
-          margin-top: 1.25rem;
-          border: 1px solid var(--border);
-          border-radius: var(--radius);
-          overflow: hidden;
-          background: var(--surface);
-        "
-      >
-        <!-- Header -->
-        <div
-          style="
-            padding: 0.9rem 1.25rem;
-            border-bottom: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-          "
-        >
-          <span
-            style="
-              background: var(--brand);
-              color: #fff;
-              font-size: 10px;
-              font-weight: 600;
-              letter-spacing: 0.08em;
-              text-transform: uppercase;
-              padding: 3px 10px;
-              border-radius: 100px;
-            "
-            >Special Promo</span
-          >
-          <span style="font-size: 13px; font-weight: 600; color: var(--text)"
-            >Graduation Portrait & Getaway 2026</span
-          >
-        </div>
-
-        <!-- Image -->
-        <img
-          src="./assets/USC/BCS_FRAMED PHOTOS_POSTER.jpg"
-          alt="Graduation Portrait and Getaway 2026 promo"
-          style="width: 100%; display: block"
-        />
-
-        <!-- Description -->
-        <div style="padding: 1rem 1.25rem">
-          <p
-            style="
-              font-size: 13px;
-              color: var(--text);
-              line-height: 1.8;
-              margin-bottom: 0.75rem;
-            "
-          >
-            Book here for the
-            <strong>GRADUATION PORTRAIT AND GETAWAY 2026</strong> promo! Blink
-            Creative Studio will contact you once you have secured a slot by
-            clicking the link below.
-          </p>
-          <a
-            href="https://www.blinkcreativestudio.com/blinkcreativestudio-usc-grad-portraits"
-            target="_blank"
-            style="
-              display: inline-flex;
-              align-items: center;
-              gap: 6px;
-              background: var(--brand);
-              color: #fff;
-              font-size: 13px;
-              font-weight: 600;
-              padding: 8px 16px;
-              border-radius: var(--radius-sm);
-              text-decoration: none;
-              transition: background 0.15s;
-            "
-            onmouseover="this.style.background = 'var(--brand-dark)'"
-            onmouseout="this.style.background = 'var(--brand)'"
-          >
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Book an
-            appointment
-          </a>
-        </div>
-      </div>
+  <!-- GETAWAY BLOCK -->
+  <div class="getaway-block">
+    <div class="getaway-title">Graduate &amp; Getaway 2026</div>
+    <div class="getaway-subtitle">Starting from Gold Package (₱2,699) and up</div>
+    <div class="getaway-prize">
+      <i class="fa-solid fa-plane"></i>
+      Get a chance to win a trip to<br>Puerto Princesa or Cebu!
     </div>
+  </div>
 
-    <style>
-      .submit-btn:disabled {
-        opacity: 0.65;
-        cursor: not-allowed;
-      }
-      .spinner {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        border: 2px solid rgba(255, 255, 255, 0.4);
-        border-top-color: #fff;
-        border-radius: 50%;
-        animation: spin 0.7s linear infinite;
-        vertical-align: middle;
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
-    <script>
-      // ── SLIDER ──
-      var currentSlide = 0;
-      var slideCount = document.querySelectorAll(".slide").length;
-      var autoTimer;
+  <!-- CHOOSE BLINK -->
+  <div class="choose-blink">Choose <span>Blink.</span></div>
 
-      // Build dots
-      var dotsEl = document.getElementById("dots");
-      for (var i = 0; i < slideCount; i++) {
-        var d = document.createElement("span");
-        d.className = "dot" + (i === 0 ? " active" : "");
-        d.setAttribute("data-i", i);
-        d.onclick = (function (idx) {
-          return function () {
-            goToSlide(idx);
-          };
-        })(i);
-        dotsEl.appendChild(d);
-      }
+  <!-- CTA -->
+  <div class="cta-section">
+    <a href="https://www.blinkcreativestudio.com/blinkcreativestudio-usc-grad-portraits" target="_blank" class="btn-book">
+      <i class="fa-solid fa-arrow-up-right-from-square"></i> Book an appointment
+    </a>
+  </div>
 
-      function goToSlide(n) {
-        currentSlide = (n + slideCount) % slideCount;
-        document.getElementById("slides").style.transform =
-          "translateX(-" + currentSlide * 100 + "%)";
-        document.querySelectorAll(".dot").forEach(function (d, idx) {
-          d.classList.toggle("active", idx === currentSlide);
-        });
-        resetAuto();
-      }
+  <!-- CONTACTS -->
+  <div class="footer-contacts" style="display: flex; gap: 20px; justify-content: space-between;">
+    <div>
+        <div class="contact-item"><i class="fa-solid fa-phone"></i> 0949 993 7469</div>
+        <div class="contact-item"><i class="fa-solid fa-envelope"></i> hello@blinkcreativestudio.com</div>
+    </div>
+    <div>
+        <p>For Commencement Coverage</p>
+        <a href="https://www.blinkcreativestudio.com/blinkcreativestudio-usc-grad-commencement" class="btn-commencement">
+        <i class="fa-solid fa-camera"></i> Make a Reservation
+        </a>
+    </div>
+  </div>
 
-      function moveSlide(dir) {
-        goToSlide(currentSlide + dir);
-      }
+</div>
 
-      function resetAuto() {
-        clearInterval(autoTimer);
-        autoTimer = setInterval(function () {
-          goToSlide(currentSlide + 1);
-        }, 4500);
-      }
+<script>
+  var currentSlide = 0;
+  var slideCount   = document.querySelectorAll('.slide').length;
+  var autoTimer;
 
-      resetAuto();
+  var dotsEl = document.getElementById('dots');
+  for (var i = 0; i < slideCount; i++) {
+    var d = document.createElement('span');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = (function(idx) { return function() { goToSlide(idx); }; })(i);
+    dotsEl.appendChild(d);
+  }
 
-      // Swipe support
-      var touchStartX = 0;
-      var slidesEl = document.getElementById("slides");
-      slidesEl.addEventListener(
-        "touchstart",
-        function (e) {
-          touchStartX = e.touches[0].clientX;
-        },
-        { passive: true },
-      );
-      slidesEl.addEventListener("touchend", function (e) {
-        var diff = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) moveSlide(diff > 0 ? 1 : -1);
-      });
+  function goToSlide(n) {
+    currentSlide = (n + slideCount) % slideCount;
+    document.getElementById('slides').style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+    document.querySelectorAll('.dot').forEach(function(d, idx) {
+      d.classList.toggle('active', idx === currentSlide);
+    });
+    resetAuto();
+  }
 
-      var SCRIPT_URL = "YOUR_APPS_SCRIPT_URL_HERE";
+  function resetAuto() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(function() { goToSlide(currentSlide + 1); }, 4000);
+  }
+  resetAuto();
 
-      // Package row highlight
-      document.querySelectorAll('input[name="pkg"]').forEach(function (r) {
-        r.addEventListener("change", function () {
-          document
-            .querySelectorAll("#pkg-table tbody tr")
-            .forEach(function (row) {
-              row.classList.remove("selected");
-            });
-          var pkgNum = this.value.split(" ")[1];
-          var row = document.querySelector(
-            '#pkg-table tbody tr[data-pkg="' + pkgNum + '"]',
-          );
-          if (row) row.classList.add("selected");
-        });
-      });
-
-      function selectPayment(method) {
-        document.getElementById("pay-gcash").classList.remove("selected");
-        document.getElementById("pay-bpi").classList.remove("selected");
-        document.getElementById("pay-" + method).classList.add("selected");
-        document.getElementById("r-" + method).checked = true;
-      }
-
-      function handleUpload(input, displayId, zoneId) {
-        var file = input.files[0];
-        if (!file) return;
-        var displayEl = document.getElementById(displayId);
-        displayEl.innerHTML =
-          '<div class="uploaded-file">' +
-          '<i class="fa-solid fa-file-circle-check"></i>' +
-          "<span>" +
-          escapeHtml(file.name) +
-          "</span>" +
-          '<span class="remove-file" onclick="removeFile(\'' +
-          input.id +
-          "','" +
-          displayId +
-          "','" +
-          zoneId +
-          "')\">&times;</span>" +
-          "</div>";
-        document.getElementById(zoneId).style.display = "none";
-      }
-
-      function removeFile(inputId, displayId, zoneId) {
-        document.getElementById(inputId).value = "";
-        document.getElementById(displayId).innerHTML = "";
-        document.getElementById(zoneId).style.display = "block";
-      }
-
-      function escapeHtml(str) {
-        return str
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/"/g, "&quot;");
-      }
-
-      function showError(msg) {
-        var box = document.getElementById("err-box");
-        document.getElementById("err-text").textContent = msg;
-        box.classList.add("visible");
-        box.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-
-      function hideError() {
-        document.getElementById("err-box").classList.remove("visible");
-      }
-
-      function fileToBase64(file) {
-        return new Promise(function (resolve, reject) {
-          var reader = new FileReader();
-          reader.onload = function () {
-            resolve(reader.result.split(",")[1]);
-          };
-          reader.onerror = reject;
-          reader.readAsDataURL(file);
-        });
-      }
-
-      async function submitForm() {
-        hideError();
-
-        var email = document.getElementById("f-email").value.trim();
-        var name = document.getElementById("f-name").value.trim();
-        var mobile = document.getElementById("f-mobile").value.trim();
-        var college = document.getElementById("f-college").value;
-        var pkg = document.querySelector('input[name="pkg"]:checked');
-        var pay = document.querySelector('input[name="payment"]:checked');
-        var ref = document.getElementById("f-ref").value.trim();
-        var proof = document.getElementById("proof-input").files[0];
-        var selfie = document.getElementById("selfie-input").files[0];
-
-        if (!email) return showError("Please enter your email address.");
-        if (!name) return showError("Please enter your full name.");
-        if (!mobile) return showError("Please enter your mobile number.");
-        if (!college) return showError("Please select your college or unit.");
-        if (!pkg) return showError("Please select a photo package.");
-        if (!pay) return showError("Please select a payment method.");
-        if (!ref) return showError("Please enter your reference number.");
-        if (!proof) return showError("Please upload your proof of payment.");
-        if (!selfie) return showError("Please upload your selfie photo.");
-
-        var btn = document.getElementById("submit-btn");
-        btn.disabled = true;
-        btn.innerHTML = '<span class="spinner"></span>&nbsp; Submitting...';
-
-        try {
-          var proofB64 = await fileToBase64(proof);
-          var selfieB64 = await fileToBase64(selfie);
-
-          var payload = {
-            timestamp: new Date().toLocaleString("en-PH", {
-              timeZone: "Asia/Manila",
-            }),
-            email: email,
-            fullName: name,
-            mobile: mobile,
-            college: college,
-            package: pkg.value,
-            payment: pay.value,
-            reference: ref,
-            proofFile: {
-              name: proof.name,
-              mimeType: proof.type,
-              data: proofB64,
-            },
-            selfieFile: {
-              name: selfie.name,
-              mimeType: selfie.type,
-              data: selfieB64,
-            },
-          };
-
-          var response = await fetch(SCRIPT_URL, {
-            method: "POST",
-            body: JSON.stringify(payload),
-          });
-
-          var result = await response.json();
-
-          if (result.status === "success") {
-            document.getElementById("success-name").textContent = name.split(
-              ",",
-            )[1]
-              ? name.split(",")[1].trim()
-              : name;
-            document.getElementById("form-wrapper").style.display = "none";
-            document.getElementById("success-screen").classList.add("visible");
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          } else {
-            throw new Error(result.message || "Submission failed.");
-          }
-        } catch (err) {
-          showError(
-            "Something went wrong: " +
-              err.message +
-              ". Please try again or contact Blink directly.",
-          );
-          btn.disabled = false;
-          btn.innerHTML =
-            '<i class="fa-solid fa-paper-plane"></i> Submit reservation';
-        }
-      }
-    </script>
-  </body>
+  var touchStartX = 0;
+  document.getElementById('slides').addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+  document.getElementById('slides').addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goToSlide(currentSlide + (diff > 0 ? 1 : -1));
+  });
+</script>
+</body>
 </html>
