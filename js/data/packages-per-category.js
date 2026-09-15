@@ -424,7 +424,7 @@ const packages = [
         calendly_link:
           // "https://calendly.com/blinkcreativestudio/studio-package-basic-standard?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
           "https://calendly.com/blinkcreativestudio/solo-c?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-          // "https://calendly.com/blinkcreativestudio/solo-c-2?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+        // "https://calendly.com/blinkcreativestudio/solo-c-2?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       // {
       //   id: "2-4",
@@ -1101,6 +1101,67 @@ const packages = [
   //   ],
   // },
   {
+    id: "12",
+    category: "selfshoot-package",
+    categoryName: "Self Shoot Package",
+    image: "/assets/appointments/studio_packages.png",
+    packages: [
+      {
+        id: "12-1",
+        package: "me",
+        name: "Me Time",
+        price: "199.00",
+        desc: "A solo session designed just for you — relaxed pacing, full attention.",
+        desc1: "",
+        desc2: "",
+        desc3: "",
+        inclusions: "",
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/me-time?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "12-2",
+        package: "duo",
+        name: "Duo",
+        price: "399.00",
+        desc: "Perfect for two — couples, best friends, or a pair with a story to tell.",
+        desc1: "",
+        desc2: "",
+        desc3: "",
+        inclusions: "",
+
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/duo?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "12-3",
+        package: "barkada",
+        name: "Barkada",
+        price: "699.00",
+        desc: "Gather the crew for a session built around your group's energy.",
+        desc1: "",
+        desc2: "",
+        desc3: "",
+        inclusions: "",
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/barkada?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+      {
+        id: "12-4",
+        package: "squad",
+        name: "Squad",
+        price: "1,099.00",
+        desc: "For the bigger crew — go big with a session made for the whole squad.",
+        desc1: "",
+        desc2: "",
+        desc3: "",
+        inclusions: "",
+        calendly_link:
+          "https://calendly.com/blinkcreativestudio/squad?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+      },
+    ],
+  },
+  {
     id: "5",
     category: "grad-package",
     categoryName: "Graduation Package",
@@ -1123,7 +1184,7 @@ const packages = [
         ],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/graduation-package-bronze?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-          // "https://calendly.com/blinkcreativestudio/graduation-package-bronze-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+        // "https://calendly.com/blinkcreativestudio/graduation-package-bronze-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
         id: "5-2",
@@ -1145,7 +1206,7 @@ const packages = [
         ],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/graduation-package-silver?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-          // "https://calendly.com/blinkcreativestudio/graduation-package-silver-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+        // "https://calendly.com/blinkcreativestudio/graduation-package-silver-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
         id: "5-3",
@@ -1167,7 +1228,7 @@ const packages = [
         ],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/graduation-package-gold?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-          // "https://calendly.com/blinkcreativestudio/graduation-package-gold-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+        // "https://calendly.com/blinkcreativestudio/graduation-package-gold-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
         id: "5-4",
@@ -1189,7 +1250,7 @@ const packages = [
         ],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/graduation-package-platinum?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-          // "https://calendly.com/blinkcreativestudio/graduation-package-platinum-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+        // "https://calendly.com/blinkcreativestudio/graduation-package-platinum-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
       {
         id: "5-5",
@@ -1212,7 +1273,7 @@ const packages = [
         ],
         calendly_link:
           "https://calendly.com/blinkcreativestudio/graduation-package-diamond?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
-          // "https://calendly.com/blinkcreativestudio/graduation-package-diamond-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
+        // "https://calendly.com/blinkcreativestudio/graduation-package-diamond-double?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24",
       },
     ],
   },
